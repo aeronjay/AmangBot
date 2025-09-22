@@ -8,8 +8,8 @@ function ChatInterface() {
                 <div className="flex items-center gap-3">
                     <img src="Ambot.png" alt="Ambot Img" className="w-10 h-10 rounded-lg"/>
                     <div>
-                        <h1 className="text-lg font-semibold text-gray-900">AmBot</h1>
-                        <div className="text-sm text-gray-500">Current Student</div>
+                        <h1 className="text-2xl font-semibold text-red-900">Amang Bot</h1>
+                        <div className="text-sm text-gray-500">Current Role</div>
                     </div>
                 </div>
                 <button className="p-1 hover:bg-gray-100 rounded">
@@ -31,9 +31,9 @@ function ChatInterface() {
                     <input 
                         type="text" 
                         placeholder="Type your message here..." 
-                        className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-900 focus:border-transparent"
                     />
-                    <button className="p-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
+                    <button className="p-2 bg-red-900 text-white rounded-lg hover:bg-red-800 transition-colors">
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                         </svg>
