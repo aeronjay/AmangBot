@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+/* Custom font size classes */
+.font-size-small {
+  font-size: 14px;
+}
+
+.font-size-medium {
+  font-size: 16px;
+}
+
+.font-size-large {
+  font-size: 18px;
+}
+
+.font-size-small h1 {
+  font-size: 1.5rem;
+}
+
+.font-size-medium h1 {
+  font-size: 1.875rem;
+}
+
+.font-size-large h1 {
+  font-size: 2.25rem;
+}
+
+.font-size-small input, .font-size-small button, .font-size-small select {
+  font-size: 13px;
+}
+
+.font-size-medium input, .font-size-medium button, .font-size-medium select {
+  font-size: 15px;
+}
+
+.font-size-large input, .font-size-large button, .font-size-large select {
+  font-size: 17px;
+}

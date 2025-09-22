@@ -34,6 +34,15 @@ function App() {
     }
   }, []);
 
+  // Apply dark mode class to document element
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   const handleRoleSelect = (role: string) => {
     const selectedRole = role as UserRole;
     setUserRole(selectedRole);
@@ -69,12 +78,21 @@ function App() {
     localStorage.setItem('ambot_font_size', size);
   };
 
+  const getFontSizeClass = () => {
+    switch (fontSize) {
+      case 'Small': return 'font-size-small';
+      case 'Large': return 'font-size-large';
+      default: return 'font-size-medium';
+    }
+  };
+
   return (
-    <>
-      <div className='h-screen bg-gray-100 flex items-center justify-center'>
+    <div className={getFontSizeClass()}>
+      <div className={`h-screen ${darkMode ? 'bg-gray-900' : 'bg-gray-100'} flex items-center justify-center transition-colors duration-200`}>
         <ChatInterface 
           userRole={userRole} 
           onOpenSettings={handleOpenSettings}
+          darkMode={darkMode}
         />
       </div>
       
@@ -94,7 +112,7 @@ function App() {
         fontSize={fontSize}
         onFontSizeChange={handleFontSizeChange}
       />
-    </>
+    </div>
   );
 }
 
