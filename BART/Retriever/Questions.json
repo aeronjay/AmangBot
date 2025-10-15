@@ -1,0 +1,218 @@
+{
+  "Admissions": [
+    {
+      "question": "What are the requirements for new freshmen applying to EARIST?",
+      "expected_reference": "Admission Requirements section"
+    },
+    {
+      "question": "How can I apply for admission as a transferee student?",
+      "expected_reference": "Admission Procedures section"
+    },
+    {
+      "question": "Does EARIST accept students from other schools?",
+      "expected_reference": "Transfer Student Policy section"
+    },
+    {
+      "question": "Where can I submit my admission documents?",
+      "expected_reference": "Office of Admissions section"
+    },
+    {
+      "question": "When does EARIST usually start accepting new enrollees?",
+      "expected_reference": "Admission Schedule section"
+    },
+    {
+      "question": "Are there entrance exams required for admission?",
+      "expected_reference": "Entrance Examination section"
+    },
+    {
+      "question": "Can foreign students apply to EARIST?",
+      "expected_reference": "Foreign Student Admission section"
+    },
+    {
+      "question": "What documents are needed for returning students to be readmitted?",
+      "expected_reference": "Re-admission Policy section"
+    }
+  ],
+  "Enrollment and Registration": [
+    {
+      "question": "How do I enroll in EARIST after being admitted?",
+      "expected_reference": "Enrollment Procedures section"
+    },
+    {
+      "question": "What is the process for online registration of classes?",
+      "expected_reference": "Registration Process section"
+    },
+    {
+      "question": "Can I still enroll if I missed the enrollment period?",
+      "expected_reference": "Late Enrollment Policy section"
+    },
+    {
+      "question": "How do I change or drop a subject after enrollment?",
+      "expected_reference": "Adding and Dropping of Subjects section"
+    },
+    {
+      "question": "What should I do if my class schedule conflicts with another subject?",
+      "expected_reference": "Schedule Adjustment Policy section"
+    },
+    {
+      "question": "Where can I see the list of courses offered by EARIST?",
+      "expected_reference": "Curriculum Offerings section"
+    },
+    {
+      "question": "Can I enroll in overload subjects this semester?",
+      "expected_reference": "Overload Policy section"
+    },
+    {
+      "question": "What are the steps to enroll as a cross-enrollee from another school?",
+      "expected_reference": "Cross-Enrollment section"
+    }
+  ],
+  "Fees, Payments and Scholarships": [
+    {
+      "question": "How much is the tuition fee per unit at EARIST?",
+      "expected_reference": "Tuition Fees section"
+    },
+    {
+      "question": "Are there any miscellaneous fees aside from tuition?",
+      "expected_reference": "Miscellaneous Fees section"
+    },
+    {
+      "question": "Where can I pay my tuition fees?",
+      "expected_reference": "Payment Procedures section"
+    },
+    {
+      "question": "Does EARIST offer scholarships or financial aid programs?",
+      "expected_reference": "Scholarships and Grants section"
+    },
+    {
+      "question": "How can I apply for an academic scholarship?",
+      "expected_reference": "Academic Scholarship Requirements section"
+    },
+    {
+      "question": "What happens if I fail to pay my fees on time?",
+      "expected_reference": "Late Payment Policy section"
+    }
+  ],
+  "Academic Policies and Grading": [
+    {
+      "question": "How is the grading system computed in EARIST?",
+      "expected_reference": "Grading System section"
+    },
+    {
+      "question": "What is the passing grade for college students?",
+      "expected_reference": "Academic Standards section"
+    },
+    {
+      "question": "Can I request for grade reconsideration if I believe there was an error?",
+      "expected_reference": "Grade Re-evaluation Policy section"
+    },
+    {
+      "question": "What is the policy on academic probation or retention?",
+      "expected_reference": "Academic Retention Policy section"
+    },
+    {
+      "question": "How do I qualify for the Dean’s List?",
+      "expected_reference": "Honors and Awards section"
+    },
+    {
+      "question": "What should I do if I failed a subject?",
+      "expected_reference": "Repetition of Subjects section"
+    },
+    {
+      "question": "Can I take make-up exams for missed tests?",
+      "expected_reference": "Make-up Examination Policy section"
+    },
+    {
+      "question": "What is the policy on incomplete grades?",
+      "expected_reference": "Incomplete Grade section"
+    }
+  ],
+  "Attendance and Conduct": [
+    {
+      "question": "What happens if I exceed the number of absences allowed?",
+      "expected_reference": "Attendance Policy section"
+    },
+    {
+      "question": "Are students required to wear uniforms in EARIST?",
+      "expected_reference": "Student Uniform Policy section"
+    },
+    {
+      "question": "What are the disciplinary actions for students who violate school rules?",
+      "expected_reference": "Code of Discipline section"
+    },
+    {
+      "question": "Can I excuse my absences due to sickness?",
+      "expected_reference": "Excused Absences Policy section"
+    },
+    {
+      "question": "Are there rules about student behavior inside the classroom?",
+      "expected_reference": "Classroom Conduct section"
+    },
+    {
+      "question": "Who handles disciplinary cases in EARIST?",
+      "expected_reference": "Disciplinary Committee section"
+    }
+  ],
+  "Student Services and Organizations": [
+    {
+      "question": "What student organizations can I join in EARIST?",
+      "expected_reference": "Student Organizations section"
+    },
+    {
+      "question": "Where can I get my student ID validated or replaced?",
+      "expected_reference": "Registrar or Student Affairs Office section"
+    },
+    {
+      "question": "Does EARIST offer guidance or counseling services?",
+      "expected_reference": "Guidance and Counseling Office section"
+    },
+    {
+      "question": "How can I request a copy of my transcript of records?",
+      "expected_reference": "Registrar Services section"
+    },
+    {
+      "question": "Who should I contact if I have a problem with my class schedule?",
+      "expected_reference": "Registrar or Academic Department section"
+    },
+    {
+      "question": "Where can I find announcements about campus activities?",
+      "expected_reference": "Student Affairs or Bulletin Announcements section"
+    }
+  ],
+  "Graduation and Academic Completion": [
+    {
+      "question": "What are the requirements to graduate from EARIST?",
+      "expected_reference": "Graduation Requirements section"
+    },
+    {
+      "question": "When are graduation applications usually submitted?",
+      "expected_reference": "Application for Graduation section"
+    },
+    {
+      "question": "Can I join the graduation ceremony if I still have incomplete grades?",
+      "expected_reference": "Graduation Eligibility section"
+    },
+    {
+      "question": "How can I request for my diploma or transcript after graduation?",
+      "expected_reference": "Post-Graduation Document Request section"
+    },
+    {
+      "question": "Does EARIST hold recognition ceremonies for honor students?",
+      "expected_reference": "Honors and Recognition section"
+    }
+  ],
+  "General and Miscellaneous Information": [
+    {
+      "question": "Where is the EARIST main campus located?",
+      "expected_reference": "Institutional Information section"
+    },
+    {
+      "question": "Who is the current president of EARIST?",
+      "expected_reference": "Administration section"
+    },
+    {
+      "question": "What are the official communication channels of EARIST for students?",
+      "expected_reference": "Official Communication Channels section"
+    }
+  ]
+}
