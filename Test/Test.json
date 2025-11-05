@@ -1,0 +1,602 @@
+[
+  {
+    "question": "What documents do I need to submit to apply as a freshman?",
+    "answer": "You need to submit your Form 138 (Senior High School Report Card), Certificate of Good Moral Character, PSA Authenticated Birth Certificate, EARISTCAT Result, a satisfactory Dean's Assessment, and pass a medical/health examination.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "I'm a transferee from another uni, what papers do I need?",
+    "answer": "Transferees must submit their Transcript of Records or Certification of Grades, a Certification of Good Moral Character, a satisfactory result from the Dean's assessment, a recommendation from the Dean or Guidance Counselor of their previous school, a Transfer Credential/Honorable Dismissal, their EARISTCAT result, and a medical/health examination.",
+    "difficulty": "easy",
+    "category": "paraphrased"
+  },
+  {
+    "question": "My EARISTCAT score for BS Civil Engineering was 82%. Did I get in?",
+    "answer": "No, the minimum score for admission to BSCE is 85.00%. A score of 82% would put you in the 'Waitlisted' category, which ranges from 50.00% to 79.99%.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "Admission is first-come-first-served, right? So my EARISTCAT score doesn't really matter?",
+    "answer": "This is incorrect. While admission is on a first-come-first-served basis, the EARISTCAT result is a mandatory admission requirement for both freshmen and transferees, and your score determines if you are admitted, waitlisted, or need realignment.",
+    "difficulty": "medium",
+    "category": "adversarial"
+  },
+  {
+    "question": "What's the deadline for freshman applications for the next school year?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "I'm applying for BS Architecture. Is there any other test besides the main entrance exam?",
+    "answer": "Yes, applicants for Architecture and Fine Arts must take a Drawing Ability Test (DAT) as part of their screening process.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "What's the maximum number of units I can enroll in per semester?",
+    "answer": "The maximum academic load for undergraduate students is the number of units specified in the program checklist for that term.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "I'm a regular student, can I enroll in just 6 units this semester because I have a part-time job?",
+    "answer": "No, students are not allowed to carry less than one-half of the regular load. Exceptions are made only if you have academic deficiencies, are a graduating student, or if your required courses are not offered that semester.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "Can I enroll in two different colleges at EARIST at the same time to get two degrees?",
+    "answer": "No, the handbook states that no student shall be enrolled in more than one college to earn more than one academic degree at the same time.",
+    "difficulty": "medium",
+    "category": "adversarial"
+  },
+  {
+    "question": "How much is the tuition fee per unit?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "My required subject isn't offered this sem. Can I just take it at another school?",
+    "answer": "Yes, this is called cross-enrollment. It is allowed if the course is not offered at the Institute and you get a permit from the Registrar, which requires an endorsement from your Dean/Campus Administrator. You can only cross-enroll a maximum of six (6) units.",
+    "difficulty": "medium",
+    "category": "paraphrased"
+  },
+  {
+    "question": "What's the official process for dropping a subject?",
+    "answer": "To drop a course, you must fill out SARRMS Form No. 007. This form needs to be endorsed by your College Dean/Campus Administration and then approved by the Vice President for Academic Affairs.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "I failed my 'Intro to Programming' major. Can I just substitute it with 'Web Development 1'?",
+    "answer": "Generally, no. The rules state that no substitution is allowed for major courses you have failed. An exception can only be made if the College Dean evaluates the new course and determines it is 'substantially similar in scope and coverage' to the one you failed.",
+    "difficulty": "hard",
+    "category": "scenario"
+  },
+  {
+    "question": "How many absences am I allowed before I get dropped from a class?",
+    "answer": "If your absences exceed 20 percent of the total scheduled hours for a subject (like lectures or labs) in one semester, you will be automatically dropped from the class.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "How late can I be to class before I'm marked absent?",
+    "answer": "You are considered 'absent' if you are not present within the first 1/6th of the scheduled class time. For example, for a one-hour class, you'd be marked absent if you arrive after the first 10 minutes. If you arrive within those first 10 minutes, you are considered 'tardy'.",
+    "difficulty": "medium",
+    "category": "paraphrased"
+  },
+  {
+    "question": "I've been late three times. Does that equal one absence?",
+    "answer": "Yes, the rules state that three incidences of tardiness shall be considered as one absence from class.",
+    "difficulty": "easy",
+    "category": "adversarial"
+  },
+  {
+    "question": "I was sick and missed my midterms. What should I do to get an excused absence?",
+    "answer": "You can get an excused absence for illness by submitting a medical certificate. If the certificate is from an outside physician, it must be verified by the Institute's Medical Office. You must also get an excuse slip from your College Dean.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "What's the minimum passing grade?",
+    "answer": "The minimum passing grade is 3.00, which is equivalent to 75%.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "I got a 2.50 in a subject. What does that mean?",
+    "answer": "A grade of 2.50 is considered 'Satisfactory' and corresponds to a percentage equivalent of 79-81%.",
+    "difficulty": "easy",
+    "category": "paraphrased"
+  },
+  {
+    "question": "My prof gave me an INC last sem. How long do I have to fix it before it becomes a 5.0?",
+    "answer": "You must complete the requirements for an Incomplete (INC) grade within the next two (2) semesters. If you don't, the grade will automatically become a 5.0 (Failed).",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "I passed my class with a 3.0 but I want to improve it. Can I retake the exam?",
+    "answer": "No, the handbook states that a student who has received a passing grade in a course is not allowed to take another examination for the purpose of improving their grade.",
+    "difficulty": "easy",
+    "category": "adversarial"
+  },
+  {
+    "question": "What's the grading breakdown? like how many percent for quizzes, midterms, and finals?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "My prof, who gave me an INC, is on leave and I can't contact him. How do I get my grade completed?",
+    "answer": "If the faculty member is on leave and unresponsive, the Area Chairperson is authorized to handle the removal of the Incomplete grade, with the approval of the Dean.",
+    "difficulty": "hard",
+    "category": "scenario"
+  },
+  {
+    "question": "What happens if I fail 3 subjects in one semester?",
+    "answer": "If you are an old student (not a senior), having failures in three (3) or more courses in one semester means you will not be readmitted for the following semester due to poor academic records.",
+    "difficulty": "medium",
+    "category": "direct"
+  },
+  {
+    "question": "My friend is on academic probation. How does he get out of it?",
+    "answer": "To lift the probation, the student must pass all of their subjects in the semester immediately following. Students on probation cannot fail or drop any subject and must not be involved in any disciplinary cases.",
+    "difficulty": "medium",
+    "category": "paraphrased"
+  },
+  {
+    "question": "I'm a freshman and I failed 2 subjects in my first sem. Am I getting kicked out?",
+    "answer": "No. Freshmen who fail three (3) or more courses in their first semester are placed on probation for the second semester. Since you failed two, you will likely be given a warning by the College Dean and referred to counseling. Your academic load for the next semester might also be reduced.",
+    "difficulty": "hard",
+    "category": "scenario"
+  },
+  {
+    "question": "This is my third time taking the same subject. What happens if I fail it again?",
+    "answer": "According to the retention policies, students who fail (or withdraw from) the same course three times will be dropped from the roll.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "I failed 2 subjects, and I also have an INC. Does the INC count towards the 3-failure rule for dismissal?",
+    "answer": "No, an 'Incomplete' (INC) grade is not included in the computations for scholastic delinquency. Only when (and if) it is replaced by a final grade, like a 5.0, will it be counted, and it will be included in the grades for the semester when the removal is made.",
+    "difficulty": "hard",
+    "category": "adversarial"
+  },
+  {
+    "question": "What's the maximum time I can take for a leave of absence (LOA)?",
+    "answer": "A leave of absence (LOA) should not normally exceed one academic year. While it can be extended, if your total leave goes beyond two (2) years, you will lose your residency status.",
+    "difficulty": "medium",
+    "category": "direct"
+  },
+  {
+    "question": "I'm in a 4-year degree program. What's the maximum number of years I'm allowed to stay in the college to finish it?",
+    "answer": "For a regular student, you should finish the program within the prescribed number of years (4 years). However, you are allowed a grace period of two semesters, or one year, to complete it. This means you have a total of 5 years.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "I'm a working student in a 4-year course. Do I also have a 5-year maximum tenure like regular students?",
+    "answer": "No, the policy for working students is different. You may finish your academic program within a period that is one and one-half (1.5) times the normal length of the program. For a 4-year program, that would be 6 years.",
+    "difficulty": "hard",
+    "category": "adversarial"
+  },
+  {
+    "question": "What's the GWA range to graduate Cum Laude?",
+    "answer": "To graduate with Cum Laude honors, your cumulative grade point average must be between 1.7500 and 1.5001.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "I'm a transferee. Can I still graduate with honors?",
+    "answer": "Yes, as long as you meet all the requirements. For transferees, this includes completing at least 75% of the total number of academic units required for graduation at EARIST and being in residence for at least three (3) years right before graduation.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "I'm aiming for Cum Laude and my GWA is 1.7. But I failed one subject in my first year. Am I still eligible?",
+    "answer": "No, you are not eligible. A requirement for graduating with honors is to have no final grades of 5.0 in any academic or non-academic course.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "For graduating with honors, do they include PE and NSTP grades in the GWA computation?",
+    "answer": "Yes, when computing the final average for honors, grades in all accredited academic courses, including P.E. and NSTP, are included.",
+    "difficulty": "medium",
+    "category": "adversarial"
+  },
+  {
+    "question": "What is the 'Student Assistance' program?",
+    "answer": "It is a term-employment program for students, allowing them to work up to 100 hours per month. The pay is P30.00 per hour for non-technical skills and P75.00 per hour for technical skills.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "What are the requirements to become a student assistant (SA)?",
+    "answer": "To be an applicant for Student Assistance, you must be a bonafide student, have been at EARIST for at least one semester, have no failing grades in the previous semester, and maintain a weighted average of 2.50 or better.",
+    "difficulty": "medium",
+    "category": "paraphrased"
+  },
+  {
+    "question": "Can I be a recipient of the Tulong Dunong Program and another government scholarship at the same time?",
+    "answer": "No, the 'Policy on No Dual Scholarship' states that a student cannot have more than one (1) scholarship or grant simultaneously. You would have to choose which one is more beneficial.",
+    "difficulty": "medium",
+    "category": "adversarial"
+  },
+  {
+    "question": "Where is the office for submitting DOST scholarship applications?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "My father works at EARIST. Can I get a scholarship?",
+    "answer": "Yes, EARIST provides a 'Faculty and Employees Union Scholarship' to qualified children of all employees who are enrolled in the Institute.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "What's the required haircut for guys?",
+    "answer": "Male students are required to have a clean haircut, specified as a 'barber's cut 2” x 3”', and it must not have highlights.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "When are we allowed to wear 'civilian' clothes or non-uniform?",
+    "answer": "The handbook specifies what to wear each day. The prescribed uniform is for Mondays, Wednesdays, and Fridays. College shirts may be worn on Tuesdays and Thursdays, and organizational shirts on Saturdays. It doesn't mention a 'civilian' day.",
+    "difficulty": "medium",
+    "category": "paraphrased"
+  },
+  {
+    "question": "I lost my ID again. This is the second time. What's the penalty?",
+    "answer": "Losing your ID for the second time is considered 'Negligence,' which is a minor offense, and it requires a parent conference.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "I lost my ID for the third time... is that still just a minor offense?",
+    "answer": "No, a third loss of your ID is considered 'Gross Negligence' and is classified as a major offense. This will subject you to discipline probation and requires a parent conference.",
+    "difficulty": "hard",
+    "category": "adversarial"
+  },
+  {
+    "question": "What does the school uniform look like? What's the color?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "Are guys allowed to wear earrings on campus?",
+    "answer": "No, male students are not allowed to wear earrings. This is listed as a minor offense.",
+    "difficulty": "easy",
+    "category": "paraphrased"
+  },
+  {
+    "question": "My job requires me to have long hair, but the handbook says I need a barber's cut. What can I do?",
+    "answer": "You can get an exemption. The handbook states that working students who need a different hairstyle for their job can get a special permit from the OSAS.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "Is cheating on an exam a major or minor offense?",
+    "answer": "Cheating or any form of dishonesty related to class work or examinations is classified as a major offense.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "What's the penalty for getting caught copying on a quiz?",
+    "answer": "Copying from classmates during quizzes or examinations is classified as a minor offense.",
+    "difficulty": "easy",
+    "category": "paraphrased"
+  },
+  {
+    "question": "This is confusing. Is 'cheating' a major offense or a minor offense?",
+    "answer": "The handbook lists 'Cheating or any form of dishonesty in relation to class work or examinations' as a major offense. However, it also lists 'Copying from classmates during quizzes or examinations' as a minor offense. You should probably assume the more serious classification.",
+    "difficulty": "hard",
+    "category": "adversarial"
+  },
+  {
+    "question": "Am I allowed to bring or drink alcohol on campus?",
+    "answer": "No, bringing or drinking liquor or other intoxicating drinks inside the school premises is a major offense. Being drunk on campus is also a major offense.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "Is it okay if I join a student org that isn't officially recognized by the school?",
+    "answer": "No, it is not okay. Membership in an unrecognized student organization is listed as a major offense.",
+    "difficulty": "medium",
+    "category": "paraphrased"
+  },
+  {
+    "question": "What is the school's policy on smoking or vaping?",
+    "answer": "Smoking or vaping in unauthorized areas is a minor offense. The handbook also specifies that the Institute is a strictly no-smoking area.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "I recorded my professor's Zoom class and posted it on social media. Am I in trouble?",
+    "answer": "Yes, that is a major offense. The handbook lists 'Unauthorized posting of class videos, recordings, pictures or statements in social media' as a major offense.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "How much is the fine if I get caught littering?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "My org has an 'initiation'. Is that considered 'hazing' and a major offense?",
+    "answer": "Yes. Hazing is defined as 'inflicting physical or emotional pain and suffering on a neophyte' and is listed as a major offense. This would be banned.",
+    "difficulty": "medium",
+    "category": "adversarial"
+  },
+  {
+    "question": "What's the most severe penalty the school can give a student?",
+    "answer": "The most severe disciplinary sanction is Expulsion.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "What's the difference between being 'dismissed' and 'expelled'?",
+    "answer": "Dismissal means you are dropped from the Institute's roll, but you can still transfer to another school. Expulsion is the most extreme penalty; you are dropped from the roll and also disqualified from being admitted to any other public or private educational institution.",
+    "difficulty": "medium",
+    "category": "paraphrased"
+  },
+  {
+    "question": "Does EARIST have a guidance counselor I can talk to?",
+    "answer": "Yes, the school provides Guidance and Counseling Services. These services use an integrated approach to help students, including counseling, information/orientation, testing, and referrals.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "I'm graduating soon. Does the school have programs to help me find a job?",
+    "answer": "Yes, the Institute provides Career and Job Placement Services, which include offering regular career seminars and other services to help students with employment.",
+    "difficulty": "easy",
+    "category": "paraphrased"
+  },
+  {
+    "question": "What services does the school clinic offer?",
+    "answer": "The Medical and Dental Services provide an entry-level physical examination for new students, free consultation and treatment for minor issues like wounds, and dental services including routine exams and free tooth extractions when indicated.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "What time does the school clinic open and close?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "I left my laptop in a classroom. Is the school security office responsible for helping me find it?",
+    "answer": "No. The handbook states that personal properties like laptops, cellphones, and cash are the 'sole responsibility of the student.' The Security and Safety Office is not held accountable for lost belongings unless you formally deposited those items with them for safekeeping.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "What benefits do student-athletes get?",
+    "answer": "Student-athletes are eligible for several benefits, including a monthly allowance, travel allowances, free uniforms and personal equipment, and certificates of recognition for winning competitions.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "I'm on the varsity team, so my grades don't matter as much, right?",
+    "answer": "That is incorrect. A requirement to be a student-athlete (for old students) is to have 'No failed grades in his/her previous semester'. One of your duties as an athlete is to 'Establish and maintain athletic and scholastic eligibility'.",
+    "difficulty": "medium",
+    "category": "adversarial"
+  },
+  {
+    "question": "Is there a gym that any student can use for working out, even if not an athlete?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "What kind of support does EARIST offer for students with disabilities?",
+    "answer": "Yes, the school provides 'Services for Students with Special Needs and Persons with Disabilities'. The Institute accommodates students with disabilities and offers programs like life skills training, counseling, and referrals to specialists when necessary.",
+    "difficulty": "easy",
+    "category": "paraphrased"
+  },
+  {
+    "question": "How long does a student org's accreditation last?",
+    "answer": "The recognition given to a student organization is effective for one (1) school year. The organization must apply to renew it annually.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "My friends and I want to start a new org. What's the process?",
+    "answer": "To get recognized, you must apply for accreditation by submitting a set of documents to the OSAS. This includes a letter of application, the SAS Application Form, your organization's Constitution and By-Laws, a list of officers and members with their details, a confirmation form from your faculty adviser, and a master plan of your proposed activities for the year.",
+    "difficulty": "hard",
+    "category": "paraphrased"
+  },
+  {
+    "question": "How much can my college-based org charge for a membership fee?",
+    "answer": "A College-Based Organization's membership fee cannot be more than One Hundred Pesos (P100.00) per school year.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "My student org wants to hold an event off-campus. What special requirements are there?",
+    "answer": "For any off-campus activity, your organization must get approval from the Office of Student Affairs and Services (OSAS), collect a notarized parental waiver from every student who is participating, get a letter of conformity from your faculty adviser, and comply with all CHED requirements.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "Our faculty adviser is busy and can't come to our off-campus teambuilding. Can we just go by ourselves?",
+    "answer": "No, all off-campus and overnight activities must be attended by the faculty adviser. If your adviser is unavailable, he or she can be replaced by another faculty member, but you must inform the SAS about the replacement two days before the activity.",
+    "difficulty": "medium",
+    "category": "adversarial"
+  },
+  {
+    "question": "How much is the budget for the Institute Student Government (ISG)?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "My org has a bank account. Who are the required signatories to withdraw money?",
+    "answer": "Withdrawals require two signatories. One must be the organization's president or treasurer. The other co-signatory is the College Dean (or a faculty member they approve) for college-based orgs, or the Director of the OSAS for institute-wide organizations.",
+    "difficulty": "hard",
+    "category": "scenario"
+  },
+  {
+    "question": "What are the requirements to be a faculty adviser for a student organization?",
+    "answer": "A faculty adviser must be a full-time faculty member of the Institute and have at least one year of residency.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "Where does the student publication get its funding?",
+    "answer": "The student publication is funded through student subscription fees, money from advertisements, donations, and grants.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "I made a poster for my org. Can I just post it anywhere on campus?",
+    "answer": "No, you can't. Announcements must first be signed by the SAS Director. After that, they can only be posted on official bulletin boards or other places specifically approved by the SAS Office.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "Can the school administration censor our student paper if we write an article criticizing them?",
+    "answer": "The handbook states that the Institute 'upholds the right of its students to the free expression of ideas' and encourages 'constructive criticisms'. It also says the Editorial Board is 'fully and solely responsible' for what they publish. However, it also states the press 'should never be used for unlawful, anti-social or divisive purposes'.",
+    "difficulty": "hard",
+    "category": "adversarial"
+  },
+  {
+    "question": "How much is the student publication fee that's collected during enrollment?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "What college is BS Criminology under?",
+    "answer": "The Bachelor of Science in Criminology (BSCrim) program is under the College of Criminal Justice Education.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "Does EARIST have an MBA program?",
+    "answer": "Yes, the Graduate School offers a Master in Business Administration.",
+    "difficulty": "easy",
+    "category": "paraphrased"
+  },
+  {
+    "question": "What was the school's name before it became EARIST?",
+    "answer": "The school's former name was Eulogio Rodriguez Vocational High School (ERVHS).",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "Can I take Aerospace Engineering at EARIST?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "Who is the president of EARIST?",
+    "answer": "The current president of EARIST is Dr. Editha V. Pillo.",
+    "difficulty": "easy",
+    "category": "paraphrased"
+  },
+  {
+    "question": "I want to apply for BS Information Technology. Which college handles that?",
+    "answer": "The BS in Information Technology program is offered by the College of Arts and Sciences (CAS).",
+    "difficulty": "easy",
+    "category": "scenario"
+  },
+  {
+    "question": "Are the courses offered in EARIST Cavite the same as the ones in Manila?",
+    "answer": "No, the curricular offerings are different. For example, the Main Campus offers programs like BS Architecture and BS Interior Design, which are not listed for the Cavite Campus. The Cavite Campus offers courses like BS in Computer Technology, which is not listed for the Main Campus.",
+    "difficulty": "medium",
+    "category": "adversarial"
+  },
+  {
+    "question": "What's the email address for the Dean of the College of Engineering?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "Who is the dean of CAS?",
+    "answer": "The Dean of the College of Arts and Sciences (CAS) is Dr. Raymund B. Bolalin.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "Does the school have a swimming pool?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "What are the library's opening and closing hours?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "What is the official vision statement of EARIST?",
+    "answer": "The vision of EARIST is 'to be a center of excellence in trades, business, arts, science, and technology education.'",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "What is EARIST's mission?",
+    "answer": "The mission is to 'turn out vocationally, technically, technologically, and scientifically trained graduates who will be economically productive, self-sufficient, effective, responsible, and disciplined citizens of the Philippines.'",
+    "difficulty": "easy",
+    "category": "paraphrased"
+  },
+  {
+    "question": "I'm currently enrolled in the Cavite campus. Is it possible to transfer to the Manila campus?",
+    "answer": "Yes, students are allowed to transfer from the EARIST Cavite Campus to the Manila campus (or vice versa). This requires a recommendation from the ECC Administrator and admission is dependent on available slots and your compliance with all admission requirements.",
+    "difficulty": "medium",
+    "category": "scenario"
+  },
+  {
+    "question": "I'm taking my OJT this semester. Can I also enroll in a major subject I failed before?",
+    "answer": "This is generally not allowed. Students who still have an academic subject (like a major or minor course) enrolled are not permitted to take their training outside of the school. An exception might be made for specialized programs, but only if your class schedule does not conflict with your training hours. In-house training (within the school) is allowed.",
+    "difficulty": "hard",
+    "category": "adversarial"
+  },
+  {
+    "question": "Is there free Wi-Fi for students on campus?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "I want to run for ISG President. My GWA is 2.75 and I have no failing grades. Am I eligible?",
+    "answer": "No, you are not eligible. A qualification for officers of the ISG (Institute Student Government) is to have a GPA of 2.50 or higher. In the EARIST grading system, a lower number is a better grade, so your 2.75 GWA is not high enough to meet the 2.50 requirement.",
+    "difficulty": "hard",
+    "category": "scenario"
+  },
+  {
+    "question": "I want to run for student council. My GWA is excellent (2.0), but I did fail one class last year. Can I still run?",
+    "answer": "No, you cannot. A qualification to be an officer of the ISG or CSG is that you 'must not have a failing grade'.",
+    "difficulty": "medium",
+    "category": "adversarial"
+  },
+  {
+    "question": "Can students bring a car to school? Is there a parking lot for students?",
+    "answer": "NOT ANSWERABLE FROM HANDBOOK",
+    "difficulty": "easy",
+    "category": "unanswerable"
+  },
+  {
+    "question": "Does EARIST have a study abroad program?",
+    "answer": "Yes, the Institute has an Office of the International Affairs Service (OIAS) that manages international programs, including 'Study abroad' programs which allow a student to live in a foreign country and attend a foreign university.",
+    "difficulty": "easy",
+    "category": "direct"
+  },
+  {
+    "question": "My organization wants to sell t-shirts with the EARIST logo on them. Do we need to get permission?",
+    "answer": "Yes, you must get a permit. Any group that wishes to use the EARIST Logo on merchandise (like t-shirts) that will be sold must secure approval from the Information and Public Affairs Services (InfoPAS Office).",
+    "difficulty": "medium",
+    "category": "scenario"
+  }
+]

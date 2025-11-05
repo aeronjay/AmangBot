@@ -1,0 +1,22 @@
+Question: Who is the Current President of Earist?
+
+Retrieved Chunks:
+
+[Chunk 1] (Score: 0.7226)
+Caillao in 2006 to 2010. The 7th and current President of EARIST is Dr. Editha V.
+
+[Chunk 2] (Score: 0.7042)
+PILLO
+President, EARIST
+Vice – Chair
+HON.
+
+[Chunk 3] (Score: 0.6187)
+President – the head of the school, college or university.
+
+[Chunk 4] (Score: 0.6060)
+Elected officers...
+
+[Chunk 5] (Score: 0.5853)
+Arturo P. Casuga is the 4th president followed by the 6th President Dr. Eduardo S.
+
