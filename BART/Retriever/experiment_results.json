@@ -1239,5 +1239,151 @@
         "num_questions": 3
       }
     }
+  },
+  {
+    "experiment_name": "P80-nomic-embed-text-v1.5",
+    "timestamp": "2025-11-11 21:05:33",
+    "chunking_config": {
+      "strategy": "semantic",
+      "percentile": 80,
+      "buffer_size": 1
+    },
+    "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+    "top_k": 5,
+    "metrics": {
+      "overall_avg_score": 0.6997595691680908,
+      "overall_median_score": 0.6989171802997589,
+      "overall_std": 0.05443940031090958,
+      "min_score": 0.5563791990280151,
+      "max_score": 0.8181365728378296,
+      "high_confidence_pct": 50.0,
+      "medium_confidence_pct": 50.0,
+      "low_confidence_pct": 0.0,
+      "total_questions": 50,
+      "execution_time_seconds": 0.6352353096008301
+    },
+    "category_metrics": {
+      "Admissions": {
+        "avg_score": 0.7449677735567093,
+        "min_score": 0.6872828602790833,
+        "max_score": 0.7918667793273926,
+        "num_questions": 8
+      },
+      "Enrollment and Registration": {
+        "avg_score": 0.6987783089280128,
+        "min_score": 0.6479846239089966,
+        "max_score": 0.7472536563873291,
+        "num_questions": 8
+      },
+      "Fees, Payments and Scholarships": {
+        "avg_score": 0.6818578839302063,
+        "min_score": 0.5563791990280151,
+        "max_score": 0.7465629577636719,
+        "num_questions": 6
+      },
+      "Academic Policies and Grading": {
+        "avg_score": 0.6996765360236168,
+        "min_score": 0.5618889331817627,
+        "max_score": 0.7729986906051636,
+        "num_questions": 8
+      },
+      "Attendance and Conduct": {
+        "avg_score": 0.6947402358055115,
+        "min_score": 0.6054050922393799,
+        "max_score": 0.7748414278030396,
+        "num_questions": 6
+      },
+      "Student Services and Organizations": {
+        "avg_score": 0.6678596337636312,
+        "min_score": 0.6228557825088501,
+        "max_score": 0.7307593822479248,
+        "num_questions": 6
+      },
+      "Graduation and Academic Completion": {
+        "avg_score": 0.6830073118209838,
+        "min_score": 0.6352153420448303,
+        "max_score": 0.7381272315979004,
+        "num_questions": 5
+      },
+      "General and Miscellaneous Information": {
+        "avg_score": 0.7196048100789388,
+        "min_score": 0.6653409004211426,
+        "max_score": 0.8181365728378296,
+        "num_questions": 3
+      }
+    }
+  },
+  {
+    "experiment_name": "P60-nomic-embed-text-v1.5",
+    "timestamp": "2025-11-11 21:07:16",
+    "chunking_config": {
+      "strategy": "semantic",
+      "percentile": 60,
+      "buffer_size": 1
+    },
+    "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+    "top_k": 5,
+    "metrics": {
+      "overall_avg_score": 0.71490274310112,
+      "overall_median_score": 0.7158709466457367,
+      "overall_std": 0.05638311499763657,
+      "min_score": 0.5549683570861816,
+      "max_score": 0.8756574392318726,
+      "high_confidence_pct": 62.0,
+      "medium_confidence_pct": 38.0,
+      "low_confidence_pct": 0.0,
+      "total_questions": 50,
+      "execution_time_seconds": 0.7644665241241455
+    },
+    "category_metrics": {
+      "Admissions": {
+        "avg_score": 0.7479851245880127,
+        "min_score": 0.6976797580718994,
+        "max_score": 0.7918667793273926,
+        "num_questions": 8
+      },
+      "Enrollment and Registration": {
+        "avg_score": 0.735972598195076,
+        "min_score": 0.6636938452720642,
+        "max_score": 0.8756574392318726,
+        "num_questions": 8
+      },
+      "Fees, Payments and Scholarships": {
+        "avg_score": 0.6874581575393677,
+        "min_score": 0.61841881275177,
+        "max_score": 0.7401540875434875,
+        "num_questions": 6
+      },
+      "Academic Policies and Grading": {
+        "avg_score": 0.7179273813962936,
+        "min_score": 0.5549683570861816,
+        "max_score": 0.780748724937439,
+        "num_questions": 8
+      },
+      "Attendance and Conduct": {
+        "avg_score": 0.6994352539380392,
+        "min_score": 0.6068932414054871,
+        "max_score": 0.7748414278030396,
+        "num_questions": 6
+      },
+      "Student Services and Organizations": {
+        "avg_score": 0.6811598837375641,
+        "min_score": 0.6547155380249023,
+        "max_score": 0.7307593822479248,
+        "num_questions": 6
+      },
+      "Graduation and Academic Completion": {
+        "avg_score": 0.7131721496582031,
+        "min_score": 0.6667307019233704,
+        "max_score": 0.7381272315979004,
+        "num_questions": 5
+      },
+      "General and Miscellaneous Information": {
+        "avg_score": 0.7186252673467001,
+        "min_score": 0.6568078398704529,
+        "max_score": 0.8181365728378296,
+        "num_questions": 3
+      }
+    }
   }
 ]
