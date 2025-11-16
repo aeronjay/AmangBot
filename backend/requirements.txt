@@ -1,0 +1,13 @@
+torch
+langchain_experimental
+langchain_community
+faiss-cpu
+numpy
+transformers
+huggingface_hub
+pandas
+bitsandbytes
+sentence-transformers
+flask
+flask-cors
+accelerate
