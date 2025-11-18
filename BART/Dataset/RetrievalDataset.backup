@@ -1,0 +1,4998 @@
+[
+  {
+    "question": "When was EARIST established?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "Who was the first principal of the institution when it was known as Eulogio Rodriguez Vocational High School?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "Which Republic Act authorized the renaming of ERVHS to EARMSAT?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "What was the effect of Republic Act No. 6595 on the institution?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "Who signed Presidential Decree No. 1524 converting EARIST into a Chartered State College?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "Who was the first College President of EARIST?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "Who is the 7th President of EARIST mentioned in the history section?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "What is the current Carnegie classification level of EARIST?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "When did EARIST acquire its present site at Nagtahan, Sampaloc, Manila?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "Which Republic Act authorized the establishment of the Technical Education Department in 1964?",
+    "positive_chunk_id": "handbook_chunk_001"
+  },
+  {
+    "question": "When was the EARIST Cavite Campus established?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "What body approved the establishment of GASAT as an EARIST branch?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "Who donated the 31,282 sq. meter lot for the GASAT school site?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "Who led the groundbreaking ceremony for the GASAT main school building in 1990?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "Which Congressman provided congressional insertions for the completion of school buildings from 1989 to 1999?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "How much was the total cost of the school building and infrastructure projects completed between 1989 and 1999 at the Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "Who provided the 2.5M appropriation for the Multi-Purpose Sports Complex Gymnasium?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "What was the initial budget allocation for the GASAT main building Phase 1?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "Who served as EARIST President from 1972 to 1982 during the development of the Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "When was the laying of the cornerstone for the GASAT main building?",
+    "positive_chunk_id": "handbook_chunk_002"
+  },
+  {
+    "question": "What is the Vision statement of EARIST?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "According to the Mission statement, what kind of graduates does EARIST aim to produce?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "What is the Goal of EARIST regarding instruction and training?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "What are the specific areas of study mentioned in EARIST's Goal?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "What is the objective of EARIST regarding faculty and staff?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "How does EARIST aim to meet the needs of business and industry according to its Objectives?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "What is the objective regarding technologies and instructional facilities?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "According to the Objectives, how does EARIST plan to attain university status?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "What legal basis is cited in the Goal section for EARIST's mandate?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "Who appropriated 1M for the construction/improvement of a school building in January 2000?",
+    "positive_chunk_id": "handbook_chunk_003"
+  },
+  {
+    "question": "What undergraduate degrees are offered under the College of Architecture and Fine Arts?",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "What are the majors available for the Bachelor of Fine Arts program?",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "Which college offers the Bachelor of Science in Interior Design?",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "What is the specific emphasis of the Bachelor of Science in Applied Physics?",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "List the programs offered by the College of Arts and Sciences.",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "Does EARIST offer a Bachelor of Science in Psychology?",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "What is the abbreviation for the Bachelor of Science in Mathematics?",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "Is Visual Communication a major under the College of Arts and Sciences or CAFA?",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "What does BSCS stand for in the curricular offerings?",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "Which college oversees the Painting major?",
+    "positive_chunk_id": "handbook_chunk_004"
+  },
+  {
+    "question": "What are the majors available under the Bachelor of Science in Business Administration?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "Which college offers the Bachelor of Science in Office Administration?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "What degree program is offered for students interested in Entrepreneurship?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "What are the majors offered under the Bachelor in Secondary Education?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "Does EARIST offer a major in Industrial Arts under the College of Education?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "What does BTLEd stand for?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "Is there a program for Special Needs Education at EARIST?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "How many units are required for the Professional Education / Subjects (TCP)?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "Which college offers the Bachelor in Public Administration?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "What majors are available under the Bachelor of Technology and Livelihood Education?",
+    "positive_chunk_id": "handbook_chunk_005"
+  },
+  {
+    "question": "List the engineering degrees offered by the College of Engineering.",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "Does EARIST offer a Bachelor of Science in Chemical Engineering?",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "What is the abbreviation for the Bachelor of Science in Electronics and Communications Engineering?",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "Is there a Civil Engineering program at EARIST?",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "What programs are offered by the College of Hospitality and Tourism Management?",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "What does BSCoE stand for?",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "Does the College of Engineering offer a degree in Computer Engineering?",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "What is the degree code for Bachelor of Science in Tourism Management?",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "Is Mechanical Engineering offered in the Main Campus?",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "What degree is offered for students interested in Hospitality Management?",
+    "positive_chunk_id": "handbook_chunk_006"
+  },
+  {
+    "question": "What are the majors offered under the Bachelor of Science in Industrial Technology?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "Does the College of Industrial Technology offer a major in Automotive Technology?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "Is Food Technology a major under the BSIT program?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "What college offers the Bachelor of Science in Criminology?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "Does EARIST offer a major in Fashion Apparel Technology?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "Is Industrial Chemistry available as a major under CIT?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "What is the specific degree offered by the College of Criminal Justice Education?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "Does the BSIT program include a major in Refrigeration and Air-conditioning?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "Is Drafting Technology a major under the College of Industrial Technology?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "What electronics-related major is offered under the College of Industrial Technology?",
+    "positive_chunk_id": "handbook_chunk_007"
+  },
+  {
+    "question": "What Master's degree in Science is offered by the Graduate School?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "What are the majors available for the Master of Arts in Education?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "Is there a Master in Public Administration program at EARIST?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "What major is available under the Master of Arts in Industrial Education?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "What are the majors for the Master of Arts in Teaching?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "What Doctorate degrees are offered by the Graduate School?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "Is there a PhD program in Industrial Psychology?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "Does EARIST offer a Doctor of Education degree?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "What is the major available for the Doctor of Education program?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "Does the Graduate School offer a Master in Business Administration?",
+    "positive_chunk_id": "handbook_chunk_008"
+  },
+  {
+    "question": "What Graduate Programs are offered at the EARIST Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "What is the major for the Doctor in Education program at the Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "Does the Cavite Campus offer a Post Baccalaureate Program?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "What undergraduate business degree is available at the Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "Is Bachelor of Science in Criminology offered at the Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "What are the majors under Bachelor of Science in Industrial Technology at the Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "Does the Cavite Campus offer a Bachelor of Science in Computer Technology?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "Is Automotive a major under BSIT at the Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "What education-related undergraduate degree is offered at the Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "Does the Cavite Campus offer a Master in Business Administration?",
+    "positive_chunk_id": "handbook_chunk_009"
+  },
+  {
+    "question": "What are the primary bases for student admission at EARIST?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "Is admission to EARIST processed on a first-come-first-served basis?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "Who are eligible to apply as Freshmen at EARIST?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "Can Senior High School Alternative Learning System (ALS) passers apply for admission?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "What is the preference regarding grades for transferees applying to EARIST?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "What factors limit the number of applicants to be admitted?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "Are foreign students eligible for admission if they graduated from high schools abroad?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "I am a Grade 12 graduate; am I eligible to apply as a freshman?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "I am a transferee with a failing grade; will I be admitted?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "What CMO issuance is cited regarding Grade 12 graduates in the admission policy?",
+    "positive_chunk_id": "handbook_chunk_010"
+  },
+  {
+    "question": "What documents are required for Freshmen admission?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "Do Freshmen need to submit a birth certificate?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "What is required from the Dean for both Freshmen and Transferees?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "What specific document do Transferees need from their previous school regarding their character?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "I am transferring to EARIST; do I need a recommendation letter?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "What result must be submitted as part of the admission requirements?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "What documents are specifically required for foreign students?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "Is a medical examination required for admission?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "What is Form 138?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "What document proves a transferee has been honorably dismissed from their previous school?",
+    "positive_chunk_id": "handbook_chunk_011"
+  },
+  {
+    "question": "How many levels of screening are there in the admission process?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "What is the formula for computing the EARISTCAT Rating?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "Which office processes EARISTCAT applications?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "Who administers the EARIST College Admission Test?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "What is the purpose of the College Admission Interview?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "Who conducts the College Admission Interview?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "What specific test is required for Architecture and Fine Arts applicants?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "Can a student appeal the evaluation of the interviewer?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "What student qualities are evaluated during the interview?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "Does each college have the prerogative to define their own interview mechanism?",
+    "positive_chunk_id": "handbook_chunk_012"
+  },
+  {
+    "question": "What is the purpose of the Program Preparedness Test?",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "List the engineering programs that require a Program Preparedness Test.",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "Is the Program Preparedness Test required for BS Psychology applicants?",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "What happens if a student scores lower than the cut-off score in the Program Preparedness Test?",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "What is the Enhancement Program?",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "When do conditionally admitted students take enhancement courses?",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "Is BS Architecture included in the list of programs requiring the Preparedness Test?",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "How many enhancement courses might a conditionally admitted student need to take?",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "Can a student be fully admitted immediately if they fail the cut-off score?",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "Does the Program Preparedness Test assess competency in specific skills/disciplines?",
+    "positive_chunk_id": "handbook_chunk_013"
+  },
+  {
+    "question": "What is the admission cut-off score for BS Architecture?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "What is the status of a BS Computer Science applicant with a score of 72%?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "I scored 82% in the BS Civil Engineering test; will I be admitted?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "What is the cut-off score for admission to the Bachelor of Elementary Education (BSEEd)?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "What happens if a student falls below 50% for the BSIT program?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "What is the 'For Admission' score requirement for BS Criminology?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "Can an applicant be deferred due to being part of an Indigenous Cultural Community?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "What happens if a student does not meet the score requirements for their first-choice program?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "What is the waitlisted range for BS Psychology?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "Is a score of 55% sufficient for admission into BS Business Administration?",
+    "positive_chunk_id": "handbook_chunk_014"
+  },
+  {
+    "question": "What is the primary condition for the admission of transferees?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "Who evaluates the courses taken by a transferee from a previous school?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "What document is required for the crediting of courses?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "What determines whether a transferee uses the old or new curriculum?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "Does a student following the old curriculum need to take the Bridging Program?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "When is a transferee required to enroll in the Bridging Program for Lifelong Learners?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "What must a student pass if they follow the new curriculum?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "Is the Registrar's Office involved in evaluating transferee records?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "Can a transferee be advised to use the old curriculum?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "Are additional general education subjects required for those on the new curriculum?",
+    "positive_chunk_id": "handbook_chunk_015"
+  },
+  {
+    "question": "What must every student sign upon admission regarding data privacy?",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "What can happen if a student refuses to sign the pledge?",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "List the three requirements for the re-admission of students.",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "From which office is the Evaluation Record Form obtained?",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "Who must provide the Admission Recommendation for re-admission?",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "Is a copy of the Approved Leave of Absence required for re-admission?",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "What is a sufficient cause for denial of admission or dismissal?",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "I am a returning student; do I need a recommendation from the College Dean?",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "Do I need to sign a waiver of data privacy upon admission?",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "Where do I get the Evaluation Record Form needed for re-admission?",
+    "positive_chunk_id": "handbook_chunk_016"
+  },
+  {
+    "question": "What is the first step in the registration procedure for new students?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "Who issues the Notice of Admission?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "Where must original requirements be submitted?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "What office handles the validation of fees?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "When is a student's Certificate of Registration considered valid?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "What is the deadline for registration?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "Who approves late registration?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "Can a student enroll in two colleges to earn two degrees simultaneously?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "Can a student attend classes if their name is not on the Official Class List?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "How long after the start of classes can a student register under justifiable circumstances?",
+    "positive_chunk_id": "handbook_chunk_017"
+  },
+  {
+    "question": "Who must endorse a request for cross-enrollment?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "What is the maximum number of units allowed for cross-enrollment?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "Can I cross-enroll if the course is offered at EARIST?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "Who prepares the cross-enrollment form?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "Does the Registrar's Office need a copy of the approved cross-enrollment request?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "What is required for a cross enrollee from another institution to be admitted to EARIST?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "What information must the cross-enrollment permit contain?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "Does EARIST accept applications for a second baccalaureate degree?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "Who issues the permit for cross-enrollment?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "I want to cross-enroll for 9 units; is this allowed?",
+    "positive_chunk_id": "handbook_chunk_018"
+  },
+  {
+    "question": "What constitutes a regular academic load?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "When can a student carry less than half of the regular load?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "What is the maximum overload allowed during a regular semester?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "What types of courses are allowed for overload?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "Who must approve an overload recommendation?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "Can a student overload with a major subject?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "What is the regular academic load for intersession classes?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "How many additional units can be enrolled during intersession?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "Can I take a course with pre-requisites as an overload?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "Is a graduating student allowed to carry less than half the regular load?",
+    "positive_chunk_id": "handbook_chunk_019"
+  },
+  {
+    "question": "What form must be filed to change a class?",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "List two conditions under which a change of class is allowed.",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "Who must sign the College Advisement Slip?",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "When can a course be substituted?",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "Can I substitute a major course that I failed?",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "Can mandated courses be substituted?",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "What form number is used for dropping a course?",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "Who approves the dropping of a course?",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "When must substitution or dropping forms be submitted?",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "What conditions must a substitute course meet?",
+    "positive_chunk_id": "handbook_chunk_020"
+  },
+  {
+    "question": "What defines a 'Beginning Freshman'?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "I am a returning student; what determines if I can be readmitted?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "What must a student present to shift to another program within the same college?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "What documents are required for shifting from one college to another?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "Who approves the clearance required for shifting to another college?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "Do shifters need to meet a grade requirement?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "What is required for a student transferring from EARIST Cavite Campus to Manila?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "Who evaluates the subjects taken by a transferee from another school?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "What form is used to evaluate the credits of a transferee from another school?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "Can a student shift if there are no available slots in the target program?",
+    "positive_chunk_id": "handbook_chunk_021"
+  },
+  {
+    "question": "How are students admitted from EARIST Cavite Campus to Manila classified?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "What defines a 'Regular student'?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "Who is classified as an 'Irregular student'?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "What is a 'Special student'?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "How much of the program must be finished to be classified as a Freshman?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "What defines a 'Sophomore' student?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "I have finished 60% of my units; what is my year level classification?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "Who is considered a 'Senior' student?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "What is the requirement for a 5th-year student to be considered a Senior in Engineering?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "Does a student enrolling in the Special Opportunity Program earn formal academic credits?",
+    "positive_chunk_id": "handbook_chunk_022"
+  },
+  {
+    "question": "What facilities are provided for students with visual impairment?",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "List the equipment provided for persons with hearing impairment.",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "What law governs the requirements for persons with orthopedic handicaps?",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "What is Batas Pambansa Bilang 344 also known as?",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "What support is available for students with behavioral problems or learning disabilities?",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "What CHED Memo is cited regarding learners with special needs?",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "Are Braille books provided for visually impaired students?",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "What specific item is mentioned for speech training of hearing-impaired students?",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "Are adjustable desks required for orthopedic handicaps?",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "Does EARIST provide orientation and mobility equipment for the blind?",
+    "positive_chunk_id": "handbook_chunk_023"
+  },
+  {
+    "question": "When does the requirement to attend classes start?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "What constitutes an absence from class?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "After how many minutes is a student considered absent in a three-hour class?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "What is the tardiness threshold for a one-hour class?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "How many incidences of tardiness constitute one absence?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "Who issues the excuse slip for absences?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "Is a student on official Institute representation excused from classes?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "What is required to excuse an absence due to illness?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "What happens after three successive unexcused absences?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "What percentage of absences results in being automatically dropped from the class?",
+    "positive_chunk_id": "handbook_chunk_024"
+  },
+  {
+    "question": "What is the percentage equivalent of a grade of 1.25?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "What descriptive rating corresponds to a grade of 1.75?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "What grade represents 'Failed'?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "What does 'INC' stand for?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "What grade is given for 'Dropped Officially/Unofficially'?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "Who is responsible for giving grades to students?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "Who gives the grade if the faculty member is no longer connected with the Institute?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "When is an 'INC' grade given?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "What is the descriptive rating for a 3.00 grade?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "What is the percentage equivalent range for a grade of 2.25?",
+    "positive_chunk_id": "handbook_chunk_025"
+  },
+  {
+    "question": "What form is used to complete an Incomplete Grade?",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "What is the deadline for completing an Incomplete Grade?",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "What happens if an INC grade is not removed within two semesters?",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "Is there a fee for removing an INC grade?",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "Who approves the Area Chairperson's action on grades if the faculty is unavailable?",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "When must a student file a dropping form to receive a 'Dropped' grade?",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "Can a student be dropped for exceeding allowable absences?",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "List the situations where a 'No Credit' (NC) grade is applicable.",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "Can a student retake an exam to improve a passing grade?",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "Can an INC grade be resolved if the faculty member is on leave?",
+    "positive_chunk_id": "handbook_chunk_026"
+  },
+  {
+    "question": "Can a faculty member amend grades without a paper trail?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "What is the time frame for rectifying grades without a petition form?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "What form is required for a grade change appeal 6-10 days after posting?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "What documents must be submitted with the Petition Form for Rectification of Grade?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "Who verifies the circumstances of a grade petition?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "Who approves the recommendation for a change of grade?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "What happens to petitions filed after 10 days?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "Who chairs the Committee on Rectification of Grades?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "Who are the members of the Committee on Rectification of Grades?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "Who acts as the Secretariat for the Committee on Rectification of Grades?",
+    "positive_chunk_id": "handbook_chunk_027"
+  },
+  {
+    "question": "What academic failure will prevent an old student from being readmitted?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "How many cumulative unauthorized withdrawals lead to non-readmission?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "What happens to a student with one failing grade?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "Can a Freshman who fails three courses enroll in the second semester?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "What is prohibited for students on probation?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "How many times can a student be on probation before becoming ineligible to enroll?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "What is the consequence of failing the same course three times?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "Does a student on probation face restrictions on dropping subjects?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "Are senior students exempt from the non-readmission rule for three failures?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "Who authorizes the courses for a Freshman on probation?",
+    "positive_chunk_id": "handbook_chunk_028"
+  },
+  {
+    "question": "Is an 'Incomplete' grade included in delinquency computations?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "When is a removed INC grade included in the scholastic delinquency check?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "Can a student due for dismissal finish the current semester if already enrolled?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "What subjects take precedence in enrollment if a student has failed them?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "What happens if a student fails 40%-75% of their academic units?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "What is the penalty for failing more than 75% of academic units in a semester?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "Is a student permanently disqualified if they fail more than 75% of their units?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "How is delinquency computed for courses without unit weights?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "I failed 50% of my units; will I be dropped from the Institute or just the College?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "Does failing a pre-requisite affect my next enrollment?",
+    "positive_chunk_id": "handbook_chunk_029"
+  },
+  {
+    "question": "What is the grace period for a regular student to finish their program?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "How long do Athletics Scholars have to finish a 5-year degree?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "What is the tenure limit for Working Students?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "Is an official Leave of Absence counted towards tenure?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "What is the maximum duration of a Leave of Absence?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "What condition must be met to apply for a Leave of Absence?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "Can I enroll in another school while on Leave of Absence?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "What happens if a leave exceeds one academic year?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "What happens to a student who withdraws without a formal Leave of Absence?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "Is an unofficial leave of absence charged to student tenure?",
+    "positive_chunk_id": "handbook_chunk_030"
+  },
+  {
+    "question": "What document is issued to a student who voluntarily withdraws to transfer to another school?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "Can a student who has been issued an Honorable Dismissal be readmitted to EARIST?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "What percentage of academic units must a transferee earn at EARIST to be eligible for graduation?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "When must a candidate for graduation clear their deficiencies?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "What is required before a student can be issued a diploma and transcript of records?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "What is the first step for a candidate for graduation?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "I am transferring schools; what must I accomplish before receiving an Honorable Dismissal?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "Who issues the Honorable Dismissal?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "Can a transferee graduate if they only took 40% of their units at EARIST?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "Is a student with uncleared accountabilities eligible to receive their transcript?",
+    "positive_chunk_id": "handbook_chunk_031"
+  },
+  {
+    "question": "What is the grade range for Summa cum Laude?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "What is the minimum residency requirement for graduation with honors?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "Are P.E. and NSTP grades included in the computation for honors?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "What is the lowest final grade allowed for a student to qualify for honors?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "Can a student with a 'Dropped' grade graduate with honors?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "What is the grade range for Magna cum Laude?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "Is a student who repeated a subject from another institution eligible for honors?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "What percentage of academic units must be completed at EARIST to qualify for honors?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "I finished my 4-year program in 5 years; am I eligible for honors?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "What is the grade range for Cum Laude?",
+    "positive_chunk_id": "handbook_chunk_032"
+  },
+  {
+    "question": "What happens if a student obtains final grades of '5.00' in three courses?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "What percentage of incomplete marks triggers a warning from the Dean?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "What is the penalty for a student who is warned due to incomplete marks?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "Who issues the warning to students with poor performance?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "I failed 3 subjects this semester; what will be my status?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "How many units are reduced from the load of a warned student?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "Does the warning apply if the 3 failing grades are accumulated?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "I have incomplete grades in 20% of my units; will I be warned?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "What is the purpose of the warning issued by the Dean?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "Is the reduction of load applicable to students with failing grades in 3 courses?",
+    "positive_chunk_id": "handbook_chunk_033"
+  },
+  {
+    "question": "What happens to a student with a previous failing grade who accumulates another failure in the succeeding semester?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "How many accumulated failing grades result in automatic probation?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "What happens to the academic load of a student with 5 failing grades?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "When is probation lifted?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "I failed 5 subjects; will I be placed on probation?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "Can probation be lifted if I pass all subjects next semester?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "Who determines the load reduction for a student on probation?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "Is probation applied if a student fails just one subject but had previous failures?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "What is the condition for a student on automatic probation regarding the next semester?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "Does automatic probation apply to the succeeding semester?",
+    "positive_chunk_id": "handbook_chunk_034"
+  },
+  {
+    "question": "What is the penalty for being on probation for two successive semesters?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "Can a student dropped from a College due to probation be readmitted to another College?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "What happens if a student on probation fails 50% or more of their units?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "I was dropped from the College roll; can I shift to another program?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "Who is dropped from the rolls of the Institute?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "I failed 40% of my units while on probation; will I be dropped from the Institute?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "Is a student eligible for readmission to the same College after two successive probations?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "What is the threshold of failure for a probationary student to be dropped from the Institute?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "Does 'dropped from the rolls of the College' mean expulsion from the entire Institute?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "Can a student qualify for another College if dropped from their current one?",
+    "positive_chunk_id": "handbook_chunk_035"
+  },
+  {
+    "question": "What are the three requirements for a student undergoing OJT?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "Must a student be enrolled in a practicum course to undergo OJT?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "Is good academic standing required for internship?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "Who examines the physical and mental fitness of the student trainee?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "Can I start OJT if I haven't completed a prerequisite subject?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "What CMO number is cited regarding Student Trainee requirements?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "Besides physical and mental fitness, what other fitness is required for OJT?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "Does the school physician need to examine the student before OJT?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "Is enrollment in an equivalent course acceptable for OJT?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "Do I need to finish all prerequisite subjects before Practice Teaching?",
+    "positive_chunk_id": "handbook_chunk_036"
+  },
+  {
+    "question": "Are students with additional enrolled subjects allowed to train outside the school?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "What exception allows a student with enrolled subjects to train outside?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "Is in-house training allowed for students who still have academic courses?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "What form must be accomplished if a student trains outside with enrolled subjects?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "Can I do OJT outside if my class schedule conflicts with training hours?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "I have minor courses left; can I do my OJT outside the campus?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "What is the condition for specialized programs regarding OJT schedule?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "Does the policy allow in-house training for students with current academic load?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "What office provides the form for OJT with concurrent subjects?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "Is concurrent enrollment of major/minor courses allowed during outside training?",
+    "positive_chunk_id": "handbook_chunk_037"
+  },
+  {
+    "question": "Are ladderized programs allowed to have OJT?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "What manual must trainees abide by?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "Who determines the requirements for ladderized OJT?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "I am in a ladderized program; can I do OJT?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "Do trainees need to follow the Department's existing training manual?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "Is OJT restricted to non-ladderized programs?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "Must ladderized OJT comply with College requirements?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "What governs the training of students in ladderized programs?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "Is there a specific training manual for trainees?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "Can a ladderized program student skip the training manual requirements?",
+    "positive_chunk_id": "handbook_chunk_038"
+  },
+  {
+    "question": "What Board Resolution approved the Guidelines on Implementation of Flexible Learning?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "For which school year were the flexible learning guidelines implemented?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "What Administrative Council Resolution endorsed the flexible learning guidelines?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "What teaching approaches are faculty members required to utilize?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "What modes of delivery are mentioned for connecting with students?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "What item number under 'Delivery of Instruction' discusses flexible learning?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "Are faculty members allowed to use offline delivery modes?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "What is the purpose of the alternative teaching approaches?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "Who endorsed the guidelines to the Board of Trustees?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "Is 'blended' listed as a teaching approach?",
+    "positive_chunk_id": "handbook_chunk_039"
+  },
+  {
+    "question": "What are the two specific learning modalities mentioned for faculty to connect with students?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "What is the goal of using online and offline delivery approaches?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "Do the learning modalities align with institutional guidelines?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "Is offline delivery a recognized modality?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "Are faculty members required to connect with students through these modalities?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "What policies do the flexible learning approaches align with?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "Is continuous learning a goal of these modalities?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "Does the handbook mention 'Board-approved policies' in relation to flexible education?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "What are the approaches aiming to ensure?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "Is 'Online delivery' one of the modalities?",
+    "positive_chunk_id": "handbook_chunk_040"
+  },
+  {
+    "question": "Who has the authority to fix tuition fees and other necessary school charges?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "What Republic Act is mentioned regarding the fixing of tuition fees?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "Is the Institute allowed to formulate mechanisms for online payment?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "What is required before the Board of Trustees can impose new charges?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "Are graduation fees considered a necessary school charge?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "Does the text mention matriculation fees as a school charge?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "Who oversees the consultation process for fixing fees?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "Are laboratory fees subject to the Board's authority?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "What standards must online payment mechanisms follow?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "Is the fixing of fees subject to R.A. No. 8292?",
+    "positive_chunk_id": "handbook_chunk_041"
+  },
+  {
+    "question": "Under what Republic Act are the educational expenses of EARIST students free?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "How does the Institute charge for tuition?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "Do laboratory fees vary depending on the subject?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "What is included in the total matriculation fees for payee students?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "Can matriculation fees be paid on an installment basis?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "Who determines the terms for installment payments?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "Are miscellaneous fees part of the matriculation fees?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "Does the Institute charge a fixed amount per unit/hour?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "Who prescribes the schedule of tuition fees?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "Is cash payment allowed for matriculation fees?",
+    "positive_chunk_id": "handbook_chunk_042"
+  },
+  {
+    "question": "Can a tertiary student availing of Free Tuition refund their fees?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "Does the refund policy apply to entrance fees for students under R.A. No. 10931?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "If a student under Free Tuition does not attend classes, can they get a refund?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "Is the withdrawal and refund policy applicable to Graduate Programs?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "Does the no-refund policy for Free Tuition students cover testing fees?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "Are Secondary Laboratory Department students mentioned in the refund section?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "I am a tertiary student with free tuition; can I refund my 'other charges'?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "Does the period of attendance affect the refund eligibility for free tuition students?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "What Republic Act governs the free tuition mentioned in the refund policy?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "Is strict implementation of these refund guidelines required?",
+    "positive_chunk_id": "handbook_chunk_043"
+  },
+  {
+    "question": "What is the regular load requirement for the Tertiary Education Program scholarship?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "Who provides scholarships and financial assistance through the Office of Student Affairs?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "Are graduating students exempt from the 18-unit load requirement?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "Can a student with a government scholarship apply for the Tertiary Education Program?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "What academic result in the previous semester disqualifies a student from the scholarship?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "How many specimen signatures are required on the School I.D. photocopy?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "Is a copy of the previous Report of Grades required for the application?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "Which office provides the Scholarship Form?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "I dropped a subject last semester; am I eligible for the Tertiary Education Program?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "Must a student be enrolled to qualify for the Tertiary Education Program?",
+    "positive_chunk_id": "handbook_chunk_044"
+  },
+  {
+    "question": "Who is the intended beneficiary of the Tulong Dunong Program regarding parent status?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "What citizenship is required for the Tulong Dunong Program?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "Can a student who has been expelled from an HEI apply for Tulong Dunong?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "Is a student eligible for Tulong Dunong if they have another government scholarship?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "What is the academic load requirement for the Tulong Dunong Program?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "Can a student with a failing grade in the previous semester apply for Tulong Dunong?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "Does the Tulong Dunong Program cover dependents of OFWs displaced by the COVID-19 pandemic?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "Is a copy of the previous Certificate of Registration required for Tulong Dunong?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "Must the applicant have not exceeded the Maximum Residency Policy?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "What department certifies the status of the OFW parent?",
+    "positive_chunk_id": "handbook_chunk_045"
+  },
+  {
+    "question": "Who is eligible for the Faculty and Employees Union Scholarship?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "What happens if a Tulong Dunong scholar fails to finish the course within the specified years?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "Can a Tulong Dunong scholar drop a subject without approval?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "What grade is required for a Faculty and Employees Union scholar to continue?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "Are P.E. and NSTP grades included in the qualification for the Faculty Scholarship?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "How often must a Tulong Dunong scholar apply for renewal?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "What offense disqualifies a scholar from these programs?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "Where should the Certificate of Employment come from for the Faculty Scholarship?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "Is shifting courses allowed for scholars without the Dean's approval?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "What is the minimum load for the Faculty and Employees Union Scholarship?",
+    "positive_chunk_id": "handbook_chunk_046"
+  },
+  {
+    "question": "What is the hourly wage for a Student Assistant with technical skills?",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "What is the maximum number of hours a Student Assistant can work per month?",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "What GWA is required to qualify as a Student Assistant?",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "Can a student enjoy two scholarships simultaneously?",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "Who informs the accounting department if a student has multiple scholarships?",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "What is the wage per hour for non-technical skills?",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "List one agency mentioned that offers Special Grants.",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "How many semesters of residence are required for Student Assistance applicants?",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "Can a student with a failing grade in the previous semester apply for Student Assistance?",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "What happens to the Faculty Scholarship if the student fails to finish on time?",
+    "positive_chunk_id": "handbook_chunk_047"
+  },
+  {
+    "question": "What Act protects the right of students to publish a newspaper?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "Do students have the right to access their transcript of records?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "Can a student seek justification for a contested grade?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "Who should a student approach regarding grade rectification for a major course?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "Do students have the right to privacy of communication?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "Are students allowed to express their gender preference?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "Can students participate in matters affecting their welfare?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "What services are available to students regarding career guidance?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "Who handles grade rectification for general education courses?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "Do students have the right to choose their field of study?",
+    "positive_chunk_id": "handbook_chunk_048"
+  },
+  {
+    "question": "What is the student's responsibility regarding behavior?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "Should students participate in co-curricular activities?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "What must students uphold regarding the Institute's integrity?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "What is the responsibility of the student towards the school environment?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "Are students expected to exert diligence in their studies?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "What code must students abide by?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "Should students aim to become assets to their families?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "Is the holistic development of the student a responsibility they must adopt measures for?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "Does the student have a duty to attain a harmonious relationship with faculty?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "Can a student file a written request for grade rectification?",
+    "positive_chunk_id": "handbook_chunk_049"
+  },
+  {
+    "question": "What is the EARIST Code of Conduct proposed by Dr. Editha V. Pillo?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "Who is authorized to use the Institute's name and logo by default?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "Can individual students use the EARIST logo without approval?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "Who must recommend the use of the logo for student activities?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "Who gives the final approval for students to use the logo?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "Does the restriction on logo use apply to printed invitations?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "What is the goal of the Code of Conduct regarding student formation?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "Is the pursuit of academic excellence a reason for adhering to the Code of Conduct?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "Are printed tickets covered by the policy on name and logo use?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "Who proposed the code 'DO the right thing, right!'?",
+    "positive_chunk_id": "handbook_chunk_050"
+  },
+  {
+    "question": "On which days are students required to wear the prescribed uniform?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "What is the prescribed attire for Tuesdays and Thursdays?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "When can students wear their Organizational Shirt uniform?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "I am a pregnant student; am I required to wear the prescribed uniform?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "Who must validate the medical certification for a pregnant student's uniform exemption?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "Can I wear my PE uniform during a lecture class?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "Are students allowed to use the Institute's logo on printed invitations without approval?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "Who must approve the use of the Institute's name and logo by student groups?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "Is wearing an organizational shirt allowed on a Wednesday if there is an approved activity?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "What uniform is appropriate for NSTP training days?",
+    "positive_chunk_id": "handbook_chunk_051"
+  },
+  {
+    "question": "What is the consequence of the 2nd loss of an ID?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "What documents are required to replace a lost ID?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "Is the 3rd loss of ID considered a minor offense?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "From which office must a student obtain a clearance form for a lost ID?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "Can a student enter the campus without their ID?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "What is the specific offense classification for the 3rd loss of ID?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "Does a student need to notarize their Affidavit of Loss for a lost ID?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "I lost my ID for the second time; is a parent conference required?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "Must the ID be worn at all times within the Institute premises?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "What sanction is the 3rd loss of ID subject to?",
+    "positive_chunk_id": "handbook_chunk_052"
+  },
+  {
+    "question": "What are the haircut requirements for male students?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "Are female students allowed to have colored highlights in their hair?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "I am a working student with a job-required hairstyle; what must I do?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "Is wearing colored nail polish allowed for students?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "What is the curfew time for students to vacate the campus?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "Are male students allowed to wear earrings?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "Who must approve a student staying on campus past 9:30 p.m.?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "What is prohibited regarding tattoos?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "Are students allowed to use gadgets during class hours?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "What constitutes the offense of 'Negligence' regarding ID loss in the previous chunk context?",
+    "positive_chunk_id": "handbook_chunk_053"
+  },
+  {
+    "question": "Is possession of deadly weapons considered a major offense?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "What classification of offense is 'Gross misconduct'?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "Is membership in an unrecognized student organization a punishable offense?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "Does being drunk inside the school premises constitute a major offense?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "Is fighting outside the school premises considered a major offense?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "What offense involves inflicting physical or emotional pain on a neophyte?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "Is disrespect to a faculty member a major offense?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "What is the consequence of preventing school employees from performing their duties?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "Does the code prohibit stopping classes through concerted activities?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "Is habitual intoxication listed as a major offense?",
+    "positive_chunk_id": "handbook_chunk_054"
+  },
+  {
+    "question": "Is plagiarism considered a major offense?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "What prior clearance is needed for student demonstrations?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "Is unauthorized use of the school ID a major offense?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "Does vandalism fall under major offenses?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "What offense involves the misuse of student funds?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "Is unauthorized solicitation of funds prohibited?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "Does falsification of school documents constitute a major offense?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "Is cheating in examinations a major offense?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "Can a student be punished for filing a false complaint against an employee?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "Is defamation of a school official considered a major offense?",
+    "positive_chunk_id": "handbook_chunk_055"
+  },
+  {
+    "question": "Is recording virtual classes without permission a major offense?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "What offense covers the violation of COVID-19 protocols?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "Is cyberbullying using ICT systems considered a major offense?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "Can a student be penalized for accessing unauthorized websites?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "Is organizing a concert inside the campus without approval a major offense?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "What is the policy on posting class videos in social media without authorization?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "Does indecent behavior during virtual class sessions fall under major offenses?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "Is defamation via social media punishable?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "Does the handbook prohibit instigating acts of bullying?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "Is 'inappropriate use of communication devices' listed as a major offense?",
+    "positive_chunk_id": "handbook_chunk_056"
+  },
+  {
+    "question": "Is failure to wear an ID inside the campus a minor or major offense?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "What classification of offense is littering?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "Are male students allowed to wear earrings under minor offenses?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "Is playing board games outside official activities prohibited?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "What offense is the third loss of ID classified as in this section?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "Is unauthorized changing of uniform inside the campus allowed?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "Does refusal to undergo random drug testing fall under minor offenses?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "Is bringing a pet to school a violation?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "Is copying from classmates during quizzes a major or minor offense?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "What is the classification for 'Entering the campus without ID'?",
+    "positive_chunk_id": "handbook_chunk_057"
+  },
+  {
+    "question": "What sanction is given for a first and second minor offense?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "Who must approve a suspension of more than three days?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "Is a suspension considered an excused or voluntary absence?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "Where is the warning/reprimand recorded?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "What does the sanction of suspension involve?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "Is a warning meted out in writing for minor offenses?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "What is the purpose of admonishing an erring student?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "Can a student be barred from a particular class as a sanction?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "Does a 2-day suspension require VPAA approval?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "What Article covers Disciplinary Sanctions?",
+    "positive_chunk_id": "handbook_chunk_058"
+  },
+  {
+    "question": "What are the two types of probationary status?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "How many major courses must a student fail to be placed under Academic Probation?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "What triggers Disciplinary Probation?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "How long does Academic Probation last?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "What is the minimum duration of Disciplinary Probation?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "How many times can a student be placed on probation before dismissal?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "I failed two minor courses; will I be on probation?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "Is the parent informed if a student is placed on probation?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "When is Academic Probation automatically lifted?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "Does the VPAA approve suspensions longer than 3 days (context check)?",
+    "positive_chunk_id": "handbook_chunk_059"
+  },
+  {
+    "question": "What sanction excludes a student from enrolling in the next semester?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "Does a student under Non-Readmission receive a Certificate of Good Moral Character?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "What sanction involves the immediate dropping of a student from the school rolls?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "When is the penalty of Dismissal applied?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "What document is issued to a dismissed student?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "Which committee recommends Non-Readmission?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "Is a counseling session required after lifting probation status?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "Can an erring student with a major offense finish the current semester under Non-Readmission rules?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "Does Dismissal require circumstances of extreme urgency?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "Who issues the communication regarding the lifting of probation?",
+    "positive_chunk_id": "handbook_chunk_060"
+  },
+  {
+    "question": "What is the definition of Expulsion?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "Who must approve the penalty of expulsion?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "Can a student be preventively suspended during an investigation for expulsion?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "What condition allows for preventive suspension?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "Is a student under expulsion penalty eligible for a Certificate of Good Moral Character?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "Who recommends the non-issuance of the Good Moral Character certificate for expelled students?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "Does expulsion exclude a student from admission to other schools?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "What office determines if a student's presence constitutes a distraction during investigation?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "Must the evidence of guilt be strong to impose preventive suspension?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "Is expulsion considered an extreme penalty?",
+    "positive_chunk_id": "handbook_chunk_061"
+  },
+  {
+    "question": "Can EARIST impose a fine as a penalty?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "Is the revocation of a degree a listed penalty?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "What is the sanction for graduating students who commit a major offense?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "Who recommends sanctions for erring graduating students?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "Can the Institute withhold a diploma as a disciplinary measure?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "How long does the school retain the right to take action against a violator?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "Who are violations reported to?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "Can an offense be annotated on a student's transcript of records?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "Is disqualification from further enrolling considered a penalty?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "Can a student be preventively suspended if they pose a danger to life?",
+    "positive_chunk_id": "handbook_chunk_062"
+  },
+  {
+    "question": "What principle must the procedure for redress conform to?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "What is the initial step for an aggrieved party?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "Where should psychological problems be referred?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "To whom should a written complaint for a minor offense be filed?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "Who handles written complaints for major offenses?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "Do students have the right to due process in disciplinary proceedings?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "Should sanctions consider the individual's capacity to learn from mistakes?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "Is amicable settlement encouraged?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "Who recommends the referral of psychological problems?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "Where should problems be solved as much as possible?",
+    "positive_chunk_id": "handbook_chunk_063"
+  },
+  {
+    "question": "Who handles a complaint by a student against a faculty member for academic concerns?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "Who handles complaints by a student against non-teaching personnel for administrative concerns?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "Where are complaints by a teacher against a student referred?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "Do parties in disciplinary proceedings have the right to counsel?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "What is the goal of the academic unit receiving a complaint?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "Who investigates if arbitration is not possible?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "To whom does the EARIST Grievance Committee submit recommendations?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "Is the decision of the Institute President final?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "Can the President's decision be appealed?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "Can a respondent present an affidavit to support their defense?",
+    "positive_chunk_id": "handbook_chunk_064"
+  },
+  {
+    "question": "What are Student Affairs and Services (SAS)?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "What is the task of SAS?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "Are there guidelines for flexible delivery of SAS programs?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "What constitutes Student Welfare Services?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "What is the purpose of Information and Orientation Services?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "Which CMOs are cited regarding SAS?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "Do SAS programs relate to student development?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "Where can the guidelines on flexible delivery be found?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "Does SAS help students interact with the educational environment?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "Are Student Welfare Services considered basic services?",
+    "positive_chunk_id": "handbook_chunk_065"
+  },
+  {
+    "question": "What information materials must the Institution provide?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "Who is the target audience for the regular comprehensive orientation program?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "Does the orientation include information on the nature of people with disabilities?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "Which Republic Act is the Anti-Bullying Act?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "What is RA 7877?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "Are materials available in different accessible formats?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "Does the handbook mention the Comprehensive Drugs Act?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "Is Gender and Development included in the information materials?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "What is RA 9512?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "Is the Anti-Hazing Law included in the information materials?",
+    "positive_chunk_id": "handbook_chunk_066"
+  },
+  {
+    "question": "What is the primary goal of Guidance and Counseling Services?",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "List three Guidance Services mentioned.",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "What is 'Counseling' defined as?",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "Which service involves gathering information about each individual student?",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "What is the purpose of Testing and Appraisal?",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "What is the 'Information' service in the context of guidance?",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "What activity is conducted to discover new knowledge?",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "Which service determines the status of a person who received assistance?",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "What does 'Referral' refer to?",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "Are Special Programs considered an adjunct service?",
+    "positive_chunk_id": "handbook_chunk_067"
+  },
+  {
+    "question": "What is the focus of Career and Job Placement Services?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "Are regular career seminars available for students?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "What document institutionalizes the link with industries?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "What does Economic Enterprise Development cater to?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "Is 'Student Loan' part of the Student Cooperatives?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "Can students engage in product selling under Economic Enterprise Development?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "Is event planning and management considered an entrepreneurial activity?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "What service involves rentals of books and laptops?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "Does the handbook mention photography as an entrepreneurial service?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "What is lay-outing services categorized under?",
+    "positive_chunk_id": "handbook_chunk_068"
+  },
+  {
+    "question": "Who checks the feasibility of a student organization's business enterprise?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "What must student organizations submit at the end of the year if granted a permit to operate?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "How often must a student organization re-apply for a business permit?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "How often is the Student Handbook revised?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "Must student organizations apply for permission to conduct business?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "Is the Financial Status report a requirement for re-application?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "What process involves developing and reviewing the student handbook?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "Are there mechanisms to develop the student handbook?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "Can a student organization operate a business without a permit?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "What office specifically checks the feasibility of the business enterprise?",
+    "positive_chunk_id": "handbook_chunk_069"
+  },
+  {
+    "question": "Who chairs the Committee on the revision of the student handbook?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "Who is the Co-Chair of the handbook revision committee?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "Is the ISG President a member of the revision committee?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "Who acts as the Consultant for the handbook revision?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "In what formats should the handbook be furnished to offices?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "Is the Director of SARRMS part of the committee?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "Are Deans included in the revision committee?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "Who ensures that concerned offices are furnished with the handbook?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "Is the Student Trustee a member of the committee?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "Can updates on certain provisions be included in the handbook?",
+    "positive_chunk_id": "handbook_chunk_070"
+  },
+  {
+    "question": "What defines Student Development Services?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "Which office organizes the Leadership Training?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "Who is the Leadership Training Seminar (LTS) intended for?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "Are student leaders given opportunities to attend leadership training outside the institute?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "What is the purpose of Student Organizations and Activities?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "Is the recognition of student groups part of Student Development Services?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "Does the Leadership Training Seminar cover elected officers?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "Are student leaders allowed to attend training based on invitations from different organizations?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "What services are designed for the enhancement of the student's full potential?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "Who supervises the accreditation of student groups?",
+    "positive_chunk_id": "handbook_chunk_071"
+  },
+  {
+    "question": "What is the highest student governing body in the Institute?",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "Who serves as a mediator between students and the administration?",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "List the officers in the Executive Board of the ISG.",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "Is there a 'Ways and Means Committee' in the ISG?",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "Who composes the Legislative Board of the ISG?",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "Does the ISG conduct regular consultations with students?",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "Who represents the Cavite Campus in the ISG Legislative Board?",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "Is the Grievance Committee part of the appointed committees in ISG?",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "What committee handles Socio-Cultural and Sports?",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "What is the role of the EARIST Student Government regarding student rights?",
+    "positive_chunk_id": "handbook_chunk_072"
+  },
+  {
+    "question": "How are members of the Executive Board elected?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "Are qualified officers entitled to re-election?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "What is the residency requirement for ISG officers?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "Must a candidate for officer be a bonafide student?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "Can a student with a past conviction of a crime run for office?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "What GPA is required for ISG officers?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "Is a minimum academic load required for officers?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "Can a student with a failing grade in the previous semester run for office?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "What is the term of office for all officers?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "Are representatives of the College Student Government part of the Legislative Board?",
+    "positive_chunk_id": "handbook_chunk_073"
+  },
+  {
+    "question": "What defines the College Student Government?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "Does obtaining a failing grade disqualify an officer?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "Can a student officer be disqualified for failure to enroll?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "Is the commission of a major offense grounds for disqualification?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "Does permanent psychological incapacity disqualify an officer?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "What GPA must an officer maintain to avoid disqualification?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "Is Student Discipline considered a Student Development Service?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "What governs the implementation of student discipline?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "If an officer obtains a failing grade during their term, are they disqualified?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "What article is referenced regarding Student Discipline?",
+    "positive_chunk_id": "handbook_chunk_074"
+  },
+  {
+    "question": "Which office supervises all student publications?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "What is the official yearbook of EARIST called?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "What facility caters to conferences and meetings?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "What activities are the Learning and Sharing Center designed for?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "Does the Learning and Sharing Center have audio-visual facilities?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "Is the student yearbook considered a student publication?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "Who oversees the judicious implementation of rules governing student behavior?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "What section covers the Learning and Sharing Center?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "Is the 'EARISTians' a journal or a yearbook?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "Does OSAS supervision extend to the official journal?",
+    "positive_chunk_id": "handbook_chunk_075"
+  },
+  {
+    "question": "What do Institutional Student Programs and Services respond to?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "What services handle the processing of entrance examination results?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "Which Republic Act is cited regarding admission accommodation for PWDs?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "Where should the list of tuition and other school fees be posted?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "Through which agency does the Institute provide scholarships?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "Are educational visits and field trips information required to be posted?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "Do admission requirements include consideration for persons with disabilities?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "Are stakeholders informed of the Institute's guidelines?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "Is housing a concern addressed by Institutional Student Programs?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "What article covers Scholarship and Financial Assistance details?",
+    "positive_chunk_id": "handbook_chunk_076"
+  },
+  {
+    "question": "What is the goal of Food Services at EARIST?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "Which government department's guidelines must Food Services follow?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "Who administers the Medical and Dental Services?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "Is the Entry Level Physical Examination for Freshmen a provided service?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "Does the medical service include cleaning of lacerated wounds?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "Is tooth extraction free for students?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "Where are emergency cases referred?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "Does the Institute provide adequate facilities for health care?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "What policy does the medical-dental program observe?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "Who must be notified in emergency cases referred to a hospital?",
+    "positive_chunk_id": "handbook_chunk_077"
+  },
+  {
+    "question": "Are all bonafide EARIST students covered by insurance?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "Who manages the external insurance policy?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "Where is the payment for the annual insurance premium taken from?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "Which office coordinates the student's personal accident insurance?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "Who ensures the safety and security of students?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "What agency provides the funds for the insurance premium according to the text?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "Does the School Physician coordinate on insurance matters?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "What is the purpose of Safety and Security Services?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "Are the security personnel required to be licensed?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "Is the insurance policy managed by a private company?",
+    "positive_chunk_id": "handbook_chunk_078"
+  },
+  {
+    "question": "Who is presumed to own assets found within the campus?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "What must a student do when bringing a laptop inside the Institute?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "Is the Security Office accountable for lost jewelry?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "Under what condition is the Security Office accountable for lost belongings?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "Who is responsible for personal properties like cellphones?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "What is required to take Institute equipment outside the campus?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "Who authorizes the gate pass for Institute equipment?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "Must personal items be reported to the IGP office as well?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "Is a student allowed to take borrowed equipment out without a gate pass?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "What documents are needed to prove ownership of assets found on campus?",
+    "positive_chunk_id": "handbook_chunk_079"
+  },
+  {
+    "question": "Can students enter the campus on Sundays to play basketball without authorization?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "Is smoking allowed inside the EARIST campus?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "What items are strictly prohibited inside the campus?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "What act is known as the 'Philippine Disaster Risk Reduction and Management Act of 2010'?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "Who prepares contingency plans for disaster risk reduction?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "Are fire drills conducted regularly?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "What is the function of the DRRMC?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "Are liquors allowed inside the campus?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "Is prior authority required for holiday campus entry for activities?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "Does the DRRM plan include persons with disabilities?",
+    "positive_chunk_id": "handbook_chunk_080"
+  },
+  {
+    "question": "What is the DRRMC tasked with regarding disasters?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "Does the Institute encourage students to use campus facilities for social activities?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "What is the consequence of unauthorized or careless use of equipment?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "Who conducts monitoring of student-athlete dormitories?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "What facilities are provided for students to express religious orientations?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "Which office assists in the accreditation of religious student organizations?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "Does the DRRMC have a contingency plan according to campus location?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "What services ensure access to safe accommodation?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "Are users charged fees for misuse of facilities?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "What does Inter-Faith Services refer to?",
+    "positive_chunk_id": "handbook_chunk_081"
+  },
+  {
+    "question": "Who assists foreign students with their academic needs?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "Does the Institute accommodate students with disabilities?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "Which office keeps records of students with disabilities?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "What programs are done for PWDs whenever necessary?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "What do Cultural and Arts Programs aim to promote?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "What does ECAD stand for?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "How does the Institute generate interest in cultural activities?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "Does the Institute provide referrals to specialists for special needs students?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "Who assists foreign students with non-academic needs?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "Are Indigenous people included in the programs for students with special needs?",
+    "positive_chunk_id": "handbook_chunk_082"
+  },
+  {
+    "question": "Who heads the Sports and Physical Development Office?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "To whom does the Sports and Physical Development Office Head report?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "Who formulates the Institute Sports and Physical Development Programs?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "Must a student-athlete be enrolled in an undergraduate program?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "What is the academic requirement regarding grades for old student-athletes?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "Is there an age limit for student-athletes?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "Whose governing rule determines the age limit for athletes?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "Can a student with a failed grade in the previous semester be selected as an athlete?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "Does ECAD design workshops?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "Is the Sports Office Head responsible for promoting sports programs?",
+    "positive_chunk_id": "handbook_chunk_083"
+  },
+  {
+    "question": "Are student-athletes eligible for a monthly allowance?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "Do student-athletes receive free uniforms?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "What is given to winners at local and international competitions?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "Are travel allowances provided during training?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "Is attendance to classes required for student-athletes?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "Who approves the mandatory training sessions for athletes?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "What happens if a student-athlete violates the Student Handbook?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "Is non-participation in practice grounds for forfeiture?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "Are student-athletes entitled to free seminars?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "Do student-athletes get free travel to local competitions?",
+    "positive_chunk_id": "handbook_chunk_084"
+  },
+  {
+    "question": "What happens if an athlete violates rules of a sports competition acknowledged by EARIST?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "Who plans the Institutional Intramurals?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "Who oversees the conduct of sports events?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "Are classes held during the duration of the Intramurals?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "Until what time are Intramural Night Activities allowed?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "What do Social and Community Involvement Programs aim to develop?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "Does the Institute encourage volunteerism?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "Who conducts the annual monitoring and evaluation of student affairs?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "What is the purpose of the evaluation of student affairs and services?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "Are evaluation instruments provided for the M&E of SAS?",
+    "positive_chunk_id": "handbook_chunk_085"
+  },
+  {
+    "question": "What law governs the creation of student organizations in the Institute?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "Which office has the authority to regulate student organizations?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "Can OSAS revoke the accreditation of a student organization?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "Who signs the Certificate of Recognition for a student organization?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "Who recommends members for SAS committees?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "Who appoints the members of SAS committees?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "Can OSAS intervene in conflicts within an organization?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "Who approves initiated co-extra-curricular activities?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "Must the ISG be consulted for the renewal of recognition?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "What is the purpose of creating committees under SAS?",
+    "positive_chunk_id": "handbook_chunk_086"
+  },
+  {
+    "question": "When is the application for accreditation of organizations done?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "How long is the processing of accreditation?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "How long is the recognition granted to organizations effective?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "To whom are applications for accreditation submitted?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "Who endorses the application for College Based Organizations?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "What form must be filled out by the faculty adviser for accreditation?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "Is a Master Plan of activities required for accreditation?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "What happens if a student group fails to meet the application deadline?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "Who comprises the Accreditation Board?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "Must the president of the organization be available for an interview?",
+    "positive_chunk_id": "handbook_chunk_087"
+  },
+  {
+    "question": "What is the consequence of failing to seek recognition for one school year?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "When should an accredited organization apply for renewal?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "How many copies of the Accomplishment Report are required for renewal?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "Who attests the Accomplishment Report for College Based Organizations?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "Who prepares the Accomplishment Report for Institutional Organizations?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "Are amendments to the Constitution required for renewal?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "Is the Master Plan of Activities required for renewal?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "Is the Faculty Adviser Conforme required for renewal?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "Does a non-recognized group lose the privilege to use Institute facilities?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "Who endorses the Accomplishment Report for Institutional Organizations?",
+    "positive_chunk_id": "handbook_chunk_088"
+  },
+  {
+    "question": "What is the mother organization of all existing student organizations?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "What is the primary function of the Institute Student Government regarding RSOs?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "What is 'Probationary Status' for an organization?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "What defines a 'Regular Status' organization?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "What characterizes College Based Organizations?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "What aspects do Institutional Organizations focus on?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "Can a certificate of recognition be revoked for violating the constitution?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "What must be observed before revocation of recognition?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "How many copies of program evaluation are needed for renewal?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "Who evaluates if an organization has performed satisfactorily?",
+    "positive_chunk_id": "handbook_chunk_089"
+  },
+  {
+    "question": "Who approves curricular and extra-curricular activities sponsored by RSOs?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "What form must be accomplished for a project proposal?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "Is a budgetary allocation required to be attached to the proposal?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "Who must note communications sent by Accredited Student Organizations to outside offices?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "Who approves solicitation letters?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "Who audits Accredited Student Organizations?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "Are student groups allowed to hold activities during major examinations?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "Who must be coordinated with regarding approved student activities?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "When must the Student Activity Performance Report be submitted?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "What is the penalty for failing to submit the activity report?",
+    "positive_chunk_id": "handbook_chunk_090"
+  },
+  {
+    "question": "When must the Student Activity Performance Report be submitted?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "What is the penalty for failing to submit the Activity Performance Report?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "What three financial/report documents are required after an activity?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "Who must approve an off-campus or overnight activity?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "Is a notarized parental waiver required for off-campus activities?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "Who must attend all off-campus activities of a recognized student organization?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "What should be done if the faculty adviser cannot attend an off-campus activity?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "How many days in advance must SAS be informed of an adviser replacement?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "What is the ideal ratio of faculty advisers to student participants for off-campus activities?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "Does an off-campus activity require compliance with CHED requirements?",
+    "positive_chunk_id": "handbook_chunk_091"
+  },
+  {
+    "question": "What is the ideal faculty-to-student ratio for off-campus activities mentioned in this section?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "Who approves fund-raising activities?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "How many days before the activity must a fund-raising application be submitted?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "What documents must accompany the fund-raising application letter?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "Who endorses the fund-raising application for academic organizations?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "Must the beneficiaries of the fund-raising be identified in the application?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "Is a resolution from organization officers required for fund-raising?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "When is the audited financial report of a fund-raising activity due?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "Who must certify the financial report of a fund-raising activity?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "Can the Director of SAS re-audit the financial report?",
+    "positive_chunk_id": "handbook_chunk_092"
+  },
+  {
+    "question": "What right does the Director of SAS reserve regarding financial reports?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "Who designates the faculty adviser for college-based organizations?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "Who designates the faculty adviser for institutional organizations?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "What is the residency requirement for a faculty adviser?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "How long is the term of a faculty adviser?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "Can a faculty adviser's term be renewed?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "What happens if a faculty adviser withdraws before the term expires?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "What is the qualification for an adviser of a curricular organization?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "What is the qualification for an adviser of an extra-curricular organization?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "How many organizations can a faculty member advise?",
+    "positive_chunk_id": "handbook_chunk_093"
+  },
+  {
+    "question": "Is a faculty member allowed to advise more than one organization?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "Who must be notified of all student organization activities?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "Who must be notified of changes in the set of officers?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "What privilege is granted to recognized student organizations?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "Are non-accredited organizations allowed to collect membership fees?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "Is the collection of membership fees mandatory for enrollment?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "What is the maximum membership fee for College-Based Organizations?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "Who clears the collection of other fees?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "Who must approve an increase in membership fees?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "Who must report the total number of members of the organization?",
+    "positive_chunk_id": "handbook_chunk_094"
+  },
+  {
+    "question": "Who approves income-generating projects like t-shirt sales?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "At what accumulated amount must an organization open a bank account?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "Where should the student organization's bank account be opened?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "Who are the authorized signatories for a student organization's bank account?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "Who is the co-signatory for Institutional Organizations?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "To whom must student organizations submit financial statements?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "Who is responsible for monitoring the security and disbursement of funds?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "What document is required prior to any fund withdrawal?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "Who notes the financial statements submitted to OSAS and FMS?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "Can a regular faculty member be a co-signatory for a college-based organization?",
+    "positive_chunk_id": "handbook_chunk_095"
+  },
+  {
+    "question": "To whom should financial liabilities of officers be paid?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "What action should current officers take against past officers with pending liabilities?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "If past officers settle liabilities, who receives the fund?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "Where are posters and notices allowed to be posted?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "Who authorizes the location for posting notices?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "Who is answerable for complaints regarding posted materials?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "What must be identified in the posters approved by OSAS?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "What is the consequence of violating Institute rules for an organization?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "Is filing a case with the Grievance Committee a step for resolving financial liability?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "Can posters be placed anywhere on campus?",
+    "positive_chunk_id": "handbook_chunk_096"
+  },
+  {
+    "question": "Are proponents of posters liable for complaints?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "What happens to an organization's recognition if rules are violated?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "Do CHED policies supersede provisions in the handbook?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "Where are SAS announcements posted?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "How should documents for accreditation be submitted?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "Is the official email of OSAS used for student activity proposals?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "What section covers the adoption of National Policies?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "Are laws issued by CHED adopted by the Institute?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "Does the Institute use social media for service delivery?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "Can an organization be withdrawn for rule violations?",
+    "positive_chunk_id": "handbook_chunk_097"
+  },
+  {
+    "question": "Where are SAS announcements posted?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "How are student activity proposals submitted?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "What award is given for outstanding academic performance like Summa Cum Laude?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "Is 'Outstanding Student Organization' considered a Service Award?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "Are there awards for Research?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "What incentive is given for National Recognition in PRC examinations?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "Is recognition given for Skills Competitions?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "What category of award does 'Outstanding Leader' fall under?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "Are Cultural Awards available?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "Does the Institute provide monetary incentives?",
+    "positive_chunk_id": "handbook_chunk_098"
+  },
+  {
+    "question": "Does the Institute uphold the student's right to free expression?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "What is the Institute's policy on student publications?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "Are students encouraged to undertake publications for constructive criticism?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "Who are the primary clientele of student publications?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "Does the student publication strive to foster goodwill?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "What office coordinates student publications?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "Who proposes rules for the management of publications?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "What types of printed matters are covered by 'student publication'?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "Is a newsletter considered a student publication?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "Does the publication aim to promote intellectual excellence?",
+    "positive_chunk_id": "handbook_chunk_099"
+  },
+  {
+    "question": "Is the yearbook considered a student publication?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "Who appoints the Publication Chief?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "Who recommends the Publication Chief for appointment?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "Who appoints the Technical Adviser?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "Who recommends the Technical Adviser?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "How many nominees must the Board of Editors submit for the adviser position?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "Who endorses the adviser nominees to the President?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "Who appoints the language critics' consultant?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "Does the Institute President appoint the Technical Adviser directly without recommendation?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "Who submits the three nominees for publication adviser?",
+    "positive_chunk_id": "handbook_chunk_100"
+  },
+  {
+    "question": "How is the printing of the Student Publication conducted?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "Who conducts the canvass or bidding for the printing of the Student Publication?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "Where are the honoraria of the Editorial Board and staff charged?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "Is the Technical Adviser's honoraria charged to the publication fund?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "What office provides software for E-Publication conversion?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "What CMO is complied with regarding the conversion to E-Publication?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "What are the sources of funding for the Student Publication?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "When are subscription fees for the Student Publication collected?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "Can revenues from advertisements fund the Student Publication?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "Are donations and grants considered sources of funding for the publication?",
+    "positive_chunk_id": "handbook_chunk_101"
+  },
+  {
+    "question": "What specific expenses can the Student Publication funds be used for?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "Who determines the publication fees?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "Who must approve the publication fees?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "What type of bank account is required for the Student Publication?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "Who are the student signatories for the publication's bank account?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "Who is the co-signatory from the administration for the publication's bank account?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "To whom must the Student Publication submit financial statements?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "What law must the Editorial Policy comply with?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "What are the penalties for violating publication policies?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "Which committee handles appropriate action for extreme cases of publication violations?",
+    "positive_chunk_id": "handbook_chunk_102"
+  },
+  {
+    "question": "What is the definition of Interfaith Services?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "Does the Institution respect the establishment of religion?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "Is a religious test required for the exercise of civil and political rights?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "What is the condition for the free exercise of religious profession?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "What is the Interfaith character of the Institute Chapel reserved for?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "Can classrooms be used by religious groups without permission?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "What does the Institute promote regarding the faithful on campus?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "From whom must permission be sought for religious groups to use facilities?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "Is discrimination allowed in the enjoyment of religious worship?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "What does the Institute encourage to build a just and human society?",
+    "positive_chunk_id": "handbook_chunk_103"
+  },
+  {
+    "question": "What is the requirement for every proposed cultural program/activity?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "Who must give prior clearance for every cultural program?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "Which office recommends cultural programs to the President?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "Through which division should a cultural program request be submitted?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "What documents must be submitted by a proponent of a cultural activity?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "Who acts upon the letter of request for cultural programs?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "What details must be included in the letter of request for a cultural program?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "Is the source of funding required in the cultural program submission?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "Does the IGP Office play a role in the submission process for cultural activities?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "Must the letter of request bear the signature of the authorized representative?",
+    "positive_chunk_id": "handbook_chunk_104"
+  },
+  {
+    "question": "According to Article XIV, what must every proposed cultural program be in pursuit of?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "Who provides prior clearance for cultural programs under Article XIV?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "Who recommends cultural programs in Article XIV?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "To whom must a student submit a request for a cultural program?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "Through which division is the cultural program request submitted in Article XIV?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "Is a tentative program required for submission under Article XIV?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "Must the production staff list be included in the submission?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "Are budget estimates required for cultural program proposals in Article XIV?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "Does the IGP Office receive submissions according to Article XIV?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "Can a bonafide faculty member submit a cultural program request?",
+    "positive_chunk_id": "handbook_chunk_105"
+  },
+  {
+    "question": "What should a student understand when sharing EARIST's information on social media?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "Who has the right to request the removal of content from an official social media account?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "What condition must be met for permission to post digital materials?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "Whose signature must all digital announcements bear?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "To whom are signed announcements endorsed for posting?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "What standards must digital materials not violate?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "Is the press considered a public trust?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "What Act is mentioned regarding the role of the student press?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "Does the Institute encourage students to share news on official social media accounts?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "Can content be removed if it poses a risk to the reputation of an employee?",
+    "positive_chunk_id": "handbook_chunk_106"
+  },
+  {
+    "question": "Who must sign announcements before they are posted on bulletin boards?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "Where should announcements be posted?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "Who authorizes locations for posting aside from bulletin boards?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "What standards must posters adhere to regarding ethical morals?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "Who is responsible for the removal of posters after they serve their purpose?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "Who is liable for any damage to the posting place?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "Who reserves the right to decide which announcements are approved for posting?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "Is a permit required to install a banner or tarpaulin?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "Should posters indicate the name of the responsible group?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "Must posters be neat and clean?",
+    "positive_chunk_id": "handbook_chunk_107"
+  },
+  {
+    "question": "From which office must one secure a permit to use the EARIST Logo?",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "Is the use of a strikingly similar seal to EARIST's prohibited without a permit?",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "Where should approval be sought for selling products with the EARIST logo?",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "List three items considered as institutional collateral.",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "Are jackets and t-shirts considered souvenir items?",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "Does the regulation cover institutional advertisements like billboards?",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "Are electronic ads included in the approval requirement?",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "Is approval required for using the logo on letterheads?",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "What office handles the approval for the use of EARIST trademarks on merchandise?",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "Can an organization use the EARIST logo on brochures without a permit?",
+    "positive_chunk_id": "handbook_chunk_108"
+  },
+  {
+    "question": "What is the role of the Office of the International Affairs Service (OIAS)?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "Which CHED Memorandum Order mandates the functions of OIAS?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "What Act is implemented by the Exchange Visitors Program?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "What is the purpose of the Cultural Exchange Program?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "How does the handbook define 'Study abroad'?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "What is an 'Academic Short Course' defined as?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "Does OIAS coordinate student mobility?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "Is OIAS responsible for international internship matters?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "Who are the participants mentioned in the Cultural Exchange Program?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "Can an academic program lead to a certificate?",
+    "positive_chunk_id": "handbook_chunk_109"
+  },
+  {
+    "question": "What is the duration of an International Internship?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "What is the primary activity in an International Internship?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "Can an International Internship be conducted in a government agency abroad?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "What is the purpose of the International Internship regarding the academic degree?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "When does the Student Handbook take effect?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "Who must approve the Student Handbook for it to be effective?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "Who is covered by the policies and regulations in the handbook?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "Is study abroad defined as a program usually run through a university?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "Does an academic short course lead to a major or minor?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "Can international internship be done in commercial services?",
+    "positive_chunk_id": "handbook_chunk_110"
+  },
+  {
+    "question": "Who is the Chairperson-Designate of the EARIST Board of Trustees?",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Who is the Vice-Chair of the EARIST Board of Trustees?",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Who represents the Senate Committee on Education, Arts, and Culture in the Board?",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Who is the DOST-NCR Director member of the Board?",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Name a Private Sector Representative in the EARIST Board of Trustees.",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Who represents the EARIST Alumni Association, Inc. in the Board?",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Who is the NEDA representative in the Board?",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Who is the President of the EARIST-ISG Federated in the Board?",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Who serves as the College and Board Secretary?",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Who represents the House Committee on Higher and Technical Education?",
+    "positive_chunk_id": "handbook_chunk_111"
+  },
+  {
+    "question": "Who is the President of EARIST?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Vice President for Academic Affairs?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Vice President for Production, Research, Extension and International Affairs?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Dean of the College of Architecture and Fine Arts?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Dean of the College of Arts and Sciences?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Dean of the College of Business and Public Administration?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Dean of the College of Education?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Dean of the College of Engineering?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Dean of the College of Industrial Technology?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Dean of the College of Hospitality and Tourism Management?",
+    "positive_chunk_id": "handbook_chunk_112"
+  },
+  {
+    "question": "Who is the Dean of the College of Criminal Justice Education?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Dean of the Graduate School?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Director of Student Admission and Records Management Services?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Administrator of the EARIST Cavite Campus?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Director of Instruction Services?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Director of Student Affairs and Services?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Director of the National Services Training Program?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Director of Research Development and Production?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Director of Extension & External Affairs?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Director of Quality Assurance Services?",
+    "positive_chunk_id": "handbook_chunk_113"
+  },
+  {
+    "question": "Who is the Director of Management Information?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Who is the Director of Information and Public Affairs Services?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Who is the Director of International Affairs?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Who is the Director of Planning Service?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Who is the Director of Management Internal Control Audit Services?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Who is the Chief of Quality Assurance?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Who is the Director of Library Service?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Who is the Chief of Physical Education, Sports Development & Athletes Services?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Who holds the position of Executive Assistant to the President?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Is there a position for Chief, Quality Assurance listed?",
+    "positive_chunk_id": "handbook_chunk_114"
+  },
+  {
+    "question": "Who is the Chief of the Culture and Arts Division?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of Counseling & Testing Service?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of Accounting Services?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of Human Resource Management Services?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of Budget Service?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of Cash and Disbursement Service?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of the Payroll Section?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of Procurement Service?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of Physical Plant & Janitorial Service?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of Transportation and Motor pool Service?",
+    "positive_chunk_id": "handbook_chunk_115"
+  },
+  {
+    "question": "Who is the Chief of Security Service?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Who is the Chief of Records Service?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Who is the Chief of Medical and Dental Service?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Who is the Chief of Information Hardware Services?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Who is the Chief of Institutional Infrastructure Planning and Development Office?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Who is listed as the College & Board Secretary?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Is the position of Chairman, EARIST Grievance Committee mentioned?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Who is Arch. Maundelito S. Florendo?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Who is Mr. Ferdinand Dp. Alvaro?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Who is Mr. Pedro Rommel D. Kirong?",
+    "positive_chunk_id": "handbook_chunk_116"
+  },
+  {
+    "question": "Who is the Chair of the committee listed in this section?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "Who is the Co-Chair of the committee?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "Who is the Chief, Publication and Yearbook listed as a Facilitator?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "Who is the Leadership Coordinator listed as a Facilitator?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "Who is the Scholarship Coordinator listed as a Facilitator?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "Who is Mr. Larex Tagalog in the committee?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "What is the position of Dr. Frederick C. Pena in the committee?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "What is the position of Ms. Agnes F. Amorin in the committee?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "Who is Mr. Virgel E. Diamante?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "Who is Mr. Raymond Dp. Cansino?",
+    "positive_chunk_id": "handbook_chunk_117"
+  },
+  {
+    "question": "Who is the Director of Instruction Services listed as a member?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "Who is the Dean of CAFA listed as a member?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "Who is the Dean of CAS listed as a member?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "Who is the Dean of CBPA listed as a member?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "Who is the Dean of CED listed as a member?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "Who is the Student Trustee listed as a member?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "Who is the ISG President, Manila Campus listed as a member?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "Who is the Consultant of the committee?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "Who is the Dean of CEN listed as a member?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "Who is the Administrator of ECC listed as a member?",
+    "positive_chunk_id": "handbook_chunk_118"
+  },
+  {
+    "question": "What is the title of the EARIST music?",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "Complete the line: 'Let the EARIST music fill the ____'.",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "Complete the line: 'EARIST your name is in our ____'.",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "What does the EARIST Hymn say we pledge to stand by?",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "What is the title of the Tagalog song lyrics provided?",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "Complete the line from Inang Paaralan: 'Ating lilisanin ____'.",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "Complete the line: 'Paaralan Inang ____'.",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "Complete the line: 'Inang paaralan, Rodriguez, naming ____'.",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "How does the EARIST Hymn end?",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "What will 'always spark' according to the EARIST Hymn?",
+    "positive_chunk_id": "handbook_chunk_119"
+  },
+  {
+    "question": "What is the title of the pledge?",
+    "positive_chunk_id": "handbook_chunk_120"
+  },
+  {
+    "question": "To whom does the student pledge loyalty?",
+    "positive_chunk_id": "handbook_chunk_120"
+  },
+  {
+    "question": "What does the student promise to hold high?",
+    "positive_chunk_id": "handbook_chunk_120"
+  },
+  {
+    "question": "What does the student promise to keep?",
+    "positive_chunk_id": "handbook_chunk_120"
+  },
+  {
+    "question": "What does the student strive to share?",
+    "positive_chunk_id": "handbook_chunk_120"
+  },
+  {
+    "question": "What is necessary in the reconstruction of the nation's economy according to the pledge?",
+    "positive_chunk_id": "handbook_chunk_120"
+  },
+  {
+    "question": "What does the student resolve to dedicate themselves to?",
+    "positive_chunk_id": "handbook_chunk_120"
+  },
+  {
+    "question": "To whose well-being does the student dedicate themselves?",
+    "positive_chunk_id": "handbook_chunk_120"
+  },
+  {
+    "question": "With what sense of responsibility does the student resolve to dedicate themselves?",
+    "positive_chunk_id": "handbook_chunk_120"
+  },
+  {
+    "question": "What is the definition of 'Absent' in the handbook?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "What term refers to the number of subjects or courses enrolled by a student?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "What is 'Accreditation' based on?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "What is the definition of 'Admission'?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "What is a 'Baccalaureate Degree'?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "What term describes a group of students usually instructed together?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "What does 'Cross Enroll' mean?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "Who is the person appointed in charge of the colleges?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "What is the definition of 'Curriculum'?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "What term refers to the withdrawal of a course within a given period?",
+    "positive_chunk_id": "handbook_chunk_121"
+  },
+  {
+    "question": "What is a 'Dropped Grade'?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "What term defines the act of forcing someone to leave with justifiable cause?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "Who is considered a 'Freshman'?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "What is an 'Incomplete Grade'?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "What do 'Institutional Student Programs and Services' respond to?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "Who is an 'Irregular Student'?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "What year level is a 'Junior' student?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "What is a 'Failed Grade'?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "What term refers to an amount of money paid in a given semester?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "What is a 'Final Examination'?",
+    "positive_chunk_id": "handbook_chunk_122"
+  },
+  {
+    "question": "What does 'Midterm Examination' mean?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "What are 'Paying Students'?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "What is 'Probation' defined as?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "What does 'Rectification of grades' mean?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "What is a 'Returnee'?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "What is the definition of 'Scholarship'?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "Who is a 'Senior' student?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "What does 'Shifter' mean?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "What are 'Miscellaneous' fees?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "What defines a 'Refund'?",
+    "positive_chunk_id": "handbook_chunk_123"
+  },
+  {
+    "question": "What year level is a 'Sophomore'?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "Who is a 'Special Student'?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "What services are included in 'Student Affairs and Services (SAS)'?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "What do 'Student Welfare Services' ensure?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "What is 'Substitution'?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "What is the definition of 'Suspension'?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "What does 'Tenure' refer to?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "Who is a 'Transferee'?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "What is 'Tuition'?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "What does 'Modular' relate to?",
+    "positive_chunk_id": "handbook_chunk_124"
+  },
+  {
+    "question": "What does the abbreviation 'CWTS' stand for?",
+    "positive_chunk_id": "handbook_chunk_125"
+  },
+  {
+    "question": "What does 'CSG' stand for?",
+    "positive_chunk_id": "handbook_chunk_125"
+  },
+  {
+    "question": "What is the full meaning of 'EARISTCAT'?",
+    "positive_chunk_id": "handbook_chunk_125"
+  },
+  {
+    "question": "What does 'FMS' stand for?",
+    "positive_chunk_id": "handbook_chunk_125"
+  },
+  {
+    "question": "What is the abbreviation for 'General Weighted Average'?",
+    "positive_chunk_id": "handbook_chunk_125"
+  },
+  {
+    "question": "What does 'INC' stand for in the list of abbreviations?",
+    "positive_chunk_id": "handbook_chunk_125"
+  },
+  {
+    "question": "What is the 'NSTP'?",
+    "positive_chunk_id": "handbook_chunk_125"
+  },
+  {
+    "question": "What does 'SARRMS' stand for?",
+    "positive_chunk_id": "handbook_chunk_125"
+  },
+  {
+    "question": "What is the meaning of 'VPAA'?",
+    "positive_chunk_id": "handbook_chunk_125"
+  },
+  {
+    "question": "What does 'VPREIA' stand for?",
+    "positive_chunk_id": "handbook_chunk_125"
+  }
+]
