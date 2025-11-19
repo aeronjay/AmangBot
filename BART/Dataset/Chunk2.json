@@ -1,0 +1,1520 @@
+[
+  {
+    "id": "earist_handbook_structure_2021",
+    "source": "Student Handbook 2021",
+    "category": "Table of Contents",
+    "topic": "Handbook Structure and Scope",
+    "content": "The EARIST Student Handbook 2021 is structured to provide comprehensive guidelines for students. It begins with the history and mission statements of the institution. The handbook details Curricular Offerings across the Main Campus colleges and the Cavite Campus. Key policy sections include Article I (Admission Policy), Article II (Academic Policies), Article III (Payment and Refund of Fees), Article IV (Scholarship and Financial Assistance), and Article V (Rights and Responsibilities of Students). Furthermore, it covers the Code of Conduct and Discipline (Article VI), Disciplinary Sanctions (Article VII), and procedures for grievance settlements. The document also outlines guidelines for Student Affairs (SAS), Student Organizations, Campus Publications, Religious Activities, and International Affairs.",
+    "keywords": [
+      "table of contents",
+      "handbook structure",
+      "policy overview",
+      "guidelines",
+      "articles"
+    ]
+  },
+  {
+    "id": "earist_history_main_campus",
+    "source": "Student Handbook 2021",
+    "category": "History of EARIST",
+    "topic": "Institutional History and Legal Basis",
+    "content": "The Eulogio \"Amang\" Rodriguez Institute of Science and Technology (EARIST) was established following the liberation of Manila in 1945, originally named the Eulogio Rodriguez Vocational High School (ERVHS). On July 1, 1946, the institute acquired its present site in Nagtahan, Sampaloc, Manila. The institution's evolution is defined by three major legislative acts. Republic Act No. 4072 (1964) authorized the Technical Education Department. Republic Act No. 5088 (1967) renamed the school to Eulogio \"Amang\" Rodriguez Memorial School of Arts and Trades (EARMSAT). Republic Act No. 6595 (1972) converted EARMSAT into EARIST, making it a full-fledged college. Presidential Decree No. 1524 (1978) further converted EARIST into a Chartered State College with a Board of Trustees. The current President is Dr. Editha V. Pillo as of 2021. EARIST is currently rated as a Level II State University College (SUC) and a Level II Comprehensive Teaching and Baccalaureate University.",
+    "keywords": [
+      "history",
+      "ERVHS",
+      "EARMSAT",
+      "Republic Act 6595",
+      "Presidential Decree 1524",
+      "Nagtahan",
+      "Editha V. Pillo",
+      "SUC Level II"
+    ]
+  },
+  {
+    "id": "earist_history_cavite_campus",
+    "source": "Student Handbook 2021",
+    "category": "History of EARIST",
+    "topic": "History of EARIST Cavite Campus",
+    "content": "The EARIST Cavite Campus, originally known as the General Alvarez School of Arts and Trades (GASAT), was established via Board Resolution No. 007-82 on March 24, 1982. This resolution approved the opening of GASAT as an EARIST branch in General Mariano Alvarez, Cavite, with funding from the EARIST budgetary allotment. In 1983, the National Housing Authority donated a 31,282 square meter lot for the school site. The groundbreaking for the main building occurred on March 2, 1990, led by Dr. Lydia Macaraig Profeta. Construction was funded largely through congressional insertions from Congressman Renato P. Dragon, totaling over PHP 42 million for phases I-X between 1989 and 1999. Additionally, a Multi-Purpose Sports Complex Gymnasium was completed in 1999 with appropriations from Speaker Jose C. De Venecia, Jr.",
+    "keywords": [
+      "Cavite Campus",
+      "GASAT",
+      "General Mariano Alvarez",
+      "Renato P. Dragon",
+      "Board Resolution 007-82",
+      "infrastructure"
+    ]
+  },
+  {
+    "id": "earist_mission_vision_goals",
+    "source": "Student Handbook 2021",
+    "category": "Mission Statements",
+    "topic": "Vision, Mission, Goal, and Objectives",
+    "content": "The strategic direction of EARIST is defined by its Vision, Mission, Goal, and Objectives. The Vision states that EARIST is envisioned to be a center of excellence in trades, business, arts, science, and technology education. The Mission is to turn out vocationally, technically, technologically, and scientifically trained graduates who will be economically productive, self-sufficient, effective, responsible, and disciplined citizens of the Philippines. The institutional Goal is to provide professional, scientific, technological, technical, and vocational instruction while promoting research, advanced studies, and progressive leadership. To achieve this, the Objectives include striving for academic excellence through accreditation, providing continuing faculty and staff development, maintaining appropriate instructional facilities and technologies, producing globally competitive graduates, and attaining university status through unity and teamwork.",
+    "keywords": [
+      "vision",
+      "mission",
+      "objectives",
+      "center of excellence",
+      "strategic direction",
+      "graduates",
+      "academic excellence"
+    ]
+  },
+  {
+    "id": "earist_offerings_main_cafa_cas",
+    "source": "Student Handbook 2021",
+    "category": "Curricular Offerings",
+    "topic": "Programs in Architecture, Fine Arts, and Arts & Sciences (Main Campus)",
+    "content": "Under the Curricular Offerings for the Main Campus, the College of Architecture and Fine Arts (CAFA) and the College of Arts and Sciences (CAS) provide specific degree programs. The College of Architecture and Fine Arts (CAFA) offers the Bachelor of Science in Architecture (BS ARCHI.), Bachelor of Science in Interior Design (BSID), and Bachelor of Fine Arts (BFA). The BFA program includes majors in Painting and Visual Communication. The College of Arts and Sciences (CAS) offers the Bachelor of Science in Applied Physics with Computer Science Emphasis (BSAP), Bachelor of Science in Computer Science (BSCS), Bachelor of Science in Information Technology (BS INFO. TECH.), Bachelor of Science in Psychology (BSPSYCH), and Bachelor of Science in Mathematics (BSMATH).",
+    "keywords": [
+      "CAFA",
+      "CAS",
+      "Architecture",
+      "Interior Design",
+      "Fine Arts",
+      "Computer Science",
+      "Psychology",
+      "Applied Physics",
+      "Information Technology"
+    ]
+  },
+  {
+    "id": "earist_offerings_main_cbpa_chtm_ccje",
+    "source": "Student Handbook 2021",
+    "category": "Curricular Offerings",
+    "topic": "Programs in Business, Public Admin, Tourism, and Criminology (Main Campus)",
+    "content": "At the Main Campus, the College of Business and Public Administration (CBPA) offers the Bachelor of Science in Office Administration (BSOA), Bachelor of Science in Entrepreneurship (BSEntrep), and Bachelor in Public Administration (BPA). Additionally, the Bachelor of Science in Business Administration is offered with majors in Marketing Management and Human Resource Management. The College of Hospitality and Tourism Management (CHTM) provides the Bachelor of Science in Tourism Management (BST) and Bachelor of Science in Hospitality Management (BSHM). The College of Criminal Justice Education offers the Bachelor of Science in Criminology (BSCrim).",
+    "keywords": [
+      "CBPA",
+      "CHTM",
+      "Business Administration",
+      "Public Administration",
+      "Tourism",
+      "Hospitality Management",
+      "Criminology",
+      "Marketing",
+      "HR"
+    ]
+  },
+  {
+    "id": "earist_offerings_main_ced",
+    "source": "Student Handbook 2021",
+    "category": "Curricular Offerings",
+    "topic": "Programs in Education (Main Campus)",
+    "content": "The College of Education (CED) at the Main Campus offers various teacher education programs. These include the Bachelor in Secondary Education (BSE) with majors in Filipino, Mathematics, and Science. The College also offers the Bachelor of Technology and Livelihood Education (BTLEd) with majors in Home Economics and Industrial Arts. Furthermore, the CED provides the Bachelor of Special Needs Education (BSNEd) and a Professional Education / Subjects (TCP) program consisting of 18 units.",
+    "keywords": [
+      "CED",
+      "Education",
+      "Secondary Education",
+      "BSE",
+      "BTLEd",
+      "Special Needs",
+      "TCP",
+      "Teaching"
+    ]
+  },
+  {
+    "id": "earist_offerings_main_cen",
+    "source": "Student Handbook 2021",
+    "category": "Curricular Offerings",
+    "topic": "Programs in Engineering (Main Campus)",
+    "content": "The College of Engineering (CEN) at the Main Campus offers a suite of Bachelor of Science degrees. The engineering programs available are Bachelor of Science in Chemical Engineering (BSChE), Bachelor of Science in Civil Engineering (BSCE), Bachelor of Science in Electrical Engineering (BSEE), Bachelor of Science in Electronics and Communications Engineering (BSECE), Bachelor of Science in Mechanical Engineering (BSME), and Bachelor of Science in Computer Engineering (BSCoE).",
+    "keywords": [
+      "CEN",
+      "Engineering",
+      "Chemical",
+      "Civil",
+      "Electrical",
+      "Electronics",
+      "Mechanical",
+      "Computer Engineering"
+    ]
+  },
+  {
+    "id": "earist_offerings_main_cit",
+    "source": "Student Handbook 2021",
+    "category": "Curricular Offerings",
+    "topic": "Programs in Industrial Technology (Main Campus)",
+    "content": "The College of Industrial Technology (CIT) at the Main Campus offers the Bachelor of Science in Industrial Technology (BSIT). This degree program includes various specialized majors: Automotive Technology, Electrical Technology, Electronics Technology, Food Technology, Fashion Apparel Technology, Industrial Chemistry, Drafting Technology, Machine Shop Technology, and Refrigeration and Air-conditioning.",
+    "keywords": [
+      "CIT",
+      "Industrial Technology",
+      "Automotive",
+      "Electronics",
+      "Food Tech",
+      "Drafting",
+      "Machine Shop",
+      "HVAC"
+    ]
+  },
+  {
+    "id": "earist_offerings_main_graduate_school",
+    "source": "Student Handbook 2021",
+    "category": "Curricular Offerings",
+    "topic": "Graduate School Programs (Main Campus)",
+    "content": "The Graduate School at the Main Campus offers Master's and Doctoral programs. Master's degrees include Master of Science in Mathematics, Master of Arts in Industrial Psychology, Master in Business Administration (MBA), and Master in Public Administration (MPA). The Master of Arts in Industrial Education is offered with a major in Hotel Management. The Master of Arts in Education includes majors in Administration and Supervision, Guidance & Counseling, and Special Education. The Master of Arts in Teaching offers majors in Electronics Technology, Mathematics, and Science. Doctoral degrees include Doctor of Philosophy in Industrial Psychology, Doctor of Education in Educational Management, Doctor in Business Administration, and Doctor in Public Administration.",
+    "keywords": [
+      "Graduate School",
+      "Masters",
+      "Doctorate",
+      "MBA",
+      "MPA",
+      "PhD",
+      "EdD",
+      "Industrial Psychology",
+      "Educational Management"
+    ]
+  },
+  {
+    "id": "earist_offerings_cavite_campus",
+    "source": "Student Handbook 2021",
+    "category": "Curricular Offerings",
+    "topic": "EARIST Cavite Campus Programs",
+    "content": "The EARIST Cavite Campus offers Graduate, Post-Baccalaureate, and Undergraduate programs. The Graduate Program includes the Doctor in Education (Major in Educational Management), Master of Arts in Education (Major in Administration and Supervision), and Master in Business Administration. The Post-Baccalaureate Program offers Professional Education / Subjects (18 units). Undergraduate offerings include Bachelor of Science degrees in Business Administration (Marketing Management), Computer Science, Computer Technology, Criminology, Hospitality Management, Office Administration, and Industrial Psychology. Additionally, the campus offers the Bachelor of Technology and Livelihood Education and the Bachelor of Science in Industrial Technology with majors in Automotive, Electrical, Electronics, Food Technology, and Drafting Technology.",
+    "keywords": [
+      "Cavite Campus",
+      "GASAT",
+      "Cavite Graduate School",
+      "Cavite Undergraduate",
+      "Industrial Technology Cavite",
+      "Computer Technology"
+    ]
+  },
+  {
+    "id": "article_i_admission_policy_qualifications_requirements",
+    "source": "Student Handbook 2021",
+    "category": "Article I - Admission Policy",
+    "topic": "General Admission Policy and Documentary Requirements",
+    "content": "Under Article I, Admission Policy, the admission of all students to EARIST is primarily based on academic preparedness, including entrance examination results, personal interviews, academic records, and character evaluation. Admission for freshmen and transferees operates on a first-come-first-served basis, dependent on available resources such as rooms and faculty. \n\nEligible freshmen include Grade 12 graduates (CMO No. 105, s. 2017) and Senior High School Alternative Learning System (ALS) Accreditation and Equivalency passers. Transferees are preferably admitted if they have no 'Dropped', 'Incomplete', or 'Failed' grades, subject to slot availability. Foreign students who graduated abroad but have not enrolled in international HEIs are also eligible.\n\n**Documentary Requirements:**\n* **Freshmen:** Form 138 (Report Card), Certificate of Good Moral Character, PSA Authenticated Birth Certificate, EARISTCAT Result, Dean's Assessment Result, and Medical/Health Examination.\n* **Transferees:** Transcript of Records/Certification of Grades, Certificate of Good Moral Character, Dean's Assessment Result, Recommendation from the previous Dean or Guidance Counselor, Transfer Credential/Honorable Dismissal, EARISTCAT result, and Medical/Health Examination.\n* **Foreign Students:** Notarized affidavit of support, proof of financial support, and equivalent High School Diploma.",
+    "keywords": [
+      "admission requirements",
+      "freshmen qualifications",
+      "transferee requirements",
+      "foreign students",
+      "Form 138",
+      "ALS passers"
+    ]
+  },
+  {
+    "id": "article_i_screening_process_levels_1_and_2",
+    "source": "Student Handbook 2021",
+    "category": "Article I - Admission Policy",
+    "topic": "Screening Levels 1 and 2 (EARISTCAT and Interview)",
+    "content": "Under Article I, the EARIST screening process consists of three levels. \n\n**Screening Level 1: EARIST College Admission Test (EARISTCAT).** \nThe test is administered by the Guidance and Counselling Office. The transmutation formula for the EARISTCAT rating is: `(Total Score x 50 / No. Of Items) + 50`. Applications are processed by the Student Admission, Registration and Records Management Services (SARRMS).\n\n**Screening Level 2: College Admission Interview.** \nThis interview assesses the candidate's leadership potential, determination, career choice, and communication skills. The interviewer is typically the chairperson or faculty of the program. \n* **Special Requirement:** Applicants for Architecture and Fine Arts must undergo a Drawing Ability Test (DAT).\n* Each college defines its own evaluation rubric. The interviewer's evaluation is final and unappealable.",
+    "keywords": [
+      "EARISTCAT",
+      "screening process",
+      "admission interview",
+      "Drawing Ability Test",
+      "DAT",
+      "SARRMS",
+      "computation"
+    ]
+  },
+  {
+    "id": "article_i_screening_level_3_program_preparedness",
+    "source": "Student Handbook 2021",
+    "category": "Article I - Admission Policy",
+    "topic": "Screening Level 3: Program Preparedness Test (PPT)",
+    "content": "Under Article I, Screening Level 3 involves the Program Preparedness Test (PPT). These are placement examinations designed to assess competency in specific skills or disciplines required for technical programs. \n\n**Applicable Programs:** The PPT applies to applicants for BS Architecture, BS Applied Physics, BS Mathematics, BS Computer Science, BS Information Technology, BS Psychology, BS Civil Engineering, BS Chemical Engineering, BS Computer Engineering, BS Electronics and Communications Engineering, BS Electrical Engineering, and BS Mechanical Engineering.\n\n**Conditional Admission:** Students who score lower than the pre-determined cut-off score in the PPT may be conditionally admitted. These students must enroll in and pass an Enhancement Program consisting of one to two enhancement courses during their first year. Students who do not meet the score requirements for their first-choice program are advised to apply for their second choice.",
+    "keywords": [
+      "Program Preparedness Test",
+      "PPT",
+      "conditional admission",
+      "enhancement program",
+      "placement exam",
+      "engineering admission"
+    ]
+  },
+  {
+    "id": "article_i_admission_cutoff_scores_table",
+    "source": "Student Handbook 2021",
+    "category": "Article I - Admission Policy",
+    "topic": "Admission and Readmission Cut-off Scores",
+    "content": "Under Article I, the decision on student applications is based on specific percentage cut-offs for Admission, Overall Assessment, and Readmission. \n\n* **College of Architecture and Fine Arts (CAFA):** BS Architecture requires 80.00% or better for admission (Readmission cut-off: lower than 75.00%). BS Interior Design requires 70.00% or better (Readmission cut-off: lower than 50.00%).\n* **College of Arts and Sciences (CAS):** BS Computer Science requires 75.00% or better. BS Information Technology requires 77.00% or better. BS Applied Physics requires 60.00% or better.\n* **College of Business Administration (CBA):** BS Office Administration (BSOA) requires 55.00% or better for admission.\n* **College of Education (CED):** BS Education programs require 80.00% or better for admission.\n* **College of Engineering (CEN):** BS Civil Engineering requires 85.00% or better (Readmission cut-off: lower than 70.00%). BS Mechanical Engineering requires 70.00% or better.\n* **College of Hospitality Management (CHM):** BS Tourism (BST) requires 75.00% or better (Readmission cut-off: lower than 65.00%).",
+    "keywords": [
+      "cut-off scores",
+      "readmission requirements",
+      "grading requirements",
+      "CAFA",
+      "CAS",
+      "CEN",
+      "engineering cut-off"
+    ]
+  },
+  {
+    "id": "article_i_enhancement_courses_conditional",
+    "source": "Student Handbook 2021",
+    "category": "Article I - Admission Policy",
+    "topic": "Enhancement Courses for Conditionally Admitted Students",
+    "content": "Under Article I, students conditionally admitted due to low Program Preparedness Test (PPT) scores must take specific enhancement courses. \n\n* **BS Architecture:** If the Mathematics PPT score is below 60%, the student must take REMMCRTA (5 units/5 hours).\n* **BS Applied Physics:** If the Critical Thinking PPT score is below 60%, the student must take REMMCRIC (3 units/3 hours).\n* **BS Computer Science:** Students must take REMMCOPHI (Moral Philosophy, 3 units/3 hours).\n* **BS Civil Engineering:** If the 'Mathematics for College Readiness 1' PPT score is below 70%, the student must take REMMCRTA (5 units/5 hours).\n* **BS Mechanical Engineering:** Students taking 'Mathematics for College Readiness 2' must take REMMCRSA (5 units/5 hours).\n* **College of Business Admin (All Courses):** If the Accounting PPT score is below 60%, the student must take GENACONT (3 units/3 hours).",
+    "keywords": [
+      "enhancement courses",
+      "conditional admission",
+      "remedial classes",
+      "REMMCRTA",
+      "GENACONT",
+      "PPT scores"
+    ]
+  },
+  {
+    "id": "article_i_transferees_pledge_inclusivity_readmission",
+    "source": "Student Handbook 2021",
+    "category": "Article I - Admission Policy",
+    "topic": "Transferee Policies, Inclusivity, and Readmission",
+    "content": "Under Article I, the Institute mandates specific policies for transferees, inclusivity, and readmission.\n\n**Inclusivity:** Applicants meeting minimum requirements cannot be deferred based on handicap/disability (RA 7277; RA 9442) or Indigenous Cultural Community status (RA 8371).\n\n**Transferee Policies:** \nAdmission depends on slot availability. Courses from previous schools are credited upon evaluation of the Official Transcript of Records by the Department Chairperson and Registrar. Transferees following the *old curriculum* do not need the Bridging Program. Transferees following the *new curriculum* must enroll in and pass additional general education subjects identified in the Bridging Program for Lifelong Learners.\n\n**Pledge:** Every student must sign a pledge and waiver of data privacy. Violation is cause for denial of admission or dismissal.\n\n**Readmission:** Students returning from a Leave of Absence (LOA) require: (1) A copy of the Approved LOA, (2) Evaluation Record Form from the Registrar, and (3) Admission Recommendation from the College Dean.",
+    "keywords": [
+      "transferee crediting",
+      "bridging program",
+      "lifelong learners",
+      "indigenous peoples",
+      "PWD",
+      "readmission",
+      "LOA",
+      "pledge"
+    ]
+  },
+  {
+    "id": "article_ii_sec_1_registration_procedures",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Registration Procedure and General Rules",
+    "content": "Under Article II Academic Policies, Section 1 outlines the Registration Procedure. A student must be officially registered to receive credit for course work. The standard registration procedure for new students involves the following steps: (1) Issuance of the Notice of Admission from the Office of the Dean or Campus Administrator; (2) Submission of original requirements to the Registrar's Office; (3) Pre-enrollment and issuance of a Student number; (4) Validation of Fees at the Financial Management Services Office; (5) Payment at the Cashier's Office for paying or opt-out students; and (6) Validation of the Certificate of Registration by the Registrar's Office. \n\nRegistration is considered complete when the \"Copy for Student\" portion of the registration certificate is signed by the student, stamped \"ENROLLED\", and initialed by the enrollment officer. Late registration is prohibited later than the date specified in the school calendar, except under reasonable circumstances determined by the Dean and approved by the Vice President for Academic Affairs (VPAA), but never more than two weeks from the start of classes. Additionally, the Institute does not accept applications for a second baccalaureate degree, and students are prohibited from enrolling in more than one college to earn multiple degrees simultaneously.",
+    "keywords": [
+      "registration steps",
+      "late registration",
+      "enrollment procedure",
+      "second degree",
+      "certificate of registration",
+      "validation"
+    ]
+  },
+  {
+    "id": "article_ii_sec_1_cross_enrollment",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Cross Enrollment Policies",
+    "content": "Under Article II Academic Policies, Section 1 establishes the rules for Cross Enrollment. \n\n**Cross Enrollment to Another School:**\nA student may cross-enroll in another school only upon favorable endorsement by the Dean or Campus Administrator and the issuance of a permit by the Registrar. Conditions for cross-enrollment include: (1) The specific course is not offered at EARIST; (2) The maximum load for cross-enrollment is six (6) units; (3) The Registrar's Office prepares the form for the student to present to the chosen school; and (4) The Registrar's Office must receive a copy of the approved request.\n\n**Cross Enrollment into EARIST:**\nStudents from other institutions cannot be admitted as cross-enrollees without written permission from the Registrar's Office of their originating school. This permit must state the total number of units and the course description of the subject the student is authorized to take at EARIST.",
+    "keywords": [
+      "cross enrollment",
+      "permit to study",
+      "registrar",
+      "unit limit",
+      "external students"
+    ]
+  },
+  {
+    "id": "article_ii_sec_2_academic_load",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Academic Load and Overload Rules",
+    "content": "Under Article II Academic Policies, Section 2 defines the Academic Load for students. \n\n**Regular and Minimum Load:**\nA student must carry the regular load prescribed in their curricular program. Students are not allowed to carry less than half of the regular load unless they have academic deficiencies, are graduating that semester, or if required courses are unavailable.\n\n**Maximum Load and Overload:**\nThe maximum academic units for regular terms correspond to the program checklist. Overloading is permitted only under specific conditions: (1) The overload does not exceed 6 units above the regular load; (2) The subjects are back courses or courses without pre-requisites; and (3) The overload is recommended by the Dean and approved by the Vice President for Academic Affairs (VPAA). Additional units must not conflict with training schedules.\n\n**Intersession (Summer) Load:**\nFor intersession classes, the regular load is 6 units. A student may enroll in an additional 3 units (totaling 9 units) only if the subjects are back courses or courses without pre-requisites.",
+    "keywords": [
+      "academic load",
+      "overload",
+      "intersession",
+      "summer classes",
+      "back subjects",
+      "residency",
+      "units"
+    ]
+  },
+  {
+    "id": "article_ii_sec_3_changing_substitution_dropping",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Changing, Substituting, and Dropping Courses",
+    "content": "Under Article II Academic Policies, Section 3 outlines procedures for course adjustments. \n\n**Changing Classes:**\nStudents may apply to change a class (subject/schedule) due to schedule conflicts, dissolved subjects, or enrollment errors by filing a College Advisement Slip signed by the Area Chairperson and Dean.\n\n**Substitution of Courses:**\nSubstitution requires recommendation by the Program Chairperson, endorsement by the Dean and Registrar, and approval by the VPAA. It is authorized if a curriculum is superseded or a course is not offered. Substitute courses must have the same or higher number of units and be substantially similar in scope. Substitution is not allowed for mandated courses or failed major courses (unless the substitute is substantially similar in scope).\n\n**Dropping Courses:**\nA student may drop a course by completing SARRMS Form No. 007, endorsed by the Dean for VPAA approval. All forms regarding substitution, adding, changing, and dropping must be submitted only during the adjustment period specified in the school calendar.",
+    "keywords": [
+      "dropping subjects",
+      "substitution",
+      "SARRMS Form 007",
+      "adjustment period",
+      "changing classes",
+      "advisement slip"
+    ]
+  },
+  {
+    "id": "earist_classification_freshmen_returnees_shifters",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Classification: Freshmen, Returnees, and Shifters",
+    "content": "Under Article II Academic Policies, Section 4 classifies students based on their admission status. \n\n**Beginning Freshmen** are students admitted through the EARIST College Admission Test (EARIST-CAT) who have not enrolled in any college or course prior to their enrollment at the Institute. They must submit all required documents to the Dean's Office and Registrar's Office for formal acceptance.\n\n**Returning Students (Returnees)** are former students qualified for readmission based on available slots and an evaluation of their previous academic performance by the Dean or Campus Administrator.\n\n**Shifting Students (Shifters)** are those moving within the same college or transferring to a different college within EARIST. \n* **Same College Shifting:** Requires a letter to the Dean or Campus Administrator justifying the intent to shift.\n* **Different College Shifting:** Requires a letter to the receiving Dean (recommended by the current Dean) and a Clearance approved by the current Dean proving good moral standing and no obligations. \n* **General Requirements:** All shifters must satisfy the receiving college's grade requirements and there must be an available slot.",
+    "keywords": [
+      "Beginning Freshmen",
+      "Returnees",
+      "Shifters",
+      "readmission",
+      "shifting requirements",
+      "clearance"
+    ]
+  },
+  {
+    "id": "earist_classification_transferees",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Classification: Transferring Students",
+    "content": "Under Article II Academic Policies, Section 4.1.4 outlines the rules for Transferring Students (Transferees).\n\n**Internal Transfers (Cavite to Manila and vice versa):** Students may be admitted as transferees upon the recommendation of the EARIST Cavite Campus (ECC) Administrator, subject to slot availability and compliance with admission requirements.\n\n**External Transfers (From Another School):** Students from other schools may be admitted based on slot availability and compliance with the Institute's academic and admission requirements. Subjects taken at the previous school may be credited upon submission of the Official Transcript of Records. These records are evaluated by the Department Chairpersons and the Registrar's Office using Form No. SARRMS C-1.",
+    "keywords": [
+      "Transferees",
+      "Cavite Campus transfer",
+      "SARRMS C-1",
+      "credit evaluation",
+      "external transfer"
+    ]
+  },
+  {
+    "id": "earist_classification_load_year_level",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Classification by Academic Load and Year Level",
+    "content": "Under Article II Academic Policies, Section 4 classifies students according to Academic Load and Year Level.\n\n**By Academic Load:**\n* **Regular Student:** Registered for formal credits and carries the full load required for the semester.\n* **Irregular Student:** Registered for formal credits but carries less than the full load.\n* **Special Student:** Not earning formal academic credits or enrolled in the Special Opportunity Program.\n\n**By Year Level:**\n* **Freshman:** 1st year of curriculum or has finished less than 25% of total program units.\n* **Sophomore:** 2nd year of curriculum or has finished between 25% and 50% of total program units.\n* **Junior:** 3rd year of curriculum or has finished between 50% and 75% of total program units.\n* **Senior:** 4th year of curriculum or has finished 75% or more of total program units.\n* **Fifth Year:** In Engineering, Architecture, and Fine Arts, a student is considered a senior if they have completed at least 80% of the curricular requirement.",
+    "keywords": [
+      "Regular Student",
+      "Irregular Student",
+      "Freshman",
+      "Sophomore",
+      "Junior",
+      "Senior",
+      "Fifth Year status"
+    ]
+  },
+  {
+    "id": "earist_classification_pwd_special_needs",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Support for Students with Special Needs/PWD",
+    "content": "Under Article II Academic Policies, Section 4.4 mandates the provision of modified educational facilities and equipment for students with special needs or Persons with Disabilities (PWDs), in accordance with CHED Memo 30 s. 2009 and the Accessibility Law (Batas Pambansa Bilang 344).\n\n* **Visual Impairment:** Sensory/tactile materials, Braille books/machines, and orientation/mobility equipment.\n* **Hearing Impairment:** Hearing aids, speech trainers, tape recorders, and language kits.\n* **Orthopedic Handicaps:** Compliance with the Accessibility Law, including adjustable desks/chairs and adapted physical education apparatuses.\n* **Other Needs (Behavioral, Autistic, Learning Disabilities):** Instructional devices for behavioral modification, perceptual motor training, and cognitive skills development.",
+    "keywords": [
+      "PWD",
+      "Special Needs",
+      "Accessibility Law",
+      "Braille",
+      "Hearing Impairment",
+      "Orthopedic Handicap",
+      "SPED support"
+    ]
+  },
+  {
+    "id": "earist_attendance_policies",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Attendance, Tardiness, and Absences",
+    "content": "Under Article II Academic Policies, Section 5 establishes the Attendance Policy. Students are required to attend all classes from the first meeting. \n\n**Absence and Tardiness:**\n* A student is **absent** if they are not present within the first 1/6 fraction of the scheduled class time.\n* A student is **tardy** if they arrive within that first 1/6 fraction. \n* **Specific Thresholds:** Late arrival constitutes an absence after 30 minutes (3-hour class), 20 minutes (2-hour class), 15 minutes (1.5-hour class), or 10 minutes (1-hour class).\n* Three incidences of tardiness equal one absence.\n\n**Sanctions and Procedures:**\n* **20% Rule:** A student absent for more than 20% of the scheduled hours in a semester shall be automatically dropped from the class roll.\n* **Reporting:** Three successive unexcused absences trigger a report to the College Prefect of Discipline and notification of parents.\n* **Excuses:** Absences due to illness require a medical certificate verified by the Institute Medical Office. Students with excused absences must comply with class requirements within a reasonable period.",
+    "keywords": [
+      "attendance policy",
+      "tardiness",
+      "dropping due to absence",
+      "20% rule",
+      "excuse slip",
+      "medical certificate"
+    ]
+  },
+  {
+    "id": "article_ii_sec_6_grading_system_scale",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Grading System and Numerical Equivalents",
+    "content": "Under Article II Academic Policies, Section 6 establishes the numerical grading system used to evaluate student academic performance. The grading scale is as follows:\n\n* **1.00:** 97-100% (Highly Excellent)\n* **1.25:** 94-96% (Excellent)\n* **1.50:** 91-93% (Very Superior)\n* **1.75:** 88-90% (Superior)\n* **2.00:** 85-87% (Very Good)\n* **2.25:** 82-84% (Good)\n* **2.50:** 79-81% (Satisfactory)\n* **2.75:** 76-78% (Fair)\n* **3.00:** 75% (Passed)\n* **5.00:** Below 75% (Failed)\n\nNon-numerical grades include **INC** (Incomplete), **DRP** (Dropped Officially/Unofficially), and **NC** (No Credit). Grades are assigned solely by the Faculty Member connected to the subject, or by the Area Chairperson if the faculty member is no longer connected with the Institute. A student who receives a passing grade is prohibited from taking another examination to improve their grade.",
+    "keywords": [
+      "grading scale",
+      "passing grade",
+      "failing grade",
+      "1.00",
+      "3.00",
+      "5.00",
+      "numerical system"
+    ]
+  },
+  {
+    "id": "article_ii_sec_6_incomplete_inc_no_credit_nc",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Incomplete (INC) and No Credit (NC) Grades",
+    "content": "Under Article II Academic Policies, Section 6 details the policies for Incomplete (INC) and No Credit (NC) grades. \n\n**Incomplete (INC):** An INC is a temporary grade given when illness or reasons beyond control prevent a student from completing requirements. To remove an INC, the student must accomplish SARRMS Form No. 006. This must be completed within the next two (2) semesters; otherwise, the grade automatically becomes \"5.0\" (Failed). Removal of INC grades is free of charge. The Area Chairperson may act on INC grades with Dean approval if the original faculty member is retired, resigned, unresponsive, missing, disabled, or deceased.\n\n**No Credit (NC):** The NC grade is restricted to specific scenarios: (1) OJT/Internship/Practicum of graduating students; (2) Thesis writing of graduating students; or (3) Exceptional/Special students not earning formal academic credit.",
+    "keywords": [
+      "INC",
+      "Incomplete grade",
+      "completion period",
+      "SARRMS Form 006",
+      "No Credit",
+      "NC",
+      "thesis grading"
+    ]
+  },
+  {
+    "id": "article_ii_sec_6_dropped_drp_status",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Dropped (DRP) Status",
+    "content": "Under Article II Academic Policies, Section 6 defines the Dropped status. A grade of Dropped is given to a student who voluntarily withdraws from a course by filing a dropping form. This must be done no later than two weeks before the mid-term examination. Alternatively, a faculty member may drop a student from the roll if the student exceeds the allowable number of absences.",
+    "keywords": [
+      "Dropped",
+      "DRP",
+      "voluntary withdrawal",
+      "excessive absences",
+      "mid-term deadline"
+    ]
+  },
+  {
+    "id": "article_ii_sec_6_rectification_of_grades",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Rectification and Change of Grades",
+    "content": "Under Article II Academic Policies, Section 6 outlines the procedure for changing grades. A change may be initiated by a teacher or student due to calculation or recording errors.\n\n**Timelines and Procedure:**\n* **Within 5 Days:** Faculty may amend grades without a paper trail or petition form during the rectification period (5 days after the posting deadline).\n* **6 to 10 Days:** Faculty must secure a Petition Form for Rectification of Grade from the Registrar. Requirements include an Affidavit/Sworn Statement, Class Record, Report of Grades, and the Student's Certificate of Registration. The process moves from the Department Head to the Dean, then to the Vice President for Academic Affairs (VPAA), and finally to the Institute President.\n* **After 10 Days:** Petitions must go through the Committee on Rectification of Grades.\n\n**Committee Composition:** The Committee is chaired by the Director of Instruction Services and includes the Directors of SARRMS and SAS, the concerned Dean, Chairperson, and Faculty Club President.",
+    "keywords": [
+      "change of grade",
+      "rectification",
+      "petition form",
+      "grade appeal",
+      "Committee on Rectification",
+      "VPAA"
+    ]
+  },
+  {
+    "id": "article_ii_sec_7_retention_probation_warnings",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Retention Policies: Probation and Warnings",
+    "content": "Under Article II Academic Policies, Section 7 describes retention rules regarding warnings and probation. \n\n**Warnings:** A student with a failing grade receives a warning from the Dean and is referred to Counseling. Their load for the succeeding semester is reduced (e.g., one less subject for one failure).\n\n**Freshman Probation:** Freshmen who incur failures in three (3) or more courses (or one-half of their load) in the first semester may enroll under probation for the second semester, limited to courses authorized by the Dean.\n\n**Probation Rules:** Students on probation must not fail or drop any subject and must avoid disciplinary cases. A student is allowed to be on probation only twice. Failure to lift the second probation renders the student ineligible for enrollment in the succeeding semester.",
+    "keywords": [
+      "retention policy",
+      "probation",
+      "freshmen retention",
+      "academic warning",
+      "load reduction",
+      "two probation limit"
+    ]
+  },
+  {
+    "id": "article_ii_sec_7_retention_dismissal_delinquency",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Retention Policies: Dismissal and Delinquency",
+    "content": "Under Article II Academic Policies, Section 7 mandates the dismissal of students with unsatisfactory performance. \n\n**Dismissal Criteria:**\n* **Old Students:** Those with failures in three (3) or more courses, or five (5) cumulative dropped subjects at the end of any term, will not be readmitted. This also applies to students with failures equivalent to one-half of their load.\n* **Repeated Failure:** Students who fail and/or withdraw (authorized or unauthorized) three times in the same specific course will be dropped from the roll.\n* **Percentage Rule (College Level):** A student obtaining final grades of \"5.00\" in 40% to 75% of their total academic units will be dropped from the roll of the concerned College.\n* **Percentage Rule (Institute Level):** A student obtaining \"5.00\" in more than 75% of their academic units is permanently disqualified from readmission to the Institute.\n\n**Computation Notes:** INC grades are not included in delinquency computations until replaced by a final grade. Failed pre-requisites take precedence in succeeding enrollments.",
+    "keywords": [
+      "dismissal",
+      "scholastic delinquency",
+      "permanent disqualification",
+      "three strikes rule",
+      "percentage rule",
+      "dropped from roll"
+    ]
+  },
+  {
+    "id": "article_ii_sec_8_tenure_residency",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Tenure and Residency Limits",
+    "content": "Under Article II Academic Policies, Section 8 establishes the tenure limits for completing academic programs. \n\n**Regular Students:** A regular student must finish the academic program within the prescribed number of years. A grace period of two semesters (one year) is allowed.\n\n**Athletics Scholars:** Scholars may finish a 4-year degree within five years and a 5-year degree within six years. A grace period of two semesters (one year) is allowed.\n\n**Working Students:** Working students are permitted to finish the program within a period equivalent to one and one-half (1.5) times the normal length of the prescribed residence.\n\n**Computation of Tenure:** If a student is officially granted a Leave of Absence (LOA) for one year, this leave is excluded from the tenure computation. However, unofficial LOAs are charged against the student's tenure. Non-compliance with prescribed tenure limits is grounds for non-admission.",
+    "keywords": [
+      "tenure",
+      "residency limit",
+      "working student load",
+      "athletics scholar",
+      "grace period",
+      "maximum residency"
+    ]
+  },
+  {
+    "id": "article_ii_sec_8_leave_of_absence_loa",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Leave of Absence (LOA) Guidelines",
+    "content": "Under Article II Academic Policies, Section 8 outlines the Leave of Absence (LOA) protocols. A student must apply for an LOA to temporarily separate from the Institute for non-academic and non-disciplinary reasons. The student must be in good standing at the time of the request.\n\n**Restrictions and Duration:** Enrolling in another school during an LOA is prohibited. The LOA is normally secured only once during a student's entire stay and usually does not exceed one academic year. Extensions may be approved by the Dean but cannot exceed two years; otherwise, residency status is lost.\n\n**Procedure:** Applications must be approved by the Dean or Campus Administrator and submitted to the Registrar. Any student intending to take a leave exceeding one semester must file a written petition. Students returning from LOA are covered by the curriculum currently in effect. \n\n**Unauthorized Withdrawal:** A student who withdraws without a formal LOA loses their status as a student in residence and must re-apply as a new student.",
+    "keywords": [
+      "Leave of Absence",
+      "LOA",
+      "awol",
+      "residency status",
+      "returning student"
+    ]
+  },
+  {
+    "id": "article_ii_sec_8_honorable_dismissal",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Honorable Dismissal",
+    "content": "Under Article II Academic Policies, Section 8 describes Honorable Dismissal. An Honorable Dismissal is a document issued by the Registrar to a student who voluntarily withdraws from the Institute for the purpose of transferring to another school. To obtain this, the student must accomplish clearance from all accountabilities with the Institute. Students who are issued an Honorable Dismissal shall not be readmitted to EARIST.",
+    "keywords": [
+      "Honorable Dismissal",
+      "transferring out",
+      "clearance",
+      "voluntary withdrawal"
+    ]
+  },
+  {
+    "id": "article_ii_sec_9_graduation_requirements",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Graduation Requirements",
+    "content": "Under Article II Academic Policies, Section 9 details the Graduation Requirements. A candidate must file an application for graduation with the Registrar's Office and satisfy all academic and prescribed requirements. \n\n**Transferees:** Transfer students are not allowed to graduate unless they have earned more than 50% of the required academic units at EARIST.\n\n**Deficiencies and Clearance:** Candidates must clear deficiencies and accountabilities not later than the date specified in the academic calendar or before the end of their last semester. No diploma or Transcript of Records (TOR) will be issued to a student who has not been cleared of all accountabilities.",
+    "keywords": [
+      "graduation requirements",
+      "diploma issuance",
+      "residency for graduation",
+      "transfer student graduation",
+      "accountabilities"
+    ]
+  },
+  {
+    "id": "article_ii_sec_10_graduation_with_honors",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Graduation with Honors (Latin Honors)",
+    "content": "Under Article II Academic Policies, Section 10 specifies the criteria for Graduation with Honors. The Dean and College Registrar recommend candidates based on the following Cumulative Grade Point Average (CGPA) ranges: \n\n* **Summa cum Laude:** 1.0000 to 1.2500\n* **Magna cum Laude:** 1.2501 to 1.5000\n* **Cum Laude:** 1.5001 to 1.7500\n\n**Computation:** The final average includes all accredited academic courses, including P.E. and NSTP.\n\n**Disqualifications and Requirements:** To qualify, a student must:\n1.  Carry the normal load and complete the program within the prescribed years (4 or 5 years).\n2.  Complete at least 75% of academic units at EARIST.\n3.  Maintain residency for at least three years prior to graduation.\n4.  Have no final grade lower than 2.25 in any course (academic or non-academic).\n5.  Have NO grades of Incomplete, Dropped, or 5.0 (Failed) in any course.\n6.  Have not repeated a course from another educational institution.",
+    "keywords": [
+      "Latin Honors",
+      "Summa cum Laude",
+      "Magna cum Laude",
+      "Cum Laude",
+      "honors disqualification",
+      "GPA requirements"
+    ]
+  },
+  {
+    "id": "article_ii_sec_11_scholastic_delinquency_warning_probation",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Scholastic Delinquency: Warning and Probation",
+    "content": "Under Article II Academic Policies, Section 11 defines Scholastic Delinquency, categorizing it into Warning and Probation levels.\n\n**Warning:** \n* A student obtaining final grades of \"5.00\" in three (3) courses (accumulated or otherwise) receives a warning.\n* A student with \"Incomplete\" marks in 16% to 30% of their total academic units receives a warning and a 3-unit load reduction.\n\n**Probation:**\n* A student with a previous failing grade who accumulates another failure in the succeeding semester is placed on probation.\n* Accumulating five (5) failing grades results in automatic probation and load reduction.\n* Probation is lifted once the student passes all subjects in the following semester.\n\n**Dismissal from College vs. Institute:**\n* **College Dismissal:** Students on probation for two successive semesters are dropped from their College but may be readmitted to a different College if qualified.\n* **Institute Dismissal:** A student on probation who fails 50% or more of their total units in the succeeding semester is dropped from the rolls of the Institute entirely.",
+    "keywords": [
+      "scholastic delinquency",
+      "probation",
+      "dismissal",
+      "academic warning",
+      "load reduction",
+      "failing grades"
+    ]
+  },
+  {
+    "id": "article_ii_sec_12_ojt_internship_guidelines",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Guidelines for OJT, Practicum, and Internship",
+    "content": "Under Article II Academic Policies, Section 12 outlines the requirements for On-the-Job Training (OJT), Practicum, Internship, and Practice Teaching. Students must officially enroll in the practicum or equivalent course and maintain good academic standing, having completed all pre-requisite subjects in accordance with CMO No. 23, series of 2009. Additionally, students must be certified as physically, mentally, and emotionally fit by the school physician. Students who are currently enrolled in additional academic subjects (major or minor courses) are generally prohibited from training outside the school. However, exceptions are made for specialized programs if the subject schedule does not conflict with training hours and the student accomplishes the required SARRMS form. In-house training is permitted for students with simultaneous academic loads. Ladderized programs with OJT components are allowed based on college requirements, and all trainees must strictly abide by the existing training manual of their respective Department or College.",
+    "keywords": [
+      "OJT",
+      "internship",
+      "practice teaching",
+      "practicum",
+      "medical clearance",
+      "ladderized program",
+      "training manual"
+    ]
+  },
+  {
+    "id": "article_ii_sec_13_learning_management_system",
+    "source": "Student Handbook 2021",
+    "category": "Article II - Academic Policies",
+    "topic": "Learning Management System (LMS) and Flexible Learning",
+    "content": "Under Article II Academic Policies, Section 13 mandates the implementation of a Learning Management System (LMS) pursuant to Board Resolution No. 352-2020, which approved the Guidelines on Implementation of Flexible Learning for S.Y. 2020-2021. Faculty members are required to utilize flexible, blended, and other alternative teaching and learning approaches to connect with students. These instructional delivery methods include both Online delivery and Offline Delivery modes, ensuring continuity of education through the Institute's approved platforms.",
+    "keywords": [
+      "LMS",
+      "flexible learning",
+      "blended learning",
+      "online delivery",
+      "offline delivery",
+      "Board Resolution 352-2020"
+    ]
+  },
+  {
+    "id": "article_iii_sec_1_2_tuition_fees_charges",
+    "source": "Student Handbook 2021",
+    "category": "Article III - Payment and Refund of Fees",
+    "topic": "General Provisions on Fees and Payment Schedule",
+    "content": "Under Article III Payment and Refund of Fees, Sections 1 and 2 establish that the EARIST Board of Trustees fixes tuition and other school charges (such as matriculation, graduation, and laboratory fees) in consultation with involved sectors, subject to Republic Act No. 8292 and Republic Act No. 10931. For the majority of students, educational expenses are free as stipulated in R.A. 10931 (Universal Access to Quality Tertiary Education Act). For 'Payee Students' (those not covered by free tuition), total matriculation fees include tuition, miscellaneous, and other fees. These fees may be paid in cash or on an installment basis, with terms determined by the Financial Management Services. The Institute charges a fixed amount per unit/hour, though laboratory fees vary by subject. The Institute is also mandated to adopt mechanisms for online payment of fees.",
+    "keywords": [
+      "tuition fees",
+      "RA 10931",
+      "free tuition",
+      "payee students",
+      "installment basis",
+      "matriculation fees"
+    ]
+  },
+  {
+    "id": "article_iii_sec_3_withdrawal_refund_policy",
+    "source": "Student Handbook 2021",
+    "category": "Article III - Payment and Refund of Fees",
+    "topic": "Withdrawal and Refund of Fees Policy",
+    "content": "Under Article III Payment and Refund of Fees, Section 3 outlines the guidelines for the withdrawal and refund of fees, which are primarily applicable to Graduate Programs and students not covered by free tuition laws. Tertiary students who have availed of the Free Tuition Fee and other charges under Republic Act No. 10931 are prohibited from refunding tuition, entrance, and examination/testing fees. This no-refund policy for R.A. 10931 beneficiaries applies regardless of whether the student attended classes or not.",
+    "keywords": [
+      "refund policy",
+      "withdrawal of fees",
+      "RA 10931 refund",
+      "graduate program fees",
+      "no refund policy"
+    ]
+  },
+  {
+    "id": "article_iv_tertiary_education_program",
+    "source": "Student Handbook 2021",
+    "category": "Article IV - Scholarship and Financial Assistance",
+    "topic": "Tertiary Education Program Guidelines",
+    "content": "Under Article IV Scholarship and Financial Assistance, the UniFAST, through the Office of Student Affairs and Services (SAS), provides financial aid to qualified students in accordance with the IRR of RA 10931. Section 1 outlines the Tertiary Education Program. To qualify, a student must be enrolled, carry a regular load of 18 units (except for graduating students), not be a recipient of any other government scholarship, and have no failing grades or dropped subjects in the previous semester. The documentary requirements include a duly accomplished Scholarship Form from the SAS, copies of the current and previous Certificate of Registration (COR), a copy of the current and previous Report of Grades, and a photocopy of the School I.D. with three specimen signatures.",
+    "keywords": [
+      "Tertiary Education Program",
+      "UniFAST",
+      "RA 10931",
+      "scholarship requirements",
+      "SAS"
+    ]
+  },
+  {
+    "id": "article_iv_tulong_dunong_program",
+    "source": "Student Handbook 2021",
+    "category": "Article IV - Scholarship and Financial Assistance",
+    "topic": "Tulong Dunong Program Guidelines",
+    "content": "Under Article IV, Section 2 details the Tulong Dunong Program. Qualifications for this program require the student to be a Filipino citizen, enrolled with a regular load of 18 units (unless graduating), and have no failing or dropped grades in the previous semester. Specifically, the student must be a dependent of an Overseas Filipino Worker (OFW) who was repatriated, displaced, or deceased during the COVID-19 Pandemic, as certified by the Department of Labor and Employment (DOLE). The student must not have been expelled from any Higher Education Institution (HEI) and must not receive other government grants. Requirements include the Scholarship Form (Appendix J), previous COR, current Report of Grades, and a Certificate of Employment of the parent/s from the EARIST HRD. Conditions state that scholars must not drop subjects, shift courses without approval, or commit serious offenses. Renewal is required every semester.",
+    "keywords": [
+      "Tulong Dunong",
+      "OFW dependent",
+      "COVID-19 assistance",
+      "DOLE certification",
+      "scholarship conditions"
+    ]
+  },
+  {
+    "id": "article_iv_faculty_employees_union_scholarship",
+    "source": "Student Handbook 2021",
+    "category": "Article IV - Scholarship and Financial Assistance",
+    "topic": "Faculty and Employees Union Scholarship",
+    "content": "Under Article IV, Section 3 establishes the Faculty and Employees Union Scholarship, which is granted to qualified children of all EARIST employees. To qualify, the student must be currently enrolled in any college course and carry a minimum academic load of 18 units (except for graduating students). The student must pass all subjects, including P.E. and NSTP, to continue the scholarship in the following semester. Requirements include the Scholarship Form (Appendix J), a copy of the previous Certificate of Registration, the current Report of Grades, and a Certificate of Employment of the parent/s from the EARIST Human Resource Department (HRD). Conditions mandate that the student must not drop subjects, shift courses, or stop schooling without approval from the Dean and Registrar, and must not commit serious offenses.",
+    "keywords": [
+      "Faculty Union Scholarship",
+      "employee dependents",
+      "HRD certification",
+      "tuition discount",
+      "internal scholarship"
+    ]
+  },
+  {
+    "id": "article_iv_special_grants_student_assistance_policy",
+    "source": "Student Handbook 2021",
+    "category": "Article IV - Scholarship and Financial Assistance",
+    "topic": "Special Grants, Student Assistantship, and Dual Policy",
+    "content": "Under Article IV, Section 4 lists Special Grants available to students, including the CHED-Student Financial Assistance Programs (StuFAPs), EARIST Faculty Sponsored Scholarship, DOST-SEI Scholarship Grant, and grants from other NGOs. Section 5 outlines the Student Assistance program, which offers term-employment of not more than 100 hours per month. The wage rates are P30.00 per hour for non-technical skills and P75.00 per hour for technical skills. Applicants must be bonafide students with at least one semester of residence, no failing grades in the previous semester, and a weighted average of at least 2.50. Section 6 establishes the \"No Dual Scholarship\" policy, stating that a student cannot enjoy more than one scholarship or grant simultaneously. If eligible for multiple grants, the student must choose the most beneficial one in coordination with the Accounting Department.",
+    "keywords": [
+      "Student Assistantship",
+      "wage rates",
+      "CHED StuFAPs",
+      "DOST-SEI",
+      "working student",
+      "dual scholarship policy"
+    ]
+  },
+  {
+    "id": "article_v_sec_1_student_rights",
+    "source": "Student Handbook 2021",
+    "category": "Article V - Rights and Responsibilities",
+    "topic": "Student Rights and Privileges",
+    "content": "Under Article V, Section 1, bonafide students of EARIST constitute specific rights guaranteed by the Institute. Students have the right to choose a field of study, subject to fair and equitable admission and academic requirements. They are entitled to participate in matters affecting their welfare and establish development paths for their future. Students may avail of career guidance and counseling services. They have the right to access and receive official documents, including diplomas, transcripts of records, and transfer credentials, upon request and payment of fees. \n\nFurthermore, students are authorized to publish student newspapers and similar publications consistent with the \"Campus Journalism Act of 1991\". The Institute protects the privacy of communication and defends the rights to freedom of speech and expression. Students may participate in approved projects to foster holistic growth. They are also free to express their gender preference, provided it follows the norms of the Institution without prejudice to other handbook provisions. Finally, students have the right to seek justification on contested grades by filing a written request for re-computation or rectification through the Dean or Campus Administrator (for major courses) or the Director of Instruction (for general education courses) within the prescribed period.",
+    "keywords": [
+      "student rights",
+      "campus journalism",
+      "gender preference",
+      "grade rectification",
+      "academic records",
+      "freedom of speech",
+      "counseling services"
+    ]
+  },
+  {
+    "id": "article_v_sec_2_student_responsibilities",
+    "source": "Student Handbook 2021",
+    "category": "Article V - Rights and Responsibilities",
+    "topic": "Duties and Responsibilities of Students",
+    "content": "Under Article V, Section 2, bonafide students of the Institution are obligated to perform specific duties and responsibilities. Students must conduct themselves with proper behavior, showing respect and manners at all times. They are required to exert utmost diligence in their studies to develop their potential for service and become assets to their families and society. Students must uphold the academic integrity of the Institute by striving for academic excellence and abiding by school rules and regulations. \n\nAdditionally, students are expected to promote and maintain a pleasant school environment, exerting extra effort to sustain harmonious relationships with fellow students, faculty, and school personnel. Active participation in the promotion of general welfare, specifically through co-curricular and extra-curricular activities contributing to cultural development, is mandated. Students must adopt positive measures to ensure their own holistic development and must strictly abide by the Code of Conduct and Discipline formulated by the Institute.",
+    "keywords": [
+      "student responsibilities",
+      "academic integrity",
+      "code of conduct",
+      "proper behavior",
+      "co-curricular activities",
+      "student duties"
+    ]
+  },
+  {
+    "id": "article_vi_general_conduct_and_logo_policy",
+    "source": "Student Handbook 2021",
+    "category": "Article VI - Code of Conduct and Discipline",
+    "topic": "General Conduct Principles and Logo Usage",
+    "content": "Under Article VI, Section 1, the EARIST Code of Conduct and Discipline mandates that every student must strictly adhere to the motto proposed by Dr. Editha V. Pillo: \"DO the right thing, right!\" This is intended to foster an environment conducive to academic excellence and the formation of responsible Filipino citizens. \n\nSection 2 regulates the use of the Institute's Name, Logo, and Seal. These symbols are reserved primarily for the offices of the Institute. Students, whether as individuals or groups, are prohibited from using the name and logo of the Institute on printed programs, invitations, announcements, letters, tickets, and similar materials without a specific recommendation from the activity adviser or chairperson and subsequent approval from a duly authorized Institute Official.",
+    "keywords": [
+      "Code of Conduct",
+      "Do the right thing right",
+      "Logo Usage",
+      "Seal Usage",
+      "Institute Name"
+    ]
+  },
+  {
+    "id": "article_vi_uniform_and_id_policy",
+    "source": "Student Handbook 2021",
+    "category": "Article VI - Code of Conduct and Discipline",
+    "topic": "Uniform Schedule and ID Regulations",
+    "content": "Under Article VI, Section 3, the Institute enforces specific policies regarding uniforms and identification cards. \n\n**Uniform Policy:**\n* **Mondays, Wednesdays, Fridays:** Prescribed Uniform.\n* **Tuesdays, Thursdays:** College Shirt Uniform.\n* **Saturdays:** Organizational Shirt Uniform.\n* **Exceptions:** Pregnant students may be exempted upon submitting a Medical Certification validated by the EARIST Medical Officer. Students may wear organizational shirts on other days if their recognized organization is conducting an approved activity. Laboratory, P.E., and NSTP uniforms are worn during their respective periods.\n\n**ID Policy:**\nEntrance to the campus is denied without an official ID, which must be worn at all times. \n\n**Lost ID Procedures:**\n1.  Report to the Security Officer and Registrar.\n2.  Submit a Notarized Affidavit of Loss, a Clearance Form from the College Prefect of Discipline, and the Official Receipt for replacement.\n\n**Penalties for Lost ID:**\n* **2nd Loss:** Considered \"Negligence\" (Minor Offense). Requires a warning and a parent conference.\n* **3rd Loss:** Considered \"Gross Negligence\" (Major Offense). Requires Discipline Probation and a parent conference.",
+    "keywords": [
+      "uniform schedule",
+      "ID policy",
+      "lost ID penalties",
+      "pregnant student exemption",
+      "college shirt",
+      "wash day"
+    ]
+  },
+  {
+    "id": "article_vi_grooming_curfew_behavior",
+    "source": "Student Handbook 2021",
+    "category": "Article VI - Code of Conduct and Discipline",
+    "topic": "Grooming, Curfew, and General Behavior",
+    "content": "Under Article VI, Section 3, the Institute establishes standards for grooming, security, and conduct.\n\n**Grooming Standards:**\n* **Male Students:** Must maintain a clean barber's cut (2 inches by 3 inches) without colorful highlights. Goatees, colored nail polish, and earrings are prohibited. Working students with required hairstyles must secure a special permit from the Office of Student Affairs and Services (OSAS).\n* **Female Students:** Colorful hair highlights are prohibited.\n* **General:** Exposed body piercing and loud tattoos are strictly prohibited for all students.\n\n**Curfew and Peace:**\n* **Curfew:** Students must vacate the campus by 9:30 p.m. unless endorsed by a Dean/Director and approved by the Office of the President.\n* **Gadgets:** The use of cell phones and gadgets is prohibited during regular class hours and examinations.\n* **Conduct:** Students must avoid loitering and making unnecessary noise near classrooms. Cleanliness must be observed, and waste must be disposed of in proper trash cans. Disrespect toward any member of the community or misuse of school property is prohibited.",
+    "keywords": [
+      "grooming standards",
+      "haircut policy",
+      "curfew",
+      "9:30 PM",
+      "tattoos",
+      "gadget policy",
+      "loitering"
+    ]
+  },
+  {
+    "id": "article_vi_major_offenses_academic_safety",
+    "source": "Student Handbook 2021",
+    "category": "Article VI - Code of Conduct and Discipline",
+    "topic": "Major Offenses: Academic Dishonesty and Safety",
+    "content": "Under Article VI, Section 4.1.1, the following acts are classified as Major Offenses related to academic integrity and safety:\n\n* **Cheating and Plagiarism:** Any form of cheating during exams or reports, including unauthorized possession of notes, copying, allowing others to copy, or having someone else take an exam. Plagiarism and other forms of academic dishonesty are strictly penalized.\n* **Violence and Weapons:** Carrying deadly weapons, firearms, or explosives inside or outside the Institute during academic functions. Direct assault, brawls, and inflicting physical injuries are prohibited.\n* **Drugs and Alcohol:** Unauthorized possession or use of prohibited drugs (RA 9165) or alcoholic beverages. Entering the premises under the influence of alcohol is a major offense.\n* **Disruption:** Deliberate disruption of academic functions or activities that creates disorder or tumult.\n* **Vandalism:** Deliberate destruction of property belonging to the EARIST community.",
+    "keywords": [
+      "major offenses",
+      "cheating",
+      "plagiarism",
+      "deadly weapons",
+      "drugs",
+      "alcohol",
+      "vandalism",
+      "assault"
+    ]
+  },
+  {
+    "id": "article_vi_major_offenses_conduct_integrity",
+    "source": "Student Handbook 2021",
+    "category": "Article VI - Code of Conduct and Discipline",
+    "topic": "Major Offenses: Conduct, Integrity, and Property",
+    "content": "Under Article VI, Section 4.1.1, the following acts are classified as Major Offenses related to conduct and integrity:\n\n* **Immorality and Lewdness:** Acts of lewdness, necking, petting, or being in a cubicle with another person regardless of gender. Displaying pornographic materials or accessing unrelated internet sites is prohibited.\n* **Disrespect and Threats:** Gross acts of disrespect, ridicule, or contempt toward school personnel or students. Threatening another person's honor, integrity, or safety is a major offense.\n* **Fraud and Falsification:** Forging or tampering with academic/official records, making false statements, perjury, or practicing fraud. Unauthorized collection of money or unjust enrichment (stealing) is prohibited.\n* **Institutional Reputation:** Acts that bring the Institute into disrepute, such as malicious imputation of crimes or defects.\n* **Gambling:** Gambling in any form inside the campus.\n* **Civil Conviction:** Conviction before any court for a criminal offense involving moral turpitude.",
+    "keywords": [
+      "major offenses",
+      "immorality",
+      "lewdness",
+      "falsification",
+      "forgery",
+      "gambling",
+      "stealing",
+      "disrespect"
+    ]
+  },
+  {
+    "id": "article_vi_major_offenses_digital_hazing_bullying",
+    "source": "Student Handbook 2021",
+    "category": "Article VI - Code of Conduct and Discipline",
+    "topic": "Major Offenses: Digital Security, Hazing, and Bullying",
+    "content": "Under Article VI, Section 4.1.1, the following acts are classified as Major Offenses related to digital security, hazing, and specific laws:\n\n* **Hazing (RA 8049):** Any initiation rite resulting in physical/psychological suffering or injury. Officers and members present are liable regardless of participation.\n* **Bullying (RA 10627):** Bullying in any form is strictly prohibited.\n* **Computer Security Breach:** Unauthorized access to the Institute's network, altering passwords, destroying data, introducing viruses, or preventing authorized use.\n* **Social Media Misuse:** Unauthorized use of the EARIST name/logo on social media.\n* **Other Violations:** \n    * Sexual advances in words or deeds.\n    * Lending or using another person's ID/COR.\n    * Violation of Intellectual Property Rights or illegal reproduction of materials.\n    * Scalping tickets.\n    * Smoking (including e-cigarettes) on premises.\n    * Recidivism: Commission of 3 minor offenses of the same kind or 5 of different kinds.",
+    "keywords": [
+      "major offenses",
+      "hazing",
+      "cyber security",
+      "bullying",
+      "social media",
+      "smoking",
+      "recidivism",
+      "intellectual property"
+    ]
+  },
+  {
+    "id": "article_vi_minor_offenses",
+    "source": "Student Handbook 2021",
+    "category": "Article VI - Code of Conduct and Discipline",
+    "topic": "Minor Offenses List",
+    "content": "Under Article VI, Section 4.1.2, the following are classified as Minor Offenses:\n\n* **Disrespect and Disturbance:** Simple acts of disrespect, disturbing classes, or making unnecessary noise.\n* **ID and Uniform:** Refusal to present ID, entering without ID (1st/2nd time), not wearing ID (1st/2nd time), or unauthorized changing of uniform.\n* **Campus Order:** Littering, loitering near classes, proselytizing (forcing faith on others), or bringing pets.\n* **Unauthorized Activities:** Selling/soliciting without approval, using facilities without reservation, or public display of physical intimacy (PDPI).\n* **Safety and Hygiene:** Improper use of facilities, playing games/gadgets outside official activities, entering restricted areas, or bringing pointed objects (cutters/scissors) without a permit.\n* **Compliance:** Refusal to undergo random drug testing.\n\n*Note: Repeated commission of these offenses can escalate to a Major Offense.*",
+    "keywords": [
+      "minor offenses",
+      "littering",
+      "loitering",
+      "PDPI",
+      "no ID",
+      "proselytizing",
+      "drug testing refusal"
+    ]
+  },
+  {
+    "id": "article_vi_student_discipline_board_penalties",
+    "source": "Student Handbook 2021",
+    "category": "Article VI - Code of Conduct and Discipline",
+    "topic": "Student Discipline Board and Corrective Measures",
+    "content": "Under Article VI, Section 4.2, the Student Discipline Board (SDB) hears cases. \n\n**Board Composition:**\n* *College Level (Minor Offenses):* Chaired by Dean/Associate Dean. Members include College Prefect, Department Head, and CSG Governor.\n* *Institute Level (Major Offenses):* Chaired by OSAS Director. Members include the concerned Dean, ISG President, and CSG Governor. Additional members may be appointed by the VPAA for impartiality.\n\n**Corrective Measures (Penalties):**\n* **Major Offenses:** Probation, Suspension, Dismissal/Exclusion, or Expulsion.\n* **Minor Offenses:** \n    * 1st Offense: Written warning.\n    * 2nd Offense: Written reprimand and parent conference.\n    * 3rd Offense: Charged as a Major Offense or strict reprimand with parent conference.\n\n**Formative Interventions:** Students may also be required to attend seminars, write apology letters, undergo counseling, or pay for damages.",
+    "keywords": [
+      "Student Discipline Board",
+      "SDB",
+      "penalties",
+      "suspension",
+      "expulsion",
+      "probation",
+      "formative intervention"
+    ]
+  },
+  {
+    "id": "article_vi_disciplinary_procedures",
+    "source": "Student Handbook 2021",
+    "category": "Article VI - Code of Conduct and Discipline",
+    "topic": "Rules of Procedure for Disciplinary Cases",
+    "content": "Under Article VI, Section 4.2.3, the Institute follows strict Rules of Procedure for student discipline. \n\n**Complaint Filing:**\nAny member of the EARIST community can file a written complaint to the Dean's Office (Minor Offenses) or OSAS (Major Offenses). Security incident reports are automatically considered formal complaints.\n\n**Hearing Procedure (Due Process):**\n1.  The student must be informed in writing of the accusation and the evidence against them.\n2.  The student has the right to answer allegations and present counter-evidence with the assistance of an adviser or counsel.\n3.  All evidence must be under oath and notarized.\n4.  School authorities render a decision after evaluating the evidence.",
+    "keywords": [
+      "disciplinary procedure",
+      "due process",
+      "complaint filing",
+      "hearing",
+      "incident report"
+    ]
+  },
+  {
+    "id": "article_vii_warning_suspension",
+    "source": "Student Handbook 2021",
+    "category": "Article VII - Disciplinary Sanctions",
+    "topic": "Warning, Reprimand, and Suspension",
+    "content": "Under Article VII Disciplinary Sanctions, Section 1 and Section 2 define the penalties of Warning, Reprimand, and Suspension. \n\n**Section 1: Warning or Reprimand**\nThese sanctions are applied to minor offenses. A warning or reprimand is issued in writing or verbally for the first and second incidents of a minor offense. The sanction is recorded in the Dean's Office or the Office of Student Affairs and Services (OSAS). The student is admonished that repetition of the offense will result in graver disciplinary measures.\n\n**Section 2: Suspension**\nSuspension involves barring a student from a particular class or from the school for a prescribed period. The suspension is considered an absence voluntarily incurred. Any suspension exceeding three (3) days requires the approval of the Vice President for Academic Affairs.",
+    "keywords": [
+      "warning",
+      "reprimand",
+      "suspension",
+      "minor offense",
+      "VPAA approval",
+      "disciplinary record"
+    ]
+  },
+  {
+    "id": "article_vii_probation_academic_discipline",
+    "source": "Student Handbook 2021",
+    "category": "Article VII - Disciplinary Sanctions",
+    "topic": "Academic and Disciplinary Probation",
+    "content": "Under Article VII, Section 3 outlines the rules for Probation, which applies to students whose behavior or performance merits potential separation from the school. \n\n**3.1 Academic Probation**\nThis is imposed if the student's problem is academic. It applies under the following circumstances:\n* Failure in one (1) major course.\n* Failure in two (2) minor courses.\nAcademic Probation lasts for one (1) semester and is automatically lifted if the student passes all courses in that semester. Further failure results in non-readmission.\n\n**3.2 Discipline Probation**\nThis is imposed if a student commits a major offense or accumulates three (3) minor offenses. \n* **Duration:** Minimum of sixty (60) school days and a maximum of one semester.\n* **Limit:** A student may be placed on probation only twice. Further violations result in dismissal.\n\n**3.3 Notification**\nIn both types, the student and their parent/guardian are informed in writing of the imposition and lifting of the probation. The Dean's Office or OSAS issues the lifting notice after a mandatory counseling session.",
+    "keywords": [
+      "probation",
+      "academic probation",
+      "discipline probation",
+      "failure in major course",
+      "60 days",
+      "counseling"
+    ]
+  },
+  {
+    "id": "article_vii_severe_sanctions_dismissal_expulsion",
+    "source": "Student Handbook 2021",
+    "category": "Article VII - Disciplinary Sanctions",
+    "topic": "Non-Readmission, Dismissal, and Expulsion",
+    "content": "Under Article VII, Sections 4, 5, and 6 define the severe sanctions involving separation from the Institute. All three sanctions involve the non-issuance of a Certificate of Good Moral Character upon the recommendation of the EARIST Grievance Committee.\n\n**Section 4: Non-Readmission**\nAn erring student with a major offense may finish the current semester but is excluded from enrolling in the next semester.\n\n**Section 5: Dismissal**\nThis penalty allows the school to immediately exclude or drop the student from school rolls and issue transfer credentials. This applies to students guilty of major offenses where urgency necessitates immediate removal.\n\n**Section 6: Expulsion**\nThis is an extreme penalty where the student is excluded from admission to **any** public or private school in the Philippines. Expulsion requires prior approval from the Board of Trustees (BOT). A student under investigation for expulsion may be preventively suspended if the evidence of guilt is strong and their presence poses a risk to operations, life, or property.",
+    "keywords": [
+      "non-readmission",
+      "dismissal",
+      "expulsion",
+      "Board of Trustees",
+      "preventive suspension",
+      "Good Moral Character"
+    ]
+  },
+  {
+    "id": "article_vii_other_penalties_graduating_students",
+    "source": "Student Handbook 2021",
+    "category": "Article VII - Disciplinary Sanctions",
+    "topic": "Other Penalties and Sanctions on Graduating Students",
+    "content": "Under Article VII, Sections 7 through 10 outline additional penalties and procedural rules.\n\n**Section 7 & 8: Other Penalties**\nDepending on the gravity of the offense, the Institute may impose penalties such as payment of fines/civil liabilities, revocation of degree, withholding/non-issuance of diploma, disqualification from enrollment, or annotation of the offense on the Transcript of Records. The College Discipline Board, Institutional Discipline Board, and Grievance Committee may recommend other sanctions.\n\n**Section 9: Sanctions on Graduating Students**\nGraduating students who commit a major offense are prohibited from joining commencement exercises. Additionally, they shall not be issued a Certification of Good Moral Character upon the recommendation of the Student Discipline Board (SDB).\n\n**Section 10: Prescriptive Period**\nThe school retains the right to take action against violators as long as they remain enrolled. All violations must be reported to parents or guardians through the Dean's Office or OSAS.",
+    "keywords": [
+      "graduating students",
+      "commencement exercises",
+      "revocation of degree",
+      "transcript annotation",
+      "prescriptive period",
+      "parent notification"
+    ]
+  },
+  {
+    "id": "article_viii_principles_filing_procedures",
+    "source": "Student Handbook 2021",
+    "category": "Article VIII - Settlement of Complaints/Grievances",
+    "topic": "General Principles and Filing Procedures",
+    "content": "Under Article VIII, the Institute mandates that procedures for the redress and settlement of complaints and grievances conform to the due process of law to ensure fairness and justice. The Institute prioritizes counseling, arbitration, and amicable settlement over sanctions, which are meted out sparingly. \n\n**Initial Steps:**\nAny aggrieved party, whether a student or personnel, must first seek advice from a responsible person, such as a teacher or official. Problems of a psychological nature are referred directly to the Counseling and Testing Office upon recommendation by the Dean or OSAS.\n\n**Filing Complaints:**\nComplaints must be in writing. The venue for filing depends on the gravity of the offense:\n* **Minor Offenses:** Filed with the Office of the Dean.\n* **Major Offenses:** Filed with the Director of Student Affairs and Services (OSAS).\n\nThis filing procedure applies to complaints involving: (1) Student against student; (2) Non-teaching personnel against student; (3) Faculty against student; and (4) Student against faculty or non-teaching personnel.",
+    "keywords": [
+      "due process",
+      "filing complaints",
+      "amicable settlement",
+      "minor offense filing",
+      "major offense filing",
+      "counseling"
+    ]
+  },
+  {
+    "id": "article_viii_jurisdiction_appeals_process",
+    "source": "Student Handbook 2021",
+    "category": "Article VIII - Settlement of Complaints/Grievances",
+    "topic": "Jurisdiction, Investigation, and Appeals",
+    "content": "Under Article VIII Section 1, specific protocols govern the referral and settlement of disputes based on the parties involved. \n\n**Referral Channels:**\n* **Student vs. Faculty/Personnel:** Complaints are referred by the OSAS Director to the Vice President for Academic Affairs (for academic concerns) or the Vice President for Administration and Finance (for administrative concerns).\n* **Faculty/Personnel vs. Student:** Complaints are referred to the College Discipline Board or the Institutional Discipline Board.\n\n**Legal Rights and Investigation:**\nIn disciplinary proceedings, both complainants and respondents have the right to counsel of their choice and the right to present affidavits. The unit handling the complaint attempts arbitration first. If amicable settlement fails, the case is referred to the **EARIST Grievance Committee** for investigation and recommendation to the Institute President.\n\n**Appeals:**\nThe decision of the Institute President is final and executory unless appealed to higher authorities, specifically the Board of Trustees (BOT). The decision of the BOT is deemed final, without prejudice to Civil Service Law.",
+    "keywords": [
+      "grievance committee",
+      "right to counsel",
+      "VPAA",
+      "Board of Trustees",
+      "appeals process",
+      "arbitration"
+    ]
+  },
+  {
+    "id": "article_ix_sas_welfare_guidance_counseling",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Overview, Information Services, and Guidance & Counseling",
+    "content": "Under Article IX, Student Affairs and Services (SAS) are defined as services and programs providing academic support to help students acquire skills for constructive interaction and total development. SAS is divided into Student Welfare Services and Student Development Services. \n\n**Student Welfare Services** include:\n1.  **Information and Orientation Services:** Facilitates student adjustment through orientation programs and materials on mission, vision, and relevant laws (e.g., Anti-Bullying Act, Anti-Sexual Harassment Act).\n2.  **Guidance and Counseling Services:** Uses an integrated approach to developing well-functioning individuals. Sub-services include:\n    * **Counseling:** Goal-oriented individual or group sessions.\n    * **Individual Inventory:** Collection of student data to identify characteristics.\n    * **Testing and Appraisal:** Measuring ability and achievement to predict performance.\n    * **Information:** Disseminating descriptive materials.\n    * **Research and Evaluation:** Discovering new knowledge and determining if program goals are met.\n    * **Follow-up:** Determining the status of students who received assistance.\n    * **Referral:** Connecting clients to external agencies.\n    * **Special Programs:** Events like Job Fairs and Career Talks.",
+    "keywords": [
+      "Student Welfare Services",
+      "Guidance and Counseling",
+      "Orientation",
+      "Testing and Appraisal",
+      "SAS definition"
+    ]
+  },
+  {
+    "id": "article_ix_career_economic_handbook_development",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Career Services, Economic Enterprise, and Handbook Development",
+    "content": "Under Article IX, Section 1 covers Career Services, Economic Enterprise, and Handbook Development.\n\n**Career and Job Placement Services:** The Institute provides assistance for vocational fitness, regular career seminars, and links with industries through Memoranda of Agreement.\n\n**Economic Enterprise Development:** This caters to student economic needs, including Student Cooperatives (loans, savings) and Entrepreneurial activities (layouting, photography, rentals, product selling). Student organizations wishing to engage in business must apply to SAS, have feasibility checked by the Income Generating Project (IGP) office, and secure a permit. They must submit an annual Financial Status report.\n\n**Student Handbook Development:** This process involves developing and revising the handbook every five (5) years in consultation with student representatives. Updates must be supported by legal issuances and approved by the Board of Trustees. The Revision Committee includes the VPAA (Chair), SAS Director (Co-chair), Deans, and student representatives (Student Trustee, ISG President).",
+    "keywords": [
+      "Career Services",
+      "Economic Enterprise",
+      "Student Cooperative",
+      "Student Handbook revision",
+      "IGP"
+    ]
+  },
+  {
+    "id": "article_ix_student_development_leadership_training",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Student Development and Leadership Training",
+    "content": "Under Article IX, Section 2 defines Student Development Services as programs for exploring and enhancing student potential for leadership and social responsibility. \n\n**Student Organizations:** This involves the recognition, accreditation, supervision, and monitoring of student groups.\n\n**Leadership Training:** The SAS organizes training for student leaders from the classroom to the institutional level. \n* **Leadership Training Seminar (LTS):** Intended for elected officers of the Institute Student Government (ISG), College Student Government (CSG), and Legislative Department.\n* **External Training:** The Leadership Service Division (LSD) develops a queuing system to ensure equal chances for student leaders to attend local, regional, or national training. \n* **Requirements:** Student leaders attending outside training must submit a narrative report, liquidation, and a copy of the lecture to OSAS.",
+    "keywords": [
+      "Student Development Services",
+      "Leadership Training",
+      "LTS",
+      "student organizations",
+      "training queuing system"
+    ]
+  },
+  {
+    "id": "article_ix_student_government_composition",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Institute Student Government (ISG) Composition",
+    "content": "Under Article IX, Section 2.3, the Institute Student Government (ISG) is recognized as the highest student governing body and the official representative of students in all EARIST activities. It serves as a mediator and active agent in promoting national awareness.\n\n**Composition of ISG:**\n* **Executive Board:** Elected at large. Includes the President, Vice President, Secretary, Treasurer, Auditor, and appointed Committee Chairpersons (Ways and Means, Education, Socio-Cultural, Cleanliness, Special Project, Grievance).\n* **Legislative Board:** Composed of Representatives of the College Student Government (Manila Campus) and Representatives per program (Cavite Campus).\n\n**College Student Government (CSG):** Each college has a CSG represented by a Governor, Vice Governor, Secretary, Treasurer, Auditor, and Representatives. The CSG Governor officially represents the college in the ISG.",
+    "keywords": [
+      "Institute Student Government",
+      "ISG",
+      "Executive Board",
+      "Legislative Board",
+      "CSG",
+      "student council"
+    ]
+  },
+  {
+    "id": "article_ix_student_government_qualifications",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "ISG/CSG Qualifications and Disqualifications",
+    "content": "Under Article IX, Section 2.3, specific rules govern the election and tenure of student officers.\n\n**Term of Office:** One year, commencing January 1st and ending December 31st. Officers are eligible for re-election.\n\n**Qualifications for Officers:**\n1.  Bonafide student of the Institute.\n2.  Carry a minimum load of 18 units (appeals allowed if the regular load is lower).\n3.  At least one year of residency.\n4.  No major offenses.\n5.  GPA of 2.50 or higher.\n6.  No failing grades in the semester preceding the election.\n\n**Disqualifications from Office:**\nOfficers shall be disqualified if they:\n1.  Obtain a failing grade in any subject before or during their term.\n2.  Commit a major offense.\n3.  Failure to enroll during their term.\n4.  Suffer permanent physiological or psychological incapacity.",
+    "keywords": [
+      "ISG qualifications",
+      "student election",
+      "GPA requirement",
+      "disqualification",
+      "student officer rules"
+    ]
+  },
+  {
+    "id": "article_ix_student_publications",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Student Publications and Yearbook",
+    "content": "Under Article IX, Section 2.5, the Institute supports student publications in accordance with R.A. 7079 (Campus Journalism Act of 1991). The Office of Student Affairs and Services (OSAS) supervises all publications and undertakes programs to upgrade writer skills.\n\n**Official Publications:**\n* **The EARIST Technozette:** Major student publication.\n* **The Champion:** Major student publication.\n* **Staff Selection:** Staff composition is determined through qualifying and editorial examinations coordinated by OSAS and the Board of Examiners.\n\n**Yearbook:**\n* **The EARISTians:** The official yearbook of graduating students. It is funded by voluntary subscriptions paid by the graduating students.",
+    "keywords": [
+      "student publication",
+      "Technozette",
+      "The Champion",
+      "The EARISTians",
+      "Campus Journalism Act",
+      "yearbook"
+    ]
+  },
+  {
+    "id": "article_ix_institutional_services_medical_food_admission",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Admission, Food, and Medical/Dental Services",
+    "content": "Under Article IX, Section 4 outlines Institutional Student Programs and Services.\n\n**Admission Services:** Processes entrance exams and requirements with reasonable accommodation for persons with disabilities (RA 7277). Tuition fees and educational visit lists are posted conspicuously.\n\n**Food Services:** Ensures available, safe, and affordable meals compliant with Department of Health guidelines.\n\n**Medical and Dental Services:** Administered by licensed professionals. Services include:\n* Entry-level physical exams for freshmen.\n* Free consultation and treatment (including minor procedures).\n* Dental services: Routine exams and free tooth extraction (if indicated).\n* **Insurance:** All bonafide students are covered by an external personal accident insurance policy managed by OSAS. The annual premium is taken from the student's miscellaneous fees.",
+    "keywords": [
+      "Medical Services",
+      "Dental Services",
+      "student insurance",
+      "Food Services",
+      "Admission Services",
+      "physical exam"
+    ]
+  },
+  {
+    "id": "article_ix_safety_security_drrm",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Safety, Security, and Risk Management",
+    "content": "Under Article IX, Section 4.5, the Safety and Security Services ensure a secure environment. \n\n**Security Protocols:**\n* All assets on campus are presumed Institute property unless documented otherwise.\n* Personal items (laptops, cameras) must be reported to Security/IGP upon entry to avoid exit issues. The Institute is not liable for lost personal items unless deposited and recorded.\n* Firearms, deadly weapons, liquor, and prohibited drugs are strictly prohibited.\n* The Institute is a strict **no-smoking area**.\n* Use of facilities on weekends/holidays requires prior authority from the President.\n\n**Disaster Risk Reduction and Management (DRRM):**\n* Compliance with RA 10121.\n* Regular conduct of earthquake and fire drills.\n* A DRRMC is tasked with Pre-Disaster, During-Disaster, and Post-Disaster action plans.",
+    "keywords": [
+      "Safety and Security",
+      "DRRM",
+      "prohibited items",
+      "no smoking",
+      "security protocols",
+      "earthquake drill"
+    ]
+  },
+  {
+    "id": "article_ix_housing_special_needs_cultural",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Housing, Special Needs, Cultural, and Foreign Student Services",
+    "content": "Under Article IX, Section 4 outlines various support services:\n\n* **Student Housing:** OSAS monitors and evaluates student-athlete dormitories and housing facilities inside the campus.\n* **Inter-Faith Services:** The Institute provides facilities (e.g., chapel) for religious expression and assists in accrediting religious student organizations.\n* **Foreign/International Student Services:** OSAS assists foreign students with academic and non-academic needs.\n* **Special Needs & PWDs:** The Institute accommodates students with disabilities and learners with special needs, providing life skills training and maintaining records in the Counseling and Testing Office.\n* **Cultural and Arts Programs:** The EARIST Cultural Affairs Division (ECAD) designs workshops and activities to enhance talents and promote national culture.",
+    "keywords": [
+      "Student Housing",
+      "PWD services",
+      "Foreign Student Services",
+      "Cultural Affairs",
+      "ECAD",
+      "Inter-faith"
+    ]
+  },
+  {
+    "id": "article_ix_sports_athletes",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Sports Development and Student-Athletes",
+    "content": "Under Article IX, Section 4.11, the Sports and Physical Development Office manages sports programs.\n\n**Student-Athlete Selection:** Must be a bonafide undergraduate student, within the SCUAA age limit, and have no failed grades in the previous semester.\n\n**Benefits:** Monthly allowance during training, travel allowances, free uniforms/equipment, and certificates of recognition.\n\n**Duties:** Maintain attendance, scholastic eligibility, and attend mandatory training. Violations or non-participation can lead to forfeiture of status.\n\n**Institutional Intramurals:** An annual sports festival where no classes are held. Attendance is checked by instructors. Night activities are allowed up to 9:00 p.m. only.",
+    "keywords": [
+      "Sports Development",
+      "Student Athletes",
+      "athlete benefits",
+      "Intramurals",
+      "SCUAA"
+    ]
+  },
+  {
+    "id": "article_ix_social_community_research",
+    "source": "Student Handbook 2021",
+    "category": "Article IX - Student Affairs and Services",
+    "topic": "Community Involvement and SAS Research",
+    "content": "Under Article IX, Section 4.12, **Social and Community Involvement Programs** provide opportunities for students to participate in volunteerism, environmental protection, and crime prevention. The Institute establishes partnerships with community agencies to facilitate this involvement.\n\n**Research, Monitoring, and Evaluation (Section 5):** The Office for Student Affairs and Services conducts annual monitoring and evaluation of all student affairs and services to improve quality. Evaluation instruments are provided and retrieved for this purpose.",
+    "keywords": [
+      "Community Involvement",
+      "Volunteerism",
+      "SAS Research",
+      "Monitoring and Evaluation"
+    ]
+  },
+  {
+    "id": "article_x_general_policy_authority_osas",
+    "source": "Student Handbook 2021",
+    "category": "Article X - Student Organization",
+    "topic": "General Policy and Authority of OSAS",
+    "content": "Under Article X Student Organization, the Institute encourages the formation of student groups to support social, cultural, religious, literary, and recreational development in accordance with Batas Pambansa Blg. 232 (Education Act of 1982). The authority to regulate the establishment and operations of any student organization is vested in the Office of Student Affairs and Services (OSAS). OSAS has the authority to formulate policies, approve co-curricular and extra-curricular activities, and issue or renew Certificates of Recognition. These certificates must be signed by the Leadership Coordinator, SAS Director, Vice President for Academic Affairs (VPAA), and the President. OSAS may also revoke accreditation for cause after consultation with the Institute Student Government (ISG) or College Student Government (CSG). In cases of conflict within or between organizations where no resolution is reached, OSAS may intervene and render a binding decision. Additionally, SAS may create committees composed of bonafide members of Accredited Student Organizations to assist the office.",
+    "keywords": [
+      "OSAS authority",
+      "student organization regulation",
+      "certificate of recognition",
+      "conflict resolution",
+      "accreditation"
+    ]
+  },
+  {
+    "id": "article_x_accreditation_process_requirements",
+    "source": "Student Handbook 2021",
+    "category": "Article X - Student Organization",
+    "topic": "Application for Recognition and Accreditation",
+    "content": "Under Article X Student Organization, the application for recognition or accreditation of student organizations must be submitted to OSAS through the Institute Student Government (ISG) one (1) month after the opening of the school year. Processing takes fifteen (15) working days. Recognition is valid for one school year. Failure to seek recognition for one school year without justifiable cause results in the loss of privileges to use Institute facilities or hold activities. \n\n**Required Documents for Accreditation:**\n1.  Letter of application (2 copies) addressed to the SAS Director through the Leadership Coordinator. For College-Based organizations, this must be endorsed by the Dean; for Institutional organizations, noted by the Adviser.\n2.  Duly accomplished SAS Application Form (2 copies).\n3.  Constitution and By-Laws (2 copies), which must align with the Institution's Mission-Vision and the ISG Constitution.\n4.  Updated rosters of officers/founders with specimen signatures, student details, and 2x2 I.D. pictures.\n5.  Photocopy of the latest registration form for officers and members.\n6.  Adviser's Conforme form (Annex E).\n7.  Master Plan of activities with a timetable, goals, objectives, and budget breakdown.\n8.  Other requirements mandated by OSAS.",
+    "keywords": [
+      "accreditation requirements",
+      "recognition process",
+      "student organization application",
+      "constitution and by-laws",
+      "master plan"
+    ]
+  },
+  {
+    "id": "article_x_renewal_of_accreditation",
+    "source": "Student Handbook 2021",
+    "category": "Article X - Student Organization",
+    "topic": "Renewal of Accreditation",
+    "content": "Under Article X Student Organization, accredited organizations intending to renew their status must apply one (1) month after the opening of the school year, before their current accreditation lapses. \n\n**Renewal Requirements:**\n1.  Accomplishment Report with documentation (2 copies). For College-Based organizations, this must be attested by the auditor and president, endorsed by the Adviser, and noted by the Dean. For Institutional organizations, it is prepared by the treasurer and endorsed by the Adviser.\n2.  Amendments to the Constitution and By-Laws with proof of ratification, if applicable.\n3.  Lists of the new set of officers and members.\n4.  Master Plan of Activities for the upcoming year.\n5.  Program/activity evaluation.\n6.  Faculty Adviser Conforme.\n\nOrganizations that fail to renew lose their recognition and privileges.",
+    "keywords": [
+      "renewal of accreditation",
+      "accomplishment report",
+      "organization renewal",
+      "documentary requirements"
+    ]
+  },
+  {
+    "id": "article_x_organization_status_classification",
+    "source": "Student Handbook 2021",
+    "category": "Article X - Student Organization",
+    "topic": "Status, Nature, and Revocation of Organizations",
+    "content": "Under Article X Student Organization, the Institute Student Government (ISG) serves as the mother organization of all existing student organizations and monitors their activities. \n\n**Classification by Status:**\n* **Regular Status:** Organizations that have passed probationary status or performed satisfactorily as evaluated by ISG and OSAS.\n* **Probationary Status:** Organizations demoted due to failure to meet requirements.\n\n**Classification by Nature:**\n* **College-Based Organizations:** Support the academic development of members, aligned with specific academic programs.\n* **Institute Organizations:** Focus on social, cultural, religious, literary, and recreational aspects.\n\n**Revocation:** Recognition may be revoked if an organization violates its statement of purpose, constitution, by-laws, or Institute policies, subject to due process.",
+    "keywords": [
+      "ISG",
+      "probationary status",
+      "regular status",
+      "college-based organization",
+      "institute organization",
+      "revocation"
+    ]
+  },
+  {
+    "id": "article_x_activity_approval_guidelines",
+    "source": "Student Handbook 2021",
+    "category": "Article X - Student Organization",
+    "topic": "Policies on Approval of Activities",
+    "content": "Under Article X Student Organization, all activities sponsored or participated in by Recognized Student Organizations (RSO) must be approved by the Institute President through the VPAA and SAS Director. \n\n**Approval Requirements:**\nProposals must include a duly accomplished Activity Proposal Form, a letter to the Institute President, budgetary allocation, venue reservation, and profiles of speakers/facilitators (including parental waivers for outside activities). \n\n**Operational Rules:**\n1.  Student groups are prohibited from holding activities one week before and during major examinations or other banned dates set by SAS.\n2.  Solicitations and external communications must be noted by the Adviser and Dean, recommended by the SAS Director, and approved by the President/VPAA.\n3.  Post-activity reports (Performance Report, Evaluation, Financial Statement) must be submitted within five (5) days; failure to do so prohibits future activities.\n4.  All approved activities must be coordinated with the College Dean and Security Office.",
+    "keywords": [
+      "activity approval",
+      "banned dates",
+      "major examinations",
+      "activity proposal",
+      "solicitation letters"
+    ]
+  },
+  {
+    "id": "article_x_off_campus_fundraising_rules",
+    "source": "Student Handbook 2021",
+    "category": "Article X - Student Organization",
+    "topic": "Off-Campus and Fundraising Activities",
+    "content": "Under Article X Student Organization, specific rules govern off-campus and fundraising events.\n\n**Off-Campus/Overnight Activities:**\nThese require approval from OSAS, notarized parental waivers, and a letter of conformity from the adviser. All CHED requirements must be met. A faculty adviser must attend the activity. If the adviser is unavailable, a replacement must be reported to SAS two days prior. The required ratio is one faculty adviser/guardian for every 30 student participants.\n\n**Fundraising Activities:**\nOrganizations are allowed only one (1) fundraising activity per school year. Applications must be submitted 30 days in advance, including a project proposal, IGP form, beneficiary list, and endorsements. An audited financial report certified by the faculty adviser must be submitted to OSAS within five (5) days after the activity.",
+    "keywords": [
+      "off-campus activity",
+      "fundraising",
+      "parental waiver",
+      "adviser ratio",
+      "financial report"
+    ]
+  },
+  {
+    "id": "article_x_faculty_adviser_qualifications",
+    "source": "Student Handbook 2021",
+    "category": "Article X - Student Organization",
+    "topic": "Faculty Adviser Guidelines",
+    "content": "Under Article X Student Organization, every student organization must have a Faculty Adviser who is a full-time faculty member with at least one year of residency at the Institute. A faculty member shall not advise more than one organization. \n\n**Designation:**\n* **College-Based Organizations:** The Adviser is designated by the College Dean.\n* **Institutional Organizations:** The Adviser is designated by the SAS Director upon the organization's recommendation.\n\n**Term and Role:**\nThe term is for one school year, renewable based on recommendation. For curricular organizations, the adviser must be involved in the specific academic area. For extra-curricular organizations, the adviser should be knowledgeable in the relevant field. Advisers must closely monitor the security and disbursement of organizational funds.",
+    "keywords": [
+      "faculty adviser",
+      "adviser qualifications",
+      "adviser term",
+      "full-time faculty"
+    ]
+  },
+  {
+    "id": "article_x_financial_guidelines_membership_fees",
+    "source": "Student Handbook 2021",
+    "category": "Article X - Student Organization",
+    "topic": "Financial Guidelines and Membership Fees",
+    "content": "Under Article X Student Organization, only accredited organizations may collect membership fees, which must be voluntary and not part of enrollment procedures. \n\n**Fee Limits and Banking:**\n* Membership fees for College-Based Organizations shall not exceed One Hundred Pesos (P100.00) per school year. Increases require majority agreement, confirmation by the Dean, and approval by the President.\n* Organizations must open a government depository bank account if accumulated fees reach a minimum of P10,000.\n\n**Disbursements and Signatories:**\n* Withdrawals require a resolution signed by the majority of officers.\n* Bank signatories must be the Organization President or Treasurer (Co-signatory 1) AND the College Dean or an endorsed regular faculty member (Co-signatory 2). For Institute Organizations, the SAS Director is the second co-signatory.\n* Officers with financial liabilities must pay the exact amount owed to the Financial Management Services (FMS). Pending obligations prevent clearance for past officers.",
+    "keywords": [
+      "membership fees",
+      "bank account",
+      "signatories",
+      "financial liability",
+      "P100 limit"
+    ]
+  },
+  {
+    "id": "article_x_posters_social_media_awards",
+    "source": "Student Handbook 2021",
+    "category": "Article X - Student Organization",
+    "topic": "Posters, Social Media, and Classification of Awards",
+    "content": "Under Article X Student Organization, posters and notices may only be posted on freedom boards or locations authorized by the OSAS Director. Proponents must be identified on all materials.\n\n**Electronic Delivery:**\nAnnouncements from SAS are posted on official social media accounts. Accreditation documents and activity proposals must be sent via the official OSAS email.\n\n**Recognition and Awards:**\nThe Institute grants awards for outstanding performance:\n* **Academic Awards:** Summa Cum Laude, Magna Cum Laude, Cum Laude, and Academic Excellence.\n* **Service Awards:** Outstanding Student Organization and Outstanding Leader.\n* **Other Categories:** Cultural Awards, Sports and Development Awards, Research Awards.\n* **Monetary Incentives:** Given for National Recognition in PRC/Government Exams and recognition in Skills Competitions.",
+    "keywords": [
+      "freedom board",
+      "social media",
+      "academic awards",
+      "service awards",
+      "outstanding leader"
+    ]
+  },
+  {
+    "id": "article_xi_policy_scope_authority",
+    "source": "Student Handbook 2021",
+    "category": "Article XI - Guidelines on Campus Publication",
+    "topic": "Policy, Scope, and Authority of Student Publications",
+    "content": "Under Article XI, the Institute establishes the basic policies and scope of student publications. The Institute recognizes the students' right to free expression as embodied in the Philippine Constitution and encourages quality publications to disseminate information, opinions, and research. \n\n**Scope and Objectives:**\nStudent publications cover all printed matters such as newspapers, magazines, yearbooks, journals, and newsletters. They aim to represent the general interest of the academe, stimulate responsible advocacy, and promote intellectual excellence and truth.\n\n**Coordination and Authority:**\nThe Office of Student Affairs and Services (OSAS) coordinates student publications through the Chief of Student Publication. The authority of the Student Publication as the publisher must be recognized by the Institute in compliance with the Editorial Policies approved by the Board of Editors and in accordance with **Republic Act 7079** (Campus Journalism Act). The Editorial Policy is subject to periodic review to align with legal mandates.",
+    "keywords": [
+      "campus journalism",
+      "free expression",
+      "RA 7079",
+      "OSAS coordination",
+      "student newspaper",
+      "editorial policy"
+    ]
+  },
+  {
+    "id": "article_xi_appointments_responsibility_printing",
+    "source": "Student Handbook 2021",
+    "category": "Article XI - Guidelines on Campus Publication",
+    "topic": "Appointments, Editorial Responsibility, and Printing",
+    "content": "Under Article XI, Section 5 and 7, the handbook outlines the appointment process and responsibilities of the publication staff.\n\n**Appointments:**\nThe Publication Chief and Technical Adviser are appointed by the Institute President based on the recommendation of the OSAS Director. Specifically, the Student Publication Board of Editors submits three nominees for the Technical Adviser and Language Critic to the SAS Director for endorsement to the President.\n\n**Responsibility and Operations:**\nThe Editorial Boards are fully and solely responsible for published materials, with technical guidance from the Adviser. Printing must be conducted by a private printer selected through canvass or bidding by the editorial board and staff. The Student Publication Office is required to provide software to convert print materials into **E-publications** in compliance with **CHED CMO No. 8 series 2021**. \n\n**Violations:**\nViolation of publication policies or professional journalism standards is subject to suspension or expulsion from the staff. Extreme cases warrant disciplinary action by the EARIST Grievance Committee.",
+    "keywords": [
+      "editorial board",
+      "technical adviser",
+      "printing bidding",
+      "E-publication",
+      "CHED CMO No. 8",
+      "journalist expulsion"
+    ]
+  },
+  {
+    "id": "article_xi_funding_banking_financials",
+    "source": "Student Handbook 2021",
+    "category": "Article XI - Guidelines on Campus Publication",
+    "topic": "Funding, Banking, and Financial Management",
+    "content": "Under Article XI, Sections 8 and 9, the financial management of student publications is strictly regulated. \n\n**Sources and Usage:**\nFunding is derived from student subscriptions (collected during enrollment), advertisements, donations, and grants. These funds are for the **exclusive use** of the publication, covering printing costs, supplies, transportation, staff allowances, and press conference expenses. Publication fees are determined by the Board of Editors with student consultation and approved by the Board of Trustees (subject to RA 10931).\n\n**Banking and Signatories:**\nThe Student Publication must open a passbook checking account in a government depository bank. Withdrawals require specific co-signatories: \n1.  The Editor-in-Chief OR Managing Editor; AND\n2.  The Director of Student Affairs and Services (SAS).\n\n**Reporting:**\nThe Student Publication is required to submit financial statements to both the Office of Student Affairs and Services (OSAS) and the Financial Management Services (FMS). Honoraria for the board and staff are charged to the publication fund subject to accounting rules.",
+    "keywords": [
+      "publication funds",
+      "subscription fees",
+      "government bank",
+      "financial statement",
+      "RA 10931",
+      "signatories"
+    ]
+  },
+  {
+    "id": "article_xii_religious_activities",
+    "source": "Student Handbook 2021",
+    "category": "Article XII - Guidelines on Religious Activities",
+    "topic": "Interfaith and Religious Policies",
+    "content": "Under Article XII Guidelines on Religious Activities, EARIST establishes policies to support spiritual expression. Section 1 defines Interfaith Services as the provision of an environment conducive to freely expressing one's religious orientation in accordance with institutional principles. Section 2 mandates that the Institute shall respect the establishment and free exercise of religion. Worship and religious profession are allowed without discrimination, provided they are not harmful to academic goals and do not violate existing policies. No religious test is required for civil or political rights.\n\nSection 3 specifies that the Interfaith character of the Institute Chapel must be reserved for faith activities with respect to the highness of God. Classrooms and other facilities may not be used by religious groups without permission from the concerned Institute Authority. Section 4 encourages the academic community to implore the aid of Almighty God to build a just and humane society and promotes ecumenism and unity among the faithful on campus.",
+    "keywords": [
+      "Interfaith Services",
+      "religious freedom",
+      "Chapel usage",
+      "ecumenism",
+      "religious activities"
+    ]
+  },
+  {
+    "id": "article_xiii_cultural_programs",
+    "source": "Student Handbook 2021",
+    "category": "Article XIII - Guidelines on Cultural Programs",
+    "topic": "Approval and Submission for Cultural Activities",
+    "content": "Under Article XIII Guidelines on Cultural Programs, strict procedures govern the proposal and execution of cultural events. Section 1 requires that every proposed cultural program or activity must pursue the objectives of the Academe. Section 2 mandates that such programs must secure prior approval from the Office of the President, passed through the Office of the Vice President for Academic Affairs (VPAA), and recommended by the Office of the Student Affairs and Services (OSAS).\n\nSection 3 outlines the submission process for any bonafide faculty, administrative employee, or student organization. They must submit requirements to OSAS through the EARIST Cultural Affairs Division (ECAD) and the Income Generating Project (IGP) Office. The required documents include a letter of request, a tentative program, a list of production staff, budget estimates, and the source of funding. Section 4 specifies that the letter of request must state the title, description, objectives, date, time, and venue of the activity, and must bear the signatures of authorized representatives and advisers. Section 5 designates the ECAD as the office responsible for acting upon these requests.",
+    "keywords": [
+      "cultural programs",
+      "ECAD",
+      "event approval",
+      "IGP Office",
+      "event proposal"
+    ]
+  },
+  {
+    "id": "article_xiv_social_media_guidelines",
+    "source": "Student Handbook 2021",
+    "category": "Article XIV - Right to Proper Information",
+    "topic": "Social Media Usage and Digital Materials",
+    "content": "Under Article XIV Right to Proper Information, the Institute regulates the use of official social media accounts. EARIST uses social media to supplement marketing efforts and encourages students to share Institute news. However, students must understand that by mentioning EARIST or sharing its information, they automatically serve as representatives of the Institute. The Institute reserves the right to request the removal of content if it poses a risk to the reputation of the Institute, its employees, or students.\n\nPermission to post digital materials on official accounts is subject to specific guidelines. The press is considered a public trust and must not be used for unlawful or divisive purposes. While the Institute recognizes the student press as a medium of learning under the Campus Journalism Act of 1991, all digital announcements must bear the signature of the SAS Director and be endorsed to the Information and Public Affairs Services (InfoPAS) Director for posting. Furthermore, digital materials must not violate contemporary ethical or moral standards regarding messages or imagery.",
+    "keywords": [
+      "social media policy",
+      "digital advertisement",
+      "reputation management",
+      "InfoPAS",
+      "online ethics"
+    ]
+  },
+  {
+    "id": "article_xiv_campus_advertisement_posters",
+    "source": "Student Handbook 2021",
+    "category": "Article XIV - Right to Proper Information",
+    "topic": "Installation of Physical Advertisements on Campus",
+    "content": "Under Article XIV, the installation of advertisement materials within school premises requires specific permits and adherence to guidelines. Section 1 requires that all announcements bear the signature of the SAS Director before posting. Section 2 restricts posting to bulletin boards or places officially designated by the SAS Office. Section 3 mandates that posters must not violate ethical or moral standards.\n\nSection 4 requires posters to be neat, clear, concise, and free from excessive aesthetics. They must indicate the name of the individual, group, or organization responsible. The responsible party is liable for removing the posters after they serve their purpose and for any damage caused to the posting area. Section 5 grants the SAS Director the right to decide which announcements are approved. Section 6 notes that permits for banners or tarpaulins are granted only upon compliance with prescribed conditions.",
+    "keywords": [
+      "campus posting",
+      "bulletin boards",
+      "poster guidelines",
+      "tarpaulin permit",
+      "SAS Director"
+    ]
+  },
+  {
+    "id": "article_xiv_logo_trademark_policy",
+    "source": "Student Handbook 2021",
+    "category": "Article XIV - Right to Proper Information",
+    "topic": "EARIST Logo and Trademark Usage",
+    "content": "Under Article XIV, the use of the EARIST Logo and trademarks is strictly regulated. Any individual, group, or organization wishing to use or imitate the EARIST Logo or a similar seal for documents, goods, or services must secure a permit from the Information and Public Affairs Services (InfoPAS Office). Approval is required for the use or selling of the logo on products distributed to the public. This policy covers three specific categories: Section 1 includes institutional collateral such as calling cards, marketing kits, brochures, stationeries, and letterheads. Section 2 includes souvenir items or merchandise such as jackets, t-shirts, bags, mugs, and pins. Section 3 includes institutional advertisements such as billboards, print ads, television ads, and electronic ads.",
+    "keywords": [
+      "EARIST logo",
+      "trademark policy",
+      "InfoPAS",
+      "merchandise",
+      "institutional branding"
+    ]
+  },
+  {
+    "id": "article_xv_international_affairs",
+    "source": "Student Handbook 2021",
+    "category": "Article XV - International Affairs Services",
+    "topic": "International Linkages and Internships",
+    "content": "Under Article XV, the Office of the International Affairs Service (OIAS) acts as the technical Secretariat assisting in international education, student mobility, and internship matters. It coordinates international dimensions of EARIST in accordance with CHED Memorandum Order 55, Series of 2016. Section 1 defines International Linkages, which include: the Exchange Visitors Program (implementing the Mutual Education and Cultural Exchange Act); the Cultural Exchange Program (promoting mutual understanding through athlete/artist exchange); Study Abroad programs; and Academic Short Courses leading to degrees or certificates. Section 2 defines International Internship as the application of classroom learning to actual work in commercial, industrial, government, or non-government agencies abroad, with a duration ranging from 6 months to 1 year for degree completion.",
+    "keywords": [
+      "OIAS",
+      "International Internship",
+      "Exchange Visitors Program",
+      "Study Abroad",
+      "CMO 55 s. 2016"
+    ]
+  },
+  {
+    "id": "article_xvi_effectivity",
+    "source": "Student Handbook 2021",
+    "category": "Article XVI - Effectivity",
+    "topic": "Handbook Effectivity Clause",
+    "content": "Under Article XVI Effectivity, Section 1 states that the Student Handbook takes effect immediately upon approval by the Board of Trustees. Section 2 specifies that the policies and regulations contained within the handbook apply to all bonafide students of the Institute.",
+    "keywords": [
+      "effectivity",
+      "Board of Trustees",
+      "legal validity",
+      "bonafide students"
+    ]
+  },
+  {
+    "id": "earist_board_of_trustees_2021",
+    "source": "Student Handbook 2021",
+    "category": "Institute Administration",
+    "topic": "Board of Trustees Composition",
+    "content": "As of May 2021, the EARIST Board of Trustees (BOT) is the governing body of the Institute. The composition includes Hon. Ronald L. Adamat (Commissioner, CHED) as Chairperson-Designate and Hon. Editha V. Pillo (EARIST President) as Vice-Chair. Legislative representatives include Hon. Mark O. Go (Chairperson, House Committee on Higher and Technical Education) and Hon. Sen. Joel J. Villanueva (Chairman, Senate Committee on Education, Arts, and Culture). Other members are Hon. Jose B. Patalinjug III (Director, DOST-NCR), Hon. Capt. Johnny G. Yu (Private Sector Representative), Hon. Reynaldo R. Cancio (Director, NPPS – NEDA), Hon. Rogelio T. Mamaradlo (President, EARIST Alumni Association, Inc.), Hon. Emmanuel Aladin D. Tumanda (Private Sector Representative), and Hon. Boniebert P. Luciano (President, EARIST-ISG Federated). Ms. Gilda S. Familara serves as the College and Board Secretary.",
+    "keywords": [
+      "Board of Trustees",
+      "BOT",
+      "Ronald L. Adamat",
+      "Editha V. Pillo",
+      "Mark O. Go",
+      "Joel J. Villanueva",
+      "governing body"
+    ]
+  },
+  {
+    "id": "earist_institute_officials_executive_deans",
+    "source": "Student Handbook 2021",
+    "category": "Institute Administration",
+    "topic": "Executive Officials and College Deans",
+    "content": "The Institute Officials leading the administration include Dr. Editha V. Pillo as President, Dr. Frederick C. Pena as Vice President for Academic Affairs, and Dr. Grant B. Cornell as Vice President for Production, Research, Extension and International Affairs. The academic colleges are led by the following Deans: Ar. Fernando DP. Pamintuan (Architecture and Fine Arts), Dr. Raymund B. Bolalin (Arts and Sciences), Dr. Willy O. Gapasin (Business and Public Administration), Dr. Eleonor T. Salvador (Education), Engr. Apolinario S. Sollano (Engineering), Dr. Josie R. Sonio (Industrial Technology), Prof. Maria Rhoda D. Dinaga (Hospitality and Tourism Management), Dr. Anabel D. Riva (Criminal Justice Education), and Dr. Marlene M. Monterona (Graduate School). Dr. Agnes N. Coo serves as the Administrator for the EARIST Cavite Campus.",
+    "keywords": [
+      "Institute Officials",
+      "President",
+      "Vice President",
+      "Deans",
+      "College Heads",
+      "Academic Affairs"
+    ]
+  },
+  {
+    "id": "earist_directors_chiefs_services",
+    "source": "Student Handbook 2021",
+    "category": "Institute Administration",
+    "topic": "Directors and Chiefs of Services",
+    "content": "EARIST operational services are managed by various Directors and Chiefs. Key Directors include Mrs. Sheila M. Matias (Student Admission and Records Mgt.), Prof. Roel P. Balayan (Instruction Services), Prof. Agnes F. Amorin (Student Affairs and Services), Dr. Giovanni L. Ahunin (NSTP), Engr. Rogelio T. Mamaradlo (Research Development), Dr. Eriberto R. Astorga Jr. (Extension & External Affairs), Dr. Rowena A. Bolotaolo (Quality Assurance), Mr. Noel A. Oriel (Administrative Services), Engr. Roberto M. Liwanag (Financial Management), Dr. Jesus M. Paguigan (Management Information), Dr. Joselito D. Mabansag (International Affairs), Dr. Myrna V. Gulles (Planning), Dr. Melba S. Asuncion (Internal Control Audit), and Ms. Rosalina A. Soriano (Library). \n\nService Chiefs include Mr. Christopher T. Buñag (Physical Education/Sports), Prof. Evan John Magno (Culture and Arts), Dr. Georgia P. Ramirez (Counseling & Testing), Mr. Ervin Carl E. Rodriguez (Accounting), Mrs. Christylane Bagabaldo (HRM), Ms. Mary Antonette Aquino (Budget), Ms. Elizabeth Gubaton (Cash/Disbursement), Mr. Generoso Maningat (Payroll), Mr. Jose Cornelio Jr. (Procurement), Ms. Belinda Delarmente (Physical Plant), Mr. Catalino Buenvenida (Transportation), Mr. Pedro Rommel D. Kirong (Security), Ms. Dana Roldan (Records), Dr. Peggy M. Ochoa (Medical/Dental), and Mr. Ferdinand DP. Alvaro (Info Hardware). Arch. Maundelito S. Florendo leads Institutional Infrastructure and serves as Chairman of the Grievance Committee.",
+    "keywords": [
+      "Directors",
+      "Chiefs",
+      "Administrative Services",
+      "Student Affairs",
+      "Medical and Dental",
+      "Registrar",
+      "Finance"
+    ]
+  },
+  {
+    "id": "earist_hymn_pledge_loyalty",
+    "source": "Student Handbook 2021",
+    "category": "Institutional Culture",
+    "topic": "EARIST Hymn and Pledges",
+    "content": "The institutional culture is defined by the EARIST Hymn, the 'Inang Paaralan' song, and the Pledge of Loyalty. The EARIST Hymn begins with 'Let the EARIST music fill the air / With the echo our spirit rise' and concludes with 'E.A.R.I.S.T. EARIST, Forever!'. The 'Inang Paaralan' lyrics express gratitude and remembrance of the Alma Mater. The Pledge of Loyalty states: 'I hereby pledge my loyalty to my School and reiterate my love to my Country and people... I will strive with others to share all the knowledge and power that I have at my command so necessary in the reconstruction of our nations’ economy.'",
+    "keywords": [
+      "EARIST Hymn",
+      "Inang Paaralan",
+      "Pledge of Loyalty",
+      "Alma Mater",
+      "lyrics"
+    ]
+  },
+  {
+    "id": "earist_glossary_terms_a_to_e",
+    "source": "Student Handbook 2021",
+    "category": "Definition of Terms",
+    "topic": "Glossary A - E",
+    "content": "The Handbook defines specific terms as follows: 'Absent' is the act of being not present in a class. 'Academic Degree' is a course or study in a particular educational institution. 'Academic Honors' are awarded to students with distinction (Summa, Magna, Cum Laude). 'Academic Load' refers to the number of subjects or courses enrolled by a student. 'Accreditation' is a concept based on self-regulation focusing on evaluation and improvement of educational quality. 'Admission' is the act of admitting or allowing a student for enrollment. 'Baccalaureate Degree' refers to any four (4) or five (5) year program of study. 'Class' is defined as a series of meetings where students are taught a subject. 'Complaint' is a verbal or written statement expressing dissatisfaction. 'Conduct' refers to the way a person behaves. 'Cross Enroll' means to enroll from one school to another. 'Curriculum' is a systematic group of courses required for graduation. 'Dean' is the person appointed in charge of a college. 'Discipline' is the control required to ensure rules are obeyed. 'Dismissal' means discharge. 'Dropped Grade' is given to a student who voluntarily withdraws not less than two weeks in a class. 'Examination' is a test to show progress.",
+    "keywords": [
+      "definition of terms",
+      "academic load",
+      "accreditation",
+      "cross enroll",
+      "dropped grade",
+      "curriculum"
+    ]
+  },
+  {
+    "id": "earist_glossary_terms_f_to_o",
+    "source": "Student Handbook 2021",
+    "category": "Definition of Terms",
+    "topic": "Glossary F - O",
+    "content": "The Handbook defines specific terms as follows: 'Failed Grade' is a grade given to a student who does not qualify for passing a subject. 'Fee' is an amount of money to be paid in a given semester. 'Freshman' is a first-year student. 'Grade' is a mark given to a student for their academic performance. 'Graduate' is a student who successfully completes a level of education. 'Incomplete Grade' is a temporary grade given to a student who may qualify for passing but has not complied with certain requirements. 'Institutional Student Programs and Services' refer to services designed to pro-actively respond to basic health, food, shelter, and safety concerns. 'Irregular Student' is one who carries less than the full load and/or has back subjects. 'Junior' is a third-year student. 'Miscellaneous' refers to additional fees aside from tuition. 'Offense' is something that is wrong or improper. 'Official' is a person who holds an office in an educational institution.",
+    "keywords": [
+      "failed grade",
+      "incomplete grade",
+      "irregular student",
+      "freshman",
+      "junior",
+      "official"
+    ]
+  },
+  {
+    "id": "earist_glossary_terms_p_to_v",
+    "source": "Student Handbook 2021",
+    "category": "Definition of Terms",
+    "topic": "Glossary P - V",
+    "content": "The Handbook defines specific terms as follows: 'Paying Students' are overstaying students ineligible for free tertiary education. 'Probation' is a situation or period of time for a person who has made a serious mistake. 'Rectification of grades' means to correct wrong entries of data. 'Refund' is to return a certain amount of fees within a prescribed period. 'Retention' is enrollment in any school year that continues the following year. 'Returnee' is a student who failed or left and wishes to be re-admitted. 'Scholarship' is assistance given to defray expenses. 'Senior' is a fourth-year student. 'Shifter' is a student changing from one course to another. 'Sophomore' is a second-year student. 'Special Student' is one not earning formal academic credits. 'Student' refers to a person currently enrolled and attending classes regularly. 'Student Affairs and Services (SAS)' refers to programs complementing academic experiences. 'Suspension' is the act of forcing someone to leave schooling due to an offense. 'Tenure' is the length of stay of a student. 'Tertiary Students' are those enjoying free tertiary education pursuing an undergraduate degree. 'Transferee' is a student entering from another school. 'Tuition' is money paid for the right to study.",
+    "keywords": [
+      "paying students",
+      "probation",
+      "rectification",
+      "returnee",
+      "shifter",
+      "tenure",
+      "transferee"
+    ]
+  },
+  {
+    "id": "earist_abbreviations_list",
+    "source": "Student Handbook 2021",
+    "category": "Definition of Terms",
+    "topic": "List of Abbreviations",
+    "content": "The Handbook utilizes specific abbreviations including: CWTS (Civic Welfare Training Service), CSG (College Student Government), DRP (Dropped), EARIST (Eulogio 'Amang' Rodriguez Institute of Science and Technology), EARMSAT (Eulogio 'Amang' Rodriguez Memorial School of Arts and Trades), ECAD (EARIST Cultural Affairs Division), EARISTCAT (EARIST College Admission Test), ECC (EARIST Cavite Campus), ERVHS (Eulogio Rodriguez Vocational High School), ESG (EARIST Student Government), FMS (Financial Management Services), GASAT (General Alvarez School of Arts and Trades), GWA (General Weighted Average), INC (Incomplete Grade), ISG (Institute Student Government), LTS (Literacy Training Services), MTS (Military Training Services), NSTP (National Service Training Program), OJT (On-the-Job Training), SAS (Student Affairs and Services), SARRMS (Student Admission Registration and Records Management Services), SPDE (Sports and Physical Development Education), VPAA (Vice President for Academic Affairs), VPAF (Vice President for Administration and Finance), and VPREIA (Vice President for Production, Research, Extension, and International Affairs).",
+    "keywords": [
+      "abbreviations",
+      "acronyms",
+      "CWTS",
+      "EARISTCAT",
+      "NSTP",
+      "SARRMS",
+      "ISG",
+      "CSG"
+    ]
+  }
+]
