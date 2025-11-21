@@ -19,29 +19,36 @@ export interface ChatResponse {
 }
 
 class ChatService {
-  private baseUrl = 'http://127.0.0.1:5000';
+  private baseUrl = 'http://localhost:8000';
 
   async getResponse(message: string): Promise<ChatResponse> {
     try {
-      const response = await fetch(`${this.baseUrl}/ask`, {
+      const response = await fetch(`${this.baseUrl}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ question: message }),
+        body: JSON.stringify({ message: message }),
       });
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({ error: 'Failed to parse error response' }));
-        throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+        throw new Error(errorData.detail || errorData.error || `HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
 
+      // Map backend context (string[]) to frontend ChatSource structure
+      const sources: ChatSource[] = (data.context || []).map((text: string, index: number) => ({
+        text: text,
+        score: 0,
+        chunk_id: index
+      }));
+
       return {
         success: true,
-        message: data.answer,
-        sources: data.sources,
+        message: data.response,
+        sources: sources,
       };
     } catch (error) {
       console.error('Chat service error:', error);
