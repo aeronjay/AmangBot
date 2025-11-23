@@ -61,7 +61,8 @@ async def startup_event():
     # 2. Initialize Embedder
     print("Initializing Nomic Embedder (nomic-ai/nomic-embed-text-v1.5)...")
     # trust_remote_code=True is needed for Nomic
-    embedder = SentenceTransformer("nomic-ai/nomic-embed-text-v1.5", trust_remote_code=True)
+    finetuned_model_path = "../Models/nomic-finetuned/nomic-finetuned-final"
+    embedder = SentenceTransformer(finetuned_model_path, trust_remote_code=True)
 
     # 3. Build FAISS Index
     print("Building FAISS index...")
