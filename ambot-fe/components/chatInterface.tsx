@@ -55,7 +55,7 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
     setIsTyping(true);
 
     try {
-      const response = await chatService.getResponse(userMessage.message);
+      const response = await chatService.getResponse(userMessage.message, messages);
       
       const botMessage: ChatMessage = {
         id: `bot-${Date.now()}`,

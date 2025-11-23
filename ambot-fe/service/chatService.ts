@@ -21,14 +21,23 @@ export interface ChatResponse {
 class ChatService {
   private baseUrl = 'http://localhost:8000';
 
-  async getResponse(message: string): Promise<ChatResponse> {
+  async getResponse(message: string, history: ChatMessage[] = []): Promise<ChatResponse> {
     try {
+      // Convert history to backend format
+      const backendHistory = history.map(msg => ({
+        role: msg.sender,
+        content: msg.message
+      }));
+
       const response = await fetch(`${this.baseUrl}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message: message }),
+        body: JSON.stringify({ 
+          message: message,
+          history: backendHistory
+        }),
       });
 
       if (!response.ok) {
