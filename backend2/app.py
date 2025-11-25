@@ -12,7 +12,7 @@ import uvicorn
 
 # --- Configuration ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CHUNKS_PATH = os.path.abspath(os.path.join(BASE_DIR, "../BART/Dataset/Chunk2.json"))
+DATASET_DIR = os.path.abspath(os.path.join(BASE_DIR, "../BART/Dataset/Latest"))
 MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"))
 NOMIC_MODEL_PATH = "../Models/nomic-finetuned/nomic-finetuned-final"
 
@@ -58,13 +58,35 @@ async def startup_event():
     global chunks, index, embedder, llm, reranker
     
     # 1. Load Chunks
-    if not os.path.exists(CHUNKS_PATH):
-        raise FileNotFoundError(f"Chunks file not found at {CHUNKS_PATH}")
+    if not os.path.exists(DATASET_DIR):
+        raise FileNotFoundError(f"Dataset directory not found at {DATASET_DIR}")
     
-    with open(CHUNKS_PATH, "r", encoding="utf-8") as f:
-        chunks_data = json.load(f)
-        chunks = [item.get("content", "") for item in chunks_data if "content" in item]
-    print(f"Loaded {len(chunks)} chunks.")
+    chunks = []
+    chunks_for_embedding = []
+    
+    for filename in os.listdir(DATASET_DIR):
+        if filename.endswith(".json"):
+            file_path = os.path.join(DATASET_DIR, filename)
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    file_data = json.load(f)
+                    if isinstance(file_data, list):
+                        for item in file_data:
+                            if "content" in item:
+                                chunks.append(item["content"])
+                                
+                                # Prepare embedding with metadata (excluding id and keywords)
+                                metadata_parts = []
+                                for k, v in item.items():
+                                    if k not in ["id", "keywords", "content"]:
+                                        metadata_parts.append(f"{k}: {v}")
+                                metadata_str = ", ".join(metadata_parts)
+                                
+                                chunks_for_embedding.append(f"search_document: {metadata_str}. {item['content']}")
+            except Exception as e:
+                print(f"Error loading {filename}: {e}")
+
+    print(f"Loaded {len(chunks)} chunks from {DATASET_DIR}.")
 
     # 2. Initialize Embedder
     print("Initializing Nomic Embedder...")
@@ -72,7 +94,7 @@ async def startup_event():
 
     # 3. Build FAISS Index
     print("Building FAISS index...")
-    chunks_for_embedding = [f"search_document: {c}" for c in chunks]
+    # chunks_for_embedding is already prepared
     embeddings = embedder.encode(chunks_for_embedding, convert_to_numpy=True, normalize_embeddings=True)
     
     dimension = embeddings.shape[1]
@@ -81,7 +103,7 @@ async def startup_event():
     print(f"FAISS index built with {index.ntotal} vectors.")
 
     # 4. Initialize LLM
-    print(f"Initializing Llama model...")
+    print(f"Initializing model...")
     llm = Llama(
         model_path=MODEL_PATH,
         n_gpu_layers=-1, 
