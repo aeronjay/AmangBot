@@ -1,12 +1,17 @@
 
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import ChatInterface from '../components/chatInterface';
 import RoleSelectionModal from '../components/RoleSelectionModal';
 import SettingsModal from '../components/SettingsModal';
 import { hasUserRole, setUserRole, getUserRole, type UserRole } from './utils/roleStorage';
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
 
-function App() {
+function ChatPage() {
   const [showRoleModal, setShowRoleModal] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [userRole, setCurrentUserRole] = useState<UserRole | null>(null);
@@ -113,6 +118,27 @@ function App() {
         onFontSizeChange={handleFontSizeChange}
       />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<ChatPage />} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route
+            path="/admindashboard"
+            element={
+              <ProtectedRoute>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
