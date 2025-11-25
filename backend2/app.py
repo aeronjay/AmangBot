@@ -10,6 +10,10 @@ from sentence_transformers import SentenceTransformer, CrossEncoder
 from llama_cpp import Llama
 import uvicorn
 
+# Import auth-related modules
+from config.database import connect_to_mongo, close_mongo_connection
+from routes.auth import router as auth_router
+
 # --- Configuration ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATASET_DIR = os.path.abspath(os.path.join(BASE_DIR, "../BART/Dataset/Latest"))
@@ -21,6 +25,9 @@ SIMILARITY_THRESHOLD = 1.4  # FAISS L2 distance. Lower is better. Tune this!
                             # If distance > 1.4, the context is likely irrelevant.
 
 app = FastAPI(title="AmangBot Backend")
+
+# Include auth router
+app.include_router(auth_router, prefix="/api")
 
 app.add_middleware(
     CORSMiddleware,
@@ -56,6 +63,9 @@ class ChatResponse(BaseModel):
 @app.on_event("startup")
 async def startup_event():
     global chunks, index, embedder, llm, reranker
+    
+    # Connect to MongoDB
+    await connect_to_mongo()
     
     # 1. Load Chunks
     if not os.path.exists(DATASET_DIR):
@@ -118,6 +128,13 @@ async def startup_event():
         print("Reranker initialized.")
     except Exception:
         reranker = None
+
+
+# --- Shutdown ---
+@app.on_event("shutdown")
+async def shutdown_event():
+    await close_mongo_connection()
+
 
 # --- Helper Functions ---
 
