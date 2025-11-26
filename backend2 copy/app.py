@@ -39,7 +39,7 @@ app.add_middleware(
 )
 
 # --- Globals ---
-chunks = []
+chunks = []  # List of dicts with 'content', 'source', 'category', 'topic'
 index = None
 embedder = None
 llm = None
@@ -53,7 +53,7 @@ class Message(BaseModel):
 class ChatRequest(BaseModel):
     message: str
     history: List[Message] = []
-    k: Optional[int] = 3  # Increased k slightly to get broader context for clarification
+    k: Optional[int] = 4  # Increased k slightly to get broader context for clarification
 
 class ChatResponse(BaseModel):
     response: str
@@ -84,7 +84,14 @@ async def startup_event():
                     if isinstance(file_data, list):
                         for item in file_data:
                             if "content" in item:
-                                chunks.append(item["content"])
+                                # Store chunk with metadata for source attribution
+                                chunk_data = {
+                                    "content": item["content"],
+                                    "source": item.get("source", "EARIST Database"),
+                                    "category": item.get("category", ""),
+                                    "topic": item.get("topic", "")
+                                }
+                                chunks.append(chunk_data)
                                 
                                 # Prepare embedding with metadata (excluding id and keywords)
                                 metadata_parts = []
@@ -144,32 +151,98 @@ def is_conversational_filler(text: str) -> bool:
     fillers = ["hi", "hello", "good morning", "good afternoon", "good evening", "thanks", "thank you", "bye"]
     return text.lower().strip() in fillers
 
+def needs_contextualization(message: str) -> bool:
+    """
+    Heuristic check to determine if a message likely needs context from history.
+    Returns True if the message contains pronouns/references that need resolution.
+    """
+    # Lowercase for comparison
+    msg_lower = message.lower().strip()
+    
+    # Reference words that indicate the message depends on previous context
+    context_indicators = [
+        "it", "that", "this", "they", "them", "those", "these",
+        "the same", "similar", "also", "too", "as well",
+        "what about", "how about", "and for", "for the",
+        "more about", "tell me more", "explain more",
+        "can you", "could you",  # Often follow-ups
+    ]
+    
+    # Check if message starts with context indicators
+    starts_with_indicators = [
+        "what about", "how about", "and ", "but ", "also ",
+        "what's", "how's", "where's", "who's",
+        "the ", "its ", "their "
+    ]
+    
+    # If message is very short (1-3 words), it likely needs context
+    word_count = len(msg_lower.split())
+    if word_count <= 3 and not any(q in msg_lower for q in ["who", "what", "where", "when", "why", "how"]):
+        return True
+    
+    # Check for starts-with indicators
+    for indicator in starts_with_indicators:
+        if msg_lower.startswith(indicator):
+            return True
+    
+    # Check for embedded context indicators (but be more careful)
+    # Only trigger if the message seems incomplete
+    if word_count < 8:
+        for indicator in context_indicators:
+            # Check if indicator appears as a standalone word
+            if f" {indicator} " in f" {msg_lower} ":
+                return True
+    
+    return False
+
 def contextualize_query(history: List[Message], latest_message: str) -> str:
     """
-    Rewrites the question to be standalone.
-    Crucial change: Added instruction to detect topic shifts.
+    Rewrites the question to be standalone only when necessary.
+    Uses heuristics first to avoid unnecessary LLM calls and incorrect rewrites.
     """
     if not history:
         return latest_message
     
+    # First, check if contextualization is likely needed
+    if not needs_contextualization(latest_message):
+        print(f"Contextualization skipped (standalone query): '{latest_message}'")
+        return latest_message
+    
+    # Get relevant history (last 2 exchanges)
     conversation_str = ""
-    for msg in history[-2:]: # Only look at last 2 turns to prevent confusion
+    for msg in history[-4:]:  # Last 4 messages (2 exchanges)
         conversation_str += f"{msg.role}: {msg.content}\n"
         
-    prompt = f"""<s>[INST] You are a query reformulator.
-Task: Rewrite the "Follow Up Input" to be a standalone question based on the "Chat History".
+    prompt = f"""[INST] You are a query reformulator for an EARIST university chatbot.
+
+Task: Determine if the "User Question" needs context from the "Chat History" to be understood.
+
 Rules:
-1. If the Follow Up Input refers to previous context (e.g., "what about for IT?", "how much is that?"), rewrite it to include the context.
-2. If the Follow Up Input is a NEW topic unrelated to the history, DO NOT change it. Just output the input as is.
-3. Output ONLY the rewritten question.
+1. If the User Question contains pronouns (it, that, this, they) or references (the same, similar) that refer to something in the Chat History, rewrite it as a complete standalone question.
+2. If the User Question is already a complete, standalone question about a NEW topic, output it EXACTLY as-is without any changes.
+3. Do NOT add information that wasn't implied by the user.
+4. Output ONLY the final question, nothing else.
+
+Examples:
+- History: "What are the requirements for freshmen?" -> User: "what about transferees?" -> Output: "What are the admission requirements for transferees?"
+- History: "Who is the president?" -> User: "What courses does EARIST offer?" -> Output: "What courses does EARIST offer?"
+- History: "Tell me about BSIT" -> User: "how many years?" -> Output: "How many years is the BSIT program?"
 
 Chat History:
 {conversation_str}
-Follow Up Input: {latest_message}
-Standalone question: [/INST]"""
+User Question: {latest_message}
+Output: [/INST]"""
 
-    output = llm(prompt, max_tokens=64, stop=["\n", "</s>"], temperature=0.1, echo=False)
+    output = llm(prompt, max_tokens=100, stop=["\n", "</s>", "[/INST]"], temperature=0.0, echo=False)
     new_query = output["choices"][0]["text"].strip()
+    
+    # Fallback: if the LLM returns empty or just punctuation, use original
+    if not new_query or len(new_query) < 3:
+        new_query = latest_message
+    
+    # Remove any quotation marks the LLM might have added
+    new_query = new_query.strip('"').strip("'")
+    
     print(f"Contextualized: '{latest_message}' -> '{new_query}'")
     return new_query
 
@@ -210,30 +283,69 @@ async def chat(request: ChatRequest):
 
     # 4. Rerank (Refining the search)
     if reranker:
-        pairs = [[standalone_query, doc] for doc in retrieved_chunks]
+        pairs = [[standalone_query, chunk["content"]] for chunk in retrieved_chunks]
         scores = reranker.predict(pairs)
         scored_chunks = sorted(zip(retrieved_chunks, scores), key=lambda x: x[1], reverse=True)
         final_chunks = [chunk for chunk, score in scored_chunks[:request.k]]
     else:
         final_chunks = retrieved_chunks[:request.k]
 
-    context_str = "\n\n".join(final_chunks)
+    # Build context string with source attribution for the LLM
+    context_parts = []
+    sources_used = set()
+    for i, chunk in enumerate(final_chunks, 1):
+        source = chunk.get("source", "EARIST Database")
+        topic = chunk.get("topic", "")
+        sources_used.add(source)
+        source_label = f"[Source {i}: {source}" + (f" - {topic}]" if topic else "]")
+        context_parts.append(f"{source_label}\n{chunk['content']}")
+    
+    context_str = "\n\n".join(context_parts)
+    sources_list = list(sources_used)
     
     # 5. Construct Prompt (The "Persona" & "Clarification" Logic)
-    system_prompt = """You are "Amang Bot", a friendly and helpful AI student assistant for EARIST (Eulogio "Amang" Rodriguez Institute of Science and Technology).
+    sources_str = ", ".join(sources_list) if sources_list else "EARIST Database"
+    
+    system_prompt = f"""You are "Amang Bot", a friendly and helpful AI student assistant for EARIST (Eulogio "Amang" Rodriguez Institute of Science and Technology).
 
 GUIDELINES:
 1. **Scope:** Answer ONLY using the provided Context. If the answer is not there, say you don't know.
-2. **Tone:** Be polite, encouraging, and conversational. You can use "we" when referring to the school community.
-3. **Ambiguity Handling (CRITICAL):** - If the user asks a vague question (e.g., "What are the requirements?" or "Who is the head?"), CHECK THE CONTEXT.
-   - If the context contains requirements for multiple things (e.g., "Admission" AND "Graduation"), DO NOT guess.
-   - Instead, list the options you see and ask the user to clarify. (e.g., "I see requirements for both Freshmen and Transferees. Which one would you like to know about?")
-4. **Formatting:** Use bullet points for lists to make it readable.
-5. **No Hallucination:** If the context does not contain the answer, respond with "I'm sorry, but I couldn't find specific information about that in my Sources.."
 
-If the context does not contain the specific contact details requested, apologize and suggest they visit the EARIST registrar personally.
+2. **Source Attribution (CRITICAL):**
+   - You MUST cite your source in your response.
+   - Start your answer with "According to the [Source Name],..." or "Based on the [Source Name],...".
+   - The sources available are: {sources_str}
 
-Remember: Your Goal is to Answer The Question Based ONLY On the provided Sources.
+3. **Use Latest Information:** Prioritize the MOST RECENT information. If multiple versions exist, use only the latest.
+
+4. **Tone:** Be polite, encouraging, and conversational.
+
+5. **Ambiguity Handling:** If the question is vague, list the available options and ask the user to clarify.
+
+6. **Formatting (IMPORTANT - Follow these rules strictly):**
+   - Use **bold** for important terms, names, or key information.
+   - Use bullet points (•) for lists with 3+ items.
+   - Use numbered lists (1. 2. 3.) for sequential steps or procedures.
+   - Add line breaks between different sections for readability.
+   - For requirements or documents, format as a clean list.
+   - Keep paragraphs short (2-3 sentences max).
+   - Example format for requirements:
+     
+     **Documentary Requirements:**
+     • Form 138 (Report Card)
+     • Certificate of Good Moral Character
+     • PSA Birth Certificate
+     
+   - Example format for steps:
+     
+     **Steps to Enroll:**
+     1. Submit your application online.
+     2. Take the entrance exam.
+     3. Attend the interview.
+
+7. **No Hallucination:** If the context does not contain the answer, say "I'm sorry, but I couldn't find specific information about that in my sources."
+
+Remember: Answer Based ONLY on the provided Sources, cite your source, and format your response for easy reading.
 """
 
     prompt_content = f"""{system_prompt}
@@ -245,22 +357,25 @@ User Question: {standalone_query}
 
 Amang Bot Response:"""
 
-    prompt = f"<s>[INST] {prompt_content} [/INST]"
+    prompt = f"[INST] {prompt_content} [/INST]"
 
     # 6. Generate
     output = llm(
         prompt,
         max_tokens=1024,
-        temperature=0.1, # Keep temperature low to reduce hallucinations, but >0 for natural flow
+        temperature=0.2, # Keep temperature low to reduce hallucinations, but >0 for natural flow
         stop=["</s>", "[/INST]", "User:"],
         echo=False
     )
     
     response_text = output["choices"][0]["text"].strip()
     
+    # Extract content strings for the response context
+    context_contents = [chunk["content"] for chunk in final_chunks]
+    
     return ChatResponse(
         response=response_text,
-        context=final_chunks
+        context=context_contents
     )
 
 if __name__ == "__main__":
