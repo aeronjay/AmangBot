@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pydantic[email]
+sentence-transformers
+faiss-cpu
+llama-cpp-python
+numpy
+motor
+pymongo
+python-jose[cryptography]
+pwdlib[bcrypt]
+python-dotenv
