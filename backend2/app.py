@@ -18,6 +18,7 @@ from routes.auth import router as auth_router
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATASET_DIR = os.path.abspath(os.path.join(BASE_DIR, "../BART/Dataset/Latest"))
 MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"))
+BART_MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "../Models/bart-finetuned/"))
 NOMIC_MODEL_PATH = "../Models/nomic-finetuned/nomic-finetuned-final"
 
 # Thresholds
