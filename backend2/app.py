@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
-from sentence_transformers import SentenceTransformer, CrossEncoder
+from sentence_transformers import SentenceTransformer
 from llama_cpp import Llama
 import uvicorn
 
@@ -23,7 +23,7 @@ NOMIC_MODEL_PATH = "../Models/nomic-finetuned/nomic-finetuned-final"
 
 # Thresholds
 SIMILARITY_THRESHOLD = 1.4  # FAISS L2 distance. Lower is better. Tune this! 
-                            # If distance > 1.4, the context is likely irrelevant.
+                            # If distance > 1.4x`x`, the context is likely irrelevant.
 
 app = FastAPI(title="AmangBot Backend")
 
@@ -43,7 +43,6 @@ chunks = []
 index = None
 embedder = None
 llm = None
-reranker = None
 
 # --- Models ---
 class Message(BaseModel):
@@ -53,7 +52,7 @@ class Message(BaseModel):
 class ChatRequest(BaseModel):
     message: str
     history: List[Message] = []
-    k: Optional[int] = 4  # Increased k slightly to get broader context for clarification
+    k: Optional[int] = 3  # Number of top chunks to return after reranking
 
 class ChatResponse(BaseModel):
     response: str
@@ -101,7 +100,7 @@ async def startup_event():
 
     # 2. Initialize Embedder
     print("Initializing Nomic Embedder...")
-    embedder = SentenceTransformer(NOMIC_MODEL_PATH, trust_remote_code=True)
+    embedder = SentenceTransformer(NOMIC_MODEL_PATH, trust_remote_code=True, device='cuda')
 
     # 3. Build FAISS Index
     print("Building FAISS index...")
@@ -117,18 +116,11 @@ async def startup_event():
     print(f"Initializing model...")
     llm = Llama(
         model_path=MODEL_PATH,
-        n_gpu_layers=-1, 
-        n_batch=4096,         
-        n_ctx=4096,           
+        n_gpu_layers=999, 
+        n_batch=512,         
+        n_ctx=2048,           
         verbose=False         
     )
-
-    # 5. Initialize Reranker
-    try:
-        reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
-        print("Reranker initialized.")
-    except Exception:
-        reranker = None
 
 
 # --- Shutdown ---
@@ -152,24 +144,40 @@ def contextualize_query(history: List[Message], latest_message: str) -> str:
     if not history:
         return latest_message
     
+    # Filter to only user/assistant messages and get last 3 turns for better context
     conversation_str = ""
-    for msg in history[-2:]: # Only look at last 2 turns to prevent confusion
-        conversation_str += f"{msg.role}: {msg.content}\n"
+    relevant_history = [msg for msg in history if msg.role in ["user", "assistant"]][-3:]
+    for msg in relevant_history:
+        role_label = "User" if msg.role == "user" else "Assistant"
+        conversation_str += f"{role_label}: {msg.content}\n"
         
-    prompt = f"""<s>[INST] You are a query reformulator.
-Task: Rewrite the "Follow Up Input" to be a standalone question based on the "Chat History".
-Rules:
-1. If the Follow Up Input refers to previous context (e.g., "what about for IT?", "how much is that?"), rewrite it to include the context.
-2. If the Follow Up Input is a NEW topic unrelated to the history, DO NOT change it. Just output the input as is.
-3. Output ONLY the rewritten question.
+    prompt = f"""<s>[INST] You are a query reformulator for an EARIST university chatbot.
+
+TASK: Rewrite the "Follow Up Input" to be a clear, standalone question.
+
+RULES:
+1. REFERENCE RESOLUTION: If the Follow Up Input uses pronouns or references (e.g., "what about for IT?", "how much is that?", "what are its requirements?"), resolve them using the Chat History context.
+2. TOPIC SHIFT: If the Follow Up Input is a completely NEW topic unrelated to the history, return it unchanged.
+3. CONTEXT PRESERVATION: Include relevant details from history (department names, specific programs, etc.) when rewriting.
+4. OUTPUT: Return ONLY the rewritten question, nothing else.
+
+EXAMPLES:
+- History mentions "BSIT program" + Follow up "what are the requirements?" → "What are the requirements for the BSIT program?"
+- History mentions "enrollment fees" + Follow up "how about for graduate students?" → "What are the enrollment fees for graduate students?"
+- New topic "Who is the president?" → "Who is the president?" (unchanged)
 
 Chat History:
 {conversation_str}
 Follow Up Input: {latest_message}
 Standalone question: [/INST]"""
 
-    output = llm(prompt, max_tokens=64, stop=["\n", "</s>"], temperature=0.1, echo=False)
+    output = llm(prompt, max_tokens=128, stop=["</s>", "\n\n"], temperature=0.1, echo=False)
     new_query = output["choices"][0]["text"].strip()
+    
+    # Fallback: if the output is empty or too short, use original
+    if len(new_query) < 3:
+        new_query = latest_message
+        
     print(f"Contextualized: '{latest_message}' -> '{new_query}'")
     return new_query
 
@@ -177,7 +185,7 @@ Standalone question: [/INST]"""
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
-    global index, chunks, embedder, llm, reranker
+    global index, chunks, embedder, llm
     
     # 1. Check for simple greetings (Speed optimization)
     if is_conversational_filler(request.message):
@@ -193,9 +201,7 @@ async def chat(request: ChatRequest):
     query_text = f"search_query: {standalone_query}"
     query_embedding = embedder.encode([query_text], convert_to_numpy=True, normalize_embeddings=True)
     
-    # Fetch candidates
-    fetch_k = request.k * 3 if reranker else request.k
-    D, I = index.search(query_embedding, fetch_k)
+    D, I = index.search(query_embedding, request.k)
     
     # Check distance threshold (Guardrail for "Unknown Info")
     # FAISS L2: Lower is better. If the closest chunk is very far, we don't know the answer.
@@ -206,16 +212,7 @@ async def chat(request: ChatRequest):
             context=[]
         )
 
-    retrieved_chunks = [chunks[i] for i in I[0]]
-
-    # 4. Rerank (Refining the search)
-    if reranker:
-        pairs = [[standalone_query, doc] for doc in retrieved_chunks]
-        scores = reranker.predict(pairs)
-        scored_chunks = sorted(zip(retrieved_chunks, scores), key=lambda x: x[1], reverse=True)
-        final_chunks = [chunk for chunk, score in scored_chunks[:request.k]]
-    else:
-        final_chunks = retrieved_chunks[:request.k]
+    final_chunks = [chunks[i] for i in I[0]]
 
     context_str = "\n\n".join(final_chunks)
     
