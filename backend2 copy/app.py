@@ -55,9 +55,16 @@ class ChatRequest(BaseModel):
     history: List[Message] = []
     k: Optional[int] = 4  # Increased k slightly to get broader context for clarification
 
+class ChunkData(BaseModel):
+    content: str
+    source: str
+    category: str
+    topic: str
+
 class ChatResponse(BaseModel):
     response: str
     context: List[str]
+    chunks: List[ChunkData] = []
     is_clarification_needed: bool = False
 
 # --- Startup ---
@@ -373,9 +380,21 @@ Amang Bot Response:"""
     # Extract content strings for the response context
     context_contents = [chunk["content"] for chunk in final_chunks]
     
+    # Prepare full chunk data for frontend
+    chunks_data = [
+        ChunkData(
+            content=chunk.get("content", ""),
+            source=chunk.get("source", "EARIST Database"),
+            category=chunk.get("category", ""),
+            topic=chunk.get("topic", "")
+        )
+        for chunk in final_chunks
+    ]
+    
     return ChatResponse(
         response=response_text,
-        context=context_contents
+        context=context_contents,
+        chunks=chunks_data
     )
 
 if __name__ == "__main__":

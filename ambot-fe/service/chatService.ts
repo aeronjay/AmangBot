@@ -5,6 +5,13 @@ export interface ChatMessage {
   timestamp: Date;
 }
 
+export interface ChunkData {
+  content: string;
+  source: string;
+  category: string;
+  topic: string;
+}
+
 export interface ChatSource {
   text: string;
   score: number;
@@ -15,6 +22,7 @@ export interface ChatResponse {
   success: boolean;
   message: string;
   sources?: ChatSource[];
+  chunks?: ChunkData[];
   error?: string;
 }
 
@@ -54,10 +62,17 @@ class ChatService {
         chunk_id: index
       }));
 
+      // Get chunks data from backend
+      const chunks: ChunkData[] = data.chunks || [];
+
+      // Log retrieved chunks to console
+      console.log('Retrieved Chunks:', chunks);
+
       return {
         success: true,
         message: data.response,
         sources: sources,
+        chunks: chunks,
       };
     } catch (error) {
       console.error('Chat service error:', error);
