@@ -29,7 +29,7 @@ NOMIC_MODEL_PATH = "../Models/nomic-finetuned/nomic-finetuned-final"
 # MS-MARCO CrossEncoder outputs raw logits (not 0-1 probability).
 # > 0 is usually relevant. < -4 is usually irrelevant.
 # We set a threshold: if the top chunk scores lower than this, we don't know the answer.
-RERANKER_THRESHOLD = -2.5
+RERANKER_THRESHOLD = -8.9
 
 # --- Globals State Storage ---
 class GlobalState:
@@ -61,6 +61,8 @@ class ChatResponse(BaseModel):
     response: str
     context: List[str]
     chunks: List[ChunkData] = []
+    prompt: str = ""
+    retrieved_chunks: List[ChunkData] = []
 
 # --- Lifespan Manager (Modern Startup/Shutdown) ---
 @asynccontextmanager
@@ -103,7 +105,7 @@ async def lifespan(app: FastAPI):
 
     # 3. Load Embedder
     print("Initializing Nomic Embedder...")
-    state.embedder = SentenceTransformer(NOMIC_MODEL_PATH, trust_remote_code=True)
+    state.embedder = SentenceTransformer(NOMIC_MODEL_PATH, trust_remote_code=True, device='cpu')
 
     # 4. Build/Load Index
     if chunks_for_embedding:
@@ -123,7 +125,7 @@ async def lifespan(app: FastAPI):
     # 5. Load Reranker
     try:
         print("Loading Reranker...")
-        state.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+        state.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2', device='cpu')
     except Exception as e:
         print(f"Failed to load Reranker: {e}")
         state.reranker = None
@@ -134,7 +136,7 @@ async def lifespan(app: FastAPI):
     state.llm = Llama(
         model_path=MODEL_PATH,
         n_gpu_layers=-1, 
-        n_batch=512,        
+        n_batch=1024,        
         n_ctx=4096,          
         verbose=False        
     )
@@ -296,6 +298,18 @@ async def chat(request: ChatRequest):
         if best_score < RERANKER_THRESHOLD:
             rerank_time = time.perf_counter() - rerank_start
             total_time = time.perf_counter() - total_start
+            
+            # Build retrieved chunks data for frontend even on failure
+            all_retrieved_chunks = [
+                ChunkData(
+                    content=c["content"], 
+                    source=c["source"], 
+                    category=c.get("category", ""), 
+                    topic=c.get("topic", "")
+                ) 
+                for c in retrieved_chunks
+            ]
+            
             print(f"\n{'='*50}")
             print(f"⏱️  TIMING BREAKDOWN (Query rejected - below threshold)")
             print(f"{'='*50}")
@@ -307,11 +321,26 @@ async def chat(request: ChatRequest):
             print(f"{'='*50}")
             print(f"  TOTAL:             {total_time*1000:.2f} ms")
             print(f"{'='*50}\n")
+            
+            # Print retrieved chunks even on failure
+            print(f"\n{'='*50}")
+            print(f"📦 RETRIEVED CHUNKS (Query rejected - below threshold)")
+            print(f"{'='*50}")
+            for i, chunk in enumerate(retrieved_chunks, 1):
+                print(f"\nChunk {i}:")
+                print(f"  Source: {chunk.get('source', 'N/A')}")
+                print(f"  Category: {chunk.get('category', 'N/A')}")
+                print(f"  Topic: {chunk.get('topic', 'N/A')}")
+                print(f"  Content: {chunk['content'][:200]}...")
+            print(f"{'='*50}\n")
+            
             # If the best match is garbage, return "Unknown" immediately
             return ChatResponse(
                 response="I'm sorry, but I couldn't find specific information about that in the EARIST handbook or my database.",
                 context=[],
-                chunks=[]
+                chunks=[],
+                prompt="(No prompt generated - query rejected due to low relevance score)",
+                retrieved_chunks=all_retrieved_chunks
             )
 
         # Take top K
@@ -344,6 +373,59 @@ GUIDELINES:
 Sources: {sources_str}
 """
     full_prompt = f"[INST] {system_prompt}\n\nContext:\n{context_str}\n\nQuestion: {standalone_query} [/INST]"
+
+    # Check token count and drop 4th chunk if too high
+    MAX_PROMPT_TOKENS = 3072  # Leave room for response within 4096 context
+    token_count = len(state.llm.tokenize(full_prompt.encode('utf-8')))
+    print(f"Initial prompt token count: {token_count}")
+    if token_count > MAX_PROMPT_TOKENS and len(final_chunks) >= 4:
+        print(f"⚠️ Token count ({token_count}) exceeds limit ({MAX_PROMPT_TOKENS}). Dropping 4th chunk...")
+        final_chunks = final_chunks[:3]
+        
+        # Rebuild prompt with reduced chunks
+        context_parts = []
+        sources_used = set()
+        for i, chunk in enumerate(final_chunks, 1):
+            src = chunk.get("source", "EARIST Database")
+            sources_used.add(src)
+            context_parts.append(f"[Source {i}: {src}]\n{chunk['content']}")
+        
+        context_str = "\n\n".join(context_parts)
+        sources_str = ", ".join(sources_used)
+        
+        system_prompt = f"""You are "AmangBot", a helpful AI student assistant for EARIST.
+
+GUIDELINES:
+1. Answer the question using ONLY the provided context.
+2. CITATION IS MANDATORY: Start your answer with "According to [Source Name]...".
+3. If the answer is not in the context, say "I don't know."
+4. Be polite and concise.
+5. Format with bullet points for lists.
+
+Sources: {sources_str}
+"""
+        full_prompt = f"[INST] {system_prompt}\n\nContext:\n{context_str}\n\nQuestion: {standalone_query} [/INST]"
+        token_count = len(state.llm.tokenize(full_prompt.encode('utf-8')))
+        print(f"✅ New token count after dropping chunk: {token_count}")
+
+    # Print the final prompt
+    print(f"\n{'='*50}")
+    print(f"📝 FINAL PROMPT TO LLM")
+    print(f"{'='*50}")
+    print(full_prompt)
+    print(f"{'='*50}\n")
+    
+    # Print retrieved chunks
+    print(f"\n{'='*50}")
+    print(f"📦 RETRIEVED CHUNKS (used for generation)")
+    print(f"{'='*50}")
+    for i, chunk in enumerate(final_chunks, 1):
+        print(f"\nChunk {i}:")
+        print(f"  Source: {chunk.get('source', 'N/A')}")
+        print(f"  Category: {chunk.get('category', 'N/A')}")
+        print(f"  Topic: {chunk.get('topic', 'N/A')}")
+        print(f"  Content: {chunk['content'][:200]}...")
+    print(f"{'='*50}\n")
 
     # 7. Generate Response (Non-blocking)
     gen_start = time.perf_counter()
@@ -381,11 +463,24 @@ Sources: {sources_str}
         ) 
         for c in final_chunks
     ]
+    
+    # All retrieved chunks (before final selection)
+    all_retrieved_chunks = [
+        ChunkData(
+            content=c["content"], 
+            source=c["source"], 
+            category=c.get("category", ""), 
+            topic=c.get("topic", "")
+        ) 
+        for c in retrieved_chunks
+    ]
 
     return ChatResponse(
         response=response_text,
         context=[c["content"] for c in final_chunks],
-        chunks=chunks_data
+        chunks=chunks_data,
+        prompt=full_prompt,
+        retrieved_chunks=all_retrieved_chunks
     )
 
 if __name__ == "__main__":

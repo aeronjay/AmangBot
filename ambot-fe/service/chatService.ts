@@ -23,6 +23,8 @@ export interface ChatResponse {
   message: string;
   sources?: ChatSource[];
   chunks?: ChunkData[];
+  prompt?: string;
+  retrieved_chunks?: ChunkData[];
   error?: string;
 }
 
@@ -64,15 +66,40 @@ class ChatService {
 
       // Get chunks data from backend
       const chunks: ChunkData[] = data.chunks || [];
+      const prompt: string = data.prompt || '';
+      const retrieved_chunks: ChunkData[] = data.retrieved_chunks || [];
 
       // Log retrieved chunks to console
-      console.log('Retrieved Chunks:', chunks);
+      console.log('%c📦 Retrieved Chunks:', 'color: #4CAF50; font-weight: bold; font-size: 14px;');
+      console.table(chunks.map((c, i) => ({
+        '#': i + 1,
+        source: c.source,
+        category: c.category,
+        topic: c.topic,
+        content: c.content.substring(0, 100) + '...'
+      })));
+
+      // Log all retrieved chunks (before filtering)
+      console.log('%c📚 All Retrieved Chunks (before final selection):', 'color: #2196F3; font-weight: bold; font-size: 14px;');
+      console.table(retrieved_chunks.map((c, i) => ({
+        '#': i + 1,
+        source: c.source,
+        category: c.category,
+        topic: c.topic,
+        content: c.content.substring(0, 100) + '...'
+      })));
+
+      // Log the prompt sent to LLM
+      console.log('%c📝 Final Prompt to LLM:', 'color: #FF9800; font-weight: bold; font-size: 14px;');
+      console.log(prompt);
 
       return {
         success: true,
         message: data.response,
         sources: sources,
         chunks: chunks,
+        prompt: prompt,
+        retrieved_chunks: retrieved_chunks,
       };
     } catch (error) {
       console.error('Chat service error:', error);
