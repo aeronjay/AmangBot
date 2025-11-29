@@ -89,29 +89,59 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
     };
 
     setMessages(prev => [...prev, userMessage]);
+    const currentInput = inputValue.trim();
     setInputValue('');
     setIsTyping(true);
 
-    try {
-      const response = await chatService.getResponse(userMessage.message, messages);
-      
-      const botMessage: ChatMessage = {
-        id: `bot-${Date.now()}`,
-        message: response.message,
-        sender: 'bot',
-        timestamp: new Date()
-      };
+    // Create a placeholder bot message that will be updated with streamed content
+    const botMessageId = `bot-${Date.now()}`;
+    const botMessage: ChatMessage = {
+      id: botMessageId,
+      message: '',
+      sender: 'bot',
+      timestamp: new Date()
+    };
 
-      setMessages(prev => [...prev, botMessage]);
+    setMessages(prev => [...prev, botMessage]);
+
+    try {
+      await chatService.streamResponse(currentInput, messages, {
+        onToken: (token: string) => {
+          setMessages(prev => 
+            prev.map(msg => 
+              msg.id === botMessageId 
+                ? { ...msg, message: msg.message + token }
+                : msg
+            )
+          );
+        },
+        onMetadata: (metadata) => {
+          // Metadata is already logged in the service
+          console.log('Received metadata:', metadata);
+        },
+        onDone: () => {
+          setIsTyping(false);
+        },
+        onError: (error: string) => {
+          console.error('Stream error:', error);
+          setMessages(prev => 
+            prev.map(msg => 
+              msg.id === botMessageId 
+                ? { ...msg, message: "Sorry, I'm having trouble connecting right now. Please try again later." }
+                : msg
+            )
+          );
+          setIsTyping(false);
+        }
+      });
     } catch (error) {
-      const errorMessage: ChatMessage = {
-        id: `bot-error-${Date.now()}`,
-        message: "Sorry, I'm having trouble connecting right now. Please try again later.",
-        sender: 'bot',
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, errorMessage]);
-    } finally {
+      setMessages(prev => 
+        prev.map(msg => 
+          msg.id === botMessageId 
+            ? { ...msg, message: "Sorry, I'm having trouble connecting right now. Please try again later." }
+            : msg
+        )
+      );
       setIsTyping(false);
     }
   };
@@ -168,7 +198,7 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
                         darkMode={darkMode} 
                     />
                 ))}
-                {isTyping && (
+                {isTyping && messages[messages.length - 1]?.message === '' && (
                     <div className="flex justify-start mb-4">
                         <img 
                             src="Ambot.png" 

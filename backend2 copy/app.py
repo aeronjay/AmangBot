@@ -4,12 +4,14 @@ import faiss
 import numpy as np
 import contextlib
 import time
+import asyncio
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.concurrency import run_in_threadpool
+from fastapi.responses import StreamingResponse
 from contextlib import asynccontextmanager
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, AsyncGenerator
 from sentence_transformers import SentenceTransformer, CrossEncoder
 from llama_cpp import Llama
 import uvicorn
@@ -137,7 +139,7 @@ async def lifespan(app: FastAPI):
         model_path=MODEL_PATH,
         n_gpu_layers=-1, 
         n_batch=1024,        
-        n_ctx=4096,          
+        n_ctx=6144,          
         verbose=False        
     )
     
@@ -211,6 +213,26 @@ async def async_llm_generate(prompt: str, max_tokens=1024, stop=None, temp=0.1):
         stop=stop or [],
         echo=False
     )
+
+async def async_llm_stream(prompt: str, max_tokens=1024, stop=None, temp=0.1) -> AsyncGenerator[str, None]:
+    """Streaming wrapper for LlamaCPP generation that yields tokens."""
+    def generate_stream():
+        return state.llm(
+            prompt=prompt,
+            max_tokens=max_tokens,
+            temperature=temp,
+            stop=stop or [],
+            echo=False,
+            stream=True
+        )
+    
+    # Get the generator in a thread pool
+    stream = await run_in_threadpool(generate_stream)
+    
+    # Iterate over the stream
+    for output in stream:
+        token = output["choices"][0]["text"]
+        yield token
 
 # --- Core Logic ---
 
@@ -482,6 +504,153 @@ Sources: {sources_str}
         prompt=full_prompt,
         retrieved_chunks=all_retrieved_chunks
     )
+
+@app.post("/chat/stream")
+async def chat_stream(request: ChatRequest):
+    """Streaming chat endpoint that returns tokens as Server-Sent Events."""
+    
+    # 1. Fast fail for fillers
+    if is_conversational_filler(request.message):
+        async def filler_response():
+            response = "Hello! I am AmangBot. How can I help you with your EARIST concerns?"
+            # Send metadata first
+            yield f"data: {json.dumps({'type': 'metadata', 'chunks': [], 'prompt': ''})}\n\n"
+            # Stream the response word by word
+            for word in response.split(' '):
+                yield f"data: {json.dumps({'type': 'token', 'content': word + ' '})}\n\n"
+                await asyncio.sleep(0.02)
+            yield f"data: {json.dumps({'type': 'done'})}\n\n"
+        return StreamingResponse(filler_response(), media_type="text/event-stream")
+
+    # 2. Contextualize (Non-blocking)
+    standalone_query = await get_contextualized_query(request.history, request.message)
+
+    # 3. Embedding (Non-blocking)
+    query_text = f"search_query: {standalone_query}"
+    query_embedding = await async_embed([query_text])
+
+    # 4. Retrieval (Hybrid Strategy)
+    initial_k = request.k * 3
+    D, I = await async_search_index(query_embedding, initial_k)
+    retrieved_chunks = [state.chunks[i] for i in I[0] if i < len(state.chunks)]
+
+    final_chunks = []
+    
+    # 5. Reranking & Thresholding
+    if state.reranker:
+        pairs = [[standalone_query, chunk["content"]] for chunk in retrieved_chunks]
+        scores = await async_rerank(pairs)
+        
+        scored_chunks = list(zip(retrieved_chunks, scores))
+        scored_chunks.sort(key=lambda x: x[1], reverse=True)
+        
+        best_score = scored_chunks[0][1] if scored_chunks else -999
+
+        if best_score < RERANKER_THRESHOLD:
+            # Build retrieved chunks data for frontend even on failure
+            all_retrieved_chunks = [
+                {"content": c["content"], "source": c["source"], "category": c.get("category", ""), "topic": c.get("topic", "")}
+                for c in retrieved_chunks
+            ]
+            
+            async def rejection_response():
+                yield f"data: {json.dumps({'type': 'metadata', 'chunks': [], 'retrieved_chunks': all_retrieved_chunks, 'prompt': '(No prompt generated - query rejected due to low relevance score)'})}\n\n"
+                response = "I'm sorry, but I couldn't find specific information about that in the EARIST handbook or my database."
+                for word in response.split(' '):
+                    yield f"data: {json.dumps({'type': 'token', 'content': word + ' '})}\n\n"
+                    await asyncio.sleep(0.02)
+                yield f"data: {json.dumps({'type': 'done'})}\n\n"
+            return StreamingResponse(rejection_response(), media_type="text/event-stream")
+
+        final_chunks = [chunk for chunk, score in scored_chunks[:request.k]]
+    else:
+        final_chunks = retrieved_chunks[:request.k]
+
+    # 6. Construct Prompt
+    context_parts = []
+    sources_used = set()
+    for i, chunk in enumerate(final_chunks, 1):
+        src = chunk.get("source", "EARIST Database")
+        sources_used.add(src)
+        context_parts.append(f"[Source {i}: {src}]\n{chunk['content']}")
+    
+    context_str = "\n\n".join(context_parts)
+    sources_str = ", ".join(sources_used)
+
+    system_prompt = f"""You are "AmangBot", a helpful AI student assistant for EARIST.
+
+GUIDELINES:
+1. Answer the question using ONLY the provided context.
+2. CITATION IS MANDATORY: Start your answer with "According to [Source Name]...".
+3. If the answer is not in the context, say "I don't know."
+4. Be polite and concise.
+5. Format with bullet points for lists.
+
+Sources: {sources_str}
+"""
+    full_prompt = f"[INST] {system_prompt}\n\nContext:\n{context_str}\n\nQuestion: {standalone_query} [/INST]"
+
+    # Check token count and drop 4th chunk if too high
+    MAX_PROMPT_TOKENS = 3072
+    token_count = len(state.llm.tokenize(full_prompt.encode('utf-8')))
+    if token_count > MAX_PROMPT_TOKENS and len(final_chunks) >= 4:
+        final_chunks = final_chunks[:3]
+        
+        context_parts = []
+        sources_used = set()
+        for i, chunk in enumerate(final_chunks, 1):
+            src = chunk.get("source", "EARIST Database")
+            sources_used.add(src)
+            context_parts.append(f"[Source {i}: {src}]\n{chunk['content']}")
+        
+        context_str = "\n\n".join(context_parts)
+        sources_str = ", ".join(sources_used)
+        
+        system_prompt = f"""You are "AmangBot", a helpful AI student assistant for EARIST.
+
+GUIDELINES:
+1. Answer the question using ONLY the provided context.
+2. CITATION IS MANDATORY: Start your answer with "According to [Source Name]...".
+3. If the answer is not in the context, say "I don't know."
+4. Be polite and concise.
+5. Format with bullet points for lists.
+
+Sources: {sources_str}
+"""
+        full_prompt = f"[INST] {system_prompt}\n\nContext:\n{context_str}\n\nQuestion: {standalone_query} [/INST]"
+
+    # Prepare metadata
+    chunks_data = [
+        {"content": c["content"], "source": c["source"], "category": c.get("category", ""), "topic": c.get("topic", "")}
+        for c in final_chunks
+    ]
+    all_retrieved_chunks = [
+        {"content": c["content"], "source": c["source"], "category": c.get("category", ""), "topic": c.get("topic", "")}
+        for c in retrieved_chunks
+    ]
+
+    async def stream_response():
+        # Send metadata first
+        metadata = {
+            'type': 'metadata',
+            'chunks': chunks_data,
+            'retrieved_chunks': all_retrieved_chunks,
+            'prompt': full_prompt
+        }
+        yield f"data: {json.dumps(metadata)}\n\n"
+        
+        # Stream tokens from LLM
+        async for token in async_llm_stream(
+            full_prompt, 
+            stop=["</s>", "[/INST]", "User:"], 
+            temp=0.1
+        ):
+            yield f"data: {json.dumps({'type': 'token', 'content': token})}\n\n"
+        
+        # Signal completion
+        yield f"data: {json.dumps({'type': 'done'})}\n\n"
+
+    return StreamingResponse(stream_response(), media_type="text/event-stream")
 
 if __name__ == "__main__":
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)

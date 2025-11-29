@@ -28,6 +28,13 @@ export interface ChatResponse {
   error?: string;
 }
 
+export interface StreamCallbacks {
+  onToken: (token: string) => void;
+  onMetadata?: (metadata: { chunks: ChunkData[]; retrieved_chunks: ChunkData[]; prompt: string }) => void;
+  onDone: () => void;
+  onError: (error: string) => void;
+}
+
 class ChatService {
   private baseUrl = 'http://localhost:8000';
 
@@ -108,6 +115,101 @@ class ChatService {
         message: "Sorry, I'm having trouble connecting to the backend. Please make sure it's running and try again.",
         error: error instanceof Error ? error.message : 'Unknown error',
       };
+    }
+  }
+
+  async streamResponse(message: string, history: ChatMessage[] = [], callbacks: StreamCallbacks): Promise<void> {
+    try {
+      // Convert history to backend format
+      const backendHistory = history.map(msg => ({
+        role: msg.sender,
+        content: msg.message
+      }));
+
+      const response = await fetch(`${this.baseUrl}/chat/stream`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          message: message,
+          history: backendHistory
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Failed to parse error response' }));
+        throw new Error(errorData.detail || errorData.error || `HTTP error! status: ${response.status}`);
+      }
+
+      const reader = response.body?.getReader();
+      if (!reader) {
+        throw new Error('No response body');
+      }
+
+      const decoder = new TextDecoder();
+      let buffer = '';
+
+      while (true) {
+        const { done, value } = await reader.read();
+        
+        if (done) {
+          break;
+        }
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            try {
+              const data = JSON.parse(line.slice(6));
+              
+              if (data.type === 'metadata') {
+                // Log metadata to console
+                console.log('%c📦 Retrieved Chunks:', 'color: #4CAF50; font-weight: bold; font-size: 14px;');
+                console.table(data.chunks.map((c: ChunkData, i: number) => ({
+                  '#': i + 1,
+                  source: c.source,
+                  category: c.category,
+                  topic: c.topic,
+                  content: c.content.substring(0, 100) + '...'
+                })));
+
+                console.log('%c📚 All Retrieved Chunks:', 'color: #2196F3; font-weight: bold; font-size: 14px;');
+                console.table(data.retrieved_chunks.map((c: ChunkData, i: number) => ({
+                  '#': i + 1,
+                  source: c.source,
+                  category: c.category,
+                  topic: c.topic,
+                  content: c.content.substring(0, 100) + '...'
+                })));
+
+                console.log('%c📝 Final Prompt to LLM:', 'color: #FF9800; font-weight: bold; font-size: 14px;');
+                console.log(data.prompt);
+
+                if (callbacks.onMetadata) {
+                  callbacks.onMetadata({
+                    chunks: data.chunks,
+                    retrieved_chunks: data.retrieved_chunks,
+                    prompt: data.prompt
+                  });
+                }
+              } else if (data.type === 'token') {
+                callbacks.onToken(data.content);
+              } else if (data.type === 'done') {
+                callbacks.onDone();
+              }
+            } catch (e) {
+              console.error('Error parsing SSE data:', e);
+            }
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Chat stream error:', error);
+      callbacks.onError(error instanceof Error ? error.message : 'Unknown error');
     }
   }
 }
