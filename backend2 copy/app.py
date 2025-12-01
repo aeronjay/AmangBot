@@ -27,6 +27,11 @@ DATASET_DIR = os.path.abspath(os.path.join(BASE_DIR, "../Dataset/300TokenDataset
 MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"))
 NOMIC_MODEL_PATH = "../Models/nomic-finetuned/nomic-finetuned-final"
 
+# --- Embeddings Cache Paths ---
+EMBEDDINGS_CACHE_DIR = os.path.abspath(os.path.join(BASE_DIR, "embeddings_cache"))
+FAISS_INDEX_PATH = os.path.join(EMBEDDINGS_CACHE_DIR, "faiss_index.bin")
+CHUNKS_CACHE_PATH = os.path.join(EMBEDDINGS_CACHE_DIR, "chunks.json")
+
 # --- Tuning Parameters ---
 # MS-MARCO CrossEncoder outputs raw logits (not 0-1 probability).
 # > 0 is usually relevant. < -4 is usually irrelevant.
@@ -42,6 +47,100 @@ class GlobalState:
     reranker: Optional[CrossEncoder] = None
 
 state = GlobalState()
+
+# --- Embedding Cache Functions ---
+def save_embeddings_cache(index, chunks: List[dict]):
+    """Save FAISS index and chunks to disk for faster startup."""
+    os.makedirs(EMBEDDINGS_CACHE_DIR, exist_ok=True)
+    
+    # Save FAISS index
+    faiss.write_index(index, FAISS_INDEX_PATH)
+    print(f"FAISS index saved to {FAISS_INDEX_PATH}")
+    
+    # Save chunks
+    with open(CHUNKS_CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump(chunks, f, ensure_ascii=False, indent=2)
+    print(f"Chunks saved to {CHUNKS_CACHE_PATH}")
+
+def load_embeddings_cache():
+    """Load FAISS index and chunks from disk. Returns (index, chunks) or (None, None) if not found."""
+    if not os.path.exists(FAISS_INDEX_PATH) or not os.path.exists(CHUNKS_CACHE_PATH):
+        return None, None
+    
+    try:
+        # Load FAISS index
+        index = faiss.read_index(FAISS_INDEX_PATH)
+        print(f"FAISS index loaded from {FAISS_INDEX_PATH} ({index.ntotal} vectors)")
+        
+        # Load chunks
+        with open(CHUNKS_CACHE_PATH, "r", encoding="utf-8") as f:
+            chunks = json.load(f)
+        print(f"Chunks loaded from {CHUNKS_CACHE_PATH} ({len(chunks)} chunks)")
+        
+        return index, chunks
+    except Exception as e:
+        print(f"Error loading embeddings cache: {e}")
+        return None, None
+
+# --- Uncomment this function and call it to re-embed the dataset ---
+# async def rebuild_embeddings():
+#     """
+#     Force rebuild embeddings from the dataset.
+#     Call this function when you update the dataset and need to re-embed.
+#     """
+#     print("Rebuilding embeddings from dataset...")
+#     
+#     if not os.path.exists(DATASET_DIR):
+#         print("Error: Dataset directory not found.")
+#         return False
+#     
+#     loaded_chunks = []
+#     chunks_for_embedding = []
+#     
+#     for filename in os.listdir(DATASET_DIR):
+#         if filename.endswith(".json"):
+#             file_path = os.path.join(DATASET_DIR, filename)
+#             try:
+#                 with open(file_path, "r", encoding="utf-8") as f:
+#                     file_data = json.load(f)
+#                     if isinstance(file_data, list):
+#                         for item in file_data:
+#                             if "content" in item:
+#                                 chunk_data = {
+#                                     "content": item["content"],
+#                                     "source": item.get("source", "EARIST Database"),
+#                                     "category": item.get("category", ""),
+#                                     "topic": item.get("topic", "")
+#                                 }
+#                                 loaded_chunks.append(chunk_data)
+#                                 
+#                                 metadata_parts = [f"{k}: {v}" for k, v in item.items() if k not in ["id", "keywords", "content"]]
+#                                 metadata_str = ", ".join(metadata_parts)
+#                                 chunks_for_embedding.append(f"search_document: {metadata_str}. {item['content']}")
+#             except Exception as e:
+#                 print(f"Error loading {filename}: {e}")
+#     
+#     if not chunks_for_embedding:
+#         print("Error: No chunks to embed.")
+#         return False
+#     
+#     print(f"Embedding {len(chunks_for_embedding)} chunks...")
+#     embeddings = state.embedder.encode(
+#         chunks_for_embedding, 
+#         convert_to_numpy=True, 
+#         normalize_embeddings=True
+#     )
+#     
+#     dimension = embeddings.shape[1]
+#     state.index = faiss.IndexFlatL2(dimension)
+#     state.index.add(embeddings)
+#     state.chunks = loaded_chunks
+#     
+#     # Save to cache
+#     save_embeddings_cache(state.index, state.chunks)
+#     
+#     print(f"Embeddings rebuilt and saved! {state.index.ntotal} vectors.")
+#     return True
 
 # --- Models ---
 class Message(BaseModel):
@@ -72,59 +171,70 @@ async def lifespan(app: FastAPI):
     # 1. Connect DB
     await connect_to_mongo()
     
-    # 2. Load Dataset
-    print(f"Loading chunks from {DATASET_DIR}...")
-    if os.path.exists(DATASET_DIR):
-        loaded_chunks = []
-        chunks_for_embedding = []
-        for filename in os.listdir(DATASET_DIR):
-            if filename.endswith(".json"):
-                file_path = os.path.join(DATASET_DIR, filename)
-                try:
-                    with open(file_path, "r", encoding="utf-8") as f:
-                        file_data = json.load(f)
-                        if isinstance(file_data, list):
-                            for item in file_data:
-                                if "content" in item:
-                                    chunk_data = {
-                                        "content": item["content"],
-                                        "source": item.get("source", "EARIST Database"),
-                                        "category": item.get("category", ""),
-                                        "topic": item.get("topic", "")
-                                    }
-                                    loaded_chunks.append(chunk_data)
-                                    
-                                    # Prepare metadata string for embedding
-                                    metadata_parts = [f"{k}: {v}" for k, v in item.items() if k not in ["id", "keywords", "content"]]
-                                    metadata_str = ", ".join(metadata_parts)
-                                    chunks_for_embedding.append(f"search_document: {metadata_str}. {item['content']}")
-                except Exception as e:
-                    print(f"Error loading {filename}: {e}")
-        state.chunks = loaded_chunks
-        print(f"Loaded {len(state.chunks)} chunks.")
-    else:
-        print("Warning: Dataset directory not found.")
-
-    # 3. Load Embedder
+    # 2. Load Embedder (needed for both cached and fresh embeddings)
     print("Initializing Nomic Embedder...")
     state.embedder = SentenceTransformer(NOMIC_MODEL_PATH, trust_remote_code=True, device='cpu')
+    
+    # 3. Try to load embeddings from cache
+    cached_index, cached_chunks = load_embeddings_cache()
+    
+    if cached_index is not None and cached_chunks is not None:
+        # Use cached embeddings
+        state.index = cached_index
+        state.chunks = cached_chunks
+        print("Using cached embeddings - skipping embedding generation.")
+    else:
+        # Build embeddings from scratch
+        print(f"No cache found. Loading chunks from {DATASET_DIR}...")
+        if os.path.exists(DATASET_DIR):
+            loaded_chunks = []
+            chunks_for_embedding = []
+            for filename in os.listdir(DATASET_DIR):
+                if filename.endswith(".json"):
+                    file_path = os.path.join(DATASET_DIR, filename)
+                    try:
+                        with open(file_path, "r", encoding="utf-8") as f:
+                            file_data = json.load(f)
+                            if isinstance(file_data, list):
+                                for item in file_data:
+                                    if "content" in item:
+                                        chunk_data = {
+                                            "content": item["content"],
+                                            "source": item.get("source", "EARIST Database"),
+                                            "category": item.get("category", ""),
+                                            "topic": item.get("topic", "")
+                                        }
+                                        loaded_chunks.append(chunk_data)
+                                        
+                                        # Prepare metadata string for embedding
+                                        metadata_parts = [f"{k}: {v}" for k, v in item.items() if k not in ["id", "keywords", "content"]]
+                                        metadata_str = ", ".join(metadata_parts)
+                                        chunks_for_embedding.append(f"search_document: {metadata_str}. {item['content']}")
+                    except Exception as e:
+                        print(f"Error loading {filename}: {e}")
+            state.chunks = loaded_chunks
+            print(f"Loaded {len(state.chunks)} chunks.")
+            
+            # Build FAISS index
+            if chunks_for_embedding:
+                print("Building FAISS index...")
+                embeddings = await run_in_threadpool(
+                    state.embedder.encode, 
+                    chunks_for_embedding, 
+                    convert_to_numpy=True, 
+                    normalize_embeddings=True
+                )
+                dimension = embeddings.shape[1]
+                state.index = faiss.IndexFlatL2(dimension)
+                state.index.add(embeddings)
+                print(f"FAISS index built: {state.index.ntotal} vectors.")
+                
+                # Save to cache for next startup
+                save_embeddings_cache(state.index, state.chunks)
+        else:
+            print("Warning: Dataset directory not found.")
 
-    # 4. Build/Load Index
-    if chunks_for_embedding:
-        print("Building FAISS index...")
-        # Run blocking encode in threadpool even during startup to prevent loop lag
-        embeddings = await run_in_threadpool(
-            state.embedder.encode, 
-            chunks_for_embedding, 
-            convert_to_numpy=True, 
-            normalize_embeddings=True
-        )
-        dimension = embeddings.shape[1]
-        state.index = faiss.IndexFlatL2(dimension)
-        state.index.add(embeddings)
-        print(f"FAISS index built: {state.index.ntotal} vectors.")
-
-    # 5. Load Reranker
+    # 4. Load Reranker
     try:
         print("Loading Reranker...")
         state.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2', device='cpu')
@@ -132,7 +242,7 @@ async def lifespan(app: FastAPI):
         print(f"Failed to load Reranker: {e}")
         state.reranker = None
 
-    # 6. Load LLM
+    # 5. Load LLM
     print(f"Loading Mistral Model...")
     # n_gpu_layers=-1 attempts to offload all layers to GPU if available
     state.llm = Llama(
