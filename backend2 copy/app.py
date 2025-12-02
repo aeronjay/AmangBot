@@ -150,7 +150,7 @@ class Message(BaseModel):
 class ChatRequest(BaseModel):
     message: str
     history: List[Message] = []
-    k: Optional[int] = 4 
+    k: Optional[int] = 4
 
 class ChunkData(BaseModel):
     content: str
@@ -237,7 +237,7 @@ async def lifespan(app: FastAPI):
     # 4. Load Reranker
     try:
         print("Loading Reranker...")
-        state.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2', device='cpu')
+        state.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2', device='cuda')
     except Exception as e:
         print(f"Failed to load Reranker: {e}")
         state.reranker = None
@@ -313,7 +313,7 @@ async def async_rerank(pairs):
         return []
     return await run_in_threadpool(state.reranker.predict, pairs)
 
-async def async_llm_generate(prompt: str, max_tokens=1024, stop=None, temp=0.1):
+async def async_llm_generate(prompt: str, max_tokens=1536, stop=None, temp=0.1):
     """Non-blocking wrapper for LlamaCPP generation."""
     return await run_in_threadpool(
         state.llm,
@@ -487,8 +487,19 @@ async def chat(request: ChatRequest):
     sources_used = set()
     for i, chunk in enumerate(final_chunks, 1):
         src = chunk.get("source", "EARIST Database")
+        category = chunk.get("category", "")
+        topic = chunk.get("topic", "")
         sources_used.add(src)
-        context_parts.append(f"[Source {i}: {src}]\n{chunk['content']}")
+        
+        # Build metadata header for this chunk
+        metadata_lines = [f"[Source {i}: {src}]"]
+        if category:
+            metadata_lines.append(f"Category: {category}")
+        if topic:
+            metadata_lines.append(f"Topic: {topic}")
+        metadata_header = "\n".join(metadata_lines)
+        
+        context_parts.append(f"{metadata_header}\n{chunk['content']}")
     
     context_str = "\n\n".join(context_parts)
     sources_str = ", ".join(sources_used)
@@ -501,6 +512,7 @@ GUIDELINES:
 3. If the answer is not in the context, say "I don't know."
 4. Be polite and concise.
 5. Format with bullet points for lists.
+6. Use the metadata (Category, Topic) to better understand the context of each source.
 
 Sources: {sources_str}
 """
@@ -519,8 +531,19 @@ Sources: {sources_str}
         sources_used = set()
         for i, chunk in enumerate(final_chunks, 1):
             src = chunk.get("source", "EARIST Database")
+            category = chunk.get("category", "")
+            topic = chunk.get("topic", "")
             sources_used.add(src)
-            context_parts.append(f"[Source {i}: {src}]\n{chunk['content']}")
+            
+            # Build metadata header for this chunk
+            metadata_lines = [f"[Source {i}: {src}]"]
+            if category:
+                metadata_lines.append(f"Category: {category}")
+            if topic:
+                metadata_lines.append(f"Topic: {topic}")
+            metadata_header = "\n".join(metadata_lines)
+            
+            context_parts.append(f"{metadata_header}\n{chunk['content']}")
         
         context_str = "\n\n".join(context_parts)
         sources_str = ", ".join(sources_used)
@@ -533,6 +556,7 @@ GUIDELINES:
 3. If the answer is not in the context, say "I don't know."
 4. Be polite and concise.
 5. Format with bullet points for lists.
+6. Use the metadata (Category, Topic) to better understand the context of each source.
 
 Sources: {sources_str}
 """
@@ -681,8 +705,19 @@ async def chat_stream(request: ChatRequest):
     sources_used = set()
     for i, chunk in enumerate(final_chunks, 1):
         src = chunk.get("source", "EARIST Database")
+        category = chunk.get("category", "")
+        topic = chunk.get("topic", "")
         sources_used.add(src)
-        context_parts.append(f"[Source {i}: {src}]\n{chunk['content']}")
+        
+        # Build metadata header for this chunk
+        metadata_lines = [f"[Source {i}: {src}]"]
+        if category:
+            metadata_lines.append(f"Category: {category}")
+        if topic:
+            metadata_lines.append(f"Topic: {topic}")
+        metadata_header = "\n".join(metadata_lines)
+        
+        context_parts.append(f"{metadata_header}\n{chunk['content']}")
     
     context_str = "\n\n".join(context_parts)
     sources_str = ", ".join(sources_used)
@@ -695,6 +730,7 @@ GUIDELINES:
 3. If the answer is not in the context, say "I don't know."
 4. Be polite and concise.
 5. Format with bullet points for lists.
+6. Use the metadata (Category, Topic) to better understand the context of each source.
 
 Sources: {sources_str}
 """
@@ -710,8 +746,19 @@ Sources: {sources_str}
         sources_used = set()
         for i, chunk in enumerate(final_chunks, 1):
             src = chunk.get("source", "EARIST Database")
+            category = chunk.get("category", "")
+            topic = chunk.get("topic", "")
             sources_used.add(src)
-            context_parts.append(f"[Source {i}: {src}]\n{chunk['content']}")
+            
+            # Build metadata header for this chunk
+            metadata_lines = [f"[Source {i}: {src}]"]
+            if category:
+                metadata_lines.append(f"Category: {category}")
+            if topic:
+                metadata_lines.append(f"Topic: {topic}")
+            metadata_header = "\n".join(metadata_lines)
+            
+            context_parts.append(f"{metadata_header}\n{chunk['content']}")
         
         context_str = "\n\n".join(context_parts)
         sources_str = ", ".join(sources_used)
@@ -724,6 +771,7 @@ GUIDELINES:
 3. If the answer is not in the context, say "I don't know."
 4. Be polite and concise.
 5. Format with bullet points for lists.
+6. Use the metadata (Category, Topic) to better understand the context of each source.
 
 Sources: {sources_str}
 """
