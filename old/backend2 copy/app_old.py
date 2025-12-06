@@ -36,7 +36,7 @@ CHUNKS_CACHE_PATH = os.path.join(EMBEDDINGS_CACHE_DIR, "chunks.json")
 # MS-MARCO CrossEncoder outputs raw logits (not 0-1 probability).
 # > 0 is usually relevant. < -4 is usually irrelevant.
 # We set a threshold: if the top chunk scores lower than this, we don't know the answer.
-RERANKER_THRESHOLD = -8.9
+RERANKER_THRESHOLD = -5
 
 # --- Globals State Storage ---
 class GlobalState:
@@ -50,7 +50,7 @@ state = GlobalState()
 
 # --- Embedding Cache Functions ---
 def save_embeddings_cache(index, chunks: List[dict]):
-    """Save FAISS index and chunks to disk for faster startup."""
+    """Save FAISS index and chunks to disk for faster startup   ."""
     os.makedirs(EMBEDDINGS_CACHE_DIR, exist_ok=True)
     
     # Save FAISS index
@@ -280,14 +280,24 @@ def is_conversational_filler(text: str) -> bool:
 
 def needs_contextualization(message: str) -> bool:
     msg_lower = message.lower().strip()
-    # Simple check: short queries or those starting with pronouns
-    triggers = ["it", "that", "this", "they", "them", "he", "she", "similar", "also", "and"]
+    # Check for pronouns and follow-up indicators
+    pronoun_triggers = ["it", "that", "this", "they", "them", "he", "she", "those", "these", "its", "their"]
+    follow_up_triggers = ["similar", "also", "and", "more", "else", "another", "other", "same", "too", 
+                          "about that", "about this", "about it", "what about", "how about", 
+                          "tell me more", "any other", "anything else", "related"]
     
     word_count = len(msg_lower.split())
-    if word_count < 3 and not any(w in msg_lower for w in ["who", "what", "where", "when", "why", "how"]):
+    
+    # Short queries often need context
+    if word_count < 4 and not any(w in msg_lower for w in ["who", "what", "where", "when", "why", "how"]):
         return True
     
-    if any(f" {t} " in f" {msg_lower} " for t in triggers):
+    # Check for pronoun triggers
+    if any(f" {t} " in f" {msg_lower} " or msg_lower.startswith(f"{t} ") or msg_lower.endswith(f" {t}") for t in pronoun_triggers):
+        return True
+    
+    # Check for follow-up phrase triggers
+    if any(trigger in msg_lower for trigger in follow_up_triggers):
         return True
         
     return False
@@ -313,7 +323,7 @@ async def async_rerank(pairs):
         return []
     return await run_in_threadpool(state.reranker.predict, pairs)
 
-async def async_llm_generate(prompt: str, max_tokens=1536, stop=None, temp=0.1):
+async def async_llm_generate(prompt: str, max_tokens=1600, stop=None, temp=0.1):
     """Non-blocking wrapper for LlamaCPP generation."""
     return await run_in_threadpool(
         state.llm,
@@ -324,7 +334,7 @@ async def async_llm_generate(prompt: str, max_tokens=1536, stop=None, temp=0.1):
         echo=False
     )
 
-async def async_llm_stream(prompt: str, max_tokens=1024, stop=None, temp=0.1) -> AsyncGenerator[str, None]:
+async def async_llm_stream(prompt: str, max_tokens=1600, stop=None, temp=0.1) -> AsyncGenerator[str, None]:
     """Streaming wrapper for LlamaCPP generation that yields tokens."""
     def generate_stream():
         return state.llm(
@@ -347,30 +357,36 @@ async def async_llm_stream(prompt: str, max_tokens=1024, stop=None, temp=0.1) ->
 # --- Core Logic ---
 
 async def get_contextualized_query(history: List[Message], latest_message: str) -> str:
-    """Refined prompt to handle topic switching better."""
+    """Refined prompt to handle topic switching and follow-up questions better."""
     if not history or not needs_contextualization(latest_message):
         return latest_message
 
-    conversation_str = "\n".join([f"{msg.role}: {msg.content}" for msg in history[-4:]])
+    conversation_str = "\n".join([f"{msg.role}: {msg.content}" for msg in history[-6:]])
     
-    prompt = f"""[INST] You are a query reformulator for a university chatbot.
+    prompt = f"""[INST] You are a query reformulator for an EARIST university chatbot.
     
-Task: Rewrite the "User Question" to be standalone based on the "Chat History" ONLY IF it refers to previous context.
+Task: Rewrite the "User Question" to be a complete, standalone question based on the "Chat History".
 
 Rules:
-1. If the User Question is a NEW TOPIC or unrelated to the history, output it EXACTLY AS IS.
-2. If the User Question uses pronouns (it, that, they) referring to the history, replace them with the specific nouns.
-3. Output ONLY the reformulated question. No explanations.
+1. If the User Question is clearly a NEW TOPIC unrelated to the history, output it EXACTLY AS IS.
+2. If the User Question is a FOLLOW-UP (uses pronouns like "it", "that", "they", "this", "those", "more", "else", "also", or asks for more details), rewrite it to include the full context from the previous conversation.
+3. Include relevant details from the conversation that help clarify what the user is asking about.
+4. Output ONLY the reformulated question. No explanations, no quotes.
+
+Examples:
+- History: "User: What are the requirements for enrollment?" / Follow-up: "What about for transferees?" -> "What are the enrollment requirements for transferee students?"
+- History: "User: Who is the president of EARIST?" / Follow-up: "When did they start?" -> "When did the president of EARIST start their term?"
+- History: "User: Tell me about scholarships" / Follow-up: "How do I apply?" -> "How do I apply for scholarships at EARIST?"
 
 Chat History:
 {conversation_str}
 
 User Question: {latest_message}
-Output: [/INST]"""
+Reformulated Question: [/INST]"""
 
     # Low max_tokens for speed, temp 0 for determinism
-    output = await async_llm_generate(prompt, max_tokens=60, stop=["\n", "[/INST]"], temp=0.0)
-    new_query = output["choices"][0]["text"].strip().strip('"')
+    output = await async_llm_generate(prompt, max_tokens=80, stop=["\n", "[/INST]"], temp=0.0)
+    new_query = output["choices"][0]["text"].strip().strip('"').strip()
     
     print(f"Contextualizer: '{latest_message}' -> '{new_query}'")
     return new_query if len(new_query) > 2 else latest_message
@@ -504,19 +520,29 @@ async def chat(request: ChatRequest):
     context_str = "\n\n".join(context_parts)
     sources_str = ", ".join(sources_used)
 
-    system_prompt = f"""You are "AmangBot", a helpful AI student assistant for EARIST.
+    system_prompt = f"""You are "AmangBot", a friendly and knowledgeable AI student assistant for EARIST (Eulogio "Amang" Rodriguez Institute of Science and Technology).
 
-GUIDELINES:
-1. Answer the question using ONLY the provided context.
-2. CITATION IS MANDATORY: Start your answer with "According to [Source Name]...".
-3. If the answer is not in the context, say "I don't know."
-4. Be polite and concise.
-5. Format with bullet points for lists.
-6. Use the metadata (Category, Topic) to better understand the context of each source.
+YOUR PERSONALITY:
+- Be warm, approachable, and conversational - like a helpful senior student or advisor
+- Use natural language and be encouraging
+- If this is a follow-up question, acknowledge the connection to the previous topic naturally
 
-Sources: {sources_str}
+RESPONSE STRUCTURE:
+1. FIRST, directly answer the student's question based on the provided context sources
+2. THEN, provide additional related information that might be helpful to the student
+
+RESPONSE RULES:
+1. ALWAYS base your answer ONLY on the provided context sources - never make up information
+2. Start your direct answer with "According to [Source Name], ..." citing the specific source
+3. If multiple sources are relevant, cite each one: "According to [Source 1], ... Additionally, [Source 2] states that..."
+4. After answering the main question, add a section like "You might also find this helpful:" or "Related information:" to share additional relevant details from the sources (such as deadlines, requirements, procedures, tips, or related topics)
+5. Use bullet points or numbered lists for multiple items, steps, or requirements
+6. If the information is NOT in the provided context, respond: "I'm sorry, I don't have specific information about that in my current sources. You may want to check with the EARIST registrar or relevant office for the most accurate details."
+7. End with a helpful follow-up when appropriate, like "Is there anything else you'd like to know about this?" or "Would you like more details about any specific part?"
+
+Sources Available: {sources_str}
 """
-    full_prompt = f"[INST] {system_prompt}\n\nContext:\n{context_str}\n\nQuestion: {standalone_query} [/INST]"
+    full_prompt = f"[INST] {system_prompt}\n\nContext from EARIST Sources:\n{context_str}\n\nStudent Question: {standalone_query} [/INST]"
 
     # Check token count and drop 4th chunk if too high
     MAX_PROMPT_TOKENS = 3072  # Leave room for response within 4096 context
@@ -548,19 +574,29 @@ Sources: {sources_str}
         context_str = "\n\n".join(context_parts)
         sources_str = ", ".join(sources_used)
         
-        system_prompt = f"""You are "AmangBot", a helpful AI student assistant for EARIST.
+        system_prompt = f"""You are "AmangBot", a friendly and knowledgeable AI student assistant for EARIST (Eulogio "Amang" Rodriguez Institute of Science and Technology).
 
-GUIDELINES:
-1. Answer the question using ONLY the provided context.
-2. CITATION IS MANDATORY: Start your answer with "According to [Source Name]...".
-3. If the answer is not in the context, say "I don't know."
-4. Be polite and concise.
-5. Format with bullet points for lists.
-6. Use the metadata (Category, Topic) to better understand the context of each source.
+YOUR PERSONALITY:
+- Be warm, approachable, and conversational - like a helpful senior student or advisor
+- Use natural language and be encouraging
+- If this is a follow-up question, acknowledge the connection to the previous topic naturally
 
-Sources: {sources_str}
+RESPONSE STRUCTURE:
+1. FIRST, directly answer the student's question based on the provided context sources
+2. THEN, provide additional related information that might be helpful to the student
+
+RESPONSE RULES:
+1. ALWAYS base your answer ONLY on the provided context sources - never make up information
+2. Start your direct answer with "According to [Source Name], ..." citing the specific source
+3. If multiple sources are relevant, cite each one: "According to [Source 1], ... Additionally, [Source 2] states that..."
+4. After answering the main question, add a section like "You might also find this helpful:" or "Related information:" to share additional relevant details from the sources (such as deadlines, requirements, procedures, tips, or related topics)
+5. Use bullet points or numbered lists for multiple items, steps, or requirements
+6. If the information is NOT in the provided context, respond: "I'm sorry, I don't have specific information about that in my current sources. You may want to check with the EARIST registrar or relevant office for the most accurate details."
+7. End with a helpful follow-up when appropriate, like "Is there anything else you'd like to know about this?" or "Would you like more details about any specific part?"
+
+Sources Available: {sources_str}
 """
-        full_prompt = f"[INST] {system_prompt}\n\nContext:\n{context_str}\n\nQuestion: {standalone_query} [/INST]"
+        full_prompt = f"[INST] {system_prompt}\n\nContext from EARIST Sources:\n{context_str}\n\nStudent Question: {standalone_query} [/INST]"
         token_count = len(state.llm.tokenize(full_prompt.encode('utf-8')))
         print(f"✅ New token count after dropping chunk: {token_count}")
 
@@ -722,19 +758,29 @@ async def chat_stream(request: ChatRequest):
     context_str = "\n\n".join(context_parts)
     sources_str = ", ".join(sources_used)
 
-    system_prompt = f"""You are "AmangBot", a helpful AI student assistant for EARIST.
+    system_prompt = f"""You are "AmangBot", a friendly and knowledgeable AI student assistant for EARIST (Eulogio "Amang" Rodriguez Institute of Science and Technology).
 
-GUIDELINES:
-1. Answer the question using ONLY the provided context.
-2. CITATION IS MANDATORY: Start your answer with "According to [Source Name]...".
-3. If the answer is not in the context, say "I don't know."
-4. Be polite and concise.
-5. Format with bullet points for lists.
-6. Use the metadata (Category, Topic) to better understand the context of each source.
+YOUR PERSONALITY:
+- Be warm, approachable, and conversational - like a helpful senior student or advisor
+- Use natural language and be encouraging
+- If this is a follow-up question, acknowledge the connection to the previous topic naturally
 
-Sources: {sources_str}
+RESPONSE STRUCTURE:
+1. FIRST, directly answer the student's question based on the provided context sources
+2. THEN, provide additional related information that might be helpful to the student
+
+RESPONSE RULES:
+1. ALWAYS base your answer ONLY on the provided context sources - never make up information
+2. Start your direct answer with "According to [Source Name], ..." citing the specific source
+3. If multiple sources are relevant, cite each one: "According to [Source 1], ... Additionally, [Source 2] states that..."
+4. After answering the main question, add a section like "You might also find this helpful:" or "Related information:" to share additional relevant details from the sources (such as deadlines, requirements, procedures, tips, or related topics)
+5. Use bullet points or numbered lists for multiple items, steps, or requirements
+6. If the information is NOT in the provided context, respond: "I'm sorry, I don't have specific information about that in my current sources. You may want to check with the EARIST registrar or relevant office for the most accurate details."
+7. End with a helpful follow-up when appropriate, like "Is there anything else you'd like to know about this?" or "Would you like more details about any specific part?"
+
+Sources Available: {sources_str}
 """
-    full_prompt = f"[INST] {system_prompt}\n\nContext:\n{context_str}\n\nQuestion: {standalone_query} [/INST]"
+    full_prompt = f"[INST] {system_prompt}\n\nContext from EARIST Sources:\n{context_str}\n\nStudent Question: {standalone_query} [/INST]"
 
     # Check token count and drop 4th chunk if too high
     MAX_PROMPT_TOKENS = 3072
@@ -763,19 +809,29 @@ Sources: {sources_str}
         context_str = "\n\n".join(context_parts)
         sources_str = ", ".join(sources_used)
         
-        system_prompt = f"""You are "AmangBot", a helpful AI student assistant for EARIST.
+        system_prompt = f"""You are "AmangBot", a friendly and knowledgeable AI student assistant for EARIST (Eulogio "Amang" Rodriguez Institute of Science and Technology).
 
-GUIDELINES:
-1. Answer the question using ONLY the provided context.
-2. CITATION IS MANDATORY: Start your answer with "According to [Source Name]...".
-3. If the answer is not in the context, say "I don't know."
-4. Be polite and concise.
-5. Format with bullet points for lists.
-6. Use the metadata (Category, Topic) to better understand the context of each source.
+YOUR PERSONALITY:
+- Be warm, approachable, and conversational - like a helpful senior student or advisor
+- Use natural language and be encouraging
+- If this is a follow-up question, acknowledge the connection to the previous topic naturally
 
-Sources: {sources_str}
+RESPONSE STRUCTURE:
+1. FIRST, directly answer the student's question based on the provided context sources
+2. THEN, provide additional related information that might be helpful to the student
+
+RESPONSE RULES:
+1. ALWAYS base your answer ONLY on the provided context sources - never make up information
+2. Start your direct answer with "According to [Source Name], ..." citing the specific source
+3. If multiple sources are relevant, cite each one: "According to [Source 1], ... Additionally, [Source 2] states that..."
+4. After answering the main question, add a section like "You might also find this helpful:" or "Related information:" to share additional relevant details from the sources (such as deadlines, requirements, procedures, tips, or related topics)
+5. Use bullet points or numbered lists for multiple items, steps, or requirements
+6. If the information is NOT in the provided context, respond: "I'm sorry, I don't have specific information about that in my current sources. You may want to check with the EARIST registrar or relevant office for the most accurate details."
+7. End with a helpful follow-up when appropriate, like "Is there anything else you'd like to know about this?" or "Would you like more details about any specific part?"
+
+Sources Available: {sources_str}
 """
-        full_prompt = f"[INST] {system_prompt}\n\nContext:\n{context_str}\n\nQuestion: {standalone_query} [/INST]"
+        full_prompt = f"[INST] {system_prompt}\n\nContext from EARIST Sources:\n{context_str}\n\nStudent Question: {standalone_query} [/INST]"
 
     # Prepare metadata
     chunks_data = [

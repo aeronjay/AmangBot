@@ -6,27 +6,61 @@ llm = Llama(
     model_path="./Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf",
     n_gpu_layers=-1,      # Offload all layers to GPU
     n_batch=1024,          # Processes prompt in bigger batches
-    n_ctx=4096,           # Context window
+    n_ctx=6144,           # Context window
     verbose=False         # Logs off
 )
 
 # 2. The Full Prompt (System + 4 Chunks + Question)
-prompt = """[INST] You are "AmangBot", a helpful AI student assistant for EARIST.
+prompt = """[INST] You are "AmangBot", a friendly and knowledgeable AI student assistant for EARIST (Eulogio "Amang" Rodriguez Institute of Science and Technology).
 
-GUIDELINES:
-1. Answer the question using ONLY the provided context.        
-2. CITATION IS MANDATORY: Start your answer with "According to [Source Name]...".
-3. If the answer is not in the context, say "I don't know."    
-4. Be polite and concise.
-5. Format with bullet points for lists.
+YOUR PERSONALITY:
+- Be warm, approachable, and conversational - like a helpful senior student or advisor
+- Use natural language and be encouraging
+- If this is a follow-up question, acknowledge the connection to the previous topic naturally
 
-Source: EARIST Curriculum 
+RESPONSE STRUCTURE:
+1. FIRST, directly answer the student's question based on the provided context sources
+2. THEN, provide additional related information that might be helpful to the student
 
-Complete Bachelor of Fine Arts (Painting) Curriculum. This is the official Bachelor of Fine Arts (BFA) curriculum for the College of Architecture and Fine Arts at the Eulogio \"Amang\" Rodriguez Institute of Science and Technology (EARIST), effective June 2018.\n\n### Curriculum Overview\n\n| Year / Semester | Course Code | Course Description | Units (Lec/Lab) | Credit Units | Prerequisites | Corequisites |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| **First Year - 1st Sem** | DRAWING1 | Drawing I | 1 / 2 | 3 | None | None |\n| | GEKOMFIL | Kontekstwalisadong Komunikasyon sa Filipino | 3 / 0 | 3 | None | None |\n| | GEPEMOVE | Movement Enhancement | 2 / 0 | 2 | None | None |\n| | GEPURCO | Purposive Communication | 3 / 0 | 3 | None | None |\n| | HISTWART | History of World Arts | 3 / 0 | 3 | None | None |\n| | MATRALS1 | Materials I (Modeling 1) | 1 / 2 | 3 | None | None |\n| | NSTPROG1 | National Service Training Program 1 | 3 / 0 | 3 | None | None |\n| | TECHNOS1 | Techniques I (Freehand Drawing 1) | 1 / 2 | 3 | None | None |\n| | VISPERC1 | Visual Perception 1 (Elements of Visual Arts) | 1 / 2 | 3 | None | None |\n| **First Year - 2nd Sem** | DRAFTPER | Drafting and Perspective | 1 / 2 | 3 | None | None |\n| | DRAWING2 | Drawing II | 1 / 2 | 3 | None | None |\n| | GEMATHMW | Mathematics in the Modern World | 3 / 0 | 3 | None | None |\n| | GEPANIPI | Panitikan sa Pilipinas / Philippine Literature | 3 / 0 | 3 | None | None |\n| | GEPEFTE | Fitness Exercises | 2 / 0 | 2 | None | None |\n| | MATRALS2 | Materials II (Modeling 2) | 1 / 2 | 3 | None | None |\n| | NSTPROG2 | National Service Training Program 2 | 3 / 0 | 3 | None | None |\n| | TECHNOS2 | Techniques II (Freehand Drawing 2) | 1 / 2 | 3 | None | None |\n| | VISPERC2 | Visual Perception 2 (Concept of Visual Org.) | 1 / 2 | 3 | None | None |\n| **Second Year - 1st Sem** | GEELECGS | Gender and Society | 3 / 0 | 3 | None | None |\n| | GEELECIT | Living in Information Technology Era | 2 / 1 | 3 | None | None |\n| | GEPEHEF1 | Physical Activity Towards Health and Fitness 1 | 2 / 0 | 2 | None | None |\n| | GESINEPP | Sinesosyedad/Pelikulang Panlipunan | 3 / 0 | 3 | None | None |\n| | GEUNDETS | Understanding the Self | 3 / 0 | 3 | None | None |\n| | MATRALS3 | Materials III (Concept, Techniques, Process) | 2 / 1 | 3 | None | None |\n| | TECHNQS3 | Techniques III (Color and Form 1) | 1 / 2 | 3 | None | None |\n| | VISSTUD1 | Visual Studies 1 (Composition 1) | 1 / 2 | 3 | None | None |\n| **Second Year - 2nd Sem** | GEARTAPP | Art Appreciation | 3 / 0 | 3 | None | None |\n| | GEELECCP | Communicative Proficiency in Business Correspondence and Research Writing | 3 / 0 | 3 | None | None |\n| | GEETHICS | Ethics | 3 / 0 | 3 | None | None |\n| | GEMATHMW | Mathematics in the Modern World | 3 / 0 | 3 | None | None |\n| | GEPEHEF2 | Physical Activity Towards Health and Fitness II | 2 / 0 | 2 | None | None |\n| | MATRALS4 | Materials IV (Continuation of Materials III) | 1 / 2 | 3 | None | None |\n| | ORIEARTS | Oriental Arts | 3 / 0 | 3 | None | None |\n| | TECHNQS4 | Techniques IV (Color and Form 2) | 1 / 2 | 3 | None | None |\n| | VISSTUD2 | Visual Studies 2 (Composition 2) | 1 / 2 | 3 | None | None |\n| **Third Year - 1st Sem** | ADVISTU1 | Advanced Visual Studies 1 (Advanced Composition 1) | 1 / 2 | 3 | None | None |\n| | ARTTHEO1 | Art Theory 1 | 1 / 2 | 3 | None | None |\n| | ARTWORK1 | Art Workshop 1 (Adobe Photoshop) | 1 / 2 | 3 | None | None |\n| | BTAPHOTO | Basic to Advance Photography | 1 / 2 | 3 | None | None |\n| | GECONTWO | The Contemporary World | 3 / 0 | 3 | None | None |\n| | GEREADPH | Readings in Philippine History | 3 / 0 | 3 | None | None |\n| | PAINTING1 | Painting 1 (Exploration and Analysis of Concept in Painting) | 1 / 2 | 3 | None | None |\n| | PHILARTS | Philippine Art | 3 / 0 | 3 | None | None |\n| **Third Year - 2nd Sem** | ADVISTU2 | Advanced Visual Studies 2 (Advanced Composition 2) | 1 / 2 | 3 | None | None |\n| | ARTTHEO2 | Art Theory 2 | 1 / 2 | 3 | None | None |\n| | ARTWORK2 | Art Workshop 1 (Corel Draw) | 2 / 1 | 3 | None | None |\n| | FASHDES | Costume & Fashion Design | 1 / 2 | 3 | None | None |\n| | GACULHER | Gallery Visit and Cultural Heritage Tour | 3 / 0 | 3 | None | None |\n| | GEELECDS | Practical Data Science | 3 / 0 | 3 | None | None |\n| | GESCIENTS | Science and Technology | 3 / 0 | 3 | None | None |\n| | PAINTING2 | Painting 2 (Portfolio Presentation) | 1 / 2 | 3 | None | None |\n| **Third Year - Summer** | COOPEDUC | Cooperative Education (200 hours)/On-the-Job Training | 1 / 2 | 3 | None | None |\n| **Fourth Year - 1st Sem** | ARTSEMR1 | Art Seminar 1 (Art Issues 1) | 1 / 0 | 3 | None | None |\n| | ARTWORK3 | Art Work 3 (Print Art) | 2 / 0 | 3 | None | None |\n| | GEELECES | Environmental Science | 3 / 0 | 3 | None | None |\n| | RESMETAR | Research Methods in the Arts | 2 / 0 | 5 | None | None |\n| **Fourth Year - 2nd Sem** | ARTSEMR2 | Art Seminar 2 (Art Issues) | 1 / 2 | 3 | None | None |\n| | ARTWORK4 | Art Workshop 4 (Installation Art and Mural Painting) | 2 / 1 | 3 | None | None |\n| | GELIFEWR | The Life and Works of Rizal | 3 / 0 | 3 | None | None |\n| | THESISPT | Thesis | 2 / 3 | 5 | None | None |\n\n**Total Number of Units:** 180\n**Effectivity Date:** June 2018
+RESPONSE RULES:
+1. ALWAYS base your answer ONLY on the provided context sources - never make up information
+2. Start your direct answer with "According to [Source Name], ..." citing the specific source
+3. If multiple sources are relevant, cite each one: "According to [Source 1], ... Additionally, [Source 2] states that..."
+4. After answering the main question, add a section like "You might also find this helpful:" or "Related information:" to share additional relevant details from the sources (such as deadlines, requirements, procedures, tips, or related topics)
+5. Use bullet points or numbered lists for multiple items, steps, or requirements
+6. If the information is NOT in the provided context, respond: "I'm sorry, I don't have specific information about that in my current sources. You may want to check with the EARIST registrar or relevant office for the most accurate details."
+7. End with a helpful follow-up when appropriate, like "Is there anything else you'd like to know about this?" or "Would you like more details about any specific part?"
 
-Question: What is the complete curriculum of BS Fine Arts? [/INST]"""
+Sources Available: EARIST Citizen's Charter 2025 (1st Edition)
+
+
+Context from EARIST Sources:
+[Source 1: EARIST Citizen's Charter 2025 (1st Edition)]
+Category: EARIST Cavite Campus - Library Services
+Topic: Special Library Services (Overnight, Referrals, Equipment)
+The Cavite Campus Library offers several special services. Overnight or Weekend Use allows students to borrow books for home use by presenting a COR and signing a Book Card (10 minutes). The Issuance of Referrals provides students with a letter to visit other libraries; this requires a COR and signing a Referral Form List (10 minutes). Users can access Computers/Equipment by presenting a COR and signing a Log Sheet (10 minutes). Reservations for materials can be made via a Reservation Form (10 minutes). Finally, Visiting Users from other institutions or alumni can access the library by presenting a valid ID and a referral letter from their school (10 minutes).
+
+[Source 2: EARIST Citizen's Charter 2025 (1st Edition)]
+Category: Library Services
+Topic: Circulation of Books - Students
+Under Library Services, the Circulation of Books and Other Library Materials for students allows for the borrowing, lending, and returning of materials depending on availability. This service is classified as a Simple Government to Citizen (G2C) transaction with a total processing time of 9 minutes. To avail of this service, students must provide a Borrower's Slip, a copy of the Book Card, and their Student ID or a copy of their Certificate of Registration (COR). The process begins with the student searching for the topic in the Online Public Access Catalog (OPAC) and filling out a borrower's slip (3 minutes). If the material is found, the student proceeds to the charging desk to fill out the book card and submit their ID or COR (3 minutes). For returns, the student hands the material to the staff at the charging desk to retrieve their ID or COR (3 minutes).
+
+[Source 3: EARIST Citizen's Charter 2025 (1st Edition)]
+Category: Student Affairs and Services
+Topic: Scholarship Application Process
+Under the Student Affairs and Services, the Scholarship application process is a Simple G2C transaction available to students. The checklist of requirements includes a Certificate of Recognition secured from the Registrar's Office and a Report of Grades (ROG) secured from the Dean's or Registrar's Office. To avail of the service, the student applicant must submit PDF copies of the Certificate of Registration (COR) and ROG to the SARRMS Office Staff. The service is free of charge, though a fee of P20.00 applies if the documents are lost. The total processing time for the request is 1 day.
+
+[Source 4: EARIST Citizen's Charter 2025 (1st Edition)]
+Category: Student Registration and Records Management Services
+Topic: Cross-Enrollment Procedure
+Currently enrolled students may cross-enroll in another school if a subject is not offered at EARIST. The maximum allowance is six (6) units. The student must present a Letter of Intent (indicating school, subject, and schedule), Certificate of Registration (COR), and School ID to the Registrar. 
+
+After evaluation of grades, the student pays a 120.00 PHP fee at the Cashier. The official receipt is submitted to the Registrar, who issues a Permit to Cross-Enroll in triplicate. This permit must be signed by the College Dean and the Registrar. Two copies are released to the student. The total processing time is approximately 14 minutes.
+
+Student Question: How to get COR? [/INST]"""
 
 print("Generating Response...\n" + "="*50)
+
 
 # 3. Start Timer
 start_time = time.time()
@@ -34,7 +68,7 @@ start_time = time.time()
 # 4. Run Generation with STREAM=TRUE
 stream = llm(
     prompt, 
-    max_tokens=712, 
+    max_tokens=1660, 
     stop=["</s>", "[/INST]"],
     echo=False, 
     stream=True  # <--- Enables the generator
