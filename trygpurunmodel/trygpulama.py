@@ -31,33 +31,49 @@ RESPONSE RULES:
 6. If the information is NOT in the provided context, respond: "I'm sorry, I don't have specific information about that in my current sources. You may want to check with the EARIST registrar or relevant office for the most accurate details."
 7. End with a helpful follow-up when appropriate, like "Is there anything else you'd like to know about this?" or "Would you like more details about any specific part?"
 
-Sources Available: EARIST Citizen's Charter 2025 (1st Edition)
-
-
 Context from EARIST Sources:
 [Source 1: EARIST Citizen's Charter 2025 (1st Edition)]
-Category: EARIST Cavite Campus - Library Services
-Topic: Special Library Services (Overnight, Referrals, Equipment)
-The Cavite Campus Library offers several special services. Overnight or Weekend Use allows students to borrow books for home use by presenting a COR and signing a Book Card (10 minutes). The Issuance of Referrals provides students with a letter to visit other libraries; this requires a COR and signing a Referral Form List (10 minutes). Users can access Computers/Equipment by presenting a COR and signing a Log Sheet (10 minutes). Reservations for materials can be made via a Reservation Form (10 minutes). Finally, Visiting Users from other institutions or alumni can access the library by presenting a valid ID and a referral letter from their school (10 minutes).
+Category: Student Registration and Records Management Services
+Topic: Withdrawal of Registration and Dropping of Subjects
+The SRRMS distinguishes between Withdrawal of Registration and Dropping of Subjects based on timing. Withdrawal must be completed within two (2) weeks from the first day of regular classes. Dropping must be completed before the scheduled Midterm Examination. 
+
+For both Undergraduate and Graduate programs, the student submits a Letter of Intent (with Parent/Guardian signature for undergrads) to the Registrar. A fee of 80.00 PHP is paid at the Cashier. The Registrar issues the appropriate form (Withdrawal or Dropping), which must be signed by concerned faculty and the Dean. The approved form is submitted to the Registrar to update the enrollment status. For students entitled to refunds, they must proceed to the Financial Management Services (FMS) office after the Registrar processes the form.
 
 [Source 2: EARIST Citizen's Charter 2025 (1st Edition)]
-Category: Library Services
-Topic: Circulation of Books - Students
-Under Library Services, the Circulation of Books and Other Library Materials for students allows for the borrowing, lending, and returning of materials depending on availability. This service is classified as a Simple Government to Citizen (G2C) transaction with a total processing time of 9 minutes. To avail of this service, students must provide a Borrower's Slip, a copy of the Book Card, and their Student ID or a copy of their Certificate of Registration (COR). The process begins with the student searching for the topic in the Online Public Access Catalog (OPAC) and filling out a borrower's slip (3 minutes). If the material is found, the student proceeds to the charging desk to fill out the book card and submit their ID or COR (3 minutes). For returns, the student hands the material to the staff at the charging desk to retrieve their ID or COR (3 minutes).
+Category: Colleges - Enrollment Services
+Topic: Approval of Withdrawal, Dropping, Changing, and Adding Courses
+The Colleges handle the approval process for Withdrawal from Enrollment, Dropping, Changing, and Adding Courses. This service is available to all student types (Old, New, Transferees, Shifters). Essential requirements include the SRRMS Accomplished Application Form, Chairperson's Evaluation, the specific Withdrawal/Changing/Adding Form, and a Letter of Request recommending approval from the program chairperson. The College Dean evaluates and processes the request. The service is fee-free and has a processing time of 1 day.
 
 [Source 3: EARIST Citizen's Charter 2025 (1st Edition)]
-Category: Student Affairs and Services
-Topic: Scholarship Application Process
-Under the Student Affairs and Services, the Scholarship application process is a Simple G2C transaction available to students. The checklist of requirements includes a Certificate of Recognition secured from the Registrar's Office and a Report of Grades (ROG) secured from the Dean's or Registrar's Office. To avail of the service, the student applicant must submit PDF copies of the Certificate of Registration (COR) and ROG to the SARRMS Office Staff. The service is free of charge, though a fee of P20.00 applies if the documents are lost. The total processing time for the request is 1 day.
+Category: EARIST Cavite Campus - Registrar's Services
+Topic: Enrollment Changes and Overload Requests
+The Registrar's Office handles modifications to student enrollment. For Withdrawal of Enrollment, Changing, Dropping, and Adding of Subjects, students must secure an accomplished form with the Program Chair's evaluation and the Academic Supervisor's recommendation. A fee of 20.00 PHP applies. The Registrar processes these requests within 45 minutes. For graduating students requesting an Excess/Overload of subjects (maximum of 12 units), a Letter of Request with recommending approval from the Program Chair is required. The Registrar's staff assists the student and evaluates records to approve the overload (30 minutes).
 
 [Source 4: EARIST Citizen's Charter 2025 (1st Edition)]
 Category: Student Registration and Records Management Services
-Topic: Cross-Enrollment Procedure
-Currently enrolled students may cross-enroll in another school if a subject is not offered at EARIST. The maximum allowance is six (6) units. The student must present a Letter of Intent (indicating school, subject, and schedule), Certificate of Registration (COR), and School ID to the Registrar. 
+Topic: Enrollment Process for Shifters
+Shifters are students transferring to a different program or college within EARIST. The process requires an Academic Program Evaluation and a Shifter's Form secured from the College. 
 
-After evaluation of grades, the student pays a 120.00 PHP fee at the Cashier. The official receipt is submitted to the Registrar, who issues a Permit to Cross-Enroll in triplicate. This permit must be signed by the College Dean and the Registrar. Two copies are released to the student. The total processing time is approximately 14 minutes.
+The student must have the Shifter's Form signed by both the previous Dean and the accepting Dean. This form is submitted to the Registrar's Office for verification and program curriculum change. The college enrollment officer then assists the student in selecting subjects based on the evaluation. If the student opts out of free tuition, they must pay fees (40.00 PHP transaction fee plus tuition). Once enrollment is validated and the Certificate of Registration is generated, the student proceeds to the Registrar's Office for ID validation. The estimated processing time is 2 hours and 20 minutes.
 
-Student Question: How to get COR? [/INST]"""
+[Source 5: Proposed Office of the Registrar Manual]
+Category: Academic Policies
+Topic: Special Academic Requests: Cross-Enrollment, Overloading, Waivers, and Substitution
+The SARMS Manual establishes protocols for handling special academic requests, including Cross-Enrollment, Overloading, Waivers of Prerequisites, and Subject Substitution. Most of these requests require recommendation by the Dean, notation by the University Registrar, and approval by the VP for Academic Affairs.
+
+**Cross-Enrollment:** Allowed only if the student is graduating, and the subject is not a major subject, is not offered at the University, or belongs to an old curriculum. The maximum allowance is six (6) units.
+
+**Overloading:** Permitted only for graduating students with a maximum limit of twenty-eight (28) units. Overloading is strictly prohibited for delinquent students and Education students undergoing Practice Teaching. A student who fails an overloaded subject cannot overload in the subsequent semester.
+
+**Waiver of Prerequisite:** Students may enroll in a prerequisite and advanced subject simultaneously only if they are graduating and the prerequisite is a "repeated subject" (previously failed). If the prerequisite is failed again, the advanced subject is automatically invalidated.
+
+**Subject Substitution:** Allowed when a subject belongs to an old curriculum and is no longer offered. The substitute must have the same number of units and be allied to the required subject.
+
+**Sit-in and Tutorial Classes:** The University explicitly does not allow sit-in or tutorial classes.
+
+
+
+Student Question: How do I change or drop a subject after enrollment? [/INST] """
 
 print("Generating Response...\n" + "="*50)
 

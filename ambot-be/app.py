@@ -13,6 +13,8 @@ from pydantic import BaseModel
 from typing import List, Optional
 from sentence_transformers import SentenceTransformer
 from llama_cpp import Llama
+import torch
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 # Configuration
 MODEL_PATH = "../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"
@@ -20,12 +22,15 @@ DATASET_PATH = "../Dataset/300TokenDataset"
 INDEX_FILE = "faiss_index_nomic.bin"
 METADATA_FILE = "chunks_metadata.json"
 EMBEDDING_MODEL_NAME = "nomic-ai/nomic-embed-text-v1.5"
+RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
 
 # Global variables
 llm = None
 embedder = None
 index = None
 chunks_metadata = []
+reranker_model = None
+reranker_tokenizer = None
 
 class ChatMessage(BaseModel):
     role: str
@@ -36,7 +41,7 @@ class ChatRequest(BaseModel):
     history: List[ChatMessage] = []
 
 def load_resources():
-    global llm, embedder, index, chunks_metadata
+    global llm, embedder, index, chunks_metadata, reranker_model, reranker_tokenizer
     
     # Determine device for embedding model
     # If index exists, we only need CPU for inference (saving GPU for LLM)
@@ -55,6 +60,16 @@ def load_resources():
         n_ctx=6144,
         verbose=False
     )
+
+    print("Loading Reranker on GPU...")
+    reranker_tokenizer = AutoTokenizer.from_pretrained(RERANKER_MODEL_NAME, trust_remote_code=True)
+    reranker_model = AutoModelForSequenceClassification.from_pretrained(
+        RERANKER_MODEL_NAME, 
+        dtype="auto", 
+        trust_remote_code=True
+    )
+    reranker_model.to('cuda')
+    reranker_model.eval()
 
     if index_exists:
         print("Loading FAISS index and metadata...")
@@ -181,13 +196,34 @@ async def chat_stream(request: ChatRequest):
     query_embedding = embedder.encode(["search_query: " + query]).astype('float32')
     
     # Search FAISS
-    k = 5
+    k = 20 # Retrieve more candidates for reranking
     D, I = index.search(query_embedding, k)
     
-    retrieved_chunks = []
+    initial_chunks = []
     for idx in I[0]:
         if idx < len(chunks_metadata):
-            retrieved_chunks.append(chunks_metadata[idx])
+            initial_chunks.append(chunks_metadata[idx])
+            
+    # Reranking
+    if not initial_chunks:
+        retrieved_chunks = []
+    else:
+        # Prepare pairs for reranking
+        pairs = [[query, chunk.get('content', '')] for chunk in initial_chunks]
+        
+        with torch.no_grad():
+            inputs = reranker_tokenizer(pairs, padding=True, truncation=True, return_tensors='pt', max_length=512)
+            inputs = {k: v.to('cuda') for k, v in inputs.items()}
+            scores = reranker_model(**inputs).logits.squeeze(-1)
+            
+        # Sort by score descending
+        sorted_indices = scores.argsort(descending=True)
+        
+        # Select top k
+        k_final = 5
+        top_indices = sorted_indices[:k_final].tolist()
+        
+        retrieved_chunks = [initial_chunks[i] for i in top_indices]
             
     # Token limit check
     # n_ctx (6144) - max_tokens (1660) = 4484 available for prompt
@@ -219,6 +255,8 @@ async def chat_stream(request: ChatRequest):
         # Stream tokens
         stream = llm(
             prompt,
+            temperature=0.1,       # <--- ADD THIS (0.1 to 0.3 is best for factual bots)
+            top_p=0.9,
             max_tokens=1660,
             stop=["</s>", "[/INST]"],
             echo=False,
