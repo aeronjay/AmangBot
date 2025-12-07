@@ -15,11 +15,14 @@ from sentence_transformers import SentenceTransformer
 from llama_cpp import Llama
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
+import pickle
+from rank_bm25 import BM25Okapi
 
 # Configuration
 MODEL_PATH = "../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"
 DATASET_PATH = "../Dataset/300TokenDataset"
 INDEX_FILE = "faiss_index_nomic.bin"
+BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
 EMBEDDING_MODEL_NAME = "nomic-ai/nomic-embed-text-v1.5"
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
@@ -28,6 +31,7 @@ RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
 llm = None
 embedder = None
 index = None
+bm25 = None
 chunks_metadata = []
 reranker_model = None
 reranker_tokenizer = None
@@ -41,7 +45,7 @@ class ChatRequest(BaseModel):
     history: List[ChatMessage] = []
 
 def load_resources():
-    global llm, embedder, index, chunks_metadata, reranker_model, reranker_tokenizer
+    global llm, embedder, index, chunks_metadata, reranker_model, reranker_tokenizer, bm25
     
     # Determine device for embedding model
     # If index exists, we only need CPU for inference (saving GPU for LLM)
@@ -76,6 +80,14 @@ def load_resources():
         index = faiss.read_index(INDEX_FILE)
         with open(METADATA_FILE, 'r', encoding='utf-8') as f:
             chunks_metadata = json.load(f)
+            
+        if os.path.exists(BM25_INDEX_FILE):
+            print("Loading BM25 index...")
+            with open(BM25_INDEX_FILE, 'rb') as f:
+                bm25 = pickle.load(f)
+        else:
+            print("BM25 index missing. Recreating indexes...")
+            create_index()
     else:
         print("Creating FAISS index...")
         create_index()
@@ -84,7 +96,7 @@ def load_resources():
         # Next restart will pick up the index and use CPU.
 
 def create_index():
-    global index, chunks_metadata
+    global index, chunks_metadata, bm25
     
     chunks_metadata = []
     texts = []
@@ -128,8 +140,16 @@ def create_index():
     index = faiss.IndexFlatL2(dimension)
     index.add(embeddings)
     
+    # Create BM25 index
+    print("Creating BM25 index...")
+    # Simple whitespace tokenization for BM25
+    tokenized_corpus = [doc.lower().split() for doc in texts]
+    bm25 = BM25Okapi(tokenized_corpus)
+    
     # Save index and metadata
     faiss.write_index(index, INDEX_FILE)
+    with open(BM25_INDEX_FILE, 'wb') as f:
+        pickle.dump(bm25, f)
     with open(METADATA_FILE, 'w', encoding='utf-8') as f:
         json.dump(chunks_metadata, f, ensure_ascii=False, indent=2)
     
@@ -198,10 +218,20 @@ async def chat_stream(request: ChatRequest):
     # Search FAISS
     k = 20 # Retrieve more candidates for reranking
     D, I = index.search(query_embedding, k)
+    faiss_indices = I[0]
+    
+    # Search BM25
+    tokenized_query = query.lower().split()
+    bm25_scores = bm25.get_scores(tokenized_query)
+    # Get top k indices from BM25
+    bm25_indices = np.argsort(bm25_scores)[::-1][:k]
+    
+    # Combine indices (Union)
+    combined_indices = list(set(faiss_indices) | set(bm25_indices))
     
     initial_chunks = []
-    for idx in I[0]:
-        if idx < len(chunks_metadata):
+    for idx in combined_indices:
+        if idx < len(chunks_metadata) and idx >= 0:
             initial_chunks.append(chunks_metadata[idx])
             
     # Reranking
