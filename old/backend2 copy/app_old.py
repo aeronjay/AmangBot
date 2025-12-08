@@ -23,9 +23,9 @@ from routes.auth import router as auth_router
 
 # --- Configuration ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATASET_DIR = os.path.abspath(os.path.join(BASE_DIR, "../Dataset/300TokenDataset"))
-MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"))
-NOMIC_MODEL_PATH = "../Models/nomic-finetuned/nomic-finetuned-final"
+DATASET_DIR = os.path.abspath(os.path.join(BASE_DIR, "../../Dataset/300TokenDataset"))
+MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "../../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"))
+NOMIC_MODEL_PATH = "../../Models/nomic-finetuned/nomic-finetuned-final"
 
 # --- Embeddings Cache Paths ---
 EMBEDDINGS_CACHE_DIR = os.path.abspath(os.path.join(BASE_DIR, "embeddings_cache"))

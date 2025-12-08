@@ -31,49 +31,236 @@ RESPONSE RULES:
 6. If the information is NOT in the provided context, respond: "I'm sorry, I don't have specific information about that in my current sources. You may want to check with the EARIST registrar or relevant office for the most accurate details."
 7. End with a helpful follow-up when appropriate, like "Is there anything else you'd like to know about this?" or "Would you like more details about any specific part?"
 
+Sources Available: EARIST Curriculum June 2018, Student Handbook 2021
+
+
 Context from EARIST Sources:
-[Source 1: EARIST Citizen's Charter 2025 (1st Edition)]
-Category: Student Registration and Records Management Services
-Topic: Withdrawal of Registration and Dropping of Subjects
-The SRRMS distinguishes between Withdrawal of Registration and Dropping of Subjects based on timing. Withdrawal must be completed within two (2) weeks from the first day of regular classes. Dropping must be completed before the scheduled Midterm Examination. 
+[Source 1: EARIST Curriculum June 2018]
+Category: Curriculum - College of Computing Studies
+Topic: Bachelor of Science in Computer Science
+Comprehensive curriculum for the Bachelor of Science in Computer Science (BSCS) under the College of Computing Studies at EARIST. 
 
-For both Undergraduate and Graduate programs, the student submits a Letter of Intent (with Parent/Guardian signature for undergrads) to the Registrar. A fee of 80.00 PHP is paid at the Cashier. The Registrar issues the appropriate form (Withdrawal or Dropping), which must be signed by concerned faculty and the Dean. The approved form is submitted to the Registrar to update the enrollment status. For students entitled to refunds, they must proceed to the Financial Management Services (FMS) office after the Registrar processes the form.
+**Program Details**
+* **Effectivity:** June 2018
+* **Total Units:** 168
 
-[Source 2: EARIST Citizen's Charter 2025 (1st Edition)]
-Category: Colleges - Enrollment Services
-Topic: Approval of Withdrawal, Dropping, Changing, and Adding Courses
-The Colleges handle the approval process for Withdrawal from Enrollment, Dropping, Changing, and Adding Courses. This service is available to all student types (Old, New, Transferees, Shifters). Essential requirements include the SRRMS Accomplished Application Form, Chairperson's Evaluation, the specific Withdrawal/Changing/Adding Form, and a Letter of Request recommending approval from the program chairperson. The College Dean evaluates and processes the request. The service is fee-free and has a processing time of 1 day.
+**FIRST YEAR**
 
-[Source 3: EARIST Citizen's Charter 2025 (1st Edition)]
-Category: EARIST Cavite Campus - Registrar's Services
-Topic: Enrollment Changes and Overload Requests
-The Registrar's Office handles modifications to student enrollment. For Withdrawal of Enrollment, Changing, Dropping, and Adding of Subjects, students must secure an accomplished form with the Program Chair's evaluation and the Academic Supervisor's recommendation. A fee of 20.00 PHP applies. The Registrar processes these requests within 45 minutes. For graduating students requesting an Excess/Overload of subjects (maximum of 12 units), a Letter of Request with recommending approval from the Program Chair is required. The Registrar's staff assists the student and evaluates records to approve the overload (30 minutes).
+**First Semester (26 units)**
+* FPROGLAB Computer Programming 1 (Fundamentals of Programming) Lab (1 unit)
+* FPROGLEC Computer Programming 1 (Fundamentals of Programming) Lec (2 units)
+* GEARTAPP Art Appreciation (3 units)
+* GEKOMFIL Kontekstwalisadong Komunikasyon sa Filipino (3 units)
+* GELIFEWR The Life and Works of Rizal (3 units)
+* GEMATHMW Mathematics in the Modern World (3 units)
+* GEPEMOVE Movement Enhancement (2 units)
+* GESCIETS Science, Technology and Society (3 units)
+* NSTPROG1 National Service Training Program 1 (3 units)
+* INTROCOMP Introduction to Computing (3 units)
 
-[Source 4: EARIST Citizen's Charter 2025 (1st Edition)]
-Category: Student Registration and Records Management Services
-Topic: Enrollment Process for Shifters
-Shifters are students transferring to a different program or college within EARIST. The process requires an Academic Program Evaluation and a Shifter's Form secured from the College. 
+**Second Semester (32 units)**
+* DBMGTLAB Database Management System (Laboratory) (1 unit)
+* DBMGTLEC Database Management System (Lecture) (2 units)
+* DISSTRU1 Discrete Structure 1 (3 units). Prerequisite: DISSTRU1 (as stated in source)
+* GEFILDIS Filipino sa Iba't ibang Disiplina (3 units)
+* GEPANIPI Panitikan sa Pilipinas / Philippine Literature (3 units)
+* GEPEFITE Fitness Exercises (2 units)
+* GEPURPCO Purposive Communication (3 units)
+* IPROGLAB Computer Programming 2 (Intermediate Programming) Laboratory (1 unit)
+* IPROGLEC Computer Programming 2 (Intermediate Programming) Lecture (2 units). Prerequisite: CPROGLEC (Logic Formulation). Corequisite: IPROGLAB
+* NSTPROG2 National Service Training Program 2 (3 units) (or NSTP-CWTS 2/LTS 2/MTS 2)
 
-The student must have the Shifter's Form signed by both the previous Dean and the accepting Dean. This form is submitted to the Registrar's Office for verification and program curriculum change. The college enrollment officer then assists the student in selecting subjects based on the evaluation. If the student opts out of free tuition, they must pay fees (40.00 PHP transaction fee plus tuition). Once enrollment is validated and the Certificate of Registration is generated, the student proceeds to the Registrar's Office for ID validation. The estimated processing time is 2 hours and 20 minutes.
+**SECOND YEAR**
 
-[Source 5: Proposed Office of the Registrar Manual]
+**First Semester (20 units)**
+* DIGDELAB Digital Logic Design (Laboratory) (1 unit)
+* DIGDELEC Digital Logic Design (Lecture) (2 units)
+* DISSTRU2 Discrete Structure 2 (3 units)
+* DSALGLAB Data Structures and Algorithm (Laboratory) (1 unit)
+* DSALGLEC Data Structures and Algorithm (Lecture) (2 units)
+* GEELECCP Communicative Proficiency in Business Correspondence and Research Writing (3 units)
+* GEPEHEF1 Physical Activity Towards Health and Fitness 1 (2 units)
+* OOPRGLAB Object-Oriented Programming (Laboratory) (1 unit)
+* OOPRGLEC Object-Oriented Programming (Lecture) (2 units)
+* PHYCSLAB Physics for Computer Scientists (Laboratory) (1 unit)
+* PHYCSLEC Physics for Computer Scientists (Lecture) (2 units)
+
+**Second Semester (18 units)**
+* CALCULUS Differential and Integral Calculus (3 units)
+* GEPEHEF2 Physical Activity Towards Health and Fitness II (2 units)
+* GPXVCLAB Graphics and Visual Computing (Laboratory) (1 unit)
+* GPXVCLEC Graphics and Visual Computing (Lecture) (2 units)
+* INFOMGMT Information Management (3 units)
+* MICROBOT Microprocessor & Introduction to Robotics (1 unit)
+* NETCOMMS Networks and Communications (3 units)
+* PROGLLAB Programming Language (Laboratory) (1 unit)
+* PROGLLEC Programming Language (Lecture) (2 units)
+
+**THIRD YEAR**
+
+**First Semester (19 units)**
+* ALGCMPLX Algorithm and Complexity (3 units)
+* APDEVLAB Application Development and Emerging Technology (Laboratory) (1 unit)
+* APDEVLEC Application Development and Emerging Technology (Lecture) (2 units)
+* ARCHIORG Architecture and Organization (3 units)
+* HUCOMINT Human Computer Interaction (1 unit)
+* INTELSYS Intelligent Systems (3 units)
+* OPERSYST Operating System (3 units)
+* SOFTENG1 Software Engineering 1 (3 units)
+
+**Second Semester (18 units)**
+* CSTHESI1 Thesis 1 (3 units)
+* GEELECDS Practical Data Science (3 units)
+* MOBAPLAB Mobile Application Development (iOS & Android) Laboratory (1 unit)
+* MOBAPLEC Mobile Application Development (iOS & Android) Lecture (2 units)
+* MOSIMLAB Modeling and Simulation (Laboratory) (1 unit)
+* MOSIMLEC Modeling and Simulation (Lecture) (2 units)
+* PARACOMP Parallel and Distributed Computing (3 units)
+* SOFENGLA Software Engineering 2 (Laboratory) (1 unit)
+* SOFTENG2 Software Engineering 2 (Lecture) (2 units)
+
+**FOURTH YEAR**
+
+**First Semester (20 units)**
+* AUTOMATA Automata Theory and Formal Language (3 units)
+* CSTHESI2 Thesis 2 (Lecture) (2 units)
+* CSTHESL2 Thesis 2 (Laboratory) (1 unit)
+* GECONTWO The Contemporary World (3 units)
+* GEELECES Environmental Science (3 units)
+* GEUNDETS Understanding the Self (3 units)
+* INFOASEC Information Assurance and Security (2 units)
+* SSUPPRAC Social Issues and Professional Practice (3 units)
+
+**Second Semester (15 units)**
+* CSINTERN Practicum/Internship (6 units)
+* GEETHICS Ethics (3 units)
+* GEREADPH Readings in Philippine History (3 units)
+* INDOBSFT Industry Observation & Field Trips (3 units)
+
+[Source 2: EARIST Curriculum June 2018]
+Category: Curriculum - College of Engineering
+Topic: Bachelor of Science in Computer Engineering
+Comprehensive curriculum for the Bachelor of Science in Computer Engineering (BSCpE) under the College of Engineering at EARIST. 
+
+**Program Details**
+* **Effectivity:** June 2018 
+* **Total Units:** 183 
+
+**FIRST YEAR**
+
+**First Semester (26 units)**
+* CENCAD 111 Computer Aided Drafting (1 unit) 
+* CENMAT01 Differential Calculus (3 units) 
+* CENMATH 111 Mathematics for Engineers (3 units) 
+* CPENG111 Computer Engineering as a Discipline (1 unit) 
+* GEKOMFIL Kontekstwalisadong Komunikasyon sa Filipino (3 units) 
+* GEPEMOVE Movement Enhancement (2 units) 
+* GEREADPH Readings in Philippine History (3 units) 
+* GEUNDETS Understanding the Self (3 units) 
+* NATSCI SP_102 Chemistry for Engineers (4 units) 
+* NSTPROG1 National Service Training Program 1 (3 units) 
+
+**Second Semester (27 units)**
+* CPE 112 Object Oriented Programming (2 units). Prerequisite: CPENG111 
+* CPE 113 Programming Logic and Design (2 units) 
+* GEFILDIS Filipino sa Iba't ibang Disiplina (3 units). Prerequisite: GEKOMFIL 
+* GEMATHMW Mathematics in the Modern World (3 units) 
+* GEPEFITE Fitness Exercises (2 units). Prerequisite: GEPEMOVE 
+* MATH_104_5C Integral Calculus (5 units). Prerequisite: CENMAT01 
+* MATH 122 Engineering Data Analysis (3 units). Prerequisite: CENMAT01 
+* NATSCI103A Physics for Engineers (Calculus Based) (4 units). Prerequisite: NATSCI_SP_102 
+* NSTPROG2 National Service Training Program 2 (3 units). Prerequisite: NSTPROG1 
+
+**SECOND YEAR**
+
+**First Semester (26 units)**
+* CPENG211 Data Structures and Algorithm Analysis (2 units). Prerequisite: CPE 112, CPE 113 
+* DIFFEQUA Differential Equations (3 units). Prerequisite: MATH_104_5C 
+* EEENG211 Fundamentals of Electrical Circuits (4 units) 
+* GEARTAPP Art Appreciation (3 units) 
+* GEELECDS Practical Data Science (3 units). Prerequisite: MATH 122 
+* GEELECIT Living in Information Technology Era (3 units) 
+* GEETHICS Ethics (3 units) 
+* GEPEHEF1 Physical Activity Towards Health and Fitness 1 (2 units) 
+* GEPURPCO Purposive Communication (3 units) 
+
+**Second Semester (25 units)**
+* CENENECO Engineering Economy (3 units) 
+* CPENG221 Numerical Methods (3 units). Prerequisite: DIFFEQUA 
+* CPENG222 Software Design (4 units). Prerequisite: CPENG211 
+* ECENG221 Fundamentals of Electronic Circuits (4 units) 
+* GECONTWO The Contemporary World (3 units) 
+* GELIFEWR The Life and Works of Rizal (3 units) 
+* GEPEHEF2 Physical Activity Towards Health and Fitness II (2 units) 
+* GESCIETS Science, Technology and Society (3 units) 
+
+**THIRD YEAR**
+
+**First Semester (24 units)**
+* CENENVIR Environmental Science and Engineering (3 units). Prerequisite: NATSCI_SP_102 
+* CPEELEC1 Cognate/Elective Course 1 (3 units) 
+* CPENG311 Logic Circuits and Design (4 units). Prerequisite: ECENG221 
+* CPENG312 Data and Digital Communications (3 units). Prerequisite: ECENG221 
+* CPENG313 CPE Drafting & Design (1 unit). Prerequisite: CENCAD 111 
+* CPENG314 Operating Systems (4 units). Prerequisite: CPENG222, CPENG211 
+* CPENG315 Discrete Mathematics (3 units). Prerequisite: CPENG221 
+* MXSIGSEN Fundamentals of Mixed Signal & Sensors (3 units). Prerequisite: ECENG221 
+
+**Second Semester (21 units)**
+* CENTECNO Technopreneurship (3 units) 
+* CPEELEC2 Cognate/Elective Course 2 (3 units). Prerequisite: CPEELEC1 
+* CPENG321 Basic Occupational Health & Safety (3 units) 
+* CPENG322 Computer Network and Security (4 units). Prerequisite: CPENG312, CPENG314 
+* CPENG323 Microprocessors (4 units). Prerequisite: CPENG311 
+* CPENG324 CpE Laws and Professional Practice (2 units) 
+* CVENG316 Engineering Management (2 units). Prerequisite: CENENECO 
+
+**Summer (3 units)**
+* CENOTJOB On-the-Job Training (300 hours) (3 units) 
+
+**FOURTH YEAR**
+
+**First Semester (20 units)**
+* CPENG411 Methods of Research (2 units). Prerequisite: MATH_122, GEELECDS, CPENG311 
+* CPENG412 Computer Architecture and Organization (4 units). Prerequisite: CPENG323 
+* CPENG413 Embedded Systems (4 units). Prerequisite: CPENG323 
+* CPENG414 Emerging Technologies in CpE (3 units) 
+* CPENG415 CpE Practice and Design 1 (1 unit). Prerequisite: CPENG323, CPENG411 
+* CPENG416 Feedback and Control System (3 units). Prerequisite: CPENG221, EEENG 221 (Electrical Circuits 2) 
+* GEELECCP Communicative Proficiency in Business Correspondence and Research Writing (3 units) 
+
+**Second Semester (11 units)**
+* CPEELEC3 Cognate/Elective Course 3 (3 units). Prerequisite: CPEELEC2 
+* CPENG421 CPE Practice and Design 2 (2 units). Prerequisite: CPENG415 
+* CPENG422 Digital Signal Processing (4 units). Prerequisite: CPENG416 
+* CPENG423 Introduction to HDL (1 unit). Prerequisite: CPENG311 
+* CPENG424 Seminars and Field Trips (1 unit) 
+
+[Source 3: Student Handbook 2021]
 Category: Academic Policies
-Topic: Special Academic Requests: Cross-Enrollment, Overloading, Waivers, and Substitution
-The SARMS Manual establishes protocols for handling special academic requests, including Cross-Enrollment, Overloading, Waivers of Prerequisites, and Subject Substitution. Most of these requests require recommendation by the Dean, notation by the University Registrar, and approval by the VP for Academic Affairs.
+Topic: Complete Curricular Offerings (Main and Cavite Campuses)
+The EARIST Student Handbook 2021 details the complete curricular offerings for both the Main Campus and the Cavite Campus. 
 
-**Cross-Enrollment:** Allowed only if the student is graduating, and the subject is not a major subject, is not offered at the University, or belongs to an old curriculum. The maximum allowance is six (6) units.
+**Main Campus Offerings by College:**
 
-**Overloading:** Permitted only for graduating students with a maximum limit of twenty-eight (28) units. Overloading is strictly prohibited for delinquent students and Education students undergoing Practice Teaching. A student who fails an overloaded subject cannot overload in the subsequent semester.
+* **College of Architecture and Fine Arts (CAFA):** Bachelor of Science in Architecture (BS ARCHI), Bachelor of Science in Interior Design (BSID), and Bachelor of Fine Arts (BFA) with majors in Painting or Visual Communication.
+* **College of Arts and Sciences (CAS):** Bachelor of Science in Applied Physics with Computer Science Emphasis (BSAP), Bachelor of Science in Psychology (BSPSYCH), and Bachelor of Science in Mathematics (BSMATH).
+* **College of Computing Studies (CCS):** Bachelor of Science in Computer Science (BSCS), Bachelor of Science in Information Technology (BS INFO. TECH.)
+* **College of Business and Public Administration (CBPA):** Bachelor of Science in Office Administration (BSOA), Bachelor of Science in Business Administration (Majors: Human Resource Management, Marketing Management), Bachelor of Science in Entrepreneurship (BSEntrep), and Bachelor in Public Administration (BPA).
+* **College of Education (CED):** Bachelor in Secondary Education (BSE) (Majors: Filipino, Mathematics, Science), Bachelor of Technology and Livelihood Education (BTLEd) (Majors: Home Economics, Industrial Arts), Bachelor of Special Needs Education (BSNEd), and Professional Education Subjects (TCP - 18 units).
+* **College of Engineering (CEN):** Bachelor of Science in Chemical Engineering (BSChE), Civil Engineering (BSCE), Electrical Engineering (BSEE), Electronics and Communication Engineering (BSECE), Mechanical Engineering (BSME), and Computer Engineering (BSCoE).
+* **College of Hospitality and Tourism Management (CHTM):** Bachelor of Science in Tourism Management (BST) and Hospitality Management (BSHM).
+* **College of Industrial Technology (CIT):** Bachelor of Science in Industrial Technology (BSIT) with majors in Automotive Technology, Electrical Technology, Electronics Technology, Food Technology, Fashion Apparel Technology, Industrial Chemistry, Drafting Technology, Machine Shop Technology, and Refrigeration and Air-conditioning.
+* **College of Criminal Justice Education:** Bachelor of Science in Criminology (BSCrim).
+* **Graduate School:** Master of Science in Mathematics, Master of Arts in Industrial Psychology, Master in Business Administration, Master in Public Administration, Master of Arts in Industrial Education (Major: Hotel Management), Master of Arts in Education (Majors: Administration and Supervision, Guidance & Counseling, Special Education), Master of Arts in Teaching (Majors: Electronics Technology, Mathematics, Science), Doctor of Philosophy in Industrial Psychology, Doctor of Education in Educational Management, Doctor in Business Administration, and Doctor in Public Administration.
 
-**Waiver of Prerequisite:** Students may enroll in a prerequisite and advanced subject simultaneously only if they are graduating and the prerequisite is a "repeated subject" (previously failed). If the prerequisite is failed again, the advanced subject is automatically invalidated.
+**EARIST Cavite Campus Offerings:**
 
-**Subject Substitution:** Allowed when a subject belongs to an old curriculum and is no longer offered. The substitute must have the same number of units and be allied to the required subject.
+* **Graduate Program:** Doctor in Education (Major: Educational Management), Master of Arts in Education (Major: Administration and Supervision), and Master in Business Administration.
+* **Post Baccalaureate:** Professional Education Subjects (18 units).
+* **Undergraduate Program:** Bachelor of Science in Business Administration (Major: Marketing Management), Bachelor of Science in Computer Science, Bachelor of Science in Computer Technology, Bachelor of Science in Criminology, Bachelor of Science in Hospitality Management, Bachelor of Science in Office Administration, Bachelor of Science in Industrial Psychology, Bachelor of Technology and Livelihood Education, and Bachelor of Science in Industrial Technology (Majors: Automotive, Electrical, Electronics, Food Technology, Drafting Technology).
 
-**Sit-in and Tutorial Classes:** The University explicitly does not allow sit-in or tutorial classes.
-
-
-
-Student Question: How do I change or drop a subject after enrollment? [/INST] """
+Student Question: What is the curriculum for BSCS? [/INST]"""
 
 print("Generating Response...\n" + "="*50)
 

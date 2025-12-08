@@ -176,7 +176,7 @@ app.add_middleware(
 
 def construct_prompt(query: str, chunks: List[dict]) -> str:
     context_text = ""
-    for i, chunk in enumerate(chunks):
+    for i, chunk in enumerate(reversed(chunks)):
         context_text += f"[Source {i+1}: {chunk.get('source', 'Unknown')}]\n"
         context_text += f"Category: {chunk.get('category', 'Unknown')}\n"
         context_text += f"Topic: {chunk.get('topic', 'Unknown')}\n"
