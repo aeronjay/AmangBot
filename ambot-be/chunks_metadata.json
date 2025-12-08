@@ -4416,6 +4416,52 @@
     ]
   },
   {
+    "id": "campus_directory_buildings_and_offices",
+    "source": "Student Handbook 2021",
+    "category": "General Information - Campus Map",
+    "topic": "Complete Office and College Directory by Building",
+    "content": "This section outlines the complete Office Directory by Building within the EARIST campus. \n\n**Regala Building Directory**\nThe Regala Building primarily houses academic colleges. The College of Hospitality Management is located on the 1st Floor. The College of Public Administration and Criminology is situated on the 2nd Floor. The College of Education occupies the 3rd Floor.\n\n**Apilado Building Directory**\nThe Apilado Building is a hub for student and administrative services. The 1st Floor contains the Cash and Disbursement Services (Cashier's Office), the National Service Training Program Security Services, the Office of the Extension & External Affairs Services, the Office of the Student, Admission, Registration and Records Management Services, and the Counseling & Testing Service. The Mezzanine level houses the Information and Public Affairs Services, the Office of the Administrative Services, and the Office of the Property Management Services.\n\n**CEAFA Building Directory**\nThe CEAFA Building serves multiple colleges and medical services. The 1st Floor houses the Medical & Dental Services and the College of Engineering. The 2nd Floor contains additional rooms for the College of Engineering and the Office of the Commission of Audit. The 3rd Floor is dedicated to the College of Architecture and Fine Arts. The 4th and 5th Floors are occupied by the College of Engineering. The 6th Floor is designated for Physical Education, Sports Development & Athletic Services.\n\n**CIT Building Directory**\nThe CIT Building is the primary location for industrial technology studies. The College of Industrial Technology occupies the 1st Floor, 2nd Floor, 3rd Floor, and 4th Floor. The 2nd Floor also houses the Office of the Research Development and Production. The 5th Floor contains facilities for the College of Hospitality Management and the EARIST Hostel.\n\n**Library/ICT Building Directory**\nThis building focuses on information resources and technology. The EARIST Museum is on the 1st Floor. Library Services are located on both the 2nd and 3rd Floors. The 4th Floor houses the Office of the Management Information System and Technology Services .\n\n**Old Laboratory High School Building Directory**\nThe 1st Floor of the Old Laboratory High School Building houses Instruction Services, Assessment Services, and Property Management Services. The 2nd Floor contains the Office of the Vice President for Administration and Finance, the Office of the Vice President for Planning, Research, Extension and Production, the Office of the Management Internal Control and Audit Services, the Office of the Quality Assurance, and the Office of the Bids and Awards Committee.\n\n**Administration Building Directory**\nThe Administration Building houses executive and financial offices. The 1st Floor contains Financial Management Services and Human Resource. The 2nd Floor is the location of the Office of the President, the Office of the Planning Services, and the Institutional Infrastructure Planning and Development Office. The 3rd Floor houses the Office of the Records Services and the Office of the Vice President. The 4th Floor features the Amphi-Theater.\n\n**Nudas Building Directory**\nThe Nudas Building provides mixed-use facilities and academic spaces. The 1st Floor contains the Canteen and Motorpool and Transportation Services. The 2nd Floor houses the College of Business Administration. The 3rd Floor is occupied by the College of Education. The 4th Floor houses the College of Arts and Sciences.",
+    "keywords": [
+      "campus map",
+      "office locations",
+      "Cashier's Office",
+      "Registrar",
+      "Medical Dental",
+      "College of Engineering",
+      "College of Industrial Technology",
+      "Library",
+      "Regala",
+      "Apilado",
+      "CEAFA",
+      "Nudas",
+      "Administration Building"
+    ]
+  },
+  {
+    "id": "mis_portal_advisory_recovery_and_role",
+    "source": "Student Advisory: Resolving Student Portal Issues",
+    "category": "Management Information Services (MIS) Support",
+    "topic": "Procedure for Password Recovery, Portal Assistance, and MIS Role",
+    "content": "According to the Student Advisory titled 'Resolving Student Portal Issues' issued by the Management Information Services (MIS) Department, specific protocols are in place for EARIST students experiencing technical difficulties with their Student Portal. These difficulties encompass issues such as forgotten passwords, login errors, or missing data. \n\nRegarding the procedure for Password Recovery and Portal Assistance, the advisory mandates that students unable to access their portal must proceed directly to the Management Information Services (MIS) office for immediate assistance. The MIS office is physically located on the 4th Floor of the CCS (College of Computer Studies) Building. Students are instructed to approach the MIS Staff on duty, who are authorized to verify student identity and manually reset passwords or address specific queries regarding the portal. A critical requirement for this process is identity verification; students are strictly required to bring and present their valid Student ID and their current Registration Form (COR) before the staff can process any request.\n\nFurthermore, the advisory provides a comprehensive overview of the Management Information Services (MIS) to clarify why students are directed to this specific office. In the context of EARIST, the MIS is defined as the technical unit responsible for managing the institution's data, software systems, and digital infrastructure. It functions as the central hub where critical student data—including grades, class schedules, and personal information—intersects with the technology used to access it, specifically the Student Portal. Consequently, the MIS serves as the primary authority for resolving access issues related to these digital assets.",
+    "keywords": [
+      "MIS",
+      "Management Information Services",
+      "Student Portal",
+      "password recovery",
+      "login errors",
+      "CCS Building",
+      "College of Computer Studies",
+      "4th Floor",
+      "identity verification",
+      "COR",
+      "Registration Form",
+      "technical support",
+      "digital infrastructure",
+      "student data",
+      "reset password"
+    ]
+  },
+  {
     "id": "sarms_overview_mission_governance_functions",
     "source": "Proposed Office of the Registrar Manual",
     "category": "Organizational Structure & Mandate",
