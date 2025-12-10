@@ -36,7 +36,7 @@ export interface StreamCallbacks {
 }
 
 class ChatService {
-  private baseUrl = 'http://localhost:8000';
+  private baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
   async getResponse(message: string, history: ChatMessage[] = []): Promise<ChatResponse> {
     try {

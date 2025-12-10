@@ -108,11 +108,13 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
       await chatService.streamResponse(currentInput, messages, {
         onToken: (token: string) => {
           setMessages(prev => 
-            prev.map(msg => 
-              msg.id === botMessageId 
-                ? { ...msg, message: msg.message + token }
-                : msg
-            )
+            prev.map(msg => {
+              if (msg.id === botMessageId) {
+                const newMessage = msg.message + token;
+                return { ...msg, message: msg.message === '' ? newMessage.trimStart() : newMessage };
+              }
+              return msg;
+            })
           );
         },
         onMetadata: (metadata) => {
@@ -192,11 +194,13 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
             
             <div ref={chatBodyRef} className="chat-body flex-1 overflow-y-auto p-4 space-y-4">
                 {messages.map(message => (
-                    <MessageBubble 
-                        key={message.id} 
-                        message={message} 
-                        darkMode={darkMode} 
-                    />
+                    message.message ? (
+                        <MessageBubble 
+                            key={message.id} 
+                            message={message} 
+                            darkMode={darkMode} 
+                        />
+                    ) : null
                 ))}
                 {isTyping && messages[messages.length - 1]?.message === '' && (
                     <div className="flex justify-start mb-4">
