@@ -21,10 +21,10 @@ from rank_bm25 import BM25Okapi
 # Configuration
 MODEL_PATH = "../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"
 DATASET_PATH = "../Dataset/300TokenDataset"
-INDEX_FILE = "faiss_index_nomic.bin"
+INDEX_FILE = "faiss_index_finetuned.bin"
 BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
-EMBEDDING_MODEL_NAME = "nomic-ai/nomic-embed-text-v1.5"
+EMBEDDING_MODEL_NAME = "../Models/nomic-finetuned/nomic-finetuned-final"
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
 
 # Global variables
