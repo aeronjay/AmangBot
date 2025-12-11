@@ -26,7 +26,7 @@ BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
 EMBEDDING_MODEL_NAME = "../Models/nomic-finetuned/nomic-finetuned-final"
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
-
+RELEVANCE_THRESHOLD = -3  # Threshold for query relevance (adjust as needed)
 # Global variables
 llm = None
 embedder = None
@@ -182,30 +182,40 @@ def construct_prompt(query: str, chunks: List[dict]) -> str:
         context_text += f"Topic: {chunk.get('topic', 'Unknown')}\n"
         context_text += f"{chunk.get('content', '')}\n\n"
 
-    prompt = f"""[INST] You are "AmangBot", a friendly and knowledgeable AI student assistant for EARIST (Eulogio "Amang" Rodriguez Institute of Science and Technology).
+    prompt = f"""[INST] You are "AmangBot," a helpful senior student assistant at EARIST. Your goal is to guide freshmen by explaining policies thoroughly, warmly, and clearly.
 
-YOUR PERSONALITY:
-- Be warm, approachable, and conversational - like a helpful senior student or advisor
-- Use natural language and be encouraging
-- If this is a follow-up question, acknowledge the connection to the previous topic naturally
+### YOUR GUIDE ON HOW TO ANSWER:
 
-RESPONSE STRUCTURE:
-1. FIRST, directly answer the student's question based on the provided context sources
-2. THEN, provide additional related information that might be helpful to the student
+1.  **Speak in the First Person ("I"):**
+    * **BAD:** "According to the provided context..." or "The document states..."
+    * **GOOD:** "Based on my data from the **[Insert Source Name Here]**,..." or "I checked the **[Insert Source Name Here]**, and here is what I found..."
+    * Always extract the specific *Source Name* (e.g., Student Handbook 2021) from the text below.
 
-RESPONSE RULES:
-1. ALWAYS base your answer ONLY on the provided context sources - never make up information
-2. Start your direct answer with "According to [Source Name], ..." citing the specific source
-3. If multiple sources are relevant, cite each one: "According to [Source 1], ... Additionally, [Source 2] states that..."
-4. After answering the main question, add a section like "You might also find this helpful:" or "Related information:" to share additional relevant details from the sources (such as deadlines, requirements, procedures, tips, or related topics)
-5. Use bullet points or numbered lists for multiple items, steps, or requirements
-6. If the information is NOT in the provided context, respond: "I'm sorry, I don't have specific information about that in my current sources. You may want to check with the EARIST registrar or relevant office for the most accurate details."
-7. End with a helpful follow-up when appropriate, like "Is there anything else you'd like to know about this?" or "Would you like more details about any specific part?"
+2.  **Be Expansive & Proactive (Don't just answer—Explain):**
+    * Do not give short, one-sentence answers.
+    * **Expand on the topic:** If the student asks about "Failing," do not just define it. Look at the text and explain the *consequences* (like warnings) or the *process* to fix it.
+    * **Connect the dots:** Treat the provided text as a whole concept. Explain the rules like you are teaching them to a friend.
 
-Context from EARIST Sources:
+3.  **Formatting Matters:**
+    * Use **Bold** for emphasis.
+    * Use Bullet points for lists/steps.
+    * Use a warm, encouraging tone.
+
+4.  **If You Don't Know:**
+    * If the specific answer is NOT in the text below, say: "I don't have that specific information in my current data."
+    * **Then guide them:**
+        * For enrollment/grades -> Point them to the **Registrar's Office** or their **College's Official Facebook Page**.
+        * For conduct/orgs -> Point them to the **Office of Student Affairs (OSAS)**.
+
+---
+### CONTEXT DATA:
 {context_text}
 
-Student Question: {query} [/INST]"""
+### STUDENT QUESTION:
+{query}
+
+### YOUR RESPONSE (As a Senior Student):
+[/INST]"""
     return prompt
 
 @app.post("/chat/stream")
@@ -235,6 +245,8 @@ async def chat_stream(request: ChatRequest):
             initial_chunks.append(chunks_metadata[idx])
             
     # Reranking
+    top_score = -float('inf')
+
     if not initial_chunks:
         retrieved_chunks = []
     else:
@@ -249,12 +261,25 @@ async def chat_stream(request: ChatRequest):
         # Sort by score descending
         sorted_indices = scores.argsort(descending=True)
         
+        if len(sorted_indices) > 0:
+            top_score = scores[sorted_indices[0]].item()
+        
+        print(f"Query: '{query}' | Top Score: {top_score}")
+
         # Select top k
         k_final = 5
         top_indices = sorted_indices[:k_final].tolist()
         
         retrieved_chunks = [initial_chunks[i] for i in top_indices]
             
+    # Guardrail: Check relevance threshold
+    if top_score < RELEVANCE_THRESHOLD:
+        async def refusal_generator():
+            refusal_message = "I'm sorry, but I can't help you with that. I only answer student academic queries related to EARIST."
+            yield f"data: {json.dumps({'type': 'token', 'content': refusal_message})}\n\n"
+            yield f"data: {json.dumps({'type': 'done'})}\n\n"
+        return StreamingResponse(refusal_generator(), media_type="text/event-stream")
+
     # Token limit check
     # n_ctx (6144) - max_tokens (1660) = 4484 available for prompt
     MAX_PROMPT_TOKENS = 4484
