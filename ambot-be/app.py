@@ -19,6 +19,7 @@ import pickle
 from rank_bm25 import BM25Okapi
 
 # Configuration
+BART_MODEL = "../Models/finetuned-BART"
 MODEL_PATH = "../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"
 DATASET_PATH = "../Dataset/300TokenDataset"
 INDEX_FILE = "faiss_index_finetuned.bin"
