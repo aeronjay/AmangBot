@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import authService from '../../service/authService';
 
 interface InfoFile {
-  id: number;
+  id: string;
   name: string;
   source: string;
   size: string;
@@ -17,13 +18,13 @@ const AdminDashboard: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [infoFiles, setInfoFiles] = useState<InfoFile[]>([]);
   const [showAddModal, setShowAddModal] = useState(false);
-  const [newInfoName, setNewInfoName] = useState('');
-  const [newInfoContent, setNewInfoContent] = useState('');
+  const [newFile, setNewFile] = useState<File | null>(null);
   const [selectedInfo, setSelectedInfo] = useState<InfoFile | null>(null);
   const [showViewModal, setShowViewModal] = useState(false);
+  const [isRestarting, setIsRestarting] = useState(false);
+  const [uploading, setUploading] = useState(false);
 
   useEffect(() => {
-    // Load dark mode setting from localStorage
     const storedDarkMode = localStorage.getItem('ambot_dark_mode');
     if (storedDarkMode !== null) {
       setDarkMode(JSON.parse(storedDarkMode));
@@ -38,6 +39,24 @@ const AdminDashboard: React.FC = () => {
     }
   }, [darkMode]);
 
+  const fetchFiles = async () => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/admin/files`, {
+        headers: authService.getAuthHeaders()
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setInfoFiles(data);
+      }
+    } catch (error) {
+      console.error("Failed to fetch files", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchFiles();
+  }, []);
+
   const handleDarkModeToggle = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
@@ -49,25 +68,79 @@ const AdminDashboard: React.FC = () => {
     navigate('/admin');
   };
 
-  const handleAddInfo = () => {
-    if (newInfoName.trim()) {
-      const newInfo: InfoFile = {
-        id: Date.now(),
-        name: newInfoName.endsWith('.txt') ? newInfoName : `${newInfoName}.txt`,
-        source: 'AdminDB',
-        size: `${Math.round(newInfoContent.length / 1024) || 1} KB`,
-        lastModified: new Date().toISOString().split('T')[0],
-        status: 'pending',
-      };
-      setInfoFiles([...infoFiles, newInfo]);
-      setNewInfoName('');
-      setNewInfoContent('');
-      setShowAddModal(false);
+  const handleAddInfo = async () => {
+    if (!newFile) return;
+
+    setUploading(true);
+    const formData = new FormData();
+    formData.append('file', newFile);
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/admin/upload`, {
+        method: 'POST',
+        headers: {
+          'Authorization': (authService.getAuthHeaders() as any)['Authorization']
+        },
+        body: formData
+      });
+      
+      if (response.ok) {
+        await fetchFiles();
+        setShowAddModal(false);
+        setNewFile(null);
+      } else {
+        const error = await response.json();
+        alert(`Upload failed: ${error.detail}`);
+      }
+    } catch (error) {
+      console.error("Upload failed", error);
+      alert("Upload failed");
+    } finally {
+      setUploading(false);
     }
   };
 
-  const handleDeleteInfo = (id: number) => {
-    setInfoFiles(infoFiles.filter(info => info.id !== id));
+  const handleDeleteInfo = async (id: string) => {
+    if (!confirm("Are you sure you want to delete this file?")) return;
+    
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/admin/files/${id}`, {
+        method: 'DELETE',
+        headers: authService.getAuthHeaders()
+      });
+      
+      if (response.ok) {
+        fetchFiles();
+        if (selectedInfo?.id === id) setShowViewModal(false);
+      } else {
+        alert("Delete failed");
+      }
+    } catch (error) {
+      console.error("Delete failed", error);
+    }
+  };
+
+  const handleRestart = async () => {
+    if (!confirm("Are you sure you want to restart the system? This will reload all resources.")) return;
+    
+    setIsRestarting(true);
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/admin/restart`, {
+        method: 'POST',
+        headers: authService.getAuthHeaders()
+      });
+      
+      if (response.ok) {
+        alert("System restarted successfully");
+      } else {
+        alert("Restart failed");
+      }
+    } catch (error) {
+      console.error("Restart failed", error);
+      alert("Restart failed");
+    } finally {
+      setIsRestarting(false);
+    }
   };
 
   const handleViewInfo = (info: InfoFile) => {
@@ -91,6 +164,28 @@ const AdminDashboard: React.FC = () => {
             </div>
           </div>
           <div className="flex items-center gap-2">
+            <button
+              onClick={handleRestart}
+              disabled={isRestarting}
+              className={`px-4 py-2 ${darkMode ? 'bg-yellow-700 hover:bg-yellow-600' : 'bg-yellow-500 hover:bg-yellow-600'} text-white rounded-lg transition-colors duration-200 text-sm font-medium flex items-center gap-2`}
+            >
+              {isRestarting ? (
+                <>
+                  <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Restarting...
+                </>
+              ) : (
+                <>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                  Restart System
+                </>
+              )}
+            </button>
             {/* Dark Mode Toggle */}
             <button 
               onClick={handleDarkModeToggle}
@@ -133,7 +228,7 @@ const AdminDashboard: React.FC = () => {
               <div className="flex items-center justify-between mb-4">
                 <h2 className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Information Files</h2>
                 <button
-                  // onClick={() => setShowAddModal(true)}
+                  onClick={() => setShowAddModal(true)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                     darkMode ? 'bg-green-700 hover:bg-green-600 text-white' : 'bg-green-600 hover:bg-green-700 text-white'
                   }`}
@@ -251,13 +346,12 @@ const AdminDashboard: React.FC = () => {
             <div className="p-4">
               <div className="mb-4">
                 <label className={`block text-sm font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                  File Name
+                  Upload PDF File
                 </label>
                 <input
-                  type="text"
-                  value={newInfoName}
-                  onChange={(e) => setNewInfoName(e.target.value)}
-                  placeholder="e.g., NewInfo.txt"
+                  type="file"
+                  accept=".pdf"
+                  onChange={(e) => setNewFile(e.target.files ? e.target.files[0] : null)}
                   className={`w-full px-3 py-2 rounded-lg border ${
                     darkMode 
                       ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
@@ -265,27 +359,12 @@ const AdminDashboard: React.FC = () => {
                   } focus:outline-none focus:ring-2 focus:ring-red-500`}
                 />
               </div>
-              <div className="mb-4">
-                <label className={`block text-sm font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                  Content
-                </label>
-                <textarea
-                  value={newInfoContent}
-                  onChange={(e) => setNewInfoContent(e.target.value)}
-                  placeholder="Enter the information content here..."
-                  rows={8}
-                  className={`w-full px-3 py-2 rounded-lg border ${
-                    darkMode 
-                      ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
-                      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
-                  } focus:outline-none focus:ring-2 focus:ring-red-500 resize-none`}
-                />
-              </div>
+              
               <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'} mb-4`}>
                 <svg className="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                This file will be saved as a .txt file
+                Only .pdf files are accepted. The file will be chunked and indexed.
               </div>
             </div>
             <div className={`flex justify-end gap-2 p-4 border-t ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
@@ -297,14 +376,20 @@ const AdminDashboard: React.FC = () => {
               </button>
               <button
                 onClick={handleAddInfo}
-                disabled={!newInfoName.trim()}
+                disabled={!newFile || uploading}
                 className={`px-4 py-2 rounded-lg ${
-                  newInfoName.trim()
+                  newFile && !uploading
                     ? darkMode ? 'bg-green-700 hover:bg-green-600 text-white' : 'bg-green-600 hover:bg-green-700 text-white'
                     : darkMode ? 'bg-gray-600 text-gray-400 cursor-not-allowed' : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                } transition-colors duration-200`}
+                } transition-colors duration-200 flex items-center gap-2`}
               >
-                Add Info
+                {uploading && (
+                  <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                )}
+                {uploading ? 'Uploading...' : 'Upload'}
               </button>
             </div>
           </div>

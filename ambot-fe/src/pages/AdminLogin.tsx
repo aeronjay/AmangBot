@@ -80,16 +80,16 @@ const AdminLogin: React.FC = () => {
 
             <div>
               <label htmlFor="email" className={`block text-sm font-medium ${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-2`}>
-                Email Address
+                Email Address or Username
               </label>
               <input
                 id="email"
-                type="email"
+                type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className={`w-full px-4 py-3 border ${darkMode ? 'border-gray-500 bg-gray-600 text-gray-100 placeholder-gray-400 focus:ring-red-400' : 'border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:ring-red-900'} rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors duration-200`}
-                placeholder="admin@earist.edu.ph"
+                placeholder="admin@earist.edu.ph or username"
                 disabled={isLoading}
               />
             </div>

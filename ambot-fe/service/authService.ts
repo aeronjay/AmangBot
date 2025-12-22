@@ -45,7 +45,7 @@ class AuthService {
     localStorage.removeItem('admin_token');
   }
 
-  private getAuthHeaders(): HeadersInit {
+  public getAuthHeaders(): HeadersInit {
     const token = this.getToken();
     return {
       'Content-Type': 'application/json',
@@ -54,12 +54,16 @@ class AuthService {
   }
 
   async login(credentials: LoginCredentials): Promise<AuthResponse> {
+    const formData = new URLSearchParams();
+    formData.append('username', credentials.email);
+    formData.append('password', credentials.password);
+
     const response = await fetch(`${API_BASE_URL}/auth/login`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify(credentials),
+      body: formData.toString(),
     });
 
     if (!response.ok) {

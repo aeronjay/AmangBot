@@ -6,9 +6,10 @@ import asyncio
 import numpy as np
 import faiss
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, UploadFile, File, Depends, HTTPException, status, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
 from typing import List, Optional
 from sentence_transformers import SentenceTransformer
@@ -17,17 +18,29 @@ import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import pickle
 from rank_bm25 import BM25Okapi
+from database import get_database, db
+from auth_utils import verify_password, get_password_hash, create_access_token, decode_access_token, ACCESS_TOKEN_EXPIRE_MINUTES
+from datetime import datetime, timedelta
+import PyPDF2
+import io
+import shutil
+from bson import ObjectId
 
 # Configuration
-BART_MODEL = "../Models/finetuned-BART"
-MODEL_PATH = "../Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf"
-DATASET_PATH = "../Dataset/300TokenDataset"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+
+BART_MODEL = os.path.join(PROJECT_ROOT, "Models/finetuned-BART")
+MODEL_PATH = os.path.join(PROJECT_ROOT, "Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf")
+DATASET_PATH = os.path.join(PROJECT_ROOT, "Dataset/300TokenDataset")
+EMBEDDING_MODEL_NAME = os.path.join(PROJECT_ROOT, "Models/nomic-finetuned/nomic-finetuned-final")
+
 INDEX_FILE = "faiss_index_finetuned.bin"
 BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
-EMBEDDING_MODEL_NAME = "../Models/nomic-finetuned/nomic-finetuned-final"
+
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
-RELEVANCE_THRESHOLD = -3  # Threshold for query relevance (adjust as needed)
+RELEVANCE_THRESHOLD = -2  # Threshold for query relevance (adjust as needed)
 # Global variables
 llm = None
 embedder = None
@@ -48,6 +61,13 @@ class ChatRequest(BaseModel):
 def load_resources():
     global llm, embedder, index, chunks_metadata, reranker_model, reranker_tokenizer, bm25
     
+    # Cleanup existing resources if any
+    if llm is not None:
+        del llm
+        import gc
+        gc.collect()
+        llm = None
+
     # Determine device for embedding model
     # If index exists, we only need CPU for inference (saving GPU for LLM)
     # If index doesn't exist, we need GPU for faster embedding creation
@@ -160,6 +180,24 @@ def create_index():
 async def lifespan(app: FastAPI):
     # Startup
     load_resources()
+    
+    # Create default admin if not exists
+    try:
+        admin = await db.users.find_one({"email": "admin@ambot.com"})
+        if not admin:
+            hashed_pw = get_password_hash("admin123")
+            await db.users.insert_one({
+                "email": "admin@ambot.com",
+                "hashed_password": hashed_pw,
+                "is_admin": True,
+                "is_active": True,
+                "username": "Admin",
+                "created_at": datetime.utcnow()
+            })
+            print("Default admin created: admin@ambot.com / admin123")
+    except Exception as e:
+        print(f"Error creating default admin: {e}")
+
     yield
     # Shutdown (if needed)
     print("Shutting down...")
@@ -174,6 +212,205 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Auth Setup
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
+
+async def get_current_user(token: str = Depends(oauth2_scheme)):
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    payload = decode_access_token(token)
+    if payload is None:
+        raise credentials_exception
+    email: str = payload.get("sub")
+    if email is None:
+        raise credentials_exception
+    
+    user = await db.users.find_one({"email": email})
+    if user is None:
+        raise credentials_exception
+    return user
+
+async def get_current_active_user(current_user = Depends(get_current_user)):
+    if not current_user.get("is_active", True):
+        raise HTTPException(status_code=400, detail="Inactive user")
+    return current_user
+
+async def get_current_admin_user(current_user = Depends(get_current_active_user)):
+    if not current_user.get("is_admin", False):
+        raise HTTPException(status_code=403, detail="Not authorized")
+    return current_user
+
+# Routers
+auth_router = APIRouter(prefix="/api/auth", tags=["auth"])
+admin_router = APIRouter(prefix="/api/admin", tags=["admin"])
+
+# ... Auth Endpoints ...
+@auth_router.post("/login")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    user = await db.users.find_one({
+        "$or": [
+            {"email": form_data.username},
+            {"username": form_data.username}
+        ]
+    })
+    if not user or not verify_password(form_data.password, user["hashed_password"]):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username/email or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(
+        data={"sub": user["email"]}, expires_delta=access_token_expires
+    )
+    return {"access_token": access_token, "token_type": "bearer"}
+
+@auth_router.get("/me")
+async def read_users_me(current_user = Depends(get_current_user)):
+    return {
+        "id": str(current_user["_id"]),
+        "email": current_user["email"],
+        "username": current_user.get("username", ""),
+        "is_active": current_user.get("is_active", True),
+        "is_admin": current_user.get("is_admin", False),
+        "created_at": current_user.get("created_at", "")
+    }
+
+@auth_router.post("/verify-token")
+async def verify_token(current_user = Depends(get_current_user)):
+    return {
+        "valid": True,
+        "user_id": str(current_user["_id"]),
+        "email": current_user["email"],
+        "is_admin": current_user.get("is_admin", False)
+    }
+
+@auth_router.post("/logout")
+async def logout():
+    return {"message": "Logged out"}
+
+# ... Admin Endpoints ...
+@admin_router.post("/upload")
+async def upload_file(file: UploadFile = File(...), current_user = Depends(get_current_admin_user)):
+    if not file.filename.endswith('.pdf'):
+        raise HTTPException(status_code=400, detail="Only PDF files are allowed")
+    
+    content = await file.read()
+    
+    # Save to MongoDB
+    file_doc = {
+        "filename": file.filename,
+        "content": content, # Binary
+        "uploaded_at": datetime.utcnow(),
+        "uploaded_by": current_user["email"],
+        "size": len(content)
+    }
+    result = await db.files.insert_one(file_doc)
+    
+    # Process PDF
+    try:
+        pdf_reader = PyPDF2.PdfReader(io.BytesIO(content))
+        text = ""
+        for page in pdf_reader.pages:
+            text += page.extract_text() + "\n"
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Error processing PDF: {str(e)}")
+    
+    # Chunking (800 tokens, 100 overlap)
+    chunks = []
+    
+    if llm:
+        try:
+            tokens = llm.tokenize(text.encode('utf-8'))
+            token_chunks = []
+            start = 0
+            while start < len(tokens):
+                end = min(start + 800, len(tokens))
+                chunk_tokens = tokens[start:end]
+                token_chunks.append(chunk_tokens)
+                if end == len(tokens):
+                    break
+                start += 700 # Overlap of 100 (Stride = 800 - 100 = 700)
+                
+            chunks = [llm.detokenize(c).decode('utf-8', errors='ignore') for c in token_chunks]
+        except Exception as e:
+            print(f"Tokenization error: {e}. Falling back to char split.")
+            chunks = [text[i:i+3200] for i in range(0, len(text), 2800)]
+    else:
+        # Fallback approximation
+        chunks = [text[i:i+3200] for i in range(0, len(text), 2800)]
+
+    # Save chunks to JSON
+    chunk_data = []
+    for i, chunk_text in enumerate(chunks):
+        chunk_data.append({
+            "source": file.filename,
+            "category": "Uploaded PDF",
+            "topic": "General",
+            "content": chunk_text
+        })
+        
+    json_path = os.path.join(DATASET_PATH, f"{file.filename}.json")
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(chunk_data, f, ensure_ascii=False, indent=2)
+        
+    return {"message": "File uploaded and processed", "id": str(result.inserted_id)}
+
+@admin_router.get("/files")
+async def list_files(current_user = Depends(get_current_admin_user)):
+    files = []
+    cursor = db.files.find({}, {"content": 0}) # Exclude content
+    async for doc in cursor:
+        files.append({
+            "id": str(doc["_id"]),
+            "name": doc["filename"],
+            "source": "AdminDB",
+            "size": f"{doc['size'] / 1024:.1f} KB",
+            "lastModified": doc["uploaded_at"].isoformat().split('T')[0],
+            "status": "indexed"
+        })
+    return files
+
+@admin_router.delete("/files/{file_id}")
+async def delete_file(file_id: str, current_user = Depends(get_current_admin_user)):
+    # Get filename
+    try:
+        doc = await db.files.find_one({"_id": ObjectId(file_id)})
+    except:
+        raise HTTPException(status_code=404, detail="Invalid ID")
+        
+    if not doc:
+        raise HTTPException(status_code=404, detail="File not found")
+        
+    # Delete from MongoDB
+    await db.files.delete_one({"_id": ObjectId(file_id)})
+    
+    # Delete JSON file
+    json_path = os.path.join(DATASET_PATH, f"{doc['filename']}.json")
+    if os.path.exists(json_path):
+        os.remove(json_path)
+        
+    return {"message": "File deleted"}
+
+@admin_router.post("/restart")
+async def restart_system(current_user = Depends(get_current_admin_user)):
+    # Delete existing index files to force re-indexing
+    if os.path.exists(INDEX_FILE):
+        os.remove(INDEX_FILE)
+    if os.path.exists(METADATA_FILE):
+        os.remove(METADATA_FILE)
+    if os.path.exists(BM25_INDEX_FILE):
+        os.remove(BM25_INDEX_FILE)
+        
+    load_resources()
+    return {"message": "System resources reloaded and index updated"}
+
+app.include_router(auth_router)
+app.include_router(admin_router)
 
 def construct_prompt(query: str, chunks: List[dict]) -> str:
     context_text = ""
