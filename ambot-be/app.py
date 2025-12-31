@@ -32,7 +32,7 @@ PROJECT_ROOT = os.path.dirname(BASE_DIR)
 
 BART_MODEL = os.path.join(PROJECT_ROOT, "Models/finetuned-BART")
 MODEL_PATH = os.path.join(PROJECT_ROOT, "Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf")
-DATASET_PATH = os.path.join(PROJECT_ROOT, "Dataset/300TokenDataset")
+DATASET_PATH = os.path.join(PROJECT_ROOT, "Dataset/Default AMBOT Knowledge Base")
 EMBEDDING_MODEL_NAME = os.path.join(PROJECT_ROOT, "Models/nomic-finetuned/nomic-finetuned-final")
 
 INDEX_FILE = "faiss_index_finetuned.bin"
@@ -40,7 +40,7 @@ BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
 
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
-RELEVANCE_THRESHOLD = -2  # Threshold for query relevance (adjust as needed)
+RELEVANCE_THRESHOLD = -4  # Threshold for query relevance (adjust as needed)
 # Global variables
 llm = None
 embedder = None
@@ -123,7 +123,7 @@ def create_index():
     texts = []
     
     # Load all JSON files
-    json_files = glob.glob(os.path.join(DATASET_PATH, "*.json"))
+    json_files = glob.glob(os.path.join(DATASET_PATH, "**/*.json"), recursive=True)
     print(f"Found {len(json_files)} JSON files.")
     
     for file_path in json_files:

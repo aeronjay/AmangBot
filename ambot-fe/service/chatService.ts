@@ -76,29 +76,12 @@ class ChatService {
       const prompt: string = data.prompt || '';
       const retrieved_chunks: ChunkData[] = data.retrieved_chunks || [];
 
-      // Log retrieved chunks to console
+      // Log Question and Retrieved Chunks
+      console.log('%c❓ Question:', 'color: #2196F3; font-weight: bold; font-size: 14px;');
+      console.log(message);
+      
       console.log('%c📦 Retrieved Chunks:', 'color: #4CAF50; font-weight: bold; font-size: 14px;');
-      console.table(chunks.map((c, i) => ({
-        '#': i + 1,
-        source: c.source,
-        category: c.category,
-        topic: c.topic,
-        content: c.content.substring(0, 100) + '...'
-      })));
-
-      // Log all retrieved chunks (before filtering)
-      console.log('%c📚 All Retrieved Chunks (before final selection):', 'color: #2196F3; font-weight: bold; font-size: 14px;');
-      console.table(retrieved_chunks.map((c, i) => ({
-        '#': i + 1,
-        source: c.source,
-        category: c.category,
-        topic: c.topic,
-        content: c.content.substring(0, 100) + '...'
-      })));
-
-      // Log the prompt sent to LLM
-      console.log('%c📝 Final Prompt to LLM:', 'color: #FF9800; font-weight: bold; font-size: 14px;');
-      console.log(prompt);
+      console.log(chunks);
 
       return {
         success: true,
@@ -167,27 +150,12 @@ class ChatService {
               const data = JSON.parse(line.slice(6));
               
               if (data.type === 'metadata') {
-                // Log metadata to console
+                // Log Question and Retrieved Chunks
+                console.log('%c❓ Question:', 'color: #2196F3; font-weight: bold; font-size: 14px;');
+                console.log(message);
+
                 console.log('%c📦 Retrieved Chunks:', 'color: #4CAF50; font-weight: bold; font-size: 14px;');
-                console.table(data.chunks.map((c: ChunkData, i: number) => ({
-                  '#': i + 1,
-                  source: c.source,
-                  category: c.category,
-                  topic: c.topic,
-                  content: c.content.substring(0, 100) + '...'
-                })));
-
-                console.log('%c📚 All Retrieved Chunks:', 'color: #2196F3; font-weight: bold; font-size: 14px;');
-                console.table(data.retrieved_chunks.map((c: ChunkData, i: number) => ({
-                  '#': i + 1,
-                  source: c.source,
-                  category: c.category,
-                  topic: c.topic,
-                  content: c.content.substring(0, 100) + '...'
-                })));
-
-                console.log('%c📝 Final Prompt to LLM:', 'color: #FF9800; font-weight: bold; font-size: 14px;');
-                console.log(data.prompt);
+                console.log(data.chunks);
 
                 if (callbacks.onMetadata) {
                   callbacks.onMetadata({

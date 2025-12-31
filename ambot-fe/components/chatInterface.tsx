@@ -119,7 +119,6 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
         },
         onMetadata: (metadata) => {
           // Metadata is already logged in the service
-          console.log('Received metadata:', metadata);
         },
         onDone: () => {
           setIsTyping(false);
