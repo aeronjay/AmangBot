@@ -40,7 +40,7 @@ BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
 
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
-RELEVANCE_THRESHOLD = -4  # Threshold for query relevance (adjust as needed)
+RELEVANCE_THRESHOLD = -1.5  # Threshold for query relevance (adjust as needed)
 # Global variables
 llm = None
 embedder = None
