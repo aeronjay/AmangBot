@@ -40,7 +40,7 @@ BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
 
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
-RELEVANCE_THRESHOLD = -1.5  # Threshold for query relevance (adjust as needed)
+RELEVANCE_THRESHOLD = -1.3  # Threshold for query relevance (adjust as needed)
 # Global variables
 llm = None
 embedder = None
@@ -540,7 +540,7 @@ async def chat_stream(request: ChatRequest):
         metadata = {
             "type": "metadata",
             "chunks": retrieved_chunks,
-            "retrieved_chunks": retrieved_chunks, # Sending same for now as we don't have a separate reranking step yet
+            "retrieved_chunks": initial_chunks,
             "prompt": prompt
         }
         yield f"data: {json.dumps(metadata)}\n\n"

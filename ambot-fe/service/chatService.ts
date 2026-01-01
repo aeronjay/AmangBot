@@ -77,11 +77,13 @@ class ChatService {
       const retrieved_chunks: ChunkData[] = data.retrieved_chunks || [];
 
       // Log Question and Retrieved Chunks
-      console.log('%c❓ Question:', 'color: #2196F3; font-weight: bold; font-size: 14px;');
-      console.log(message);
-      
-      console.log('%c📦 Retrieved Chunks:', 'color: #4CAF50; font-weight: bold; font-size: 14px;');
-      console.log(chunks);
+      if (localStorage.getItem('ADMIN') === '1') {
+        console.log('%c❓ Question:', 'color: #2196F3; font-weight: bold; font-size: 14px;');
+        console.log(message);
+        
+        console.log('All chunks got:', retrieved_chunks);
+        console.log('Passed to LLM:', chunks);
+      }
 
       return {
         success: true,
@@ -151,11 +153,13 @@ class ChatService {
               
               if (data.type === 'metadata') {
                 // Log Question and Retrieved Chunks
-                console.log('%c❓ Question:', 'color: #2196F3; font-weight: bold; font-size: 14px;');
-                console.log(message);
+                if (localStorage.getItem('ADMIN') === '1') {
+                  console.log('%c❓ Question:', 'color: #2196F3; font-weight: bold; font-size: 14px;');
+                  console.log(message);
 
-                console.log('%c📦 Retrieved Chunks:', 'color: #4CAF50; font-weight: bold; font-size: 14px;');
-                console.log(data.chunks);
+                  console.log('All chunks got:', data.retrieved_chunks);
+                  console.log('Passed to LLM:', data.chunks);
+                }
 
                 if (callbacks.onMetadata) {
                   callbacks.onMetadata({
