@@ -17,8 +17,26 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [showClearConfirm, setShowClearConfirm] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatBodyRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Auto-resize textarea
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      const scrollHeight = textareaRef.current.scrollHeight;
+      textareaRef.current.style.height = `${Math.min(scrollHeight, 120)}px`;
+      
+      // Only show scrollbar if content exceeds max height
+      if (scrollHeight > 120) {
+        textareaRef.current.style.overflowY = 'auto';
+      } else {
+        textareaRef.current.style.overflowY = 'hidden';
+      }
+    }
+  }, [inputValue]);
 
   // Auto-scroll to bottom when new messages are added
   const scrollToBottom = () => {
@@ -68,6 +86,10 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
   };
 
   const handleNewChat = () => {
+    setShowClearConfirm(true);
+  };
+
+  const confirmClearChat = () => {
     localStorage.removeItem(CHAT_HISTORY_KEY);
     const welcomeMessage: ChatMessage = {
       id: `welcome-${Date.now()}`,
@@ -76,6 +98,7 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
       timestamp: new Date()
     };
     setMessages([welcomeMessage]);
+    setShowClearConfirm(false);
   };
 
   const handleSendMessage = async () => {
@@ -147,7 +170,7 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
     }
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
@@ -171,10 +194,10 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
                     <button 
                       onClick={handleNewChat}
                       className={`p-1 ${darkMode ? 'hover:bg-gray-600' : 'hover:bg-gray-100'} rounded transition-colors duration-200`}
-                      title="New Chat"
+                      title="Clear Chat History"
                     >
                         <svg className={`w-5 h-5 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                         </svg>
                     </button>
                     <button 
@@ -220,14 +243,15 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
 
             
             <div className={`chat-footer p-4 ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'} border-t transition-colors duration-200`}>
-                <div className="flex items-center gap-2">
-                    <input 
-                        type="text" 
+                <div className="flex items-end gap-2">
+                    <textarea 
+                        ref={textareaRef}
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
-                        onKeyPress={handleKeyPress}
+                        onKeyDown={handleKeyDown}
                         placeholder="Type your message here..." 
-                        className={`flex-1 px-4 py-2 border ${darkMode ? 'border-gray-500 bg-gray-600 text-gray-100 placeholder-gray-400 focus:ring-red-400' : 'border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:ring-red-900'} rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors duration-200`}
+                        rows={1}
+                        className={`flex-1 px-4 py-2 border ${darkMode ? 'border-gray-500 bg-gray-600 text-gray-100 placeholder-gray-400 focus:ring-red-400' : 'border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:ring-red-900'} rounded-lg focus:outline-none focus:ring-2 focus:border-transparent transition-colors duration-200 resize-none overflow-hidden min-h-[42px] max-h-[120px]`}
                         disabled={isTyping}
                     />
                     <button 
@@ -245,6 +269,34 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
                     </button>
                 </div>
             </div>
+
+            {showClearConfirm && (
+                <div 
+                    className="fixed inset-0 z-50 flex items-center justify-center p-4"
+                    style={{backgroundColor: darkMode ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)'}}
+                >
+                    <div className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} p-6 rounded-lg shadow-xl max-w-sm w-full mx-4`}>
+                        <h3 className="text-lg font-semibold mb-2">Clear Chat History?</h3>
+                        <p className={`mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                            Are you sure you want to clear all chat history? This action cannot be undone.
+                        </p>
+                        <div className="flex justify-end gap-3">
+                            <button
+                                onClick={() => setShowClearConfirm(false)}
+                                className={`px-4 py-2 rounded-lg ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'} transition-colors`}
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={confirmClearChat}
+                                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                            >
+                                Clear Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
