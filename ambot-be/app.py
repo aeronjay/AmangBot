@@ -25,6 +25,7 @@ import PyPDF2
 import io
 import shutil
 from bson import ObjectId
+import re
 
 # Configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -316,12 +317,25 @@ async def upload_file(file: UploadFile = File(...), current_user = Depends(get_c
         pdf_reader = PyPDF2.PdfReader(io.BytesIO(content))
         text = ""
         for page in pdf_reader.pages:
-            text += page.extract_text() + "\n"
+            page_text = page.extract_text()
+            if page_text:
+                text += page_text + " "
+        
+        # Clean text to fix newlines in words and formatting
+        # 1. Remove hyphens at line endings (e.g. "process-\ning" -> "processing")
+        text = re.sub(r'-\n', '', text)
+        # 2. Replace newlines with spaces
+        text = text.replace('\n', ' ')
+        # 3. Remove multiple spaces
+        text = re.sub(r'\s+', ' ', text).strip()
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Error processing PDF: {str(e)}")
     
-    # Chunking (800 tokens, 100 overlap)
+    # Chunking (Increased to 1200 tokens, 200 overlap)
     chunks = []
+    CHUNK_SIZE = 1200
+    OVERLAP = 200
+    STRIDE = CHUNK_SIZE - OVERLAP
     
     if llm:
         try:
@@ -329,20 +343,25 @@ async def upload_file(file: UploadFile = File(...), current_user = Depends(get_c
             token_chunks = []
             start = 0
             while start < len(tokens):
-                end = min(start + 800, len(tokens))
+                end = min(start + CHUNK_SIZE, len(tokens))
                 chunk_tokens = tokens[start:end]
                 token_chunks.append(chunk_tokens)
                 if end == len(tokens):
                     break
-                start += 700 # Overlap of 100 (Stride = 800 - 100 = 700)
+                start += STRIDE
                 
             chunks = [llm.detokenize(c).decode('utf-8', errors='ignore') for c in token_chunks]
         except Exception as e:
             print(f"Tokenization error: {e}. Falling back to char split.")
-            chunks = [text[i:i+3200] for i in range(0, len(text), 2800)]
+            # Fallback: ~4 chars per token. 1200 tokens ~= 4800 chars.
+            CHAR_CHUNK_SIZE = 4800
+            CHAR_STRIDE = 4000
+            chunks = [text[i:i+CHAR_CHUNK_SIZE] for i in range(0, len(text), CHAR_STRIDE)]
     else:
         # Fallback approximation
-        chunks = [text[i:i+3200] for i in range(0, len(text), 2800)]
+        CHAR_CHUNK_SIZE = 4800
+        CHAR_STRIDE = 4000
+        chunks = [text[i:i+CHAR_CHUNK_SIZE] for i in range(0, len(text), CHAR_STRIDE)]
 
     # Save chunks to JSON
     chunk_data = []
