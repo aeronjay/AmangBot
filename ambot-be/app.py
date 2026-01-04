@@ -39,6 +39,7 @@ EMBEDDING_MODEL_NAME = os.path.join(PROJECT_ROOT, "Models/nomic-finetuned/nomic-
 INDEX_FILE = "faiss_index_finetuned.bin"
 BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
+DISABLED_DATASETS_FILE = "disabled_datasets.json"
 
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
 RELEVANCE_THRESHOLD = -2  # Threshold for query relevance (adjust as needed)
@@ -58,6 +59,19 @@ class ChatMessage(BaseModel):
 class ChatRequest(BaseModel):
     message: str
     history: List[ChatMessage] = []
+
+def get_disabled_datasets():
+    if os.path.exists(DISABLED_DATASETS_FILE):
+        try:
+            with open(DISABLED_DATASETS_FILE, 'r') as f:
+                return json.load(f)
+        except:
+            return []
+    return []
+
+def save_disabled_datasets(disabled_list):
+    with open(DISABLED_DATASETS_FILE, 'w') as f:
+        json.dump(disabled_list, f)
 
 def load_resources():
     global llm, embedder, index, chunks_metadata, reranker_model, reranker_tokenizer, bm25
@@ -123,11 +137,23 @@ def create_index():
     chunks_metadata = []
     texts = []
     
+    disabled_files = get_disabled_datasets()
+    # Normalize disabled files for comparison
+    disabled_files_norm = [d.replace("\\", "/") for d in disabled_files]
+
     # Load all JSON files
     json_files = glob.glob(os.path.join(DATASET_PATH, "**/*.json"), recursive=True)
     print(f"Found {len(json_files)} JSON files.")
     
     for file_path in json_files:
+        # Check if file is disabled
+        rel_path = os.path.relpath(file_path, DATASET_PATH)
+        rel_path_norm = rel_path.replace("\\", "/")
+        
+        if rel_path_norm in disabled_files_norm:
+            print(f"Skipping disabled file: {rel_path}")
+            continue
+
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -436,6 +462,46 @@ async def restart_system(current_user = Depends(get_current_admin_user)):
         
     load_resources()
     return {"message": "System resources reloaded and index updated"}
+
+class ToggleKBRequest(BaseModel):
+    filename: str
+    enabled: bool
+
+@admin_router.get("/knowledge-base")
+async def list_knowledge_base(current_user = Depends(get_current_admin_user)):
+    json_files = glob.glob(os.path.join(DATASET_PATH, "**/*.json"), recursive=True)
+    disabled_files = get_disabled_datasets()
+    # Normalize disabled files for comparison
+    disabled_files_norm = [d.replace("\\", "/") for d in disabled_files]
+    
+    kb_files = []
+    for file_path in json_files:
+        rel_path = os.path.relpath(file_path, DATASET_PATH)
+        rel_path_norm = rel_path.replace("\\", "/")
+        
+        kb_files.append({
+            "filename": rel_path_norm,
+            "enabled": rel_path_norm not in disabled_files_norm
+        })
+    return kb_files
+
+@admin_router.post("/knowledge-base/toggle")
+async def toggle_knowledge_base(request: ToggleKBRequest, current_user = Depends(get_current_admin_user)):
+    disabled_files = get_disabled_datasets()
+    # Normalize disabled files
+    disabled_files = [d.replace("\\", "/") for d in disabled_files]
+    
+    filename_norm = request.filename.replace("\\", "/")
+    
+    if request.enabled:
+        if filename_norm in disabled_files:
+            disabled_files.remove(filename_norm)
+    else:
+        if filename_norm not in disabled_files:
+            disabled_files.append(filename_norm)
+            
+    save_disabled_datasets(disabled_files)
+    return {"message": f"File {'enabled' if request.enabled else 'disabled'}", "filename": request.filename}
 
 app.include_router(auth_router)
 app.include_router(admin_router)

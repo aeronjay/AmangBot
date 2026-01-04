@@ -12,6 +12,11 @@ interface InfoFile {
   status: string;
 }
 
+interface KBFile {
+  filename: string;
+  enabled: boolean;
+}
+
 const AdminDashboard: React.FC = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
@@ -26,6 +31,7 @@ const AdminDashboard: React.FC = () => {
   const [showViewModal, setShowViewModal] = useState(false);
   const [isRestarting, setIsRestarting] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [kbFiles, setKBFiles] = useState<KBFile[]>([]);
 
   useEffect(() => {
     const storedDarkMode = localStorage.getItem('ambot_dark_mode');
@@ -56,9 +62,46 @@ const AdminDashboard: React.FC = () => {
     }
   };
 
+  const fetchKBFiles = async () => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/admin/knowledge-base`, {
+        headers: authService.getAuthHeaders()
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setKBFiles(data);
+      }
+    } catch (error) {
+      console.error("Failed to fetch KB files", error);
+    }
+  };
+
   useEffect(() => {
     fetchFiles();
+    fetchKBFiles();
   }, []);
+
+  const handleToggleKB = async (filename: string, enabled: boolean) => {
+    try {
+        const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/admin/knowledge-base/toggle`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                ...(authService.getAuthHeaders() as any)
+            },
+            body: JSON.stringify({ filename, enabled })
+        });
+        
+        if (response.ok) {
+            fetchKBFiles();
+        } else {
+            alert("Failed to toggle file");
+        }
+    } catch (error) {
+        console.error("Toggle failed", error);
+        alert("Toggle failed");
+    }
+  };
 
   const handleDarkModeToggle = () => {
     const newDarkMode = !darkMode;
@@ -156,6 +199,19 @@ const AdminDashboard: React.FC = () => {
     setSelectedInfo(info);
     setShowViewModal(true);
   };
+
+  const groupedKBFiles = React.useMemo(() => {
+    const groups: { [key: string]: KBFile[] } = {};
+    kbFiles.forEach(file => {
+      const parts = file.filename.split('/');
+      const folder = parts.length > 1 ? parts[0] : 'Uncategorized';
+      if (!groups[folder]) {
+        groups[folder] = [];
+      }
+      groups[folder].push(file);
+    });
+    return groups;
+  }, [kbFiles]);
 
   return (
     <div className={`h-screen ${darkMode ? 'bg-gray-900' : 'bg-gray-100'} flex items-center justify-center transition-colors duration-200`}>
@@ -321,6 +377,63 @@ const AdminDashboard: React.FC = () => {
                           </td>
                         </tr>
                       ))
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Knowledge Base Management */}
+            <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-white'} shadow transition-colors duration-200`}>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Knowledge Base Management</h2>
+                <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    Uncheck to disable specific knowledge base files. Restart required to apply changes.
+                </div>
+              </div>
+
+              <div className="overflow-x-auto max-h-96 overflow-y-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className={`${darkMode ? 'border-gray-600' : 'border-gray-200'} border-b`}>
+                      <th className={`text-left py-3 px-4 font-medium ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Filename</th>
+                      <th className={`text-left py-3 px-4 font-medium ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Status</th>
+                      <th className={`text-left py-3 px-4 font-medium ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {kbFiles.length === 0 ? (
+                        <tr>
+                            <td colSpan={3} className={`text-center py-4 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                                No knowledge base files found.
+                            </td>
+                        </tr>
+                    ) : (
+                        kbFiles.map((file) => (
+                            <tr key={file.filename} className={`${darkMode ? 'border-gray-600 hover:bg-gray-600' : 'border-gray-200 hover:bg-gray-50'} border-b transition-colors duration-200`}>
+                                <td className={`py-3 px-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{file.filename}</td>
+                                <td className={`py-3 px-4`}>
+                                    <span className={`px-2 py-1 rounded text-xs font-medium ${
+                                      file.enabled 
+                                        ? darkMode ? 'bg-green-900 text-green-200' : 'bg-green-100 text-green-800'
+                                        : darkMode ? 'bg-red-900 text-red-200' : 'bg-red-100 text-red-800'
+                                    }`}>
+                                      {file.enabled ? 'Enabled' : 'Disabled'}
+                                    </span>
+                                </td>
+                                <td className={`py-3 px-4`}>
+                                    <label className="relative inline-flex items-center cursor-pointer">
+                                        <input 
+                                            type="checkbox" 
+                                            className="sr-only peer"
+                                            checked={file.enabled}
+                                            onChange={(e) => handleToggleKB(file.filename, e.target.checked)}
+                                        />
+                                        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                    </label>
+                                </td>
+                            </tr>
+                        ))
                     )}
                   </tbody>
                 </table>
