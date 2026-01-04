@@ -402,37 +402,49 @@ const AdminDashboard: React.FC = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {kbFiles.length === 0 ? (
+                    {Object.keys(groupedKBFiles).length === 0 ? (
                         <tr>
                             <td colSpan={3} className={`text-center py-4 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                                 No knowledge base files found.
                             </td>
                         </tr>
                     ) : (
-                        kbFiles.map((file) => (
-                            <tr key={file.filename} className={`${darkMode ? 'border-gray-600 hover:bg-gray-600' : 'border-gray-200 hover:bg-gray-50'} border-b transition-colors duration-200`}>
-                                <td className={`py-3 px-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{file.filename}</td>
-                                <td className={`py-3 px-4`}>
-                                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                                      file.enabled 
-                                        ? darkMode ? 'bg-green-900 text-green-200' : 'bg-green-100 text-green-800'
-                                        : darkMode ? 'bg-red-900 text-red-200' : 'bg-red-100 text-red-800'
-                                    }`}>
-                                      {file.enabled ? 'Enabled' : 'Disabled'}
-                                    </span>
-                                </td>
-                                <td className={`py-3 px-4`}>
-                                    <label className="relative inline-flex items-center cursor-pointer">
-                                        <input 
-                                            type="checkbox" 
-                                            className="sr-only peer"
-                                            checked={file.enabled}
-                                            onChange={(e) => handleToggleKB(file.filename, e.target.checked)}
-                                        />
-                                        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-                                    </label>
-                                </td>
-                            </tr>
+                        Object.entries(groupedKBFiles).map(([folder, files]) => (
+                            <React.Fragment key={folder}>
+                                <tr className={`${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
+                                    <td colSpan={3} className={`py-2 px-4 font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                                        {folder}
+                                    </td>
+                                </tr>
+                                {files.map((file) => {
+                                    const displayName = file.filename.split('/').pop()?.replace('.json', '') || file.filename;
+                                    return (
+                                        <tr key={file.filename} className={`${darkMode ? 'border-gray-600 hover:bg-gray-600' : 'border-gray-200 hover:bg-gray-50'} border-b transition-colors duration-200`}>
+                                            <td className={`py-3 px-4 pl-8 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{displayName}</td>
+                                            <td className={`py-3 px-4`}>
+                                                <span className={`px-2 py-1 rounded text-xs font-medium ${
+                                                file.enabled 
+                                                    ? darkMode ? 'bg-green-900 text-green-200' : 'bg-green-100 text-green-800'
+                                                    : darkMode ? 'bg-red-900 text-red-200' : 'bg-red-100 text-red-800'
+                                                }`}>
+                                                {file.enabled ? 'Enabled' : 'Disabled'}
+                                                </span>
+                                            </td>
+                                            <td className={`py-3 px-4`}>
+                                                <label className="relative inline-flex items-center cursor-pointer">
+                                                    <input 
+                                                        type="checkbox" 
+                                                        className="sr-only peer"
+                                                        checked={file.enabled}
+                                                        onChange={(e) => handleToggleKB(file.filename, e.target.checked)}
+                                                    />
+                                                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                            </React.Fragment>
                         ))
                     )}
                   </tbody>
