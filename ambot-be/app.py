@@ -6,7 +6,7 @@ import asyncio
 import numpy as np
 import faiss
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, Request, UploadFile, File, Depends, HTTPException, status, APIRouter
+from fastapi import FastAPI, Request, UploadFile, File, Form, Depends, HTTPException, status, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
@@ -296,7 +296,13 @@ async def logout():
 
 # ... Admin Endpoints ...
 @admin_router.post("/upload")
-async def upload_file(file: UploadFile = File(...), current_user = Depends(get_current_admin_user)):
+async def upload_file(
+    file: UploadFile = File(...), 
+    source: str = Form(...),
+    category: str = Form(...),
+    topic: str = Form(...),
+    current_user = Depends(get_current_admin_user)
+):
     if not file.filename.endswith('.pdf'):
         raise HTTPException(status_code=400, detail="Only PDF files are allowed")
     
@@ -305,6 +311,9 @@ async def upload_file(file: UploadFile = File(...), current_user = Depends(get_c
     # Save to MongoDB
     file_doc = {
         "filename": file.filename,
+        "source": source,
+        "category": category,
+        "topic": topic,
         "content": content, # Binary
         "uploaded_at": datetime.utcnow(),
         "uploaded_by": current_user["email"],
@@ -367,9 +376,9 @@ async def upload_file(file: UploadFile = File(...), current_user = Depends(get_c
     chunk_data = []
     for i, chunk_text in enumerate(chunks):
         chunk_data.append({
-            "source": file.filename,
-            "category": "Uploaded PDF",
-            "topic": "General",
+            "source": source,
+            "category": category,
+            "topic": topic,
             "content": chunk_text
         })
         
@@ -387,7 +396,7 @@ async def list_files(current_user = Depends(get_current_admin_user)):
         files.append({
             "id": str(doc["_id"]),
             "name": doc["filename"],
-            "source": "AdminDB",
+            "source": doc.get("source", "AdminDB"),
             "size": f"{doc['size'] / 1024:.1f} KB",
             "lastModified": doc["uploaded_at"].isoformat().split('T')[0],
             "status": "indexed"

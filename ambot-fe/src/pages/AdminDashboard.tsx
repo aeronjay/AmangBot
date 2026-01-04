@@ -19,6 +19,9 @@ const AdminDashboard: React.FC = () => {
   const [infoFiles, setInfoFiles] = useState<InfoFile[]>([]);
   const [showAddModal, setShowAddModal] = useState(false);
   const [newFile, setNewFile] = useState<File | null>(null);
+  const [newSource, setNewSource] = useState('');
+  const [newCategory, setNewCategory] = useState('');
+  const [newTopic, setNewTopic] = useState('');
   const [selectedInfo, setSelectedInfo] = useState<InfoFile | null>(null);
   const [showViewModal, setShowViewModal] = useState(false);
   const [isRestarting, setIsRestarting] = useState(false);
@@ -69,11 +72,14 @@ const AdminDashboard: React.FC = () => {
   };
 
   const handleAddInfo = async () => {
-    if (!newFile) return;
+    if (!newFile || !newSource || !newCategory || !newTopic) return;
 
     setUploading(true);
     const formData = new FormData();
     formData.append('file', newFile);
+    formData.append('source', newSource);
+    formData.append('category', newCategory);
+    formData.append('topic', newTopic);
 
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/admin/upload`, {
@@ -88,6 +94,9 @@ const AdminDashboard: React.FC = () => {
         await fetchFiles();
         setShowAddModal(false);
         setNewFile(null);
+        setNewSource('');
+        setNewCategory('');
+        setNewTopic('');
       } else {
         const error = await response.json();
         alert(`Upload failed: ${error.detail}`);
@@ -346,6 +355,54 @@ const AdminDashboard: React.FC = () => {
             <div className="p-4">
               <div className="mb-4">
                 <label className={`block text-sm font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  Source
+                </label>
+                <input
+                  type="text"
+                  value={newSource}
+                  onChange={(e) => setNewSource(e.target.value)}
+                  placeholder="e.g. Student Handbook 2021"
+                  className={`w-full px-3 py-2 rounded-lg border ${
+                    darkMode 
+                      ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
+                      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
+                  } focus:outline-none focus:ring-2 focus:ring-red-500`}
+                />
+              </div>
+              <div className="mb-4">
+                <label className={`block text-sm font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  Category
+                </label>
+                <input
+                  type="text"
+                  value={newCategory}
+                  onChange={(e) => setNewCategory(e.target.value)}
+                  placeholder="e.g. Policies"
+                  className={`w-full px-3 py-2 rounded-lg border ${
+                    darkMode 
+                      ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
+                      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
+                  } focus:outline-none focus:ring-2 focus:ring-red-500`}
+                />
+              </div>
+              <div className="mb-4">
+                <label className={`block text-sm font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  Topic
+                </label>
+                <input
+                  type="text"
+                  value={newTopic}
+                  onChange={(e) => setNewTopic(e.target.value)}
+                  placeholder="e.g. Grading System"
+                  className={`w-full px-3 py-2 rounded-lg border ${
+                    darkMode 
+                      ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
+                      : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400'
+                  } focus:outline-none focus:ring-2 focus:ring-red-500`}
+                />
+              </div>
+              <div className="mb-4">
+                <label className={`block text-sm font-medium mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   Upload PDF File
                 </label>
                 <input
@@ -376,9 +433,9 @@ const AdminDashboard: React.FC = () => {
               </button>
               <button
                 onClick={handleAddInfo}
-                disabled={!newFile || uploading}
+                disabled={!newFile || !newSource || !newCategory || !newTopic || uploading}
                 className={`px-4 py-2 rounded-lg ${
-                  newFile && !uploading
+                  newFile && newSource && newCategory && newTopic && !uploading
                     ? darkMode ? 'bg-green-700 hover:bg-green-600 text-white' : 'bg-green-600 hover:bg-green-700 text-white'
                     : darkMode ? 'bg-gray-600 text-gray-400 cursor-not-allowed' : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                 } transition-colors duration-200 flex items-center gap-2`}
