@@ -42,7 +42,7 @@ METADATA_FILE = "chunks_metadata.json"
 DISABLED_DATASETS_FILE = "disabled_datasets.json"
 
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
-RELEVANCE_THRESHOLD = -2  # Threshold for query relevance (adjust as needed)
+RELEVANCE_THRESHOLD = -1.5  # Threshold for query relevance (adjust as needed)
 # Global variables
 llm = None
 embedder = None
@@ -506,6 +506,54 @@ async def toggle_knowledge_base(request: ToggleKBRequest, current_user = Depends
 app.include_router(auth_router)
 app.include_router(admin_router)
 
+def is_follow_up(query: str) -> bool:
+    # Regex patterns to detect follow-up questions
+    patterns = [
+        r"\b(it|that|this|these|those|he|she|they|them|him|her|his|hers|its|their|theirs)\b", # Pronouns
+        r"^(and|but|so|because|or)\b", # Conjunctions at start
+        r"^(what|how) about\b", # "What about..."
+        r"^(why|how|when|where|who)\?*$" # Short questions
+    ]
+    combined_pattern = "|".join(patterns)
+    return bool(re.search(combined_pattern, query, re.IGNORECASE))
+
+def contextualize_query(query: str, history: List[ChatMessage]) -> str:
+    if not history:
+        return query
+        
+    # Use last 3 turns for context
+    recent_history = history[-3:]
+    history_text = ""
+    for msg in recent_history:
+        role = "User" if msg.role == "user" else "Assistant"
+        history_text += f"{role}: {msg.content}\n"
+        
+    prompt = f"""[INST] You are an expert at rewriting questions to be standalone.
+Given the conversation history, rewrite the follow-up question to be a complete, standalone question that contains all necessary context.
+Do NOT answer the question. ONLY return the rewritten question.
+
+History:
+{history_text}
+
+Follow-up Question: {query}
+
+Standalone Question: [/INST]"""
+
+    try:
+        output = llm(
+            prompt,
+            max_tokens=64, # Short output expected
+            stop=["\\n", "[/INST]"],
+            echo=False
+        )
+        rewritten = output['choices'][0]['text'].strip()
+        if rewritten:
+            return rewritten
+    except Exception as e:
+        print(f"Error contextualizing query: {e}")
+        
+    return query
+
 def construct_prompt(query: str, chunks: List[dict]) -> str:
     context_text = ""
     for i, chunk in enumerate(reversed(chunks)):
@@ -546,13 +594,19 @@ def construct_prompt(query: str, chunks: List[dict]) -> str:
 ### STUDENT QUESTION:
 {query}
 
-### YOUR RESPONSE (As a Senior Student):
+### YOUR RESPONSE (As a helpfult chatbot assistant):
 [/INST]"""
     return prompt
 
 @app.post("/chat/stream")
 async def chat_stream(request: ChatRequest):
     query = request.message
+    
+    # Check for follow-up
+    if request.history and is_follow_up(query):
+        print(f"Follow-up detected: {query}")
+        query = contextualize_query(query, request.history)
+        print(f"Contextualized to: {query}")
     
     # Embed query with prefix as required by nomic-embed-text-v1.5
     query_embedding = embedder.encode(["search_query: " + query]).astype('float32')
@@ -642,7 +696,7 @@ async def chat_stream(request: ChatRequest):
         # Stream tokens
         stream = llm(
             prompt,
-            temperature=0.1,       # <--- ADD THIS (0.1 to 0.3 is best for factual bots)
+            temperature=0.1,
             top_p=0.9,
             max_tokens=1660,
             stop=["</s>", "[/INST]"],
