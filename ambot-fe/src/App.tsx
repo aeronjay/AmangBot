@@ -10,6 +10,7 @@ import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import AmbotScene from './components/AmbotModel';
 
 function ChatPage() {
   const [showRoleModal, setShowRoleModal] = useState(false);
@@ -93,12 +94,20 @@ function ChatPage() {
 
   return (
     <div className={getFontSizeClass()}>
-      <div className={`h-screen ${darkMode ? 'bg-gray-900' : 'bg-gray-100'} flex items-center justify-center transition-colors duration-200`}>
-        <ChatInterface 
-          userRole={userRole} 
-          onOpenSettings={handleOpenSettings}
-          darkMode={darkMode}
-        />
+      <div className={`h-screen ${darkMode ? 'bg-gray-900' : 'bg-gray-100'} flex items-center justify-center transition-colors duration-200 overflow-hidden`}>
+        <div className="flex w-full max-w-[1800px] h-[95vh] gap-6 px-4 justify-center">
+          <div className="flex-1 h-full flex justify-center max-w-5xl">
+            <ChatInterface 
+              userRole={userRole} 
+              onOpenSettings={handleOpenSettings}
+              darkMode={darkMode}
+              className="w-full h-full"
+            />
+          </div>
+          <div className="hidden xl:flex w-[500px] h-full items-center justify-center bg-transparent">
+            <AmbotScene />
+          </div>
+        </div>
       </div>
       
       <RoleSelectionModal 

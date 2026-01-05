@@ -9,11 +9,12 @@ interface ChatInterfaceProps {
   userRole: UserRole | null;
   onOpenSettings: () => void;
   darkMode: boolean;
+  className?: string;
 }
 
 const CHAT_HISTORY_KEY = 'ambot-chat-history';
 
-function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProps) {
+function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -140,7 +141,7 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
             })
           );
         },
-        onMetadata: (metadata) => {
+        onMetadata: (_metadata) => {
           // Metadata is already logged in the service
         },
         onDone: () => {
@@ -178,7 +179,7 @@ function ChatInterface({ userRole, onOpenSettings, darkMode }: ChatInterfaceProp
   };
 
     return (
-        <div className={`chat-interface w-full sm:w-[90%] md:w-[70%] lg:w-[50%] xl:w-[40%] mx-auto my-4 h-[95vh] ${darkMode ? 'bg-gray-800' : 'bg-gray-50'} rounded-lg flex flex-col shadow-lg transition-colors duration-200`}>
+        <div className={`chat-interface ${darkMode ? 'bg-gray-800' : 'bg-gray-50'} rounded-lg flex flex-col shadow-lg transition-colors duration-200 ${className}`}>
 
             <div className={`chat-header flex items-center justify-between p-4 ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'} border-b transition-colors duration-200`}>
                 <div className="flex items-center gap-3">
