@@ -10,11 +10,12 @@ interface ChatInterfaceProps {
   onOpenSettings: () => void;
   darkMode: boolean;
   className?: string;
+  onBotStateChange?: (state: string) => void;
 }
 
 const CHAT_HISTORY_KEY = 'ambot-chat-history';
 
-function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: ChatInterfaceProps) {
+function ChatInterface({ userRole, onOpenSettings, darkMode, className = '', onBotStateChange }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -22,6 +23,15 @@ function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: C
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatBodyRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Initial greeting
+  useEffect(() => {
+    onBotStateChange?.('greeting');
+    const timer = setTimeout(() => {
+      onBotStateChange?.('idle');
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Auto-resize textarea
   useEffect(() => {
@@ -116,6 +126,7 @@ function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: C
     const currentInput = inputValue.trim();
     setInputValue('');
     setIsTyping(true);
+    onBotStateChange?.('answering');
 
     // Create a placeholder bot message that will be updated with streamed content
     const botMessageId = `bot-${Date.now()}`;
@@ -128,6 +139,8 @@ function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: C
 
     setMessages(prev => [...prev, botMessage]);
 
+    let isComplain = false;
+
     try {
       await chatService.streamResponse(currentInput, messages, {
         onToken: (token: string) => {
@@ -135,6 +148,10 @@ function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: C
             prev.map(msg => {
               if (msg.id === botMessageId) {
                 const newMessage = msg.message + token;
+                if (!isComplain && (newMessage.toLowerCase().includes("sorry") || newMessage.toLowerCase().includes("i'm sorry"))) {
+                    isComplain = true;
+                    onBotStateChange?.('complain');
+                }
                 return { ...msg, message: msg.message === '' ? newMessage.trimStart() : newMessage };
               }
               return msg;
@@ -146,6 +163,9 @@ function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: C
         },
         onDone: () => {
           setIsTyping(false);
+          if (!isComplain) {
+            onBotStateChange?.('after_answering');
+          }
         },
         onError: (error: string) => {
           console.error('Stream error:', error);
@@ -157,6 +177,7 @@ function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: C
             )
           );
           setIsTyping(false);
+          onBotStateChange?.('complain');
         }
       });
     } catch (error) {
@@ -168,6 +189,7 @@ function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: C
         )
       );
       setIsTyping(false);
+      onBotStateChange?.('complain');
     }
   };
 
@@ -248,7 +270,16 @@ function ChatInterface({ userRole, onOpenSettings, darkMode, className = '' }: C
                     <textarea 
                         ref={textareaRef}
                         value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
+                        onChange={(e) => {
+                            setInputValue(e.target.value);
+                            if (!isTyping) {
+                                if (e.target.value.trim().length > 0) {
+                                    onBotStateChange?.('user_typing');
+                                } else {
+                                    onBotStateChange?.('idle');
+                                }
+                            }
+                        }}
                         onKeyDown={handleKeyDown}
                         placeholder="Type your message here..." 
                         rows={1}

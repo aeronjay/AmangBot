@@ -3,56 +3,70 @@ import { useGLTF, useAnimations, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Group } from 'three'
 
-export function Model(props: any) {
+const ANIMATION_MAPPING: Record<string, number[]> = {
+    idle: [2, 4, 5, 13, 16, 23],
+    user_typing: [19, 20],
+    answering: [10, 12],
+    after_answering: [1, 6, 18, 24],
+    complain: [9, 14, 21, 22],
+    greeting: [15, 17],
+    clicked: [0, 7]
+};
+
+export function Model({ botState, ...props }: any) {
   const group = useRef<Group>(null)
-  const { nodes, materials, animations } = useGLTF('/ambotv1.1.glb') as any
+  const { scene, animations } = useGLTF('/ambotv2.glb') as any
   const { actions } = useAnimations(animations, group)
-  const [index, setIndex] = useState(0)
+  const [currentActionName, setCurrentActionName] = useState<string | null>(null);
+  const [localState, setLocalState] = useState<string | null>(null);
 
   useEffect(() => {
     if (actions) {
         const actionNames = Object.keys(actions);
-        if (actionNames.length > 0) {
-            const actionName = actionNames[index % actionNames.length];
-            const action = actions[actionName];
-            action?.reset().fadeIn(0.5).play();
+        
+        const stateToUse = localState || botState || 'idle';
+        const availableIndices = ANIMATION_MAPPING[stateToUse] || ANIMATION_MAPPING['idle'];
+        
+        // Pick a random index
+        const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+        
+        if (randomIndex < actionNames.length) {
+            const actionName = actionNames[randomIndex];
             
-            return () => {
-                action?.fadeOut(0.5);
+            if (currentActionName !== actionName) {
+                // Fade out previous action
+                if (currentActionName && actions[currentActionName]) {
+                    actions[currentActionName]?.fadeOut(0.5);
+                }
+
+                // Play new action
+                const action = actions[actionName];
+                if (action) {
+                    action.reset().fadeIn(0.5).play();
+                    setCurrentActionName(actionName);
+                }
             }
         }
     }
-  }, [actions, index]);
+  }, [actions, botState, localState]);
 
   const handleClick = () => {
-      if (actions) {
-          const count = Object.keys(actions).length;
-          if (count > 0) {
-              setIndex((prev) => (prev + 1) % count);
-          }
-      }
+      setLocalState('clicked');
+      setTimeout(() => {
+          setLocalState(null);
+      }, 4000);
   }
 
   return (
     <group ref={group} {...props} dispose={null} onClick={handleClick}>
-      <group name="Scene">
-        <group name="Armature">
-          <skinnedMesh
-            name="tripo_node_2d45e372-1007-4618-a246-081344c2f060"
-            geometry={nodes['tripo_node_2d45e372-1007-4618-a246-081344c2f060'].geometry}
-            material={materials['tripo_mat_2d45e372-1007-4618-a246-081344c2f060']}
-            skeleton={nodes['tripo_node_2d45e372-1007-4618-a246-081344c2f060'].skeleton}
-          />
-          <primitive object={nodes.Root} />
-        </group>
-      </group>
+      <primitive object={scene} />
     </group>
   )
 }
 
-useGLTF.preload('/ambotv1.1.glb')
+useGLTF.preload('/ambotv2.glb')
 
-export default function AmbotScene() {
+export default function AmbotScene({ botState }: { botState?: string }) {
   return (
     <div className="w-full h-full min-h-[400px]">
       <Canvas camera={{ position: [0, 0.5, 2.5], fov: 50 }}>
@@ -60,7 +74,7 @@ export default function AmbotScene() {
         <directionalLight position={[5, 5, 5]} intensity={1.5} />
         <directionalLight position={[-5, 5, 5]} intensity={1} />
         <directionalLight position={[0, 2, 5]} intensity={1} />
-        <Model position={[0.05, -.95, .1]} rotation={[0, -1.6, .3]} scale={2.0} />
+        <Model botState={botState} position={[0.05, -.95, .1]} rotation={[0, -1.6, .3]} scale={1.7} />
         <OrbitControls 
             enableZoom={false} 
             enableRotate={false} 

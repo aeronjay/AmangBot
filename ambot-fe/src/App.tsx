@@ -18,6 +18,7 @@ function ChatPage() {
   const [userRole, setCurrentUserRole] = useState<UserRole | null>(null);
   const [darkMode, setDarkMode] = useState(false);
   const [fontSize, setFontSize] = useState<'Small' | 'Medium' | 'Large'>('Medium');
+  const [botState, setBotState] = useState<string>('idle');
 
   useEffect(() => {
     // Check if user has a role stored in localStorage
@@ -102,10 +103,11 @@ function ChatPage() {
               onOpenSettings={handleOpenSettings}
               darkMode={darkMode}
               className="w-full h-full"
+              onBotStateChange={setBotState}
             />
           </div>
           <div className="hidden xl:flex w-[500px] h-full items-center justify-center bg-transparent">
-            <AmbotScene />
+            <AmbotScene botState={botState} />
           </div>
         </div>
       </div>
