@@ -42,9 +42,9 @@ METADATA_FILE = "chunks_metadata.json"
 DISABLED_DATASETS_FILE = "disabled_datasets.json"
 
 RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
-RELEVANCE_THRESHOLD = -1.5  # Threshold for query relevance (adjust as needed)
+RELEVANCE_THRESHOLD = -2  # Threshold for query relevance (adjust as needed)
 # Global variables
-llm = None
+llm = None 
 embedder = None
 index = None
 bm25 = None
