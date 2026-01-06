@@ -562,7 +562,7 @@ def construct_prompt(query: str, chunks: List[dict]) -> str:
         context_text += f"Topic: {chunk.get('topic', 'Unknown')}\n"
         context_text += f"{chunk.get('content', '')}\n\n"
 
-    prompt = f"""[INST] You are "AmangBot," a helpful senior student assistant at EARIST. Your goal is to guide freshmen by explaining policies thoroughly, warmly, and clearly.
+    prompt = f"""[INST] You are AmBOT (Amang Bot) a helpful student assistant at EARIST. Your goal is to guide students by explaining policies thoroughly, warmly, and clearly.
 
 ### YOUR GUIDE ON HOW TO ANSWER:
 
