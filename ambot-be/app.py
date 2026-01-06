@@ -519,6 +519,7 @@ def is_follow_up(query: str) -> bool:
         r"\b(it|that|this|these|those|he|she|they|them|him|her|his|hers|its|their|theirs)\b", # Pronouns
         r"^(and|but|so|because|or)\b", # Conjunctions at start
         r"^(what|how) about\b", # "What about..."
+        r"^(i mean)\b", # "I mean..."
         r"^(why|how|when|where|who)\?*$" # Short questions
     ]
     combined_pattern = "|".join(patterns)
@@ -535,9 +536,26 @@ def contextualize_query(query: str, history: List[ChatMessage]) -> str:
         role = "User" if msg.role == "user" else "Assistant"
         history_text += f"{role}: {msg.content}\n"
         
-    prompt = f"""[INST] You are an expert at rewriting questions to be standalone.
-Given the conversation history, rewrite the follow-up question to be a complete, standalone question that contains all necessary context.
-Do NOT answer the question. ONLY return the rewritten question.
+    prompt = f"""[INST] Task: Rewrite the Follow-up Question to be a standalone question based on the History.
+
+Rules:
+1. EXACT INHERITANCE: If the follow-up is "What about X?", use the exact same question structure as the last User message, but replace the old entity with X.
+2. DISAMBIGUATION: Replace pronouns (it, they, he, she) with the specific nouns they refer to.
+3. CLARIFICATION: If the follow-up starts with "I mean...", it is correcting or refining the previous question. Combine them.
+4. NO HALLUCINATION: Do NOT add concepts (like "transferring", "shifting") unless explicitly present in the History.
+
+Examples:
+History:
+User: Who is the dean of CCS?
+Assistant: Dean Smith.
+Follow-up Question: What about CEN?
+Standalone Question: Who is the dean of CEN?
+
+History:
+User: How do I enroll?
+Assistant: Go to the registrar.
+Follow-up Question: I mean for irregular students.
+Standalone Question: How do I enroll as an irregular student?
 
 History:
 {history_text}
