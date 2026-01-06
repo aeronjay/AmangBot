@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "What documents does a freshman need for EARIST admission?",
+    "context_id": "admission_services_screening_and_application",
+    "ground_truth_answer": "Original Form 138, Certificate of Good Moral Character, PSA Birth Certificate, and a Personal Data Form."
+  },
+  {
+    "id": 2,
+    "question": "What is the total processing time for the entire admission cycle?",
+    "context_id": "admission_services_screening_and_application",
+    "ground_truth_answer": "The estimated time is 2 days and 4 hours."
+  },
+  {
+    "id": 3,
+    "question": "How long is the EARIST College Admission Test (ECAT) proper?",
+    "context_id": "sas_guidance_testing_ecat_administration",
+    "ground_truth_answer": "The ECAT administration proper lasts 1 hour and 30 minutes."
+  },
+  {
+    "id": 4,
+    "question": "Where can I get my ECAT Examination Permit?",
+    "context_id": "sas_guidance_testing_ecat_administration",
+    "ground_truth_answer": "The permit must be secured from the EARIST Admission Office."
+  },
+  {
+    "id": 5,
+    "question": "What is the three-level screening process for applicants?",
+    "context_id": "earist_handbook_2021_screening_process_levels",
+    "ground_truth_answer": "Level 1: EARISTCAT (Admission Test), Level 2: College Interview, and Level 3: Program Preparedness Test (PPT)."
+  },
+  {
+    "id": 6,
+    "question": "What are the grade requirements for the College of Engineering (CEN)?",
+    "context_id": "admission_reqs_2025_tech_eng_design_official",
+    "ground_truth_answer": "Applicants need a GWA of 90% and no grade lower than 88 in any subject."
+  },
+  {
+    "id": 7,
+    "question": "Can a student be 'conditionally admitted'?",
+    "context_id": "earist_handbook_2021_screening_process_levels",
+    "ground_truth_answer": "Yes, if they score lower than the PPT cut-off, they must undergo an Enhancement Program during their first year."
+  },
+  {
+    "id": 8,
+    "question": "What is the required score for admission into BS Architecture?",
+    "context_id": "earist_handbook_2021_program_cutoff_scores",
+    "ground_truth_answer": "A score of 70.00% or better is required for admission."
+  },
+  {
+    "id": 9,
+    "question": "What items must I bring on my ECAT examination day?",
+    "context_id": "admission_services_screening_and_application",
+    "ground_truth_answer": "You must bring the ECAT Form, a Mongol 2 pencil, and 2 pieces of scratch paper."
+  },
+  {
+    "id": 10,
+    "question": "Who conducts the personal interview for those who pass the ECAT?",
+    "context_id": "admission_services_screening_and_application",
+    "ground_truth_answer": "The personal interview is conducted by the EARIST College Deans."
+  },
+  {
+    "id": 11,
+    "question": "What happens if my PPT score is below 50.00% for Architecture?",
+    "context_id": "earist_handbook_2021_program_cutoff_scores",
+    "ground_truth_answer": "Scores lower than 50.00% are classified for 'Realignment' to another program."
+  },
+  {
+    "id": 12,
+    "question": "Are shifters required to take the Program Preparedness Test (PPT)?",
+    "context_id": "vpaa_colleges_admission_enrollment_interview",
+    "ground_truth_answer": "Yes, the procedure is applicable to new students, shifters, and transferees."
+  },
+  {
+    "id": 13,
+    "question": "What is the 'Advisement Slip' in the enrollment process?",
+    "context_id": "vpaa_colleges_admission_enrollment_interview",
+    "ground_truth_answer": "It is a document issued by the Program Chairperson after the interview phase of enrollment."
+  },
+  {
+    "id": 14,
+    "question": "What is the GWA requirement for BS Criminology?",
+    "context_id": "admission_reqs_2025_business_arts_service_official",
+    "ground_truth_answer": "A GWA of 90% is required, with no grade lower than 85%."
+  },
+  {
+    "id": 15,
+    "question": "Where is the Office of Admission Services located?",
+    "context_id": "earist_main_campus_office_directory_2025",
+    "ground_truth_answer": "It is located on the ground floor of the Apilado Building."
+  },
+  {
+    "id": 16,
+    "question": "What is the ECAT score transmutation formula?",
+    "context_id": "earist_handbook_2021_screening_process_levels",
+    "ground_truth_answer": "EARISTCAT Rating = (Total Score x 50 / No. of Items) + 50."
+  },
+  {
+    "id": 17,
+    "question": "Is there a fee for the ECAT administration?",
+    "context_id": "sas_guidance_testing_ecat_administration",
+    "ground_truth_answer": "No, there are no fees associated with this testing service."
+  },
+  {
+    "id": 18,
+    "question": "What is the GWA requirement for the College of Computing Studies?",
+    "context_id": "admission_reqs_2025_tech_eng_design_official",
+    "ground_truth_answer": "A GWA of 90% with no grade lower than 80."
+  },
+  {
+    "id": 19,
+    "question": "How long does it take for ECAT results to be posted in Pinnacle?",
+    "context_id": "sas_guidance_testing_ecat_administration",
+    "ground_truth_answer": "It takes 5 days for results to be summarized, forwarded, and posted."
+  },
+  {
+    "id": 20,
+    "question": "What documents do transferees need for admission?",
+    "context_id": "earist_handbook_2021_admission_policy_requirements",
+    "ground_truth_answer": "TOR or Certification of Grades, Good Moral Certificate, and a Transfer Credential/Honorable Dismissal."
+  },
+  {
+    "id": 21,
+    "question": "Who is the current Chief of Admission Services?",
+    "context_id": "sas_organizational_structure_2025",
+    "ground_truth_answer": "Mr. Ferdinand DP. Alvarro."
+  },
+  {
+    "id": 22,
+    "question": "What health assessment is required before enrollment?",
+    "context_id": "medical_dental_services_pre_enrollment_freshmen",
+    "ground_truth_answer": "A pre-enrollment health assessment including a Chest X-ray."
+  },
+  {
+    "id": 23,
+    "question": "How long does the pre-enrollment health assessment take?",
+    "context_id": "medical_dental_services_pre_enrollment_freshmen",
+    "ground_truth_answer": "The entire process takes approximately 1 hour."
+  },
+  {
+    "id": 24,
+    "question": "Can I apply for admission on a first-come, first-served basis?",
+    "context_id": "earist_handbook_2021_admission_policy_requirements",
+    "ground_truth_answer": "Yes, admission is subject to the availability of resources like rooms and faculty."
+  },
+  {
+    "id": 25,
+    "question": "What is the required score for BS Psychology admission?",
+    "context_id": "earist_handbook_2021_program_cutoff_scores",
+    "ground_truth_answer": "A score of 77.00% or better is required."
+  },
+  {
+    "id": 26,
+    "question": "How do I complete an 'Incomplete' (INC) grade?",
+    "context_id": "vpaa_colleges_completion_of_grade",
+    "ground_truth_answer": "Secure a Completion Form from SRRMS, get the faculty signature, and have it validated by the Dean."
+  },
+  {
+    "id": 27,
+    "question": "What is the deadline to complete an INC grade?",
+    "context_id": "earist_handbook_2021_grading_system_rectification",
+    "ground_truth_answer": "It must be completed within the next two semesters; otherwise, it becomes a 5.0 (Failed)."
+  },
+  {
+    "id": 28,
+    "question": "How many units are required for a BS in Information Technology?",
+    "context_id": "curriculum_earist_bsit",
+    "ground_truth_answer": "A total of 157 units are required."
+  },
+  {
+    "id": 29,
+    "question": "What is the process for shifting to another program?",
+    "context_id": "srrms_enrollment_shifters_process",
+    "ground_truth_answer": "Obtain an APE and Shifter's Form from the Registrar, get signatures from both Deans, and update the curriculum at the Registrar."
+  },
+  {
+    "id": 30,
+    "question": "Can I take subjects in other schools (Cross-Registration)?",
+    "context_id": "vpaa_colleges_cross_registration",
+    "ground_truth_answer": "Yes, with recommendation from the College Dean and Program Chairperson."
+  },
+  {
+    "id": 31,
+    "question": "What is the maximum unit limit for cross-registration?",
+    "context_id": "srrms_cross_enrollment_procedure",
+    "ground_truth_answer": "The maximum limit is six (6) units."
+  },
+  {
+    "id": 32,
+    "question": "What is the prerequisite for Calculus 2 in the BSAP program?",
+    "context_id": "curriculum_earist_bsap",
+    "ground_truth_answer": "The prerequisite for Calculus 2 (MATHANA2) is Calculus 1 (MATHANA1)."
+  },
+  {
+    "id": 33,
+    "question": "How do I apply for a course adjustment (adding/dropping)?",
+    "context_id": "vpaa_colleges_course_adjustments",
+    "ground_truth_answer": "Secure a 'Withdrawal/Changing/Adding Form' from SRRMS and submit it with chairperson approval to the Dean’s Office."
+  },
+  {
+    "id": 34,
+    "question": "What are the GPA requirements for Summa Cum Laude?",
+    "context_id": "earist_handbook_2021_graduation_honors_ojt",
+    "ground_truth_answer": "A cumulative GPA of 1.0000 to 1.2500."
+  },
+  {
+    "id": 35,
+    "question": "How long is the OJT for BSBA Human Resource Management?",
+    "context_id": "curriculum_earist_bsba_hrm",
+    "ground_truth_answer": "The HRM Practicum requires 600 hours."
+  },
+  {
+    "id": 36,
+    "question": "What is the processing fee for a Certificate of Registration (COR) reprint?",
+    "context_id": "earist_registrar_document_procedures_2025",
+    "ground_truth_answer": "The reprint fee is ₱20.00."
+  },
+  {
+    "id": 37,
+    "question": "What is the total units for BS Civil Engineering?",
+    "context_id": "curriculum_earist_bsce",
+    "ground_truth_answer": "The total units are 194."
+  },
+  {
+    "id": 38,
+    "question": "When must 'Withdrawal of Registration' be completed?",
+    "context_id": "srrms_withdrawal_dropping_undergraduate",
+    "ground_truth_answer": "Within two (2) weeks from the first day of regular classes."
+  },
+  {
+    "id": 39,
+    "question": "When is the deadline for dropping a subject?",
+    "context_id": "srrms_withdrawal_dropping_undergraduate",
+    "ground_truth_answer": "Before the scheduled Midterm Examination."
+  },
+  {
+    "id": 40,
+    "question": "How do I request a subject crediting for a transferee?",
+    "context_id": "srrms_subject_crediting_equivalency",
+    "ground_truth_answer": "Submit your TOR and Course Description to the Registrar, then have the Dean and Chairperson match the subjects."
+  },
+  {
+    "id": 41,
+    "question": "What is the grading equivalent for 'Very Superior'?",
+    "context_id": "earist_handbook_2021_grading_system_rectification",
+    "ground_truth_answer": "A grade of 1.50 (91-93)."
+  },
+  {
+    "id": 42,
+    "question": "What is the 'NC' grade in the grading system?",
+    "context_id": "earist_handbook_2021_grading_system_rectification",
+    "ground_truth_answer": "'No Credit,' usually reserved for OJT, Thesis, or Special students."
+  },
+  {
+    "id": 43,
+    "question": "Can I overload units if I am a graduating student?",
+    "context_id": "vpaa_colleges_excess_overload_units",
+    "ground_truth_answer": "Yes, graduating students may request an overload up to a maximum of 12 units."
+  },
+  {
+    "id": 44,
+    "question": "What is the prerequisite for Web Development 2 in BSIT?",
+    "context_id": "curriculum_earist_bsit",
+    "ground_truth_answer": "Web Development 1 (WEBDVLC1 and WEBDVLB1)."
+  },
+  {
+    "id": 45,
+    "question": "How long is the Teaching Internship for BSED Filipino?",
+    "context_id": "curriculum_earist_bsed_filipino",
+    "ground_truth_answer": "It is a 6-unit course taken in the second semester of the fourth year."
+  },
+  {
+    "id": 46,
+    "question": "What is the retention policy for freshmen failing 3 courses?",
+    "context_id": "earist_handbook_2021_retention_tenure_scholastic_delinquency",
+    "ground_truth_answer": "Freshmen failing 3 or more courses in the first semester are placed on probation."
+  },
+  {
+    "id": 47,
+    "question": "What happens if a student fails a course three times?",
+    "context_id": "earist_handbook_2021_retention_tenure_scholastic_delinquency",
+    "ground_truth_answer": "They are dropped from the roll."
+  },
+  {
+    "id": 48,
+    "question": "Who approves a petition for rectification of a grade?",
+    "context_id": "earist_handbook_2021_grading_system_rectification",
+    "ground_truth_answer": "The Department Head, Dean, VPAA, and finally the Institute President."
+  },
+  {
+    "id": 49,
+    "question": "What is the required residency for transfer students to graduate?",
+    "context_id": "earist_handbook_2021_graduation_honors_ojt",
+    "ground_truth_answer": "They must earn more than 50% of their academic units at EARIST."
+  },
+  {
+    "id": 50,
+    "question": "What subjects are included in the first semester of BFA Painting?",
+    "context_id": "curriculum_earist_bfa_painting",
+    "ground_truth_answer": "DRAWING1, GEKOMFIL, GEPEMOVE, GEPURCO, HISTWART, MATRALS1, NSTPROG1, TECHNOS1, and VISPERC1."
+  },
+  {
+    "id": 51,
+    "question": "Is there a fee for completing an INC grade?",
+    "context_id": "earist_handbook_2021_grading_system_rectification",
+    "ground_truth_answer": "No, completion of INC grades is free of charge."
+  },
+  {
+    "id": 52,
+    "question": "What is the 'APE' in the shifting process?",
+    "context_id": "srrms_enrollment_shifters_process",
+    "ground_truth_answer": "Academic Program Evaluation."
+  },
+  {
+    "id": 53,
+    "question": "How many units is the BSED Mathematics program?",
+    "context_id": "curriculum_earist_bsed_math",
+    "ground_truth_answer": "A total of 177 units."
+  },
+  {
+    "id": 54,
+    "question": "What is the maximum load for intersession (summer) classes?",
+    "context_id": "earist_handbook_2021_enrollment_load_substitution",
+    "ground_truth_answer": "The regular load is 6 units, with 3 additional units allowed for back courses."
+  },
+  {
+    "id": 55,
+    "question": "Can I apply for a second baccalaureate degree at EARIST?",
+    "context_id": "earist_handbook_2021_enrollment_load_substitution",
+    "ground_truth_answer": "No, the Institute does not accept applications for a second baccalaureate degree."
+  },
+  {
+    "id": 56,
+    "question": "What is the prerequisite for Advanced Shorthand (ADVSTENO)?",
+    "context_id": "curriculum_earist_bsoa",
+    "ground_truth_answer": "Foundation of Shorthand (FNDSTENO)."
+  },
+  {
+    "id": 57,
+    "question": "How many units is the Internship for BS Applied Physics?",
+    "context_id": "curriculum_earist_bsap",
+    "ground_truth_answer": "9 units."
+  },
+  {
+    "id": 58,
+    "question": "What is the 'PPT' in academic screenings?",
+    "context_id": "earist_handbook_2021_screening_process_levels",
+    "ground_truth_answer": "Program Preparedness Test."
+  },
+  {
+    "id": 59,
+    "question": "How do I access the Program Curriculum (Syllabus)?",
+    "context_id": "vpaa_colleges_program_curriculum",
+    "ground_truth_answer": "Submit a formal Letter of Request to the EARIST College Dean’s Office."
+  },
+  {
+    "id": 60,
+    "question": "How long does it take to access a Course Syllabus?",
+    "context_id": "vpaa_colleges_program_curriculum",
+    "ground_truth_answer": "Approximately 2 days."
+  },
+  {
+    "id": 61,
+    "question": "How do I get my first School ID?",
+    "context_id": "srrms_issuance_school_id_first_copy",
+    "ground_truth_answer": "Fill out an ID request form and provide your Certificate of Registration (COR)."
+  },
+  {
+    "id": 62,
+    "question": "Is the first copy of the School ID free?",
+    "context_id": "srrms_issuance_school_id_first_copy",
+    "ground_truth_answer": "Yes, it is free of charge for first-time freshmen."
+  },
+  {
+    "id": 63,
+    "question": "How much is the fee for a lost ID replacement?",
+    "context_id": "srrms_reissuance_school_id",
+    "ground_truth_answer": "The fee is ₱200.00."
+  },
+  {
+    "id": 64,
+    "question": "What documents are needed to replace a lost ID?",
+    "context_id": "srrms_reissuance_school_id",
+    "ground_truth_answer": "COR, Official Receipt of payment, and an Affidavit of Loss."
+  },
+  {
+    "id": 65,
+    "question": "How long does it take to print a new School ID?",
+    "context_id": "srrms_reissuance_school_id",
+    "ground_truth_answer": "Approximately 1 hour."
+  },
+  {
+    "id": 66,
+    "question": "Where can I get a Good Moral Certificate?",
+    "context_id": "sas_guidance_good_moral_certificate",
+    "ground_truth_answer": "At the Counseling and Testing Services office."
+  },
+  {
+    "id": 67,
+    "question": "What is the processing time for a Good Moral Certificate?",
+    "context_id": "sas_guidance_good_moral_certificate",
+    "ground_truth_answer": "It takes 15 minutes."
+  },
+  {
+    "id": 68,
+    "question": "How do I apply for a tuition fee refund?",
+    "context_id": "office_president_refund_tuition_fees",
+    "ground_truth_answer": "Submit a request letter endorsed by your Dean and VPAA, plus a photocopy of your COR, to the Office of the President."
+  },
+  {
+    "id": 69,
+    "question": "What is the refund rate if I drop within one week of classes?",
+    "context_id": "earist_handbook_2021_fees_refunds_financial_assistance",
+    "ground_truth_answer": "You are eligible for an 80% refund."
+  },
+  {
+    "id": 70,
+    "question": "Can students covered by the Free Tuition Law (RA 10931) get a refund?",
+    "context_id": "earist_handbook_2021_fees_refunds_financial_assistance",
+    "ground_truth_answer": "No, they cannot refund tuition or other charges regardless of attendance."
+  },
+  {
+    "id": 71,
+    "question": "How do I validate my scholarship eligibility?",
+    "context_id": "sas_scholarship_validation_processing",
+    "ground_truth_answer": "Submit PDF copies of your COR and Report of Grades (ROG) to the SARRMS Office."
+  },
+  {
+    "id": 72,
+    "question": "Is there a fee for lost scholarship documents replacement?",
+    "context_id": "sas_scholarship_validation_processing",
+    "ground_truth_answer": "Yes, a fee of ₱20.00 is enforced for replacements."
+  },
+  {
+    "id": 73,
+    "question": "What is the 'SARRMS' office?",
+    "context_id": "sas_scholarship_validation_processing",
+    "ground_truth_answer": "Scholarship, Admission, Registration, and Records Management Services."
+  },
+  {
+    "id": 74,
+    "question": "How do I get a medical certificate for OJT?",
+    "context_id": "medical_dental_services_ojt_medical_certificate",
+    "ground_truth_answer": "Secure lab results (X-ray, CBC, Urinalysis), then visit the Medical Clinic for an assessment and consultation."
+  },
+  {
+    "id": 75,
+    "question": "How do I request an Excuse Slip for missing class due to illness?",
+    "context_id": "medical_dental_services_excuse_slip",
+    "ground_truth_answer": "Visit the clinic for an interview; if you didn't consult them during the illness, bring a parental excuse letter and ID."
+  },
+  {
+    "id": 76,
+    "question": "Can I get a free tooth extraction at EARIST?",
+    "context_id": "medical_dental_services_dental_checkup_extraction",
+    "ground_truth_answer": "Yes, dental services including check-ups and extractions are free for students."
+  },
+  {
+    "id": 77,
+    "question": "What are the uniform days at EARIST?",
+    "context_id": "earist_handbook_art_vi_sec_1_to_3_2_conduct_uniform_id",
+    "ground_truth_answer": "Prescribed uniforms are worn on Mondays, Wednesdays, and Fridays."
+  },
+  {
+    "id": 78,
+    "question": "When can I wear my College Shirt?",
+    "context_id": "earist_handbook_art_vi_sec_1_to_3_2_conduct_uniform_id",
+    "ground_truth_answer": "Tuesdays and Thursdays."
+  },
+  {
+    "id": 79,
+    "question": "What is the prescribed haircut for male students?",
+    "context_id": "earist_handbook_art_vi_sec_3_3_grooming_curfew_behavior",
+    "ground_truth_answer": "A clean barber's cut of 2 inches by 3 inches."
+  },
+  {
+    "id": 80,
+    "question": "Is smoking allowed on campus?",
+    "context_id": "earist_handbook_art_vi_sec_3_3_grooming_curfew_behavior",
+    "ground_truth_answer": "No, EARIST is a strict no-smoking area (including e-cigarettes)."
+  },
+  {
+    "id": 81,
+    "question": "What is the campus curfew for students?",
+    "context_id": "earist_handbook_art_vi_sec_3_3_grooming_curfew_behavior",
+    "ground_truth_answer": "Students must be out of the campus by 9:30 PM."
+  },
+  {
+    "id": 82,
+    "question": "How do I reset my Student Portal password?",
+    "context_id": "mis_portal_advisory_recovery_and_role",
+    "ground_truth_answer": "Proceed to the MIS office on the 4th Floor of the CCS Building with your ID and COR."
+  },
+  {
+    "id": 83,
+    "question": "Where is the Library located?",
+    "context_id": "earist_main_campus_office_directory_2025",
+    "ground_truth_answer": "On the 2nd floor of the Library Building."
+  },
+  {
+    "id": 84,
+    "question": "How many books can a student borrow for overnight use?",
+    "context_id": "earist_library_circulation_loans_penalties",
+    "ground_truth_answer": "A maximum of two (2) books."
+  },
+  {
+    "id": 85,
+    "question": "When must overnight library books be returned?",
+    "context_id": "earist_library_circulation_loans_penalties",
+    "ground_truth_answer": "On or before 10:00 AM the following service day."
+  },
+  {
+    "id": 86,
+    "question": "What is the penalty for not returning a library book on time?",
+    "context_id": "earist_library_circulation_loans_penalties",
+    "ground_truth_answer": "Confiscation of the COR for 3 days to 1 week."
+  },
+  {
+    "id": 87,
+    "question": "How do I apply for a Leave of Absence (LOA)?",
+    "context_id": "srrms_application_leave_of_absence",
+    "ground_truth_answer": "Submit a Letter of Intent with parental signature, pay the ₱80 fee, and submit the LOA form to the Registrar."
+  },
+  {
+    "id": 88,
+    "question": "How long can an LOA last?",
+    "context_id": "srrms_application_leave_of_absence",
+    "ground_truth_answer": "Typically it does not exceed one academic year."
+  },
+  {
+    "id": 89,
+    "question": "What is the fee for a Transcript of Records (TOR) request?",
+    "context_id": "srrms_tor_automated_2011_present",
+    "ground_truth_answer": "₱100.00 per page plus ₱25.00 for a security envelope."
+  },
+  {
+    "id": 90,
+    "question": "Can a representative claim my TOR?",
+    "context_id": "srrms_tor_automated_2011_present",
+    "ground_truth_answer": "Yes, they need an Authorization Letter and ID photocopies."
+  },
+  {
+    "id": 91,
+    "question": "How long does it take to process a TOR?",
+    "context_id": "srrms_tor_automated_2011_present",
+    "ground_truth_answer": "5 working days."
+  },
+  {
+    "id": 92,
+    "question": "What is a 'CAV' request?",
+    "context_id": "srrms_certification_authentication_verification",
+    "ground_truth_answer": "Certification, Authentication, and Verification of academic records."
+  },
+  {
+    "id": 93,
+    "question": "How much does a CAV cost?",
+    "context_id": "srrms_certification_authentication_verification",
+    "ground_truth_answer": "₱40.00 per copy."
+  },
+  {
+    "id": 94,
+    "question": "What is the wage for a student assistant?",
+    "context_id": "earist_handbook_2021_fees_refunds_financial_assistance",
+    "ground_truth_answer": "₱30/hr for non-technical and ₱75/hr for technical skills."
+  },
+  {
+    "id": 95,
+    "question": "Can I have two scholarships at the same time?",
+    "context_id": "earist_handbook_2021_fees_refunds_financial_assistance",
+    "ground_truth_answer": "No, the Institute enforces a 'No Dual Scholarship' policy."
+  },
+  {
+    "id": 96,
+    "question": "What are the components of the male uniform?",
+    "context_id": "earist_institutional_uniform_components_list",
+    "ground_truth_answer": "Maroon short-sleeved polo and beige slacks."
+  },
+  {
+    "id": 97,
+    "question": "What are the components of the female uniform?",
+    "context_id": "earist_institutional_uniform_components_list",
+    "ground_truth_answer": "Beige short-sleeved blouse and maroon slacks."
+  },
+  {
+    "id": 98,
+    "question": "Where is the Medical Clinic located?",
+    "context_id": "earist_main_campus_office_directory_2025",
+    "ground_truth_answer": "Ground floor of the Apilado Building."
+  },
+  {
+    "id": 99,
+    "question": "Who handles formal student complaints?",
+    "context_id": "sas_complaints_and_investigation_process",
+    "ground_truth_answer": "The Student Discipline Board (SDB)."
+  },
+  {
+    "id": 100,
+    "question": "What is the processing time for a student complaint at the college level?",
+    "context_id": "vpaa_colleges_student_complaints",
+    "ground_truth_answer": "3 days."
+  }
+]

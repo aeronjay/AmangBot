@@ -158,8 +158,13 @@ def create_index():
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 if isinstance(data, list):
-                    for item in data:
+                    for i, item in enumerate(data):
                         if 'content' in item:
+                            # Ensure ID exists
+                            if 'id' not in item:
+                                clean_name = os.path.splitext(os.path.basename(file_path))[0].replace(" ", "_").lower()
+                                item['id'] = f"{clean_name}_{i}"
+                                
                             chunks_metadata.append(item)
                             # Embed necessary metadata along with content
                             # Format: Source: [Source]; Category: [Category]; Topic: [Topic]; Content: [Content]
@@ -400,8 +405,10 @@ async def upload_file(
 
     # Save chunks to JSON
     chunk_data = []
+    clean_filename = os.path.splitext(file.filename)[0].replace(" ", "_").lower()
     for i, chunk_text in enumerate(chunks):
         chunk_data.append({
+            "id": f"{clean_filename}_{i}",
             "source": source,
             "category": category,
             "topic": topic,
