@@ -710,30 +710,30 @@ async def chat_stream(request: ChatRequest):
 
     # Refinement step using BART
     refined_context = ""
-#     if retrieved_chunks:
-#         try:
-#             refine_context_text = ""
-#             for chunk in retrieved_chunks:
-#                 refine_context_text += f"{chunk.get('content', '')}\n\n"
+    if retrieved_chunks:
+        try:
+            refine_context_text = ""
+            for chunk in retrieved_chunks:
+                refine_context_text += f"{chunk.get('content', '')}\n\n"
 
-#             refine_prompt = f"""[INST] Task: Synthesize the following information into a concise summary relevant to: "{query}".
+            refine_prompt = f"""[INST] Task: Synthesize the following information into a concise summary relevant to: "{query}".
             
-# Context:
-# {refine_context_text}
+Context:
+{refine_context_text}
 
-# Summary:
-# [/INST]"""
+Summary:
+[/INST]"""
             
-#             refine_output = llm(
-#                 refine_prompt,
-#                 max_tokens=712,
-#                 stop=["</s>", "[/INST]"],
-#                 echo=False
-#             )
-#             refined_context = refine_output['choices'][0]['text'].strip()
-#         except Exception as e:
-#             print(f"Refinement error: {e}")
-#             refined_context = "Error refining context."
+            refine_output = llm(
+                refine_prompt,
+                max_tokens=384,
+                stop=["</s>", "[/INST]"],
+                echo=False
+            )
+            refined_context = refine_output['choices'][0]['text'].strip()
+        except Exception as e:
+            print(f"Refinement error: {e}")
+            refined_context = "Error refining context."
     
     async def event_generator():
         # Send metadata first
