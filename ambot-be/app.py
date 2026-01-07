@@ -707,6 +707,33 @@ async def chat_stream(request: ChatRequest):
             
         # Remove least relevant chunk (last one in the list)
         retrieved_chunks.pop()
+
+    # Refinement step using BART
+    refined_context = ""
+    if retrieved_chunks:
+        try:
+            refine_context_text = ""
+            for chunk in retrieved_chunks:
+                refine_context_text += f"{chunk.get('content', '')}\n\n"
+
+            refine_prompt = f"""[INST] Task: Synthesize the following information into a concise summary relevant to: "{query}".
+            
+Context:
+{refine_context_text}
+
+Summary:
+[/INST]"""
+            
+            refine_output = llm(
+                refine_prompt,
+                max_tokens=512,
+                stop=["</s>", "[/INST]"],
+                echo=False
+            )
+            refined_context = refine_output['choices'][0]['text'].strip()
+        except Exception as e:
+            print(f"Refinement error: {e}")
+            refined_context = "Error refining context."
     
     async def event_generator():
         # Send metadata first
@@ -714,7 +741,8 @@ async def chat_stream(request: ChatRequest):
             "type": "metadata",
             "chunks": retrieved_chunks,
             "retrieved_chunks": initial_chunks,
-            "prompt": prompt
+            "prompt": prompt,
+            "bart_output": refined_context
         }
         yield f"data: {json.dumps(metadata)}\n\n"
         

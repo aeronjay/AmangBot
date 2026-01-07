@@ -26,11 +26,12 @@ export interface ChatResponse {
   prompt?: string;
   retrieved_chunks?: ChunkData[];
   error?: string;
+  bart_output?: string;
 }
 
 export interface StreamCallbacks {
   onToken: (token: string) => void;
-  onMetadata?: (metadata: { chunks: ChunkData[]; retrieved_chunks: ChunkData[]; prompt: string }) => void;
+  onMetadata?: (metadata: { chunks: ChunkData[]; retrieved_chunks: ChunkData[]; prompt: string; bart_output?: string }) => void;
   onDone: () => void;
   onError: (error: string) => void;
 }
@@ -159,13 +160,15 @@ class ChatService {
 
                   console.log('All chunks got:', data.retrieved_chunks);
                   console.log('Passed to LLM:', data.chunks);
+                  console.log('BART OUTPUT:', data.bart_output);
                 }
 
                 if (callbacks.onMetadata) {
                   callbacks.onMetadata({
                     chunks: data.chunks,
                     retrieved_chunks: data.retrieved_chunks,
-                    prompt: data.prompt
+                    prompt: data.prompt,
+                    bart_output: data.bart_output
                   });
                 }
               } else if (data.type === 'token') {
