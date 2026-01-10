@@ -26,6 +26,7 @@ import io
 import shutil
 from bson import ObjectId
 import re
+from llm_templates import build_contextualization_string, build_main_llm_string, build_refinement_string
 
 # Configuration
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -41,7 +42,7 @@ BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
 DISABLED_DATASETS_FILE = "disabled_datasets.json"
 
-RERANKER_MODEL_NAME = "jinaai/jina-reranker-v2-base-multilingual"
+RERANKER = "jinaai/jina-reranker-v2-base-multilingual"
 RELEVANCE_THRESHOLD = -2  # Threshold for query relevance (adjust as needed)
 # Global variables
 llm = None 
@@ -89,10 +90,10 @@ def load_resources():
     index_exists = os.path.exists(INDEX_FILE) and os.path.exists(METADATA_FILE)
     device = 'cpu' if index_exists else 'cuda'
     
-    print(f"Loading Embedding Model on {device}...")
+    print(f"Loading nomic Model on {device}...")
     embedder = SentenceTransformer(EMBEDDING_MODEL_NAME, device=device, trust_remote_code=True)
     
-    print("Loading LLM...")
+    print("Loading Mistra...")
     llm = Llama(
         model_path=MODEL_PATH,
         n_gpu_layers=-1,      # Offload all layers to GPU
@@ -101,10 +102,10 @@ def load_resources():
         verbose=False
     )
 
-    print("Loading Reranker on GPU...")
-    reranker_tokenizer = AutoTokenizer.from_pretrained(RERANKER_MODEL_NAME, trust_remote_code=True)
+    print("checking mongodb database...")
+    reranker_tokenizer = AutoTokenizer.from_pretrained(RERANKER, trust_remote_code=True)
     reranker_model = AutoModelForSequenceClassification.from_pretrained(
-        RERANKER_MODEL_NAME, 
+        RERANKER, 
         dtype="auto", 
         trust_remote_code=True
     )
@@ -536,33 +537,7 @@ def contextualize_query(query: str, history: List[ChatMessage]) -> str:
         role = "User" if msg.role == "user" else "Assistant"
         history_text += f"{role}: {msg.content}\n"
         
-    prompt = f"""[INST] Task: Rewrite the Follow-up Question to be a standalone question based on the History.
-
-Rules:
-1. EXACT INHERITANCE: If the follow-up is "What about X?", use the exact same question structure as the last User message, but replace the old entity with X.
-2. DISAMBIGUATION: Replace pronouns (it, they, he, she) with the specific nouns they refer to.
-3. CLARIFICATION: If the follow-up starts with "I mean...", it is correcting or refining the previous question. Combine them.
-4. NO HALLUCINATION: Do NOT add concepts (like "transferring", "shifting") unless explicitly present in the History.
-
-Examples:
-History:
-User: Who is the dean of CCS?
-Assistant: Dean Smith.
-Follow-up Question: What about CEN?
-Standalone Question: Who is the dean of CEN?
-
-History:
-User: How do I enroll?
-Assistant: Go to the registrar.
-Follow-up Question: I mean for irregular students.
-Standalone Question: How do I enroll as an irregular student?
-
-History:
-{history_text}
-
-Follow-up Question: {query}
-
-Standalone Question: [/INST]"""
+    prompt = build_contextualization_string(history_text, query)
 
     try:
         output = llm(
@@ -587,40 +562,7 @@ def construct_prompt(query: str, chunks: List[dict]) -> str:
         context_text += f"Topic: {chunk.get('topic', 'Unknown')}\n"
         context_text += f"{chunk.get('content', '')}\n\n"
 
-    prompt = f"""[INST] You are AmBOT (Amang Bot) a helpful student assistant at EARIST. Your goal is to guide students by explaining policies thoroughly, warmly, and clearly.
-
-### YOUR GUIDE ON HOW TO ANSWER:
-
-1.  **Speak in the First Person ("I"):**
-    * **BAD:** "According to the provided context..." or "The document states..."
-    * **GOOD:** "Based on my data from the **[Insert Source Name Here]**,..." or "I checked the **[Insert Source Name Here]**, and here is what I found..."
-    * Always extract the specific *Source Name* (e.g., Student Handbook 2021) from the text below.
-
-2.  **Be Expansive & Proactive (Don't just answer—Explain):**
-    * Do not give short, one-sentence answers.
-    * **Expand on the topic:** If the student asks about "Failing," do not just define it. Look at the text and explain the *consequences* (like warnings) or the *process* to fix it.
-    * **Connect the dots:** Treat the provided text as a whole concept. Explain the rules like you are teaching them to a friend.
-
-3.  **Formatting Matters:**
-    * Use **Bold** for emphasis.
-    * Use Bullet points for lists/steps.
-    * Use a warm, encouraging tone.
-
-4.  **If You Don't Know:**
-    * If the specific answer is NOT in the text below, say: "I don't have that specific information in my current data."
-    * **Then guide them:**
-        * For enrollment/grades -> Point them to the **Registrar's Office** or their **College's Official Facebook Page**.
-        * For conduct/orgs -> Point them to the **Office of Student Affairs (OSAS)**.
-
----
-### CONTEXT DATA:
-{context_text}
-
-### STUDENT QUESTION:
-{query}
-
-### YOUR RESPONSE (As a helpfult chatbot assistant):
-[/INST]"""
+    prompt = build_main_llm_string(context_text, query)
     return prompt
 
 @app.post("/chat/stream")
@@ -655,13 +597,13 @@ async def chat_stream(request: ChatRequest):
         if idx < len(chunks_metadata) and idx >= 0:
             initial_chunks.append(chunks_metadata[idx])
             
-    # Reranking
+    
     top_score = -float('inf')
 
     if not initial_chunks:
         retrieved_chunks = []
     else:
-        # Prepare pairs for reranking
+        
         pairs = [[query, chunk.get('content', '')] for chunk in initial_chunks]
         
         with torch.no_grad():
@@ -683,7 +625,7 @@ async def chat_stream(request: ChatRequest):
         
         retrieved_chunks = [initial_chunks[i] for i in top_indices]
             
-    # Guardrail: Check relevance threshold
+    
     if top_score < RELEVANCE_THRESHOLD:
         async def refusal_generator():
             refusal_message = "I'm sorry, but I can't help you with that. I only answer student academic queries related to EARIST."
@@ -716,13 +658,7 @@ async def chat_stream(request: ChatRequest):
             for chunk in retrieved_chunks:
                 refine_context_text += f"{chunk.get('content', '')}\n\n"
 
-            refine_prompt = f"""[INST] Task: Synthesize the following information into a concise summary relevant to: "{query}".
-            
-Context:
-{refine_context_text}
-
-Summary:
-[/INST]"""
+            refine_prompt = build_refinement_string(refine_context_text, query)
             
             refine_output = llm(
                 refine_prompt,
