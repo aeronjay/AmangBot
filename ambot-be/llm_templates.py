@@ -54,7 +54,7 @@ def build_main_llm_string(context_text, query):
         * For conduct/orgs -> Point them to the **Office of Student Affairs (OSAS)**.
 
 ---
-### CONTEXT DATA:
+### YOUR DATA:
 {context_text}
 
 ### STUDENT QUESTION:

@@ -33,7 +33,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
 
 BART_MODEL = os.path.join(PROJECT_ROOT, "Models/finetuned-BART")
-MODEL_PATH = os.path.join(PROJECT_ROOT, "Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf")
+MODEL_PATH = os.path.join(PROJECT_ROOT, "Models/mistral-7b-instruct-v0.2.Q5_K_M.gguf")
 DATASET_PATH = os.path.join(PROJECT_ROOT, "Dataset/Default AMBOT Knowledge Base")
 EMBEDDING_MODEL_NAME = os.path.join(PROJECT_ROOT, "Models/nomic-finetuned/nomic-finetuned-final")
 
@@ -652,24 +652,24 @@ async def chat_stream(request: ChatRequest):
 
     # Refinement step using BART
     refined_context = ""
-    if retrieved_chunks:
-        try:
-            refine_context_text = ""
-            for chunk in retrieved_chunks:
-                refine_context_text += f"{chunk.get('content', '')}\n\n"
+    # if retrieved_chunks:
+    #     try:
+    #         refine_context_text = ""
+    #         for chunk in retrieved_chunks:
+    #             refine_context_text += f"{chunk.get('content', '')}\n\n"
 
-            refine_prompt = build_refinement_string(refine_context_text, query)
+    #         refine_prompt = build_refinement_string(refine_context_text, query)
             
-            refine_output = llm(
-                refine_prompt,
-                max_tokens=384,
-                stop=["</s>", "[/INST]"],
-                echo=False
-            )
-            refined_context = refine_output['choices'][0]['text'].strip()
-        except Exception as e:
-            print(f"Refinement error: {e}")
-            refined_context = "Error refining context."
+    #         refine_output = llm(
+    #             refine_prompt,
+    #             max_tokens=384,
+    #             stop=["</s>", "[/INST]"],
+    #             echo=False
+    #         )
+    #         refined_context = refine_output['choices'][0]['text'].strip()
+    #     except Exception as e:
+    #         print(f"Refinement error: {e}")
+    #         refined_context = "Error refining context."
     
     async def event_generator():
         # Send metadata first
