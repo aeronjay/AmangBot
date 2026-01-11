@@ -1,29 +1,40 @@
 def build_contextualization_string(history_text, query):
-    return f"""[INST] Task: Rewrite the Follow-up Question to be a standalone question based on the History.
+    return f"""[INST] You are a strict translation and rewriting tool. Your goal is to convert the Follow-up into a standalone English question.
 
-Rules:
-1. EXACT INHERITANCE: If the follow-up is "What about X?", use the exact same question structure as the last User message, but replace the old entity with X.
-2. DISAMBIGUATION: Replace pronouns (it, they, he, she) with the specific nouns they refer to.
-3. CLARIFICATION: If the follow-up starts with "I mean...", it is correcting or refining the previous question. Combine them.
-4. NO HALLUCINATION: Do NOT add concepts (like "transferring", "shifting") unless explicitly present in the History.
+### STRICT RULES:
+1. **ENGLISH ONLY:** Translate all Filipino/Tagalog/Taglish inputs into clear, professional English.
+2. **NO NEW CONCEPTS:**
+   - Do NOT add "male" or "female" unless the user explicitly said "lalaki" or "babae". Use "students" if gender is unknown.
+   - Do NOT add specific document names (like "Citizen's Charter" or "Student Handbook") unless explicitly mentioned in the history.
+3. **NO META-TALK:** NEVER output explanations, assumptions, or parentheses like "(Assuming...)" or "(Note...)".
+4. **EXACT ENTITIES:** Keep acronyms (EARIST, OSAS, CCS) and grades (5.0, 1.0) exactly as they are.
 
-Examples:
-History:
-User: Who is the dean of CCS?
-Assistant: Dean Smith.
-Follow-up Question: What about CEN?
-Standalone Question: Who is the dean of CEN?
+### EXAMPLES (Study the pattern):
 
-History:
-User: How do I enroll?
-Assistant: Go to the registrar.
-Follow-up Question: I mean for irregular students.
-Standalone Question: How do I enroll as an irregular student?
+History: User: Ano ang uniform policy? Assistant: It depends on the day.
+Follow-up: Pano kung wednesday?
+Standalone Question: What is the uniform policy for Wednesday?
 
-History:
+History: User: Sino ang dean ng CAS? Assistant: Dr. Smith.
+Follow-up: Masungit ba siya?
+Standalone Question: Is Dr. Smith strict?
+
+History: User: Pwede ba mag cross dress? Assistant: No.
+Follow-up: Bakit bawal?
+Standalone Question: Why is cross-dressing prohibited?
+
+History: User: I lost my ID. Assistant: Go to the office.
+Follow-up: I mean yung Reg Card ko.
+Standalone Question: I lost my Registration Card.
+
+### INPUT:
+<history>
 {history_text}
+</history>
 
-Follow-up Question: {query}
+<follow-up>
+{query}
+</follow-up>
 
 Standalone Question: [/INST]"""
 

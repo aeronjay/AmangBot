@@ -514,24 +514,12 @@ async def toggle_knowledge_base(request: ToggleKBRequest, current_user = Depends
 app.include_router(auth_router)
 app.include_router(admin_router)
 
-def is_follow_up(query: str) -> bool:
-    # Regex patterns to detect follow-up questions
-    patterns = [
-        r"\b(it|that|this|these|those|he|she|they|them|him|her|his|hers|its|their|theirs)\b", # Pronouns
-        r"^(and|but|so|because|or)\b", # Conjunctions at start
-        r"^(what|how) about\b", # "What about..."
-        r"^(i mean)\b", # "I mean..."
-        r"^(why|how|when|where|who)\?*$" # Short questions
-    ]
-    combined_pattern = "|".join(patterns)
-    return bool(re.search(combined_pattern, query, re.IGNORECASE))
-
 def contextualize_query(query: str, history: List[ChatMessage]) -> str:
     if not history:
         return query
         
-    # Use last 3 turns for context
-    recent_history = history[-3:]
+    # Use last 2 turns for context
+    recent_history = history[-2:]
     history_text = ""
     for msg in recent_history:
         role = "User" if msg.role == "user" else "Assistant"
@@ -543,11 +531,11 @@ def contextualize_query(query: str, history: List[ChatMessage]) -> str:
         output = llm(
             prompt,
             max_tokens=64, # Short output expected
-            stop=["\\n", "[/INST]"],
+            stop=["\\n", "[/INST]", "("],
             echo=False
         )
         rewritten = output['choices'][0]['text'].strip()
-        if rewritten:
+        if rewritten and rewritten.lower() != query.lower():
             return rewritten
     except Exception as e:
         print(f"Error contextualizing query: {e}")
@@ -557,7 +545,7 @@ def contextualize_query(query: str, history: List[ChatMessage]) -> str:
 def construct_prompt(query: str, chunks: List[dict]) -> str:
     context_text = ""
     for i, chunk in enumerate(reversed(chunks)):
-        context_text += f"[Source {i+1}: {chunk.get('source', 'Unknown')}]\n"
+        context_text += f"[Source: {chunk.get('source', 'Unknown')}]\n"
         context_text += f"Category: {chunk.get('category', 'Unknown')}\n"
         context_text += f"Topic: {chunk.get('topic', 'Unknown')}\n"
         context_text += f"{chunk.get('content', '')}\n\n"
@@ -569,11 +557,17 @@ def construct_prompt(query: str, chunks: List[dict]) -> str:
 async def chat_stream(request: ChatRequest):
     query = request.message
     
-    # Check for follow-up
-    if request.history and is_follow_up(query):
-        print(f"Follow-up detected: {query}")
+    # Capitalize 'earist' if present
+    query = re.sub(r'earist', 'EARIST', query, flags=re.IGNORECASE)
+    
+    print(f"Original Query: {query}")
+    
+    # Always contextualize if history exists
+    if request.history:
+        original_query = query
         query = contextualize_query(query, request.history)
-        print(f"Contextualized to: {query}")
+    
+    print(f"Contextualized Query: {query}")
     
     # Embed query with prefix as required by nomic-embed-text-v1.5
     query_embedding = embedder.encode(["search_query: " + query]).astype('float32')
