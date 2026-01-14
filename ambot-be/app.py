@@ -35,7 +35,7 @@ PROJECT_ROOT = os.path.dirname(BASE_DIR)
 BART_MODEL = os.path.join(PROJECT_ROOT, "Models/finetuned-BART")
 MODEL_PATH = os.path.join(PROJECT_ROOT, "Models/mistral-7b-instruct-v0.2.Q5_K_M.gguf")
 DATASET_PATH = os.path.join(PROJECT_ROOT, "Dataset/Default AMBOT Knowledge Base")
-EMBEDDING_MODEL_NAME = os.path.join(PROJECT_ROOT, "Models/nomic-finetuned")
+EMBEDDING_MODEL_NAME = os.path.join(PROJECT_ROOT, "Models/old nomic/nomic-finetuned/nomic-finetuned-final")
 
 INDEX_FILE = "faiss_index_finetuned.bin"
 BM25_INDEX_FILE = "bm25_index.pkl"
@@ -43,7 +43,7 @@ METADATA_FILE = "chunks_metadata.json"
 DISABLED_DATASETS_FILE = "disabled_datasets.json"
 
 RERANKER = os.path.join(PROJECT_ROOT, "Models/jina")
-RELEVANCE_THRESHOLD = -2  # Threshold for query relevance (adjust as needed)
+RELEVANCE_THRESHOLD = -1.5
 # Global variables
 llm = None 
 embedder = None
@@ -561,6 +561,33 @@ async def chat_stream(request: ChatRequest):
     query = re.sub(r'earist', 'EARIST', query, flags=re.IGNORECASE)
     
     print(f"Original Query: {query}")
+    
+    # Check for greetings
+    clean_q = re.sub(r'[^\w\s]', '', query).lower().strip()
+    greetings = {"hi", "hello", "yo", "sup", "how are you", "hey", "greetings", 
+                 "good morning", "good afternoon", "good evening", "whats up"}
+    
+    if clean_q in greetings:
+        async def greeting_generator():
+            metadata = {
+                "type": "metadata",
+                "chunks": [],
+                "retrieved_chunks": [],
+                "prompt": query,
+                "bart_output": ""
+            }
+            yield f"data: {json.dumps(metadata)}\n\n"
+            
+            response_text = "Hello! I'm AmangBot, here to assist with your academic queries at EARIST. How can I help you today?"
+            
+            for i in range(0, len(response_text), 4):
+                chunk = response_text[i:i+4]
+                yield f"data: {json.dumps({'type': 'token', 'content': chunk})}\n\n"
+                await asyncio.sleep(0.01)
+                
+            yield f"data: {json.dumps({'type': 'done'})}\n\n"
+            
+        return StreamingResponse(greeting_generator(), media_type="text/event-stream")
     
     # Always contextualize if history exists
     if request.history:
