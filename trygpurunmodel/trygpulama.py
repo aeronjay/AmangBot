@@ -3,7 +3,7 @@ from llama_cpp import Llama
 
 # 1. Initialize Model
 llm = Llama(
-    model_path="./Models/mistral-7b-instruct-v0.1.Q4_K_M.gguf",
+    model_path="./Models/mistral-7b-instruct-v0.2.Q6_K.gguf",
     n_gpu_layers=-1,      # Offload all layers to GPU
     n_batch=1024,          # Processes prompt in bigger batches
     n_ctx=6144,           # Context window

@@ -35,14 +35,14 @@ PROJECT_ROOT = os.path.dirname(BASE_DIR)
 BART_MODEL = os.path.join(PROJECT_ROOT, "Models/finetuned-BART")
 MODEL_PATH = os.path.join(PROJECT_ROOT, "Models/mistral-7b-instruct-v0.2.Q5_K_M.gguf")
 DATASET_PATH = os.path.join(PROJECT_ROOT, "Dataset/Default AMBOT Knowledge Base")
-EMBEDDING_MODEL_NAME = os.path.join(PROJECT_ROOT, "Models/nomic-finetuned/nomic-finetuned-final")
+EMBEDDING_MODEL_NAME = os.path.join(PROJECT_ROOT, "Models/nomic-finetuned")
 
 INDEX_FILE = "faiss_index_finetuned.bin"
 BM25_INDEX_FILE = "bm25_index.pkl"
 METADATA_FILE = "chunks_metadata.json"
 DISABLED_DATASETS_FILE = "disabled_datasets.json"
 
-RERANKER = "jinaai/jina-reranker-v2-base-multilingual"
+RERANKER = os.path.join(PROJECT_ROOT, "Models/jina")
 RELEVANCE_THRESHOLD = -2  # Threshold for query relevance (adjust as needed)
 # Global variables
 llm = None 
@@ -573,7 +573,7 @@ async def chat_stream(request: ChatRequest):
     query_embedding = embedder.encode(["search_query: " + query]).astype('float32')
     
     # Search FAISS
-    k = 20 # Retrieve more candidates for reranking
+    k = 10 # Retrieve more candidates for reranking
     D, I = index.search(query_embedding, k)
     faiss_indices = I[0]
     
@@ -601,7 +601,8 @@ async def chat_stream(request: ChatRequest):
         pairs = [[query, chunk.get('content', '')] for chunk in initial_chunks]
         
         with torch.no_grad():
-            inputs = reranker_tokenizer(pairs, padding=True, truncation=True, return_tensors='pt', max_length=512)
+            
+            inputs = reranker_tokenizer(pairs, padding=True, truncation=True, return_tensors='pt', max_length=1024)
             inputs = {k: v.to('cuda') for k, v in inputs.items()}
             scores = reranker_model(**inputs).logits.squeeze(-1)
             
